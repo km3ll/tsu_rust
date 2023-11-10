@@ -14,8 +14,10 @@ rustc main.rs
 # Cargo
 cargo version
 cargo new hello_cargo
-cargo build
 cargo check
+cargo build
+cargo build --release
+cargo run
 
 # Toolchain
 rustup docs --book
