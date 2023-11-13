@@ -25,6 +25,9 @@ cargo build
 cargo build --release
 cargo run
 
+## Documentation based on project's dependencies 
+cargo doc --open
+
 # Toolchain
 rustup docs --book
 rustup doc
