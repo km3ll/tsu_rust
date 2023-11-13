@@ -13,7 +13,7 @@ rustc main.rs
 
 # Cargo
 cargo version
-cargo new hello_cargo
+cargo new <project-name>
 cargo check
 cargo build
 cargo build --release
@@ -28,7 +28,7 @@ rustup doc
 rustup update
 
 # Bash
-./target/debug/guessing_game
+./target/debug/tsu-rust
 ```
 
 ## references
