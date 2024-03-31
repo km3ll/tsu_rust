@@ -10,7 +10,22 @@ We follow the learning path described in book: [The Rust Programming Language](h
 
 ## 2. commands
 
+### `rustc`
+
+```shell
+rustc main.rs
 ```
+
+### `rustup`
+
+`rustup` is a command line tool for managing Rust versions and associated tools.
+
+```shell
+rustup --version
+rustup update
+
+# Local copy of Rust documentation
+rustup doc
 ```
 
 ## 3. features
