@@ -6,9 +6,12 @@
 
 ## 1. overview
 
-We are following the learning path described in book: [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html).
+We follow the learning path described in book: [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html).
 
 ## 2. commands
+
+```
+```
 
 ## 3. features
 
