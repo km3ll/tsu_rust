@@ -1,44 +1,17 @@
 # tsu-rust
 
-- [commands](#commands)
-- [references](#references)
-- [crates](#crates)
+- [1. overview](#1-overview)
+- [2. commands](#2-commands)
+- [3. features](#3-features)
 
-## commands
+## 1. overview
 
-```bash
-# Compiler
-rustc --version
-rustc main.rs
+We are following the learning path described in book: [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html).
 
-# Cargo
-cargo version
-cargo new <project-name>
-cargo check
-cargo build
-cargo build --release
-cargo run
+## 2. commands
 
-## Documentation based on project's dependencies 
-cargo doc --open
+## 3. features
 
-# Toolchain
-rustup docs --book
-rustup doc
-rustup update
+### GitHub Actions
 
-# Bash
-./target/debug/tsu-rust
-```
-
-## references
-
-- Rust Compiler `rustc`: [blog](https://doc.rust-lang.org/rustc/what-is-rustc.html)
-- Rust Programming Language: [blog](https://doc.rust-lang.org/book/title-page.html)
-- Semantic Versioning 2.0.0: [blog](https://semver.org/)
-- The `Cargo` Book: [blog](https://doc.rust-lang.org/cargo/index.html)
-- TOML Format: [blog](https://toml.io/en/)
-
-## crates
-
-- `Rand` - Random number generators and other randomness functionality: [doc](https://crates.io/crates/rand)
+Basic workflow configuration is defined in file `.github/workflows/rust.yml`
