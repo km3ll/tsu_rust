@@ -1,4 +1,4 @@
-# tsu-rust
+# tsu_rust
 
 - [1. overview](#1-overview)
 - [2. commands](#2-commands)
