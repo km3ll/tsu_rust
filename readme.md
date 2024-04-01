@@ -1,44 +1,55 @@
-# tsu-rust
+# tsu_rust
 
-- [commands](#commands)
-- [references](#references)
-- [crates](#crates)
+- [1. overview](#1-overview)
+- [2. commands](#2-commands)
+  - [cargo](#cargo)
+  - [rustc](#rustc)
+  - [rustfmt](#rustfmt)
+  - [rustup](#rustup)
+- [3. features](#3-features)
 
-## commands
+## 1. overview
 
-```bash
-# Compiler
-rustc --version
-rustc main.rs
+We follow the learning path described in book: [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html).
 
-# Cargo
-cargo version
-cargo new <project-name>
-cargo check
+## 2. commands
+
+### `cargo`
+
+```shell
 cargo build
-cargo build --release
-cargo run
-
-## Documentation based on project's dependencies 
-cargo doc --open
-
-# Toolchain
-rustup docs --book
-rustup doc
-rustup update
-
-# Bash
-./target/debug/tsu-rust
+cargo new hello_pod
+cargo --help
+cargo --version
 ```
 
-## references
+### `rustc`
 
-- Rust Compiler `rustc`: [blog](https://doc.rust-lang.org/rustc/what-is-rustc.html)
-- Rust Programming Language: [blog](https://doc.rust-lang.org/book/title-page.html)
-- Semantic Versioning 2.0.0: [blog](https://semver.org/)
-- The `Cargo` Book: [blog](https://doc.rust-lang.org/cargo/index.html)
-- TOML Format: [blog](https://toml.io/en/)
+```shell
+rustc main.rs
+```
 
-## crates
+### `rustfmt`
 
-- `Rand` - Random number generators and other randomness functionality: [doc](https://crates.io/crates/rand)
+```shell
+rustfmt main.rs
+cat main.rs
+```
+
+### `rustup`
+
+_rustup_ is a command line tool for managing Rust versions and associated tools.
+
+```shell
+rustup --version
+rustup update
+
+# Local copy of Rust documentation
+rustup doc
+```
+
+## 3. features
+
+### 3.1. actions
+
+A GitHub workflow is defined in file `.github/workflows/rust.yml`
