@@ -18,7 +18,7 @@ rustc main.rs
 
 ### `rustup`
 
-`rustup` is a command line tool for managing Rust versions and associated tools.
+_rustup_ is a command line tool for managing Rust versions and associated tools.
 
 ```shell
 rustup --version
