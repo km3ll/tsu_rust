@@ -13,7 +13,7 @@ fn main() {
 }
 
 fn execute() {
-    println!("Pod 042: start");
+    println!("pod 042: start");
     loop {
         let mut cmd: String = String::new();
         io::stdin()
@@ -27,7 +27,7 @@ fn execute() {
             continue;
         }
     }
-    println!("Pod 042: stop");
+    println!("pod 042: stop");
 }
 
 fn run_cmd(cmd: &str) {
