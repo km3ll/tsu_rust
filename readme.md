@@ -11,7 +11,9 @@
 
 ## 1. overview
 
-We follow the learning path described in _The Rust Programming Language_.
+We follow the learning path described in _The Rust Programming Language_. 
+
+Index: c2.
 
 ## 2. commands
 
@@ -47,8 +49,9 @@ cat main.rs
 _rustup_ is a command line tool for managing Rust versions and associated tools.
 
 ```shell
-rustup --version
+rustup default stable
 rustup update
+rustup --version
 
 # Local copy of Rust documentation
 rustup doc
@@ -65,3 +68,6 @@ A GitHub workflow is defined in file `.github/workflows/rust.yml`
 - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
 - [TOML - Tom's Obvious Minimal Language](https://toml.io/en/)
 - [The Cargo Book](https://doc.rust-lang.org/cargo/)
+- [Module std::prelude](https://doc.rust-lang.org/std/prelude/index.html)
+- [Semantic Versioning 2.0.0](https://semver.org/)
+- [Crates.io](https://crates.io/)
