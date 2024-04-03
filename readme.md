@@ -13,7 +13,7 @@
 
 We follow the learning path described in _The Rust Programming Language_. 
 
-Index: c3
+Index: C3
 
 ## 2. commands
 
