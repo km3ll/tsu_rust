@@ -13,7 +13,7 @@
 
 We follow the learning path described in _The Rust Programming Language_. 
 
-Index: c2.
+Index: c3
 
 ## 2. commands
 
@@ -29,6 +29,9 @@ cargo build --release // target/release
 cargo new hello_pod
 cargo --help
 cargo --version
+
+# documentation provided by all your dependencies
+cargo doc --open
 ```
 
 ### `rustc`
