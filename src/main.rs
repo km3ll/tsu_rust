@@ -10,7 +10,8 @@ mod c02_game;
 mod c03_concepts;
 
 fn main() {
-    constants();
+    shadowing();
+    //constants();
     //mutability();
     //start_game();
     //start_pod();
