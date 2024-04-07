@@ -13,12 +13,12 @@ fn main() {
 }
 
 fn execute() {
-    println!("pod 042: start");
+    println!("> pod 042: start");
     loop {
         let mut cmd: String = String::new();
         io::stdin()
             .read_line(&mut cmd)
-            .expect("Failed to read command");
+            .expect("> Failed to read command");
         let cmd: &str = cmd.as_str().trim();
         if cmd == "thanks" {
             break;
@@ -27,13 +27,13 @@ fn execute() {
             continue;
         }
     }
-    println!("pod 042: stop");
+    println!("> pod 042: stop");
 }
 
 fn run_cmd(cmd: &str) {
     match cmd {
         "mantra" => mantra(),
-        _ => println!(" > Unrecognized command '{cmd}'")
+        _ => println!("> Unrecognized command '{cmd}'")
     }
 }
 
@@ -45,6 +45,6 @@ fn mantra() {
     ];
     let n: usize = rand::thread_rng()
         // pod: range expression is inclusive on the lower and upper bounds
-        .gen_range(0..=1);
-    println!(" > {}", mantras[n])
+        .gen_range(0..=2);
+    println!("> {}", mantras[n])
 }
