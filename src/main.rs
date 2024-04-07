@@ -38,9 +38,10 @@ fn run_cmd(cmd: &str) {
 }
 
 fn mantra() {
-    let mantras: [&str; 2] = [
-        "No one should be honored for doing what is expected",
-        "The best is yet to come"
+    let mantras: [&str; 3] = [
+        "No one should be honored for doing what is expected.",
+        "The best is yet to come.",
+        "Information is just an opportunity: it means nothing if you don't use it."
     ];
     let n: usize = rand::thread_rng()
         // pod: range expression is inclusive on the lower and upper bounds
