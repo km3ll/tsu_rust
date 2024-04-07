@@ -36,6 +36,7 @@ cargo doc --open
 
 ```shell
 rustc main.rs
+rustc --explain E0384
 ```
 
 ### `rustfmt`
