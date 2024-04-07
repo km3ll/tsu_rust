@@ -11,9 +11,7 @@
 
 ## 1. overview
 
-We follow the learning path described in _The Rust Programming Language_. 
-
-Index: C3
+We follow the learning path described in _The Rust Programming Language_.
 
 ## 2. commands
 
