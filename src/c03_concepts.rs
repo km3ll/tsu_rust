@@ -3,7 +3,7 @@
 use rand::Rng;
 use std::io;
 
-pub fn mut_vs_shadowing() {
+pub fn shadowing_02() {
     // Because we’re effectively creating a new variable when we use the let keyword again,
     // we can change the type of the value but reuse the same name
     let spaces: &str = "    ";
@@ -11,7 +11,7 @@ pub fn mut_vs_shadowing() {
     let spaces: usize = spaces.len();
     println!("Value of spaces: '{spaces}'");
 }
-pub fn shadowing() {
+pub fn shadowing_01() {
     let x: i32 = 5;
     println!("Value of x: {x}");
     let x: i32 = x + 1;
