@@ -23,12 +23,12 @@ pub fn start_pod() {
 
 fn run_cmd(cmd: &str) {
     match cmd {
-        "mantra" => mantra(),
+        "quote" => quote(),
         _ => println!("> Unrecognized command '{cmd}'")
     }
 }
 
-fn mantra() {
+fn quote() {
     let mantras: [&str; 3] = [
         "No one should be honored for doing what is expected.",
         "The best is yet to come.",
