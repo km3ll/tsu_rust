@@ -1,13 +1,13 @@
 // pod: disables the warning over unused function
 #![allow(unused)]
+mod rust_pl;
+mod get_rusty;
 
-use crate::c01_pod::start_pod;
-use crate::c02_game::start_game;
-use crate::c03_concepts::*;
+use crate::get_rusty::greet;
 
-mod c01_pod;
-mod c02_game;
-mod c03_concepts;
+use crate::rust_pl::c01_pod::start_pod;
+use crate::rust_pl::c02_game::start_game;
+use crate::rust_pl::c03_concepts::*;
 
 fn main() {
     // shadowing_02();
@@ -16,4 +16,5 @@ fn main() {
     // mutability();
     // start_game();
     // start_pod();
+    // greet()
 }
