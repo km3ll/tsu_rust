@@ -11,6 +11,7 @@ pub fn shadowing_02() {
     let spaces: usize = spaces.len();
     println!("Value of spaces: '{spaces}'");
 }
+
 pub fn shadowing_01() {
     let x: i32 = 5;
     println!("Value of x: {x}");
