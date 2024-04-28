@@ -12,7 +12,7 @@ pub fn variables() {
     b = 10;
     println!("Value of b is {b}");
 
-    // shadowing
+    // shadowin g
     let c: i32 = 10;
     let c: i32 = 20;
     println!("Value of c is {c}");
