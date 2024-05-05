@@ -58,6 +58,4 @@ pub fn control_flow() {
         println!("For-loop name: {}", name);
     }
 
-
-
 }
