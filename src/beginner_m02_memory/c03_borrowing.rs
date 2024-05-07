@@ -14,9 +14,7 @@ pub fn main_borrownig() {
     add_to_reference(ref2);
 
     println!("Value of s1 is: {s1}");
-
     
-
 }
 
 // Instead of taking ownership this function is borrowing and reading a String
