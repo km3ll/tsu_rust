@@ -5,6 +5,6 @@ pub fn main_slices() {
     );
     
     let trimmed_tweet: &str = &tweet[..20];
-    println!("trimmed tweet: {trimmed_tweet}");
+    println!("Trimmed: {trimmed_tweet}");
 
 }
