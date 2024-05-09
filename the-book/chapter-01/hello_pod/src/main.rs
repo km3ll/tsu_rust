@@ -1,9 +1,7 @@
-#![allow(unused)]
-
 use rand::Rng;
 use std::io;
 
-pub fn start_pod() {
+fn main() {
     println!("> pod 042: start");
     loop {
         let mut cmd: String = String::new();
