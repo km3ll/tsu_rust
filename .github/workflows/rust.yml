@@ -31,5 +31,8 @@ jobs:
        cargo run --manifest-path bootcamp/1_beginner/2_memory/c03_borrowing/Cargo.toml
        cargo run --manifest-path bootcamp/1_beginner/2_memory/c04_slices/Cargo.toml
        cargo run --manifest-path bootcamp/1_beginner/2_memory/c05_strings/Cargo.toml
+    - name: Beginner > 03. Building Your Own Data Types
+      run: |
+       cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c01_structs/Cargo.toml
     #- name: Run tests
     #  run: cargo test --verbose
