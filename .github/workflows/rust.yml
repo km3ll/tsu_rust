@@ -1,0 +1,35 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main", "feature/tsu-pods" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Beginner > 01. Get Up And Running FAST!
+      run: |
+       cargo run --manifest-path bootcamp/01_beginner/01_setup_fast/c01_hello_pod/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/01_setup_fast/c02_variables/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/01_setup_fast/c03_data_types/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/01_setup_fast/c04_constants_statics/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/01_setup_fast/c05_functions/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/01_setup_fast/c06_flow_control/Cargo.toml
+    - name: Beginner > 02. How Rust Achieves Memory Safety
+      run: |
+       cargo run --manifest-path bootcamp/01_beginner/02_memory/c01_ownership/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/02_memory/c02_ownership_continued/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/02_memory/c03_borrowing/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/02_memory/c04_slices/Cargo.toml
+       cargo run --manifest-path bootcamp/01_beginner/02_memory/c05_strings/Cargo.toml
+    #- name: Run tests
+    #  run: cargo test --verbose
