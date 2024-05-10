@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 fn main() {
 
     let tweet: String = String::from(
