@@ -16,7 +16,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Run
-      run: cargo run --manifest-path bootcamp/01_beginner/c01_hello_pod/Cargo.toml --verbose
+    - name: Run Beginner Section
+      run: |
+       cargo run --manifest-path bootcamp/01_beginner/c01_hello_pod/Cargo.toml --verbose
+       cargo run --manifest-path bootcamp/01_beginner/c02_variables/Cargo.toml --verbose
+       cargo run --manifest-path bootcamp/01_beginner/c03_data_types/Cargo.toml --verbose
+       cargo run --manifest-path bootcamp/01_beginner/c04_constants_statics/Cargo.toml --verbose
+       cargo run --manifest-path bootcamp/01_beginner/c05_functions/Cargo.toml --verbose
+       cargo run --manifest-path bootcamp/01_beginner/c06_flow_control/Cargo.toml --verbose
     #- name: Run tests
     #  run: cargo test --verbose
