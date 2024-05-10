@@ -1,4 +1,4 @@
-# tsu_rust
+# bootcamp
 
 - [1. overview](#1-overview)
 - [2. commands](#2-commands)
