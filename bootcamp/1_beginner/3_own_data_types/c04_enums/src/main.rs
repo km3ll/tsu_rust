@@ -19,7 +19,7 @@ enum Command {
     Redo,
     AddText(String),
     MoveCursor(i32, i32),
-    Repace {
+    Replace {
         from: String, 
         to: String
     }
@@ -52,7 +52,7 @@ impl Command {
                     }}"
                 )
             },
-            Command::Repace { from, to } => {
+            Command::Replace { from, to } => {
                 format!(
                     "{{ \
                         \"cmd\": \"replace\", \
@@ -80,7 +80,7 @@ fn main() {
     let cmd_1 = Command::Undo;
     let cmd_2 = Command::AddText(String::from("Hello"));
     let cmd_3 = Command::MoveCursor(22, 0);
-    let cmd_4 = Command::Repace {
+    let cmd_4 = Command::Replace {
         from: String::from("Hello"),
         to: String::from("Hello, pod!")
     };

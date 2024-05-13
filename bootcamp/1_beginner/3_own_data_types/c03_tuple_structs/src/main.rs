@@ -6,7 +6,7 @@ fn main() {
     let rgb_color: (i32, i32, i32, ) = (255, 106, 0);
     let cmyk_color: (i32, i32, i32, i32) = (0, 58, 100, 0);
 
-    // tupple structs
+    // tuple structs
     struct RGB(i32, i32, i32, );
     struct CMYK(i32, i32, i32, i32);
 
