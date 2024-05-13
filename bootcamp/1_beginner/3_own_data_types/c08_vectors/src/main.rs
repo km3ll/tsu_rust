@@ -59,7 +59,7 @@ fn main() {
     for s in vector1 {
         vector4.push(s);
     }
-    
+
     // After this for-loop, vector1 is no longer valid
     // vector1.get(1); // Error: value borrowed here after move
 

@@ -2,7 +2,7 @@ name: Rust
 
 on:
   push:
-    branches: [ "main", "feature/tsu-pods" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -35,5 +35,11 @@ jobs:
       run: |
        cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c01_structs/Cargo.toml
        cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c02_implementation_blocks/Cargo.toml
+       cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c03_tuple_structs/Cargo.toml
+       cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c04_enums/Cargo.toml
+       cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c05_matching/Cargo.toml
+       cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c06_option/Cargo.toml
+       cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c07_result/Cargo.toml
+       cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c08_vectors/Cargo.toml
     #- name: Run tests
     #  run: cargo test --verbose
