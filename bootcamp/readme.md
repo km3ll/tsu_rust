@@ -5,7 +5,7 @@
 ### 1. Beginner
 
 - 1.1. Get Up And Running FAST!
- - Setup
+  - Setup
  - Hello World
  - Variables
  - Data Types
