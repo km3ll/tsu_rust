@@ -28,23 +28,41 @@ enum Command {
 impl Command {
 
     fn serialize(&self) -> String {
-        match self {
+        let json_string = match self {
             Command::Undo => {
-                String::from("Undo")
+                String::from("{ \"cmd\": \"undo\" }")
             },
             Command::Redo => {
-                String::from("Redo")
+                String::from("{ \"cmd\": \"redo\" }")
             },
-            Command::AddText(text) => {
-                String::from("AddText")
+            Command::AddText(s) => {
+                format!(
+                    "{{ \
+                        \"cmd\": \"add_text\", \
+                        \"text\": \"{s}\" \
+                    }}"
+                )
             },
-            Command::MoveCursor(x, y) => {
-                String::from("MoveCursor")
+            Command::MoveCursor(line, column) => {
+                format!(
+                    "{{ \
+                        \"cmd\": \"move_cursor\", \
+                        \"line\": {line}, \
+                        \"column\": {column} \
+                    }}"
+                )
             },
             Command::Repace { from, to } => {
-                String::from("Replace")
+                format!(
+                    "{{ \
+                        \"cmd\": \"replace\", \
+                        \"from\": \"{from}\", \
+                        \"to\": \"{to}\" \
+                    }}"
+                )
             }
-        }
+        };
+        json_string
     }
 
 }
@@ -59,15 +77,17 @@ fn main() {
         in_stock: true
     };
 
-    let cmd1 = Command::Undo;
-    let cmd2 = Command::AddText(String::from("Hello"));
-    let cmd3 = Command::MoveCursor(22, 0);
-    let cmd4 = Command::Repace {
+    let cmd_1 = Command::Undo;
+    let cmd_2 = Command::AddText(String::from("Hello"));
+    let cmd_3 = Command::MoveCursor(22, 0);
+    let cmd_4 = Command::Repace {
         from: String::from("Hello"),
         to: String::from("Hello, pod!")
     };
 
-    let json_String = cmd3.serialize();
-    println!("JSON string: {:?}", json_String);
+    println!("{}", cmd_1.serialize());
+    println!("{}", cmd_2.serialize());
+    println!("{}", cmd_3.serialize());
+    println!("{}", cmd_4.serialize());
 
 }
