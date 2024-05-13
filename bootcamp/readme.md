@@ -6,18 +6,43 @@
 
 - 1.1. Get Up And Running FAST!
   - Setup
- - Hello World
- - Variables
- - Data Types
- - Constants & Statics
- - Functions
- - Control Flow
- - Comments
+  - Hello World
+  - Variables
+  - Data Types
+  - Constants & Statics
+  - Functions
+  - Control Flow
+  - Comments
 - 1.2. How Rust Achieves Memory Safety
+  - Memory Management
+  - Ownership
+  - Ownership Continued
+  - Borrowing
+  - Slices
+  - Strings in Rust
 - 1.3. Building Your Own Data Types
+  - Structs
+  - Implementation Blocks
+  - Tuple Structs
+  - Enums
+  - Matching
+  - Option
+  - Result
+  - Vectors
 - 1.4. How To Structure Your Rust Projects
+  - Project Structure
+  - Modules
+  - Modules Continued
+  - External Dependencies
+  - Publishing Packages
 - 1.5. Structuring Larger Projects
+  - Cargo Features
+  - Cargo Workspaces
 - 1.6. How To Test & Document Your Code
+  - Unit Tests
+  - Integration Tests
+  - Documentation
+  - Benchmark Testing
 
 ### 2. Intermediate
 
