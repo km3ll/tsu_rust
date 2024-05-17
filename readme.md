@@ -26,6 +26,7 @@ cargo run --bin another
 cargo build           // target/debug
 cargo build --release // target/release
 cargo new hello_pod
+cargo new --lib hello_lib
 cargo --help
 cargo --version
 
