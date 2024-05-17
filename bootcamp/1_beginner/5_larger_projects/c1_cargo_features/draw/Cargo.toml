@@ -1,0 +1,34 @@
+[package]
+name = "draw"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# Now that serde and rgb are optional dependencies they will only be compiled
+# if color or shape features are enabled.
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"], optional = true }
+rgb = { version = "0.8.25", features = ["serde"], optional = true }
+
+# Features are disabled by default
+# All features are disabled except for color
+# default = ["color"]
+
+[features]
+default = ["color"]
+color = ["dep:rgb"]
+shapes = ["color","dep:serde","rgb?/serde"]
+
+# When the shapes feature is enabled, then also the color feature
+# shapes = ["color"]
+
+# Optional dependencies
+# serder = { optional = true }
+
+# When color feature is enabled, then also the rgb dependency
+# color = ["dep:rgb"]
+
+# Enabling serde feature inside the rgb dependency
+# shapes = ["rgb?/serde"]
