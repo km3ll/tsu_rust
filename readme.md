@@ -19,8 +19,9 @@ We follow the learning path described in _The Rust Programming Language_.
 
 ```shell
 cargo clean
-cargo run
 cargo check
+cargo run
+cargo run --bin another
 
 cargo build           // target/debug
 cargo build --release // target/release
@@ -28,8 +29,13 @@ cargo new hello_pod
 cargo --help
 cargo --version
 
+cargo install cargo-modules
+cargo install cargo-watch
+
 # documentation provided by all your dependencies
 cargo doc --open
+
+cargo-modules structure
 ```
 
 ### `rustc`
