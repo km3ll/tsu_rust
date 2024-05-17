@@ -1,0 +1,8 @@
+[package]
+name = "c5_publishing"
+version = "0.1.0"
+edition = "2021"
+description = "Example of publishing crates"
+license = "MIT"
+
+[dependencies]
