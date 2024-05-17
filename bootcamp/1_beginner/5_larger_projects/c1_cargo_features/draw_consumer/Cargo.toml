@@ -1,0 +1,12 @@
+[package]
+name = "draw_consumer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# Add draw library as a dependency
+# As a consumer of the library we can disable behaviors
+# Manually enable shapes feature
+[dependencies]
+draw = { path = "../draw", default-features = false, features = ["shapes"] }
