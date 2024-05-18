@@ -1,0 +1,15 @@
+# Virtual Manifest
+# It defines a workspace rather than a package
+
+# A worskpace is a collection of related cargo packages.
+[workspace]
+
+# Packages in a workspace are called members
+members = [
+    "blog_api",
+    "blog_web",
+    "blog_shared"
+]
+
+# vcs = none so that a git repository is not created
+# cargo new --vcs none blog_api

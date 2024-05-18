@@ -27,13 +27,16 @@ cargo build           // target/debug
 cargo build --release // target/release
 cargo new hello_pod
 cargo new --lib hello_lib
-cargo new draw --lib --vcs none // workspace no-git
 
 cargo --help
 cargo --version
 
 cargo install cargo-modules
 cargo install cargo-watch
+
+# workspace
+cargo new draw --lib --vcs none # no git repository
+cargo build -p <package-name> # target a package
 
 # documentation provided by all your dependencies
 cargo doc --open
