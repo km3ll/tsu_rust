@@ -1,0 +1,8 @@
+[package]
+name = "blog_api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Becase blog_shared is a local dependency we can specify the path to it
+blog_shared = { path = "../blog_shared" }

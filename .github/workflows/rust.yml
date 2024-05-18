@@ -12,7 +12,7 @@ env:
 jobs:
   
   beginner_s1:
-    name: Beginner > 01. Get Up And Running FAST!
+    name: Beginner > 1. Get Up And Running FAST!
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -28,9 +28,9 @@ jobs:
     #  run: cargo test --verbose
 
   beginner_s2:
-    name: Beginner > 02. How Rust Achieves Memory Safety
+    name: Beginner > 2. How Rust Achieves Memory Safety
     runs-on: ubuntu-latest
-    needs: beginner_s1
+    #needs: beginner_s1
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -42,9 +42,9 @@ jobs:
        cargo run --manifest-path bootcamp/1_beginner/2_memory/c5_strings/Cargo.toml
 
   beginner_s3:
-    name: Beginner > 03. Building Your Own Data Types
+    name: Beginner > 3. Building Your Own Data Types
     runs-on: ubuntu-latest
-    needs: beginner_s2
+    #needs: beginner_s2
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -58,9 +58,9 @@ jobs:
        cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c7_result/Cargo.toml
        cargo run --manifest-path bootcamp/1_beginner/3_own_data_types/c8_vectors/Cargo.toml
   beginner_s4:
-    name: Beginner > 04. How to Structure Your Projects
+    name: Beginner > 4. How to Structure Your Projects
     runs-on: ubuntu-latest
-    needs: beginner_s3
+    #needs: beginner_s3
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -72,12 +72,24 @@ jobs:
        cargo run --manifest-path bootcamp/1_beginner/4_projects/c4_modules_part3/Cargo.toml
        cargo run --manifest-path bootcamp/1_beginner/4_projects/c5_publishing/Cargo.toml
   beginner_s5:
-    name: Beginner > 05. Structuring Larger Projects
+    name: Beginner > 5. Structuring Larger Projects
     runs-on: ubuntu-latest
-    needs: beginner_s4
+    #needs: beginner_s4
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
       run: |
        cargo run --manifest-path bootcamp/1_beginner/5_larger_projects/c1_cargo_features/Cargo.toml
-       
+       cargo run --bin blog_api --manifest-path bootcamp/1_beginner/5_larger_projects/c2_cargo_workspaces/Cargo.toml
+       cargo run --bin blog_web --manifest-path bootcamp/1_beginner/5_larger_projects/c2_cargo_workspaces/Cargo.toml
+  beginner_s6:
+    name: Beginner > 6. How To Test & Document Your Code
+    runs-on: ubuntu-latest
+    #needs: beginner_s5
+    steps:
+    - uses: actions/checkout@v4
+    - name: cargo run
+      run: |
+       cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c1_unit_tests/Cargo.toml
+       cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c2_integration_tests/Cargo.toml
+       cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c3_documentation/Cargo.toml
