@@ -2,7 +2,28 @@ pub struct SavingsAccount {
     balance: i32,
 }
 
+// Doc comments are written in markdown and support code blocks/ 
+// Some common sections included in documentation blocks are: 
+// an 'example' section to show examples, a 'panic' section to
+// explaing why a function might panic, and a 'failure' section
+// explaining what type of failures your function can return.
+
+// Cargo executes documentation code blocks as tests, so that you
+// can be sure that the example code compiles. These tests are 
+// displayed within section Doc-tests
+
+/// A savings account
 impl SavingsAccount {
+
+    /// Creates a `SavingsAccount` with balance of 0
+    /// 
+    /// # Examples
+    /// 
+    /// ```
+    /// use c3_documentation::SavingsAccount;
+    /// let account = SavingsAccount::new();
+    /// assert_eq!(account.get_balance(), 0);
+    /// ```
     pub fn new() -> SavingsAccount {
         SavingsAccount { balance: 0 }
     }
