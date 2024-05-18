@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "c1_unit_tests"
+name = "c3_documentation"
 version = "0.1.0"

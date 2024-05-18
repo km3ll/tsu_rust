@@ -38,8 +38,12 @@ cargo install cargo-watch
 cargo new draw --lib --vcs none # no git repository
 cargo build -p <package-name> # target a package
 
-# documentation provided by all your dependencies
+# generate doc
+cargo doc
 cargo doc --open
+
+# benchmarks
+cargo bench
 
 cargo-modules structure
 ```

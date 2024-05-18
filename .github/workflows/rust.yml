@@ -93,3 +93,4 @@ jobs:
        cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c1_unit_tests/Cargo.toml
        cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c2_integration_tests/Cargo.toml
        cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c3_documentation/Cargo.toml
+       cargo bench --manifest-path bootcamp/1_beginner/6_test_and_document/c4_benchmark_tests/Cargo.toml
