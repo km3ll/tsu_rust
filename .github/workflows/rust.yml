@@ -80,4 +80,4 @@ jobs:
     - name: cargo run
       run: |
        cargo run --manifest-path bootcamp/1_beginner/5_larger_projects/c1_cargo_features/Cargo.toml
-       
+       cargo run --manifest-path bootcamp/1_beginner/5_larger_projects/c2_cargo_workspaces/Cargo.toml
