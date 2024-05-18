@@ -81,3 +81,13 @@ jobs:
       run: |
        cargo run --manifest-path bootcamp/1_beginner/5_larger_projects/c1_cargo_features/Cargo.toml
        cargo run --manifest-path bootcamp/1_beginner/5_larger_projects/c2_cargo_workspaces/Cargo.toml
+  beginner_s6:
+    name: Beginner > How To Test & Document Your Code
+    runs-on: ubuntu-latest
+    needs: beginner_s5
+    steps:
+    - uses: actions/checkout@v4
+    - name: cargo run
+      run: |
+       cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c1_unit_tests/Cargo.toml
+
