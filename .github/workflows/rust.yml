@@ -94,3 +94,15 @@ jobs:
        cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c2_integration_tests/Cargo.toml
        cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c3_documentation/Cargo.toml
        cargo bench --manifest-path bootcamp/1_beginner/6_test_and_document/c4_benchmark_tests/Cargo.toml
+  intermediate_s1:
+    name: Intermediate > 1. Polymorphism with Generics and Traits
+    runs-on: ubuntu-latest
+    #needs: beginner_s5
+    steps:
+    - uses: actions/checkout@v4
+    - name: cargo run
+      run: |
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c1_generics/Cargo.toml
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c2_traits/Cargo.toml
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c3_trait_bounds/Cargo.toml
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c4_super_traits/Cargo.toml
