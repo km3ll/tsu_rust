@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 use serde::Serialize;
 // Generics allow you to define structs, enums and functions with
 // generic types that will be substituted for concrete types at copile time
@@ -60,7 +62,12 @@ fn serialize_payload<T>(payload: T) -> String {
 
 
 // 5. Monomorphization
-// At compile time, Rust
+// At compile time, Rust will take a generic function and create two concrete
+// functions: one that takes a string and one that takes an integer. Then, Rust
+// will update the call sites of the generic function to call the concrete
+// versions. This process also happens with structs, enums and implementation
+// blocks
+
 fn main() {
 
     let cmd1: BrowserCommand<String> = BrowserCommand {
@@ -86,5 +93,3 @@ fn main() {
     serialize_payload(30);
 
 }
-
-

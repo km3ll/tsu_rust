@@ -30,7 +30,7 @@ jobs:
   beginner_s2:
     name: Beginner > 2. How Rust Achieves Memory Safety
     runs-on: ubuntu-latest
-    #needs: beginner_s1
+    needs: beginner_s1
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -44,7 +44,7 @@ jobs:
   beginner_s3:
     name: Beginner > 3. Building Your Own Data Types
     runs-on: ubuntu-latest
-    #needs: beginner_s2
+    needs: beginner_s2
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -60,7 +60,7 @@ jobs:
   beginner_s4:
     name: Beginner > 4. How to Structure Your Projects
     runs-on: ubuntu-latest
-    #needs: beginner_s3
+    needs: beginner_s3
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -74,7 +74,7 @@ jobs:
   beginner_s5:
     name: Beginner > 5. Structuring Larger Projects
     runs-on: ubuntu-latest
-    #needs: beginner_s4
+    needs: beginner_s4
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -85,7 +85,7 @@ jobs:
   beginner_s6:
     name: Beginner > 6. How To Test & Document Your Code
     runs-on: ubuntu-latest
-    #needs: beginner_s5
+    needs: beginner_s5
     steps:
     - uses: actions/checkout@v4
     - name: cargo run
@@ -94,3 +94,14 @@ jobs:
        cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c2_integration_tests/Cargo.toml
        cargo test --manifest-path bootcamp/1_beginner/6_test_and_document/c3_documentation/Cargo.toml
        cargo bench --manifest-path bootcamp/1_beginner/6_test_and_document/c4_benchmark_tests/Cargo.toml
+  intermediate_s1:
+    name: Intermediate > 1. Polymorphism with Generics and Traits
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: cargo run
+      run: |
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c1_generics/Cargo.toml
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c2_traits/Cargo.toml
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c3_trait_bounds/Cargo.toml
+       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c4_super_traits/Cargo.toml
