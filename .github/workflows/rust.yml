@@ -101,7 +101,10 @@ jobs:
     - uses: actions/checkout@v4
     - name: cargo run
       run: |
-       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c1_generics/Cargo.toml
-       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c2_traits/Cargo.toml
-       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c3_trait_bounds/Cargo.toml
-       cargo test --manifest-path bootcamp/2_intermediate/1_polymorphism/c4_super_traits/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/1_polymorphism/c1_generics/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/1_polymorphism/c2_traits/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/1_polymorphism/c3_trait_bounds/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/1_polymorphism/c4_super_traits/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/1_polymorphism/c5_trait_objects/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/1_polymorphism/c6_deriving_traits/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/1_polymorphism/c7_orphan_rule/Cargo.toml
