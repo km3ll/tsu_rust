@@ -14,6 +14,55 @@ fn main() {
     case_2();
     case_3();
 
+    // references
+    case_4();
+    case_5();
+
+}
+
+pub fn case_5() {
+
+    // The borrowing rules state that there can only be either one mutable
+    // mutable reference or any number of immutable references at a given time.
+    
+    // Non-Lexical Lifetimes
+    // References r1 and r2 do not live for the entire duration of this scope.
+
+    // heap-allocated string
+    let mut s1: String = String::from("Let's Get Rusty");
+    
+    // immutable reference
+    let r1: &String = &s1;
+    // let r2 = &mut s1; //Error: cannot borrow s2 as mutable because it's borrowed as immutable
+    println!("r1: {r1}"); // last usage of r1
+
+    // mutable reference
+    let r2 = &mut s1;
+    r2.push_str("!"); // last usage of r2
+    println!("r2: {r2}");
+
+}
+
+pub fn case_4() {
+
+    // String reference
+    let r1: &String;
+
+    {
+        let s1: String = String::from("Let's Get Rusty!"); // s1 life starts here
+        println!("s1: {s1}");   
+
+        // The borrow checker checkt at compile time that the lifetime of a reference
+        // is contained within lifetime of the value that it is borrowing.
+        // r1 = &s1; Error: s1 does not live enough
+
+        r1 = &s1; 
+        println!("r1: {r1}");
+
+    }// s1 life ends here
+
+    // println!("r1: {r1}") Error: used binding is not initialized
+
 }
 
 pub fn case_3() {
