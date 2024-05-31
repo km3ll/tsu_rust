@@ -121,3 +121,5 @@ jobs:
        cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c3_structs_lt_elision/Cargo.toml
        cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c4_box_smart_pointer/Cargo.toml
        cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c5_rc_smart_pointer/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c6_refcell_smart_pointer/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c7_deref_coercion/Cargo.toml
