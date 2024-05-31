@@ -22,6 +22,8 @@ cargo clean
 cargo check
 cargo run
 cargo run --bin another
+cargo add rand
+cargo add random
 
 cargo build           // target/debug
 cargo build --release // target/release
