@@ -117,3 +117,5 @@ jobs:
     - name: cargo run
       run: |
        cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c1_concrete_lifetimes/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c2_generic_lifetimes/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/2_memory_management/c3_structs_lt_elision/Cargo.toml
