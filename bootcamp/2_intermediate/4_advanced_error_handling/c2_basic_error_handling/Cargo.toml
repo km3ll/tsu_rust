@@ -1,0 +1,6 @@
+[package]
+name = "c2_basic_error_handling"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
