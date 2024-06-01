@@ -2,7 +2,11 @@
 
 use std::{fs, io, error, num::ParseIntError};
 
-fn main() {
+fn main() {   
+    println!("Hello World!");
+}
+
+fn implementations() {
     
     println!("Parsing file...");
     match parse_file_v2("example.txt") {

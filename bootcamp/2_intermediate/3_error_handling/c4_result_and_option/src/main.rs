@@ -1,8 +1,11 @@
 #![allow(unused)]
 use std::{fs, io};
 
-
 fn main() {
+    println!("Hello World!");
+}
+
+fn implementations() {
 
     // Methods such as ok(), map(), and and_then() are called combinators.
     // Combinators are functions which perform operations on a value and
