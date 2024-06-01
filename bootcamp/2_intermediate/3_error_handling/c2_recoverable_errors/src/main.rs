@@ -4,10 +4,12 @@ use std::{fs::File, io::Write};
 
 fn main() {
 
+    /*
     match get_user_id("") {
         Ok(id) => println!("Success: User id is {}", id),
         Err(e) => println!("Error  : {}", e)
     }
+    */
 
     match get_user_id("johnwick") {
         Ok(id) => println!("Success: User id is {}", id),
