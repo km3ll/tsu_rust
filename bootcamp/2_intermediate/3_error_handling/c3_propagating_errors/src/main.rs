@@ -7,7 +7,7 @@ fn main() {
     let content: String = read_file("example.txt").unwrap();
     println!("{}", content);
 
-    println!("Getting initials");
+    println!("Getting initials...");
     let user: User = User::new(String::from("John"), String::from("Wick"));
     let initials: String = get_initials(user).unwrap();
     println!("{}", initials);            
