@@ -49,9 +49,15 @@ cargo bench
 
 cargo-modules structure
 
-# environment variables
+# environment
+
+## errors
 RUST_BACKTRACE=1
 RUST_BACKTRACE=full
+
+## logging
+RUST_LOG=off cargo run
+
 ```
 
 ### `rustc`
