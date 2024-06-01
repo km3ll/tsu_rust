@@ -136,3 +136,12 @@ jobs:
        cargo run --manifest-path bootcamp/2_intermediate/3_error_handling/c3_propagating_errors/Cargo.toml
        cargo run --manifest-path bootcamp/2_intermediate/3_error_handling/c4_result_and_option/Cargo.toml
        cargo run --manifest-path bootcamp/2_intermediate/3_error_handling/c5_multiple_error_types/Cargo.toml
+  intermediate_s4:
+    name: Intermediate > 4. Advanced Error Handling
+    runs-on: ubuntu-latest
+    needs: intermediate_s3
+    steps:
+    - uses: actions/checkout@v4
+    - name: cargo run
+      run: |
+       cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c1_overview/Cargo.toml
