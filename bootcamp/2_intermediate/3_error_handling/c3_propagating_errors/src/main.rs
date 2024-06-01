@@ -2,6 +2,10 @@
 use std::{fs::File, io::{self, Read}};
 
 fn main() {
+    println!("Hello World!");
+}
+
+fn implementation() {
     
     println!("Reading file...");
     let content: String = read_file("example.txt").unwrap();
