@@ -48,6 +48,10 @@ cargo doc --open
 cargo bench
 
 cargo-modules structure
+
+# environment variables
+RUST_BACKTRACE=1
+RUST_BACKTRACE=full
 ```
 
 ### `rustc`
