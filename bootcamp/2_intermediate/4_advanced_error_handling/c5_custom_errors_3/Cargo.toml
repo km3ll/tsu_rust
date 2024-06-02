@@ -1,0 +1,11 @@
+[package]
+name = "c5_custom_errors_3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+# log provides a lightweight facade for other log libraries
+log = {version = "0.4"}
+# env_logger is an implementation of log that uses environment variables to set log levels
+env_logger = {version = "0.9.3"}

@@ -1,0 +1,20 @@
+[package]
+name = "c6_thiserror_anyhow"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+# log provides a lightweight facade for other log libraries
+log = {version = "0.4"}
+# env_logger is an implementation of log that uses environment variables to set log levels
+env_logger = {version = "0.9.3"}
+
+# thiserror
+# Provides a derive macro for the error trait. By extension the macro will also implement
+# the Debug, Display and From traits
+thiserror = { version = "1.0"}
+
+# anyhow trait
+# Provides a trait-based error type. It also allows to attach context to errors 
+anyhow = { version = "1.0"}
