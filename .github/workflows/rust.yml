@@ -147,3 +147,6 @@ jobs:
        cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c1_overview/Cargo.toml
        cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c2_basic_error_handling/Cargo.toml
        RUST_LOG=error; cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c3_custom_errors_1/Cargo.toml
+       RUST_LOG=error; cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c4_custom_errors_2/Cargo.toml
+       RUST_LOG=error; cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c5_custom_errors_3/Cargo.toml
+       RUST_LOG=error; cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c6_thiserror_anyhow/Cargo.toml
