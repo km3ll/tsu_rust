@@ -161,3 +161,4 @@ jobs:
       run: |
        cargo run --manifest-path bootcamp/2_intermediate/5_functional_features/c1_closures/Cargo.toml
        cargo run --manifest-path bootcamp/2_intermediate/5_functional_features/c2_closures_continued/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/5_functional_features/c2_function_pointers/Cargo.toml
