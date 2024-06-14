@@ -56,7 +56,7 @@ RUST_BACKTRACE=1
 RUST_BACKTRACE=full
 
 ## logging
-RUST_LOG=off cargo run
+RUST_LOG=off|error cargo run
 
 ```
 
