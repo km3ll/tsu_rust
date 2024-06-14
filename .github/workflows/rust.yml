@@ -151,3 +151,13 @@ jobs:
        RUST_LOG=error; cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c5_custom_errors_3/Cargo.toml
        RUST_LOG=error; cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c6_thiserror_anyhow/Cargo.toml
        RUST_LOG=error; cargo run --manifest-path bootcamp/2_intermediate/4_advanced_error_handling/c7_error_stack/Cargo.toml
+  intermediate_s5:
+    name: Intermediate > 5. Functional Features
+    runs-on: ubuntu-latest
+    # needs: intermediate_s3
+    steps:
+    - uses: actions/checkout@v4
+    - name: cargo run
+      run: |
+       cargo run --manifest-path bootcamp/2_intermediate/5_functional_features/c1_closures/Cargo.toml
+       cargo run --manifest-path bootcamp/2_intermediate/5_functional_features/c2_closures_continued/Cargo.toml
