@@ -1,4 +1,4 @@
-# bootcamp
+# lgr_bootcamp
 
 ## content
 
