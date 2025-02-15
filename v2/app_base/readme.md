@@ -5,4 +5,6 @@
 ```bash
 cargo clean build
 cargo run
+
+docker build .
 ```
