@@ -1,3 +1,4 @@
 pub fn greeting() {
-    println!("Hello, pod!");
+	// println! is a macro
+	println!("Hello, pod!");
 }
