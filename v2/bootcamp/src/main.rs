@@ -3,7 +3,7 @@
 
 mod m1_beginner;
 
-use crate::m1_beginner::c1_get_started::u1_hello_world::*;
+use crate::m1_beginner::c1_get_started::u1_hello_pod::*;
 
 fn main() {
 	greeting()
