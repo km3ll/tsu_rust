@@ -1,0 +1,13 @@
+[package]
+name = "bootcamp"
+version = "0.1.0"
+edition = "2021"
+
+# See more at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# async
+# tokio = { version = "1.43.0", features = ["full"] }
+
+# command-line interface
+# clap = { version = "4.5.29", features = ["cargo"] }
