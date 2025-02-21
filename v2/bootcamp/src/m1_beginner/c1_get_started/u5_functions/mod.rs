@@ -1,4 +1,4 @@
 pub fn functions() {
-    println!("---");
-    println!("Functions");
+    //println!("---");
+    //println!("Functions");
 }
