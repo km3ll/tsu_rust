@@ -1,5 +1,5 @@
 pub fn functions() {
-    println!("---");
+    println!("----------");
     println!("Functions");
     
     my_function(20);

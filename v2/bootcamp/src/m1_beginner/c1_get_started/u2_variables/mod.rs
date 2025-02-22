@@ -1,5 +1,5 @@
 pub fn variables() {
-    println!("---");
+    println!("----------");
     println!("Variables");
 
     println!("creation");

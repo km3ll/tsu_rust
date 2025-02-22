@@ -1,5 +1,5 @@
 pub fn constants() {
-    println!("---");
+    println!("----------");
     println!("Constants");
 
     // Constants are computed at compile time

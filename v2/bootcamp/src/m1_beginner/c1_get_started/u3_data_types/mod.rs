@@ -1,5 +1,5 @@
 pub fn data_types() {
-    println!("---");
+    println!("----------");
     println!("Data Types");
 
     println!("Scalar");

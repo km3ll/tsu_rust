@@ -8,7 +8,7 @@ use crate::m1_beginner::c1_get_started::u2_variables::*;
 use crate::m1_beginner::c1_get_started::u3_data_types::*;
 use crate::m1_beginner::c1_get_started::u4_constants::*;
 use crate::m1_beginner::c1_get_started::u5_functions::*;
-use crate::m1_beginner::c1_get_started::u6_control_flow::*;
+use crate::m1_beginner::c1_get_started::u6_flow_control::*;
 use crate::m1_beginner::c1_get_started::u7_comments::*;
 
 fn main() {
@@ -20,10 +20,10 @@ fn main() {
 	data_types();
 	// u4
 	constants();
-	// u5
+	// u5``
 	functions();
 	// u6
-	control_flow();
+	flow_control();
 	// u7
 	comments();
 }
