@@ -1,4 +1,14 @@
 pub fn comments() {
-    //println!("---");
-    //println!("Comments");
+    println!("----------");
+    println!("Comments");
+
+    // line comments
+
+    /*
+    block comments
+     */
+
+    /*
+     * optional formatting
+     */
 }

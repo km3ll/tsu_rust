@@ -51,5 +51,4 @@ pub fn flow_control() {
     for element in numbers {
         println!("element: {}", element)
     }
-
 }
