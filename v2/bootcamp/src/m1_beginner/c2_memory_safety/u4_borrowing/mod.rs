@@ -4,18 +4,52 @@ pub fn borrowing() {
 
     /**
      * Borrowing
-     * - the act of creating a reference
-     * - references are pointers with rules/restrictions
-     * - references do not take ownership
+     * - The act of creating a reference
+     * - References are pointers with rules/restrictions
+     * - References do not take ownership
      * 
      * Why borrow?
-     * - performance
-     * - when ownership is not needed/desired
+     * - Performance
+     * - When ownership is not needed/desired
      * 
      * Rules
-     * - at any given time, you can have either one mutable reference
+     * - At any given time, you can have either one mutable reference
      *   or any number of immutable references
-     * - references must always be valid
+     * - References must always be valid
+     * 
+     * References
+     * - Created with an ampersand
      */
+    let s1: String = String::from("John");
+
+    /**
+     * Immutable reference
+     */
+    let r1: &String = &s1;
+    print_string(r1);
+    println!("s1: {s1}");
+
+    /**
+     * Mutable reference
+     * - In order to declare a mutable reference the variable itself
+     *   has to be mutable
+     */
+    let mut s2: String = String::from("Ferris");
+    let r2: &mut String = &mut s2;
+    add_to_string(r2);
+    println!("s2: {s2}");
+
     
+}
+
+/**
+ * Borrowing
+ * - Function does not need to take ownership of the string
+ */
+fn print_string(r1: &String) {
+    println!("r1: {r1}");
+}
+
+fn add_to_string(r2: &mut String) {
+    r2.push_str(" is awesome!");
 }

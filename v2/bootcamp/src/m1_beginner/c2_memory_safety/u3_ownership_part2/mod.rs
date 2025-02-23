@@ -4,8 +4,8 @@ pub fn ownership_part2() {
 
     /**
      * Moving ownership INTO functions
-     * - values are moved by default
-     * - passing a variable into a function has the same effect 
+     * - Values are moved by default
+     * - Passing a variable into a function has the same effect 
      *   as assigning one variable to another variable 
      */
     let s1: String = String::from("John");
@@ -14,7 +14,7 @@ pub fn ownership_part2() {
 
     /**
      * Cloning
-     * - instead of moving ownership, we first cloine s2 and then
+     * - Instead of moving ownership, we first cloine s2 and then
      *   move ownership of that clone into the function
      */
     let s2: String = String::from("Wick");
@@ -23,7 +23,7 @@ pub fn ownership_part2() {
 
     /**
      * Moving ownership OUT of functions
-     * - ownership of the generated function is tranferred to s3
+     * - Ownership of the generated function is tranferred to s3
      */
     let s3: String = generate_string();
     println!("s3: {s3}");
@@ -45,7 +45,7 @@ pub fn ownership_part2() {
 
 fn print_string(p1: String) {
     println!("{p1}");
-} // name is dropped
+} // p1 is dropped
 
 fn generate_string() -> String {
     String::from("Ferris")

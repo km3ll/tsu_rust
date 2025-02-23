@@ -31,7 +31,7 @@ pub fn ownership_part1() {
 
     /**
      * Moving ownership
-     * - values are moved by default
+     * - Values are moved by default
      * - s3 is invalidated
      * - s4 is now the owner of the String
      */
