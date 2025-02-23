@@ -6,6 +6,7 @@ mod m1_beginner;
 use crate::m1_beginner::c2_memory_safety::u1_memory_regions::*;
 use crate::m1_beginner::c2_memory_safety::u2_ownership_part1::*;
 use crate::m1_beginner::c2_memory_safety::u3_ownership_part2::*;
+use crate::m1_beginner::c2_memory_safety::u4_borrowing::*;
 
 use crate::m1_beginner::c1_get_started::u1_hello_pod::*;
 use crate::m1_beginner::c1_get_started::u2_variables::*;
@@ -27,6 +28,8 @@ fn module1_chapter2() {
 	ownership_part1();
 	// u3
 	ownership_part2();
+	// u4
+	borrowing();
 }
 
 fn module1_chapter1() {
