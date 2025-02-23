@@ -39,7 +39,8 @@ pub fn borrowing() {
     add_to_string(r2);
     println!("s2: {s2}");
 
-    
+    // Dangling reference
+    // let s3 = generate_string();
 }
 
 /**
@@ -53,3 +54,10 @@ fn print_string(r1: &String) {
 fn add_to_string(r2: &mut String) {
     r2.push_str(" is awesome!");
 }
+
+/*
+fn generate_string() -> &String {
+    let s: String = String::from("Ferris");
+    &s //dangling reference
+} // s is dropped
+*/
