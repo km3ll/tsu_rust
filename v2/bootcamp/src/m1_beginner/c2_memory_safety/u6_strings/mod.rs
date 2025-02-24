@@ -80,10 +80,12 @@ pub fn strings() {
      * Iterating
      */
     println!("Iterating");
+    
     println!("bytes");
     for b1 in "Hello 🦀".bytes() {
         println!("{}", b1);
     }
+
     println!("characters");
     for c1 in "Hello 🦀".chars() {
         println!("{}", c1);

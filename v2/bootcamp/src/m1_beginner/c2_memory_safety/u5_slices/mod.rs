@@ -61,7 +61,6 @@ pub fn slices() {
     let v2: &[i32] = &v1[..3];
     println!("{:?}", v1); // {:?} syntax for debug formatting
     println!("{:?}", v2);
-
 }
 
 fn trim_tweet(tweet: &String) -> &str {
