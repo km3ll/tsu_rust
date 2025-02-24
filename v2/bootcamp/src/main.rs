@@ -8,6 +8,7 @@ use crate::m1_beginner::c2_memory_safety::u2_ownership_part1::*;
 use crate::m1_beginner::c2_memory_safety::u3_ownership_part2::*;
 use crate::m1_beginner::c2_memory_safety::u4_borrowing::*;
 use crate::m1_beginner::c2_memory_safety::u5_slices::*;
+use crate::m1_beginner::c2_memory_safety::u6_strings::*;
 
 use crate::m1_beginner::c1_get_started::u1_hello_pod::*;
 use crate::m1_beginner::c1_get_started::u2_variables::*;
@@ -33,6 +34,8 @@ fn module1_chapter2() {
 	borrowing();
 	// u5
 	slices();
+	// u6
+	strings();
 }
 
 fn module1_chapter1() {
