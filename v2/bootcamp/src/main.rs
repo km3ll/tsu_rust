@@ -3,6 +3,8 @@
 
 mod m1_beginner;
 
+use crate::m1_beginner::c3_data_types::u1_structs::*;
+
 use crate::m1_beginner::c2_memory_safety::u1_memory_regions::*;
 use crate::m1_beginner::c2_memory_safety::u2_ownership_part1::*;
 use crate::m1_beginner::c2_memory_safety::u3_ownership_part2::*;
@@ -21,6 +23,12 @@ use crate::m1_beginner::c1_get_started::u7_comments::*;
 fn main() {
 	module1_chapter1();
 	module1_chapter2();
+	module1_chapter3();
+}
+
+fn module1_chapter3() {
+	// u1
+	structs();
 }
 
 fn module1_chapter2() {
