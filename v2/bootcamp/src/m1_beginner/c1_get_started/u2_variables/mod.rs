@@ -27,5 +27,4 @@ pub fn variables() {
         println!("inner d1: {d1}");
     }
     println!("outer d1: {d1}");
-
 }
