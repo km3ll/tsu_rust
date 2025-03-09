@@ -33,7 +33,7 @@ pub fn flow_control() {
         }
     }
 
-    // retur values from loop
+    // return values from loop
     let x: i8 = loop {
         println!("loop returning 5");
         break 5;
