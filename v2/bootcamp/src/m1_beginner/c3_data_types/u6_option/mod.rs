@@ -14,6 +14,9 @@ pub fn option() {
         None => println!(" > name1 not found")
     }
 
+    /**
+     * if-let syntax
+     */
     println!("if-let syntax");
     if let Some(name2) = get_username(1) {
         println!(" > name2: {}", name2);
