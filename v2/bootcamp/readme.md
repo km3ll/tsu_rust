@@ -4,9 +4,13 @@
 
 ```bash
 cargo clean build
+cargo new package_name # binary crate
+cargo new --lib package_name # library crate
 
 # target/debug
 cargo run
+cargo run --bin base_package
+cargo run --bin another_main
 
 # target/release
 cargo run --release
