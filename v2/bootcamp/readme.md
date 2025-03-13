@@ -15,6 +15,9 @@ cargo run --bin another_main
 # target/release
 cargo run --release
 
+# modules
+cargo install cargo-modules
+
 docker build .
 ```
 
