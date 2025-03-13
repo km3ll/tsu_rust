@@ -10,5 +10,11 @@ pub fn modules() {
      * - A single file could have multiple modules
      * - Allow conditional compilation
      */
-    println!("#![allow(unused)]");
+    println!(" > #![allow(unused)]");
+
+    /**
+     * Sub-Modules
+     * - Must be declared within the parent module
+     */
+    println!(" > mod database (database.rs)");
 }
