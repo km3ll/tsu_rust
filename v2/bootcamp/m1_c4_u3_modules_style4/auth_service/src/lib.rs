@@ -1,9 +1,11 @@
 #![allow(dead_code, unused)]
 
+// Submodules
 mod database;
 mod auth_utils;
 
-use auth_utils::models::Credentials;
+// Re-exporting
+pub use auth_utils::models::Credentials;
 use database::Status;
 
 pub fn authenticate(creds: Credentials) {
