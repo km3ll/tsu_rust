@@ -1,8 +1,8 @@
 #![allow(unused)]
 
-use crate::c01_started::m03_hello_cargo::hello_cargo;
+mod c01_getting_started;
 
-mod c01_started;
+use crate::c01_getting_started::m03_hello_cargo::u01_hello::*;
 
 fn main() {
 	chapter_01()
