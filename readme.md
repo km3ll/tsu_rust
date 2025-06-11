@@ -4,6 +4,7 @@
 
 - [app_base](v2/app_base)
 - [bootcamp](v2/bootcamp)
+- [the_book](v2/the_book)
 
 ## v1
 
