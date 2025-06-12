@@ -24,6 +24,13 @@ pub fn start_game() {
 	let mut guess: String = String::new();
 
 	io::stdin()
+		/***
+		pod: References '&'
+		The & indicates that this argument is a reference, which gives you a way
+		to let multiple parts of your code access one piece of data without
+		needing to copy that data into memory multiple times.
+		References are immutable by default.
+		 */
 		.read_line(&mut guess)
 		.expect("Failed to read line");
 

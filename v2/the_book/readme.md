@@ -1,6 +1,6 @@
 # the_book
 
-- [The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result)
 
 ## commands
 
