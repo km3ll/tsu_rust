@@ -1,6 +1,6 @@
 # the_book
 
-- [The Rust Programming Language](https://doc.rust-lang.org/book/ch01-03-hello-cargo.html)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
 
 ## commands
 
