@@ -31,10 +31,3 @@ cargo --version
 ```bash
 docker build .
 ```
-
-## content
-
-```
-the_book
-└── main.rs
-```
