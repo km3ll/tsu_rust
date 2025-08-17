@@ -1,6 +1,4 @@
-// pod: sub-module definition
-pub mod testdrive;
-
+// pod: Sub-Module Functions
 pub fn greet() {
     println!("Hello book");
 }
