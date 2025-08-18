@@ -2,31 +2,38 @@
 use std::fs;
 use std::io::Result;
 use std::path::Path;
-// pod: Module Import
-mod config;
-mod c01;
+use tsu::config::AppConfig;
+use crate::tsu::index::{load_file, Note};
+
+// config: Module Import
+mod tsu;
 
 fn main() {
-	load_config();
-	load_file();
+	let config: AppConfig = load();
+	start(config);
+	//load_note("resources/index/one-piece/note.txt");
+	//let lines = load_file("resources/index/tag/character.txt");
+	//for line in &lines {
+	//	println!("{}", line);
+	//}
+	//let note = Note::new(lines);
+
 }
 
-fn load_config() {
-	// Load configuration
-	let cfg = config::AppConfig::from_file()
-		.expect("Failed to load config file");
-	println!("Server will run on {}:{}", cfg.server.host, cfg.server.port);
+fn load() -> AppConfig {
+	AppConfig::from_file().expect("Failed to load config file")
 }
 
-fn load_file() {
-	let name = "resources/messages.txt";
-	let path = Path::new(name);
-	let content = fs::read_to_string(path)
-		.expect(&format!("Something went wrong reading file: {}", name));
-	let lines: Vec<&str> = content.lines().collect();
+fn start(config: AppConfig) {
+	// tags
+	let characters = load_file("resources/index/tag/character.txt");
+	let places = load_file("resources/index/tag/place.txt");
+	let technique = load_file("resources/index/tag/technique.txt");
 
-	println!("Line count: {}", lines.len());
-	for line in lines {
+	// note
+	let lines = load_file("resources/index/one-piece/note.txt");
+	let note = Note::new(lines);
+	for line in note.content {
 		println!("{}", line);
 	}
 }
