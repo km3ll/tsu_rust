@@ -20,11 +20,11 @@ fn load() -> AppConfig {
 
 fn start(config: AppConfig) {
 	// tags
-	let characters = load_file("resources/index/tag/character.txt");
-	let concepts = load_file("resources/index/tag/concept.txt");
-	let fruits = load_file("resources/index/tag/fruit.txt");
-	let places = load_file("resources/index/tag/place.txt");
-	let techniques = load_file("resources/index/tag/technique.txt");
+	let characters = load_file("resources/index/one-piece/character.txt");
+	let concepts = load_file("resources/index/one-piece/concept.txt");
+	let fruits = load_file("resources/index/one-piece/fruit.txt");
+	let places = load_file("resources/index/one-piece/place.txt");
+	let techniques = load_file("resources/index/one-piece/technique.txt");
 
 	// note
 	let lines = load_file("resources/index/one-piece/note.txt");
@@ -37,10 +37,13 @@ fn start(config: AppConfig) {
 	let checked = uncommon_elements(fruits, checked);
 	let checked = uncommon_elements(concepts, checked);
 
-	println!("Uncategorized: ");
-	for i in checked {
-		println!(" - {}", i);
+	if (!checked.is_empty()) {
+		println!("Uncategorized: ");
+		for i in checked {
+			println!(" - {}", i);
+		}
 	}
+
 }
 
 fn uncommon_elements(a: Vec<String>, b: Vec<String>) -> Vec<String> {
