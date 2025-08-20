@@ -23,6 +23,7 @@ cargo run --release
 cargo new package_name # binary crate
 cargo new --lib package_name # library crate
 cargo install cargo-modules
+cargo install cargo-make
 cargo --version
 ```
 
