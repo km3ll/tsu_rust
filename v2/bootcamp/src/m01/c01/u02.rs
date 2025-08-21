@@ -4,7 +4,7 @@ pub fn greet() {
 }
 
 #[cfg(test)]
-mod u02_tests {
+mod tests {
 	use super::*;
 
 	#[test]
@@ -12,5 +12,4 @@ mod u02_tests {
 		greet();
 		assert!(true)
 	}
-
 }
