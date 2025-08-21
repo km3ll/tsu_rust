@@ -2,10 +2,7 @@
 name = "bootcamp"
 version = "0.1.0"
 edition = "2021"
-description = "LGR Bootcamp"
-license = "MIT"
-
-# See more at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "tsu"
 
 [dependencies]
 rand = "0.9.0"
