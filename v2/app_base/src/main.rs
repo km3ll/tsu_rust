@@ -1,12 +1,23 @@
 mod tsu;
 
 use tsu::config::AppConfig;
+use tsu::resource::File;
 
 fn main() {
 	load_config();
+	load_file("resources/one-piece.txt");
 }
 
 fn load_config() {
+	println!("----");
 	let cfg = AppConfig::from_file().expect("");
 	println!("Server will run on {}:{}", cfg.server.host, cfg.server.port)
+}
+
+fn load_file(file: &str) {
+	println!("----");
+	let file = File::from_file(file);
+	for line in file.lines {
+		println!("{}", line)
+	}
 }
