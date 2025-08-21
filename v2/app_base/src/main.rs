@@ -7,7 +7,7 @@ use tsu::serde::*;
 fn main() {
 	load_config();
 	load_file("resources/one-piece.txt");
-	use_serde();
+	use_serdes();
 }
 
 fn load_config() {
@@ -25,7 +25,7 @@ fn load_file(file: &str) {
 	}
 }
 
-fn use_serde() {
+fn use_serdes() {
 	println!("----");
 	serdes_json();
 	println!("----");
