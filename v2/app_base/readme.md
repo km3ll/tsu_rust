@@ -3,9 +3,9 @@
 ## commands
 
 ```bash
-cargo clean build
-
-# Compile in debug mode in: target/debug
+cargo clean
+cargo build
+cargo fmt
 cargo run
 
 docker build .

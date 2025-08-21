@@ -1,6 +1,6 @@
 # the_book
 
-- [The Rust Programming Language](https://doc.rust-lang.org/book/ch01-03-hello-cargo.html)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result)
 
 ## commands
 
@@ -23,6 +23,7 @@ cargo run --release
 cargo new package_name # binary crate
 cargo new --lib package_name # library crate
 cargo install cargo-modules
+cargo install cargo-make
 cargo --version
 ```
 
@@ -30,11 +31,4 @@ cargo --version
 
 ```bash
 docker build .
-```
-
-## content
-
-```
-the_book
-└── main.rs
 ```
