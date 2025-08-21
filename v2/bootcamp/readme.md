@@ -6,7 +6,8 @@
 bootcamp
 - m01 beginner
   - c01 Get up and running fast
-    - u01 setup
+    - u01 Setup
+    - u02 Hello World
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
