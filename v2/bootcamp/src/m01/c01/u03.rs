@@ -22,10 +22,11 @@ pub fn variable_shadowing() {
 }
 
 pub fn variable_scope() {
-	// pod: Scope: outer scope
+	// pod: Outer scope
 	let d1: i16 = 40;
+    // pod: Inner Scope: this varible lives within the scope of brackets {}
 	{
-		// pod: Scope: this varible lives within the scope of brackets {} (inner scope)
+		
 		let d1: i16 = 30;
 		println!("inner d1: {d1}");
 	}

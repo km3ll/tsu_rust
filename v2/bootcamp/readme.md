@@ -8,6 +8,7 @@ bootcamp
   - c01 Get up and running fast
     - u01 Setup
     - u02 Hello World
+    - u03 Variables
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
