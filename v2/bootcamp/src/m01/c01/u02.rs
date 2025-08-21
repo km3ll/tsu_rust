@@ -1,4 +1,4 @@
-pub fn hello_pod() {
+pub fn greet() {
 	// pod: println! is a macro
 	println!("Hello, pod!");
 }
@@ -6,9 +6,11 @@ pub fn hello_pod() {
 #[cfg(test)]
 mod u02_tests {
 	use super::*;
+
 	#[test]
-	fn hello_pod_runs() {
-		hello_pod();
+	fn greet_runs() {
+		greet();
 		assert!(true)
 	}
+
 }
