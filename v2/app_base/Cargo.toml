@@ -11,3 +11,5 @@ config = { version = "0.15.14" }
 # pod: Serde
 # Serializing and Deserializing
 serde = { version = "1.0.219", features = ["derive"] }
+serde_json = { version = "1.0.143" }
+serde-xml-rs = { version = "0.6.0"}
