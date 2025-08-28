@@ -2,12 +2,13 @@
 
 ## v2
 
-- [app_base](v2/app_base)
 - [bootcamp](v2/bootcamp)
+- [exploratory](v2/exploratory)
 - [the_book](v2/the_book)
 
 ## v1
 
+- [app_base](v1/app_base)
 - [book_design_patterns](v1/book_design_patterns)
 - [book_rust_lang](v1/book_rust_lang)
 - [lgr_accelerator](v1/lgr_accelerator)
