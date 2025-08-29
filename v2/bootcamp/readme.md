@@ -9,6 +9,7 @@ bootcamp
     - u01 Setup
     - u02 Hello World
     - u03 Variables
+    - u04 Data Types
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
