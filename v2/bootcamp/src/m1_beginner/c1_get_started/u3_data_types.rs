@@ -4,24 +4,6 @@ pub fn data_types() {
 
 	println!("Scalar");
 
-	println!("booleans");
-	let b1: bool = true;
-	let b2: bool = false;
-	println!("b1: {b1}");
-	println!("b2: {b2}");
-
-	println!("unsigned integers"); // positive
-	let ui1: u8 = 8;
-	let ui2: u16 = 16;
-	let ui3: u32 = 32;
-	let ui4: u64 = 64;
-	let ui5: u128 = 128;
-	println!("ui1: {ui1}");
-	println!("ui2: {ui2}");
-	println!("ui3: {ui3}");
-	println!("ui4: {ui4}");
-	println!("ui5: {ui5}");
-
 	println!("signed integers");
 	let si1: i8 = -8;
 	let si2: i16 = 16;
