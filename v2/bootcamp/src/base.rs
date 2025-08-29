@@ -1,15 +1,14 @@
 pub fn base_() {
-    println!("Base")
+	println!("Base")
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+	use super::*;
 
-    #[test]
-    fn _runs() {
-        base_();
-        assert!(true)
-    }
-    
+	#[test]
+	fn _runs() {
+		base_();
+		assert!(true)
+	}
 }
