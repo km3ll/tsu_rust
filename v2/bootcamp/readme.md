@@ -10,6 +10,8 @@ bootcamp
     - u02 Hello World
     - u03 Variables
     - u04 Data Types
+    - u05 Constants And Statics
+    - u06 Functions
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

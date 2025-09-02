@@ -1,0 +1,45 @@
+// pod: The naming convention for functions is snake-case
+pub fn functions_statement(x: u32) {
+	// pod: Statements are instructions that do not return a value
+	println!("Function called with: {}", x);
+}
+
+pub fn functions_expression(x: u32) -> u32 {
+	// pod: Expressions are code that evaluate to a value
+	let y: u32 = x * 2;
+
+	/***
+	 * pod: For a function to use the last expression as return type,
+	 * we have to omit the semicolon. This syntax only works for
+	 * the last expression in a function
+	 */
+	println!("New value of y: {}", y);
+	y
+}
+
+pub fn functions_() {
+	println!("Base")
+}
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+
+	#[test]
+	fn functions_statement_runs() {
+		functions_statement(11);
+		assert!(true)
+	}
+
+	#[test]
+	fn functions_expression_runs() {
+		functions_expression(11);
+		assert!(true)
+	}
+
+	#[test]
+	fn _runs() {
+		functions_();
+		assert!(true)
+	}
+}
