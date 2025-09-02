@@ -19,10 +19,6 @@ pub fn conts_static() {
 	println!("Casino name: {:?}", CASINO_NAME);
 }
 
-pub fn base_() {
-	println!("Base")
-}
-
 #[cfg(test)]
 mod tests {
 	use super::*;

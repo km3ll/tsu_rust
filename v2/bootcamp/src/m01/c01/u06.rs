@@ -17,10 +17,6 @@ pub fn functions_expression(x: u32) -> u32 {
 	y
 }
 
-pub fn functions_() {
-	println!("Base")
-}
-
 #[cfg(test)]
 mod tests {
 	use super::*;
@@ -34,12 +30,6 @@ mod tests {
 	#[test]
 	fn functions_expression_runs() {
 		functions_expression(11);
-		assert!(true)
-	}
-
-	#[test]
-	fn _runs() {
-		functions_();
 		assert!(true)
 	}
 }

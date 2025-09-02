@@ -12,6 +12,10 @@ bootcamp
     - u04 Data Types
     - u05 Constants And Statics
     - u06 Functions
+    - u07 Flow Control
+    - u08 Comments
+  - c02 How Rust achieves memory safety
+    - u01 Memory regions
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
