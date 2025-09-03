@@ -7,7 +7,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn _runs() {
+	fn run_() {
 		base_();
 		assert!(true)
 	}

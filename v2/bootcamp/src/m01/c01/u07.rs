@@ -65,43 +65,43 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn flow_ifelse_runs() {
+	fn run_flow_ifelse() {
 		flow_ifelse();
 		assert!(true)
 	}
 
 	#[test]
-	fn flow_ifelse_in_let_runs() {
+	fn run_flow_ifelse_in_let() {
 		flow_ifelse_in_let();
 		assert!(true)
 	}
 
 	#[test]
-	fn flow_loop_runs() {
+	fn run_flow_loop() {
 		flow_loop();
 		assert!(true)
 	}
 
 	#[test]
-	fn flow_labeling_loops_runs() {
+	fn run_flow_labeling_loops() {
 		flow_labeling_loops();
 		assert!(true)
 	}
 
 	#[test]
-	fn flow_loop_returning_value_runs() {
+	fn run_flow_loop_returning_value() {
 		flow_loop_returning_value();
 		assert!(true)
 	}
 
 	#[test]
-	fn flow_while_loop_runs() {
+	fn run_flow_while_loop() {
 		flow_while_loop();
 		assert!(true)
 	}
 
 	#[test]
-	fn flow_for_loop_runs() {
+	fn run_flow_for_loop() {
 		flow_for_loop();
 		assert!(true)
 	}

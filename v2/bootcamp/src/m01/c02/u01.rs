@@ -46,19 +46,19 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn memory_stack_runs() {
+	fn run_memory_stack() {
 		memory_stack();
 		assert!(true)
 	}
 
 	#[test]
-	fn memory_heap_runs() {
+	fn run_memory_heap() {
 		memory_heap();
 		assert!(true)
 	}
 
 	#[test]
-	fn memory_static_runs() {
+	fn run_memory_static() {
 		memory_static();
 		assert!(true)
 	}

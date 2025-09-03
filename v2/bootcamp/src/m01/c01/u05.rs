@@ -24,13 +24,13 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn const_constants_runs() {
+	fn run_const_constants() {
 		const_constants();
 		assert!(true)
 	}
 
 	#[test]
-	fn conts_static_runs() {
+	fn run_conts_static() {
 		conts_static();
 		assert!(true)
 	}

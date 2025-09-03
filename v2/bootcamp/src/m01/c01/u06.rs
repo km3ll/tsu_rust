@@ -22,13 +22,13 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn functions_statement_runs() {
+	fn run_functions_statement() {
 		functions_statement(11);
 		assert!(true)
 	}
 
 	#[test]
-	fn functions_expression_runs() {
+	fn run_functions_expression() {
 		functions_expression(11);
 		assert!(true)
 	}

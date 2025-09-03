@@ -15,13 +15,13 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn comments_line_runs() {
+	fn run_comments_line() {
 		comments_line();
 		assert!(true)
 	}
 
 	#[test]
-	fn comments_block_runs() {
+	fn run_comments_block() {
 		comments_block();
 		assert!(true)
 	}

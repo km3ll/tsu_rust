@@ -16,6 +16,7 @@ bootcamp
     - u08 Comments
   - c02 How Rust achieves memory safety
     - u01 Memory regions
+    - u02 Ownership Part 1
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

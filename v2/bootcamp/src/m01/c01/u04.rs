@@ -105,61 +105,61 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn types_boolean_runs() {
+	fn run_types_boolean() {
 		types_boolean();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_unsigned_integers_runs() {
+	fn run_types_unsigned_integers() {
 		types_unsigned_integers();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_signed_integers_runs() {
+	fn run_types_signed_integers() {
 		types_signed_integers();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_floating_point_runs() {
+	fn run_types_floating_point() {
 		types_floating_point();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_platform_specific_runs() {
+	fn run_types_platform_specific() {
 		types_platform_specific();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_chars_slices_strings_runs() {
+	fn run_types_chars_slices_strings() {
 		types_chars_slices_strings();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_arrays_runs() {
+	fn run_types_arrays() {
 		types_arrays();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_tuples_runs() {
+	fn run_types_tuples() {
 		types_tuples();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_unit_or_empty_tuple_runs() {
+	fn run_types_unit_or_empty_tuple() {
 		types_unit_or_empty_tuple();
 		assert!(true)
 	}
 
 	#[test]
-	fn types_alias_runs() {
+	fn run_types_alias() {
 		types_alias();
 		assert!(true)
 	}
