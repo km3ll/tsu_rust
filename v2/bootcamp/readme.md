@@ -19,6 +19,7 @@ bootcamp
     - u02 Ownership Part 1
     - u03 Ownership Part 2
     - u04 Borrowing
+    - u05 Slices
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
