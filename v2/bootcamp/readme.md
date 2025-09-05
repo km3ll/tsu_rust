@@ -20,6 +20,7 @@ bootcamp
     - u03 Ownership Part 2
     - u04 Borrowing
     - u05 Slices
+    - u06 Strings
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
