@@ -18,6 +18,7 @@ bootcamp
     - u01 Memory regions
     - u02 Ownership Part 1
     - u03 Ownership Part 2
+    - u04 Borrowing
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
