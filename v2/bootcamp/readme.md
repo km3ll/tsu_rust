@@ -21,6 +21,7 @@ bootcamp
     - u04 Borrowing
     - u05 Slices
     - u06 Strings
+  - c03 Build your own data types
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

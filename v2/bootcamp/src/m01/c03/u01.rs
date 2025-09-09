@@ -1,4 +1,4 @@
-pub fn base_() {
+pub fn structs_() {
 	println!("Base");
 }
 
@@ -8,7 +8,7 @@ mod tests {
 
 	#[test]
 	fn run_() {
-		base_();
+		structs_();
 		assert!(true)
 	}
 }
