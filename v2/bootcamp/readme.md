@@ -10,6 +10,21 @@ bootcamp
     - u02 Hello World
     - u03 Variables
     - u04 Data Types
+    - u05 Constants And Statics
+    - u06 Functions
+    - u07 Flow Control
+    - u08 Comments
+  - c02 How Rust achieves memory safety
+    - u01 Memory regions
+    - u02 Ownership Part 1
+    - u03 Ownership Part 2
+    - u04 Borrowing
+    - u05 Slices
+    - u06 Strings
+  - c03 Build your own data types
+    - u01 Structs
+    - u02 Implementation Blocks
+    - u03 Tupple Structs
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

@@ -37,19 +37,19 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn variable_creation_runs() {
+	fn run_variable_creation() {
 		variable_creation();
 		assert!(true)
 	}
 
 	#[test]
-	fn variable_mutability_runs() {
+	fn run_variable_mutability() {
 		variable_mutability();
 		assert!(true)
 	}
 
 	#[test]
-	fn variable_scope_runs() {
+	fn run_variable_scope() {
 		variable_scope();
 		assert!(true)
 	}

@@ -8,7 +8,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn greet_runs() {
+	fn run_greet() {
 		greet();
 		assert!(true)
 	}

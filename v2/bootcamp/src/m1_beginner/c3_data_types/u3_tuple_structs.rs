@@ -3,7 +3,7 @@ pub fn tuple_structs() {
 	println!("Tuple Structs");
 
 	/**
-	 * Tuples
+	 * pod: Tuples
 	 * - group together data of different types
 	 * - do not define a new type
 	 */

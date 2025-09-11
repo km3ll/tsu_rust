@@ -1,5 +1,5 @@
 pub fn base_() {
-	println!("Base")
+	println!("Base");
 }
 
 #[cfg(test)]
@@ -7,7 +7,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn _runs() {
+	fn run_() {
 		base_();
 		assert!(true)
 	}
