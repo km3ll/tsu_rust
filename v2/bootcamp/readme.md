@@ -27,6 +27,7 @@ bootcamp
     - u03 Tupple Structs
     - u04 Enums
     - u05 Matching
+    - u06 Option
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
