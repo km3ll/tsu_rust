@@ -24,6 +24,7 @@ bootcamp
   - c03 Build your own data types
     - u01 Structs
     - u02 Implementation Blocks
+    - u03 Tupple Structs
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
