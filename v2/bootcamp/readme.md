@@ -29,6 +29,7 @@ bootcamp
     - u05 Matching
     - u06 Option
     - u07 Result
+  - c04 How to structure your projects
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
