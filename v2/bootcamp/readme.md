@@ -28,6 +28,7 @@ bootcamp
     - u04 Enums
     - u05 Matching
     - u06 Option
+    - u07 Result
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

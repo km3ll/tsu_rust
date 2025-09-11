@@ -11,8 +11,8 @@ pub fn option_enum() {
 	/**
 	 * pod: Option is defined and loaded in the prelude
 	 */
-	let rs: Option<String> = find_name(2);
-	match rs {
+	let op: Option<String> = find_name(2);
+	match op {
 		Some(name) => println!("name: {name}"),
 		None => println!("name not found!"),
 	}
@@ -23,13 +23,13 @@ pub fn option_if_let_syntax() {
 	 * pod: Options if-let syntax
 	 * * - works when you only care about one variant
 	 */
-	let rs1 = find_name(1);
-	if let Some(name) = rs1 {
+	let op1 = find_name(1);
+	if let Some(name) = op1 {
 		println!("name: {name}")
 	}
 
-	let rs2 = find_name(2);
-	if let None = rs2 {
+	let op2 = find_name(2);
+	if let None = op2 {
 		println!("name not found!")
 	}
 }
