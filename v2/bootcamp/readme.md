@@ -22,6 +22,8 @@ bootcamp
     - u05 Slices
     - u06 Strings
   - c03 Build your own data types
+    - u01 Structs
+    - u02 Implementation Blocks
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

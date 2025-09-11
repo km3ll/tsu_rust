@@ -4,7 +4,7 @@ pub fn strings_acronyms() {
 	/**
 	 * pod: ASCII. American Standard Code for Information Interchange
 	 * An encoding which maps integers to characters.
- 	 */
+	 */
 	println!("ASCII. American Standard Code for Information Interchange");
 
 	/**
@@ -44,7 +44,6 @@ pub fn strings_utf_8() {
 	println!("replace_range");
 	s6.replace_range(.., "Hello Pod!");
 	println!(" s6: {s6}\n");
-
 }
 
 pub fn strings_slice() {
@@ -102,8 +101,6 @@ pub fn strings_concatenation() {
 	let s18: String = String::from("Hello ");
 	let s19: String = s18 + "there"; // String type must be first
 	println!(" s19: {s19}\n");
-
-
 }
 
 pub fn strings_extracting() {
@@ -156,12 +153,12 @@ pub fn strings_graphemes() {
 
 pub fn strings_and_functions() {
 	fn format_it(p1: &str) -> String {
-		return format!("[{}]", p1)
+		return format!("[{}]", p1);
 	}
-	
+
 	let s1 = "Hello Ferris";
 	let s2 = String::from("Hello 🦀");
-	
+
 	println!("Deref cohersion");
 	let s3: String = format_it(s1);
 	let s4: String = format_it(&s2);
@@ -232,5 +229,4 @@ mod tests {
 		strings_and_functions();
 		assert!(true)
 	}
-
 }
