@@ -29,6 +29,7 @@ bootcamp
     - u05 Matching
     - u06 Option
     - u07 Result
+    - u08 Vector
   - c04 How to structure your projects
 - m02 intermediate
 - m03 advanced
