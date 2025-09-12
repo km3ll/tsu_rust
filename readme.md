@@ -3,6 +3,8 @@
 ## v2
 
 - [bootcamp](v2/bootcamp)
+  - [bootcamp_p01](v2/bootcamp_p01)
+  - [bootcamp_p02](v2/bootcamp_p02)
 - [exploratory](v2/exploratory)
 - [the_book](v2/the_book)
 
