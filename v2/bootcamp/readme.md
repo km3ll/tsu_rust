@@ -37,6 +37,8 @@ bootcamp
       - bootcamp_p02
       - bootcamp_p03
       - bootcamp_p04
+    - u03 External dependencies
+    - u04 Publishing your package
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
