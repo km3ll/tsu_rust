@@ -35,6 +35,8 @@ bootcamp
       - bootcamp_p01
     - u02 Modules 
       - bootcamp_p02
+      - bootcamp_p03
+      - bootcamp_p04
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

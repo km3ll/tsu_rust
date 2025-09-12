@@ -13,9 +13,17 @@ pub fn modules_module() {
 pub fn modules_sub_module() {
 	/**
 	 * pod: Sub-modules
-	 * - Must be declared within the parent module
+	 * - Must be declared within the parent module regardless of if
+	 *   their content is defined inline or in a different file
 	 */
 	println!("sub-module");
+}
+
+pub fn modules_re_exporting() {
+	/**
+	 * pod: Re-Exporting by adding 'pub' before 'use'
+	 */
+	println!("re-exporting");
 }
 
 #[cfg(test)]
@@ -31,6 +39,12 @@ mod tests {
 	#[test]
 	fn run_modules_sub_module() {
 		modules_sub_module();
+		assert!(true)
+	}
+
+	#[test]
+	fn run_modules_re_exporting() {
+		modules_re_exporting();
 		assert!(true)
 	}
 }
