@@ -32,7 +32,7 @@ bootcamp
     - u08 Vector
   - c04 How to structure your projects
     - u01 Project structure overview
-      - bootcamp_p01
+      - p01_basic
     - u02 Modules 
       - bootcamp_p02
       - bootcamp_p03

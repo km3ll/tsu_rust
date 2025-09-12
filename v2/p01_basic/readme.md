@@ -1,8 +1,8 @@
-# bootcamp_p01
+# p01_basic
 
 ## commands
 
 ```
 cargo run --bin another
-cargo run --bin bootcamp_p01
+cargo run --bin p01_basic
 ```

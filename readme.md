@@ -3,7 +3,7 @@
 ## v2
 
 - [bootcamp](v2/bootcamp)
-  - [bootcamp_p01](v2/bootcamp_p01)
+  - [p01 basic project structure](v2/p01_basic)
   - [bootcamp_p02](v2/bootcamp_p02)
   - [bootcamp_p03](v2/bootcamp_p03)
   - [bootcamp_p04](v2/bootcamp_p04)
