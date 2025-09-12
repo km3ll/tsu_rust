@@ -1,11 +1,11 @@
-# bootcamp_p02
+# p03_mod_file
 
 ## commands
 
 ```
 cargo-modules modules structure
 
-crate bootcamp_p02
+crate p03_mod_file
 ├── mod auth_utils: pub(crate)
 │   ├── fn login: pub
 │   ├── fn logout: pub

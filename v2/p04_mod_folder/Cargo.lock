@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "bootcamp_p03"
+name = "p04_mod_folder"
 version = "0.1.0"
