@@ -34,9 +34,9 @@ bootcamp
     - u01 Project structure overview
       - p01_basic
     - u02 Modules 
-      - bootcamp_p02
-      - bootcamp_p03
-      - bootcamp_p04
+      - p02_in_line
+      - p03_mod_file
+      - p04_mod_folder
     - u03 External dependencies
     - u04 Publishing your package
 - m02 intermediate
