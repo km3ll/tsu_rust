@@ -5,6 +5,8 @@
 - [bootcamp](v2/bootcamp)
   - [bootcamp_p01](v2/bootcamp_p01)
   - [bootcamp_p02](v2/bootcamp_p02)
+  - [bootcamp_p03](v2/bootcamp_p03)
+  - [bootcamp_p04](v2/bootcamp_p04)
 - [exploratory](v2/exploratory)
 - [the_book](v2/the_book)
 
