@@ -3,10 +3,12 @@
 ## v2
 
 - [bootcamp](v2/bootcamp)
-  - [p01 basic project structure](v2/p01_basic)
-  - [bootcamp_p02](v2/bootcamp_p02)
-  - [bootcamp_p03](v2/bootcamp_p03)
-  - [bootcamp_p04](v2/bootcamp_p04)
+  - Project structures
+    - [p01_basic_](v2/p01_basic). Library and binary crate
+  - Module definitions
+  - [p02_in_line](v2/p02_in_line). In-line definitions
+  - [p03_mod_file](v2/p03_mod_file). File mod.rs
+  - [p04_mod_folder](v2/p04_mod_folder). Folder name and file
 - [exploratory](v2/exploratory)
 - [the_book](v2/the_book)
 
