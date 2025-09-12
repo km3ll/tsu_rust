@@ -7,30 +7,32 @@ bootcamp
 - m01 beginner
   - c01 Get up and running fast
     - u01 Setup
-    - u02 Hello World
+    - u02 Hello world
     - u03 Variables
-    - u04 Data Types
-    - u05 Constants And Statics
+    - u04 Data types
+    - u05 Constants and statics
     - u06 Functions
-    - u07 Flow Control
+    - u07 Flow control
     - u08 Comments
   - c02 How Rust achieves memory safety
     - u01 Memory regions
-    - u02 Ownership Part 1
-    - u03 Ownership Part 2
+    - u02 Ownership part 1
+    - u03 Ownership part 2
     - u04 Borrowing
     - u05 Slices
     - u06 Strings
   - c03 Build your own data types
     - u01 Structs
-    - u02 Implementation Blocks
-    - u03 Tupple Structs
+    - u02 Implementation blocks
+    - u03 Tupple structs
     - u04 Enums
     - u05 Matching
     - u06 Option
     - u07 Result
     - u08 Vector
   - c04 How to structure your projects
+    - u01 Project structure overview
+      - bootcamp_p01
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
@@ -41,7 +43,7 @@ bootcamp
 
 ```bash
 cargo clean build
-cargo new package_name # binary crate
+cargo new package_name       # binary crate
 cargo new --lib package_name # library crate
 
 # target/debug
