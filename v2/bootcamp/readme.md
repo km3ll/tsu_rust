@@ -33,6 +33,8 @@ bootcamp
   - c04 How to structure your projects
     - u01 Project structure overview
       - bootcamp_p01
+    - u02 Modules 
+      - bootcamp_p02
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
@@ -55,6 +57,9 @@ cargo run --bin another_main
 cargo run --release
 
 # modules
+cargo-modules modules structure
+
+# plugins
 cargo install cargo-modules
 
 docker build .
