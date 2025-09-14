@@ -39,6 +39,7 @@ bootcamp
       - p04_mod_folder
     - u03 External dependencies
     - u04 Publishing your package
+  - c05 Structuring larger projects
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
