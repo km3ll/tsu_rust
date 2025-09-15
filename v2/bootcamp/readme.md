@@ -40,6 +40,7 @@ bootcamp
     - u03 External dependencies
     - u04 Publishing your package
   - c05 Structuring larger projects
+    - u01 Cargo features
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
