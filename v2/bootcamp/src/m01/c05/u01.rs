@@ -34,5 +34,4 @@ mod tests {
 		features_cargo();
 		assert!(true)
 	}
-
 }

@@ -42,6 +42,7 @@ bootcamp
   - c05 Structuring larger projects
     - u01 Cargo features
     - u02 Cargo workspaces
+  - c06 How to test and document your code
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
