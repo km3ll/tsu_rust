@@ -1,0 +1,23 @@
+[package]
+name = "p05_features_lib"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# pod: Cargo features
+# - Dependencias have to be marked as optional
+serde = { version = "1.0", features = ["derive"], optional = true}
+rgb = { version = "0.8.51", features = ["serde"], optional = true}
+
+# pod: Cargo features
+# - Have a name and an associated array with other features or optional dependencies.
+[features]
+# pod: All features are disabled by default. Enabling 'colors' only
+default = ["color"]
+
+# pod: If color is enabled then 'rgb' dependency is also enabled
+color = ["dep:rgb"]
+
+# pod: If 'shapes' is enabled then 'color' feature is also enabled
+# pod: If 'shapes' is enabled then 'serde' feature inside rgb dependency is also enabled
+shapes = ["color", "dep:serde", "rgb?/serde"]

@@ -39,6 +39,13 @@ bootcamp
       - p04_mod_folder
     - u03 External dependencies
     - u04 Publishing your package
+  - c05 Structuring larger projects
+    - u01 Cargo features
+      - p05_features_lib
+      - p06_features_bin
+    - u02 Cargo workspaces
+      - p07_workspace
+  - c06 How to test and document your code
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
@@ -65,6 +72,11 @@ cargo-modules modules structure
 
 # plugins
 cargo install cargo-modules
+
+# workspaces
+cargo build -b blog_api
+cargo build -b blog_web
+cargo build -b blog_shared
 
 docker build .
 ```
