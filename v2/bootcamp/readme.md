@@ -41,6 +41,7 @@ bootcamp
     - u04 Publishing your package
   - c05 Structuring larger projects
     - u01 Cargo features
+    - u02 Cargo workspaces
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
@@ -67,6 +68,11 @@ cargo-modules modules structure
 
 # plugins
 cargo install cargo-modules
+
+# workspaces
+cargo build -b blog_api
+cargo build -b blog_web
+cargo build -b blog_shared
 
 docker build .
 ```

@@ -12,6 +12,8 @@
   - features
     - [p05_features_lib](v2/p05_features_lib). Feature definition
     - [p06_features_bin](v2/p06_features_bin). Feature usage
+  - workspaces
+    - [p07_workspace](v2/p07_workspace)
 - [exploratory](v2/exploratory)
 - [the_book](v2/the_book)
 

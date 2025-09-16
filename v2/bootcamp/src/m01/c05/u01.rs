@@ -19,10 +19,6 @@ pub fn features_cargo() {
 	println!("Cargo.toml");
 }
 
-pub fn features_() {
-	println!("Base");
-}
-
 #[cfg(test)]
 mod tests {
 	use super::*;
@@ -39,9 +35,4 @@ mod tests {
 		assert!(true)
 	}
 
-	#[test]
-	fn run_() {
-		features_();
-		assert!(true)
-	}
 }
