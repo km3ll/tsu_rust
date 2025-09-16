@@ -1,0 +1,8 @@
+[package]
+name = "p06_features_bin"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# pod: Disabling dependencies by default
+p05_features_lib = { path = "../p05_features_lib", default-features = false, features = ["shapes"] }
