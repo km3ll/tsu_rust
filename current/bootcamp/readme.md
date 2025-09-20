@@ -47,6 +47,8 @@ bootcamp
       - p07_workspace
   - c06 How to test and document your code
     - u01 Unit tests
+    - u02 Integration tests
+      - p08_tests
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

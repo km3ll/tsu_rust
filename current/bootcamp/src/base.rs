@@ -9,6 +9,5 @@ mod tests {
 	#[test]
 	fn run_() {
 		base_();
-		assert!(true)
 	}
 }
