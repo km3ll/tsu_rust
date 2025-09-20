@@ -49,6 +49,8 @@ bootcamp
     - u01 Unit tests
     - u02 Integration tests
       - p08_tests
+    - u03 Documentation
+    - u04 Benchmark testing
 - m02 intermediate
 - m03 advanced
 - m04 masterclass
@@ -80,6 +82,10 @@ cargo install cargo-modules
 cargo build -b blog_api
 cargo build -b blog_web
 cargo build -b blog_shared
+
+# documentation
+cargo doc
+cargo doc --open
 
 docker build .
 ```

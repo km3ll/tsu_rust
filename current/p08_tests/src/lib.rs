@@ -3,6 +3,15 @@ pub struct Account {
 }
 
 impl Account {
+    /// Creates an `Account` with balance of zero
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// use p08_tests::Account;
+    /// let account = Account::new();
+    /// assert_eq!(0, account.get_balance())
+    /// ```
     pub fn new() -> Account {
         Account { balance: 0 }
     }
