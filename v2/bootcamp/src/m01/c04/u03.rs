@@ -12,6 +12,5 @@ mod tests {
 	#[test]
 	fn run_dependencies_crates_io() {
 		dependencies_crates_io();
-		assert!(true)
 	}
 }

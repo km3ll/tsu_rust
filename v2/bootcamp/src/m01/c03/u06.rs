@@ -41,12 +41,10 @@ mod tests {
 	#[test]
 	fn run_option_enum() {
 		option_enum();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_option_if_let_syntax() {
 		option_if_let_syntax();
-		assert!(true)
 	}
 }

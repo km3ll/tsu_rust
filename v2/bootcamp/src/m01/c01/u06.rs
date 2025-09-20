@@ -24,12 +24,10 @@ mod tests {
 	#[test]
 	fn run_functions_statement() {
 		functions_statement(11);
-		assert!(true)
 	}
 
 	#[test]
 	fn run_functions_expression() {
 		functions_expression(11);
-		assert!(true)
 	}
 }

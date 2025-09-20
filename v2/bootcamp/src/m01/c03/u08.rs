@@ -115,48 +115,40 @@ mod tests {
 	#[test]
 	fn run_vectors_definition() {
 		vectors_definition();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_vectors_macro() {
 		vectors_macro();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_vectors_index_brackets() {
 		vectors_index_brackets();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_vectors_index_get() {
 		vectors_index_get();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_vectors_remove() {
 		vectors_remove();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_vectors_iterating_mutable() {
 		vectors_iteration_mutable();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_vectors_iteration_immutable() {
 		vectors_iteration_immutable();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_vectors_iteration_consuming() {
 		vectors_iteration_consuming();
-		assert!(true)
 	}
 }

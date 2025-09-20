@@ -26,12 +26,10 @@ mod tests {
 	#[test]
 	fn run_const_constants() {
 		const_constants();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_conts_static() {
 		conts_static();
-		assert!(true)
 	}
 }

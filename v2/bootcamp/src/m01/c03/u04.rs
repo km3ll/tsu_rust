@@ -71,18 +71,15 @@ mod tests {
 	#[test]
 	fn run_enums_instance() {
 		enums_instance();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_enums_variants() {
 		enums_variants();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_enums_implementation_blocks() {
 		enums_implementation_blocks();
-		assert!(true)
 	}
 }

@@ -72,24 +72,20 @@ mod tests {
 	#[test]
 	fn run_structure_package() {
 		structure_package();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_structure_crate() {
 		structure_crate();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_structure_module() {
 		structure_module();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_structure_overview() {
 		structure_overview();
-		assert!(true)
 	}
 }

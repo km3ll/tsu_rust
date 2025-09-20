@@ -26,12 +26,10 @@ mod tests {
 	#[test]
 	fn run_features_definition() {
 		features_definition();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_features_cargo() {
 		features_cargo();
-		assert!(true)
 	}
 }

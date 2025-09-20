@@ -83,12 +83,10 @@ mod tests {
 	#[test]
 	fn run_matching_expression() {
 		matching_expression();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_matching_serialize() {
 		matching_serialize();
-		assert!(true)
 	}
 }

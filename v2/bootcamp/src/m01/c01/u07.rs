@@ -67,42 +67,35 @@ mod tests {
 	#[test]
 	fn run_flow_ifelse() {
 		flow_ifelse();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_flow_ifelse_in_let() {
 		flow_ifelse_in_let();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_flow_loop() {
 		flow_loop();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_flow_labeling_loops() {
 		flow_labeling_loops();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_flow_loop_returning_value() {
 		flow_loop_returning_value();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_flow_while_loop() {
 		flow_while_loop();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_flow_for_loop() {
 		flow_for_loop();
-		assert!(true)
 	}
 }

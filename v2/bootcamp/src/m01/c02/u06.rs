@@ -173,60 +173,50 @@ mod tests {
 	#[test]
 	fn run_strings_acronyms() {
 		strings_acronyms();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_utf_8() {
 		strings_utf_8();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_slice() {
 		strings_slice();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_string() {
 		strings_string();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_concatenation() {
 		strings_concatenation();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_extracting() {
 		strings_extracting();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_different_bytes() {
 		strings_different_bytes();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_iterating() {
 		strings_iterating();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_graphemes() {
 		strings_graphemes();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_strings_and_functions() {
 		strings_and_functions();
-		assert!(true)
 	}
 }

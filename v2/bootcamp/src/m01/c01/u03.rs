@@ -45,12 +45,10 @@ mod tests {
 	#[test]
 	fn run_variable_mutability() {
 		variable_mutability();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_variable_scope() {
 		variable_scope();
-		assert!(true)
 	}
 }

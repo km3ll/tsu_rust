@@ -112,30 +112,25 @@ mod tests {
 	#[test]
 	fn run_impl_blocks_immutable_borrow() {
 		impl_blocks_immutable_borrow();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_impl_blocks_mutable_borrow() {
 		impl_blocks_mutable_borrow();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_impl_blocks_owned_form() {
 		impl_blocks_owned_form();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_impl_blocks_associated_functions() {
 		impl_blocks_associated_functions();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_impl_blocks_constructor_new() {
 		impl_blocks_constructor_new();
-		assert!(true)
 	}
 }

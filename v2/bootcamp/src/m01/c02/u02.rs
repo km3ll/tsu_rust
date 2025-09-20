@@ -73,30 +73,25 @@ mod tests {
 	#[test]
 	fn run_ownership_strategy() {
 		ownership_strategy();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_scope() {
 		ownership_scope();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_moving() {
 		ownership_moving();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_cloning() {
 		ownership_cloning();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_primitive_types() {
 		ownership_primitive_types();
-		assert!(true)
 	}
 }

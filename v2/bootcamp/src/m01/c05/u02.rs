@@ -16,6 +16,5 @@ mod tests {
 	#[test]
 	fn run_workspace_virtual_manifest() {
 		workspace_virtual_manifest();
-		assert!(true)
 	}
 }

@@ -85,36 +85,30 @@ mod tests {
 	#[test]
 	fn run_slices_range_syntax() {
 		slices_range_syntax();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_slices_string_types() {
 		slices_string_types();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_slices_string_literal() {
 		slices_string_literal();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_slices_string_slice_and_functions() {
 		slices_string_slice_and_functions();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_slices_dref_cohersion() {
 		slices_dref_cohersion();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_slices_vector_slices() {
 		slices_vector_slices();
-		assert!(true)
 	}
 }

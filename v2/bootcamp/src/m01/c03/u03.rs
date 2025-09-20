@@ -44,18 +44,15 @@ mod tests {
 	#[test]
 	fn run_tuple_structs_tuples() {
 		tuple_structs_tuples();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_tuple_structs_definition() {
 		tuple_structs_definition();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_tuple_structs_unit_like() {
 		tuple_structs_unit_like();
-		assert!(true)
 	}
 }

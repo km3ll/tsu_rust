@@ -18,6 +18,5 @@ mod tests {
 	#[test]
 	fn run_publishing_crates_io() {
 		publishing_crates_io();
-		assert!(true)
 	}
 }

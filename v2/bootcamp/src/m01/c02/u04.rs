@@ -75,24 +75,20 @@ mod tests {
 	#[test]
 	fn run_borrowing_definition() {
 		borrowing_definition();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_borrowing_immutable_reference() {
 		borrowing_immutable_reference();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_borrowing_mutable_reference() {
 		borrowing_mutable_reference();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_borrowing_dangling_reference() {
 		borrowing_dangling_reference();
-		assert!(true)
 	}
 }

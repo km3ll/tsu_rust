@@ -10,6 +10,5 @@ mod tests {
 	#[test]
 	fn run_greet() {
 		greet();
-		assert!(true)
 	}
 }

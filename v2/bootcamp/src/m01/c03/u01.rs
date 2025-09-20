@@ -49,18 +49,15 @@ mod tests {
 	#[test]
 	fn run_structs_instance() {
 		structs_instance();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_structs_mutable() {
 		structs_mutable();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_structs_function() {
 		structs_function();
-		assert!(true)
 	}
 }

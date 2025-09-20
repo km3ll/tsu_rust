@@ -37,12 +37,10 @@ mod tests {
 	#[test]
 	fn run_result_enum() {
 		result_enum();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_result_to_option() {
 		result_to_option();
-		assert!(true)
 	}
 }

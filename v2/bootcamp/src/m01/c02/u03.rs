@@ -80,30 +80,25 @@ mod tests {
 	#[test]
 	fn run_ownership_pass_into_function() {
 		ownership_pass_into_function();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_clone_into_function() {
 		ownership_clone_into_function();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_out_of_function() {
 		ownership_out_of_function();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_in_and_out_functions() {
 		ownership_in_and_out_functions();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_ownership_stack_datatypes() {
 		ownership_stack_datatypes();
-		assert!(true)
 	}
 }

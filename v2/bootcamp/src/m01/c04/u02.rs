@@ -33,18 +33,15 @@ mod tests {
 	#[test]
 	fn run_modules_module() {
 		modules_module();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_modules_sub_module() {
 		modules_sub_module();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_modules_re_exporting() {
 		modules_re_exporting();
-		assert!(true)
 	}
 }

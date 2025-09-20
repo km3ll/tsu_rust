@@ -46,6 +46,7 @@ bootcamp
     - u02 Cargo workspaces
       - p07_workspace
   - c06 How to test and document your code
+    - u01 Unit tests
 - m02 intermediate
 - m03 advanced
 - m04 masterclass

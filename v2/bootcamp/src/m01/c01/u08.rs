@@ -17,12 +17,10 @@ mod tests {
 	#[test]
 	fn run_comments_line() {
 		comments_line();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_comments_block() {
 		comments_block();
-		assert!(true)
 	}
 }

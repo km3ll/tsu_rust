@@ -107,60 +107,50 @@ mod tests {
 	#[test]
 	fn run_types_boolean() {
 		types_boolean();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_unsigned_integers() {
 		types_unsigned_integers();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_signed_integers() {
 		types_signed_integers();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_floating_point() {
 		types_floating_point();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_platform_specific() {
 		types_platform_specific();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_chars_slices_strings() {
 		types_chars_slices_strings();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_arrays() {
 		types_arrays();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_tuples() {
 		types_tuples();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_unit_or_empty_tuple() {
 		types_unit_or_empty_tuple();
-		assert!(true)
 	}
 
 	#[test]
 	fn run_types_alias() {
 		types_alias();
-		assert!(true)
 	}
 }
