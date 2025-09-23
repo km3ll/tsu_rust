@@ -1,27 +1,31 @@
 # tsu_rust
 
-## v2
+## current
 
-- [bootcamp](v2/bootcamp)
+- [bootcamp](current/bootcamp)
   - projects
-    - [p01_basic](v2/p01_basic). Library and binary crate
+    - [p01_basic](current/p01_basic). Library and binary crate
   - modules
-    - [p02_in_line](v2/p02_in_line). In-line definitions
-    - [p03_mod_file](v2/p03_mod_file). File mod.rs
-    - [p04_mod_folder](v2/p04_mod_folder). Folder name and file
+    - [p02_in_line](current/p02_in_line). In-line definitions
+    - [p03_mod_file](current/p03_mod_file). File mod.rs
+    - [p04_mod_folder](current/p04_mod_folder). Folder name and file
   - features
-    - [p05_features_lib](v2/p05_features_lib). Feature definition
-    - [p06_features_bin](v2/p06_features_bin). Feature usage
+    - [p05_features_lib](current/p05_features_lib). Feature definition
+    - [p06_features_bin](current/p06_features_bin). Feature usage
   - workspaces
-    - [p07_workspace](v2/p07_workspace)
-- [exploratory](v2/exploratory)
-- [the_book](v2/the_book)
+    - [p07_workspace](current/p07_workspace)
+  - tests
+    - [p08_tests](current/08_tests)
+  - benchmark
+    - [p09_benchmark](current/p09_benchmark)
+- [exploratory](current/exploratory)
+- [the_book](current/the_book)
 
-## v1
+## backup
 
-- [app_base](v1/app_base)
-- [book_design_patterns](v1/book_design_patterns)
-- [book_rust_lang](v1/book_rust_lang)
-- [lgr_accelerator](v1/lgr_accelerator)
-- [lgr_bootcamp](v1/lgr_bootcamp)
-- [workflows-github](v1/workflows-github)
+- [app_base](backup/app_base)
+- [book_design_patterns](backup/book_design_patterns)
+- [book_rust_lang](backup/book_rust_lang)
+- [lgr_accelerator](backup/lgr_accelerator)
+- [lgr_bootcamp](backup/lgr_bootcamp)
+- [workflows-github](backup/workflows-github)

@@ -1,0 +1,17 @@
+[package]
+name = "p09_benchmark"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[dev-dependencies]
+# pod: Criterion
+# - Library to benchmark code
+criterion = { version = "0.3"}
+
+# pod: benchmark target
+[[bench]]
+name = "sorting_benchmark"
+# pod: Disable Rust default benchmarking system
+harness = false
