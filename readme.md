@@ -16,6 +16,8 @@
     - [p07_workspace](current/p07_workspace)
   - tests
     - [p08_tests](current/08_tests)
+  - benchmark
+    - [p09_benchmark](current/p09_benchmark)
 - [exploratory](current/exploratory)
 - [the_book](current/the_book)
 

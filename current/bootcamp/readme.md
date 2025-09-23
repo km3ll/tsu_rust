@@ -51,7 +51,10 @@ bootcamp
       - p08_tests
     - u03 Documentation
     - u04 Benchmark testing
+      - p09_benchmark
 - m02 intermediate
+  - c01 Polymorphism with generics and traits
+    - u01 Generics
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
@@ -87,5 +90,38 @@ cargo build -b blog_shared
 cargo doc
 cargo doc --open
 
+# benchmarks
+cargo bench
+
 docker build .
+```
+
+## benchmarks
+
+```
+# bubble_sort
+
+Sorting algorithm       time:   [2.7247 ns 2.7290 ns 2.7372ns]                               
+Found 13 outliers among 100 measurements (13.00%)
+  5 (5.00%) high mild
+  8 (8.00%) high severe
+
+# bubble_sort
+
+Sorting algorithm       time:   [2.7353 ns 2.7390 ns 2.7428 ns]                               
+                        change: [-0.1197% +0.1971% +0.4848%] (p = 0.22 > 0.05)
+                        No change in performance detected.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) high mild
+  2 (2.00%) high severe
+
+# selection_sort
+
+Sorting algorithm       time:   [8.5274 ns 8.5505 ns 8.5719 ns]                               
+                        change: [+210.36% +211.47% +212.65%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
 ```
