@@ -8,3 +8,6 @@
  * - TODO Tree
  * - GitHub Copilot
  */
+fn setup() {
+	println!("setup")
+}
