@@ -55,6 +55,7 @@ bootcamp
 - m02 intermediate
   - c01 Polymorphism with generics and traits
     - u01 Generics
+    - u02 Traits
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp

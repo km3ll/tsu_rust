@@ -1,5 +1,2 @@
-/// 1. Cargo features
-pub mod u01;
-
-/// 2. Cargo workspaces
-pub mod u02;
+pub mod u01_cargo_features;
+pub mod u02_cargo_workspaces;
