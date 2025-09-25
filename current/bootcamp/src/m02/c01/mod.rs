@@ -1,2 +1,2 @@
-/// 1. Generics
-pub mod u01;
+pub mod u01_generics;
+pub mod u02_traits;

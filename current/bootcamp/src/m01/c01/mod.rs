@@ -1,23 +1,8 @@
-/// 1. Setup
-pub mod u01;
-
-/// 2. Hello world
-pub mod u02;
-
-/// 3. Variables
-pub mod u03;
-
-/// 4. Data types
-pub mod u04;
-
-/// 5. Constants and statics
-pub mod u05;
-
-/// 6. Functions
-pub mod u06;
-
-/// 7. Flow control
-pub mod u07;
-
-/// 8. Comments
-pub mod u08;
+pub mod u01_setup;
+pub mod u02_hello_world;
+pub mod u03_variables;
+pub mod u04_data_types;
+pub mod u05_constants_and_statics;
+pub mod u06_functions;
+pub mod u07_flow_control;
+pub mod u08_comments;

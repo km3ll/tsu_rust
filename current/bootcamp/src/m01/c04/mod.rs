@@ -1,11 +1,4 @@
-/// 1. Project structure overview
-pub mod u01;
-
-/// 2. Modules
-pub mod u02;
-
-/// 3. External dependencies
-pub mod u03;
-
-/// 4. Publishing your package
-pub mod u04;
+pub mod u01_project_structure;
+pub mod u02_modules;
+pub mod u03_dependencies;
+pub mod u04_publishing_package;
