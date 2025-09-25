@@ -4,20 +4,20 @@
 
 - [bootcamp](current/bootcamp)
   - projects
-    - [p01_basic](current/p01_basic). Library and binary crate
+    - [p01_basic](current/p01_basic) - library and binary crate
   - modules
-    - [p02_in_line](current/p02_in_line). In-line definitions
-    - [p03_mod_file](current/p03_mod_file). File mod.rs
-    - [p04_mod_folder](current/p04_mod_folder). Folder name and file
+    - [p02_in_line](current/p02_in_line) - in-line definitions
+    - [p03_mod_file](current/p03_mod_file) - file mod.rs
+    - [p04_mod_folder](current/p04_mod_folder) - folder name and file
   - features
-    - [p05_features_lib](current/p05_features_lib). Feature definition
-    - [p06_features_bin](current/p06_features_bin). Feature usage
+    - [p05_features_lib](current/p05_features_lib) - feature definition
+    - [p06_features_bin](current/p06_features_bin) - feature usage
   - workspaces
     - [p07_workspace](current/p07_workspace)
   - tests
-    - [p08_tests](current/08_tests)
+    - [p08_tests](current/p08_tests) - integration tests
   - benchmark
-    - [p09_benchmark](current/p09_benchmark)
+    - [p09_benchmark](current/p09_benchmark) - benchmark tests
 - [exploratory](current/exploratory)
 - [the_book](current/the_book)
 
