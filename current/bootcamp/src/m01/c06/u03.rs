@@ -55,4 +55,3 @@ mod tests {
 	#[test]
 	fn documentation_() {}
 }
-	
