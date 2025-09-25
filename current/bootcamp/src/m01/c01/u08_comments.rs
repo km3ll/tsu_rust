@@ -1,11 +1,13 @@
 pub fn comments_line() {
-	// line comments
+	/**
+	 * pod: Line comments
+	 */
 	println!("Line comments")
 }
 
 pub fn comments_block() {
 	/**
-	 * block comments
+	 * pod: Block comments
 	 */
 	println!("Block comments")
 }

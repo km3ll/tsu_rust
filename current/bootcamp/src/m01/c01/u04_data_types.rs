@@ -1,5 +1,6 @@
 /**
- * pod: Scalar data types store a single value
+ * pod: Scalar data types
+ * - store a single value
  */
 
 pub fn types_boolean() {
@@ -10,7 +11,9 @@ pub fn types_boolean() {
 }
 
 pub fn types_unsigned_integers() {
-	// pod: Unsigned integers must be positive
+	/**
+	 * pod: Unsigned integers must be positive
+	 */
 	let ui1: u8 = 8;
 	let ui2: u16 = 16;
 	let ui3: u32 = 32;
@@ -24,7 +27,9 @@ pub fn types_unsigned_integers() {
 }
 
 pub fn types_signed_integers() {
-	// pod: Signed integers could be positive or negative
+	/**
+	 * pod: Signed integers could be positive or negative
+	 */
 	let si1: i8 = -8;
 	let si2: i16 = 16;
 	let si3: i32 = -32;
@@ -52,9 +57,13 @@ pub fn types_platform_specific() {
 }
 
 pub fn types_chars_slices_strings() {
-	// pod: Single character is represented as char
+	/**
+	 * pod: Single character is represented as char
+	 */
 	let c1: char = 'c';
-	// pod: All string literals as slices
+	/**
+	 * pod: All string literals as slices
+	 */
 	let s2: &str = "Hello";
 	let s3: String = String::from("Hello");
 	println!("c1: {c1}");
@@ -63,9 +72,9 @@ pub fn types_chars_slices_strings() {
 }
 
 /**
- * pod: Compound data types store multiple values
+ * pod: Compound data types 
+ * - store multiple values
  */
-
 pub fn types_arrays() {
 	let arr1: [i32; 5] = [1, 2, 3, 4, 5];
 	let e0: i32 = arr1[0];
@@ -81,7 +90,9 @@ pub fn types_tuples() {
 	println!("tup1_0: {}", tup1.0);
 	println!("tup1_1: {}", tup1.1);
 	println!("tup1_2: {}", tup1.2);
-	// pod: Destructuring a tuple
+	/**
+	 * pod: Destructuring a tuple
+	 */
 	let (te1, te2, te3) = tup1;
 	println!("te1: {te1}");
 	println!("te2: {te2}");
@@ -94,7 +105,9 @@ pub fn types_unit_or_empty_tuple() {
 }
 
 pub fn types_alias() {
-	// pod: Type alias is a new name for an existing type
+	/**
+	 * pod: Type alias is a new name for an existing type
+	 */
 	type Age = u8;
 	let a1: Age = 40;
 	println!("a1: {a1}");

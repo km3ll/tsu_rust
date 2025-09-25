@@ -10,7 +10,10 @@ pub fn flow_ifelse() {
 }
 
 pub fn flow_ifelse_in_let() {
-	// pod: if-else expressions can be used in let statements
+	/**
+	 * pod: if-else expressions
+	 * - can be used in let statements
+	 */
 	let a: i8 = 25;
 	let b: i8 = if a > 18 { 1 } else { -1 };
 	println!("b: {b}");
@@ -18,7 +21,10 @@ pub fn flow_ifelse_in_let() {
 
 pub fn flow_loop() {
 	loop {
-		// pod: the 'break' statement exits a loop
+		/**
+		 * pod: 'break' statement 
+		 * - exits a loop
+		 */
 		println!("loops forever");
 		break;
 	}
@@ -26,7 +32,8 @@ pub fn flow_loop() {
 
 pub fn flow_labeling_loops() {
 	/***
-	 * pod: when labeling loops, their name must start with a tick (')
+	 * pod: Labeling loops
+	 * - The name must start with a tick (')
 	 */
 	'outer: loop {
 		println!("outer loop");
