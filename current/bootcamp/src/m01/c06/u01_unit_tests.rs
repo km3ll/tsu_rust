@@ -13,7 +13,9 @@ impl Account {
 		self.balance
 	}
 
-	// pod: panic! macro
+	/**
+	 * pod: panic! macro
+	 */
 	pub fn deposit(&mut self, amount: i32) {
 		if amount < 0 {
 			panic!("Cannot deposit a negative amount!")
@@ -51,8 +53,10 @@ fn run_stand_alone() {
  */
 #[cfg(test)]
 mod tests {
-
-	// pod: Import items from parent module
+	/**
+	 * pod: use super::*;
+	 * - Import items from parent module
+	 */
 	use super::*;
 
 	#[test]
@@ -74,14 +78,15 @@ mod tests {
 		let mut account = Account::new();
 		account.deposit(100);
 
-		// pod: assert_eq! macro
+		/**
+		 * pod: Assert macros
+		 * - assert
+		 * - assert_eq!
+		 * - assert_ne!
+		 * - custom failure message
+		 */
 		assert_eq!(100, account.get_balance());
-
-		// pod: assert_ne! macro
 		assert_ne!(0, account.get_balance());
-
-		// pod: custom failure message
-		// pod: assert_ne! macro
 		assert_ne!(0, account.get_balance(), "Balance should not be Zero");
 	}
 
@@ -94,14 +99,12 @@ mod tests {
 		 * pod: Error variant
 		 * - Question mark operator (?) propagates errors
 		 */
-		// pod: Error variant
 		account.transfer(123456, 50)?;
 
 		/**
 		 * pod: Ok variant
 		 * - Instead of using assert macros we return the Ok()
 		 */
-		// pod:
 		Ok(())
 	}
 

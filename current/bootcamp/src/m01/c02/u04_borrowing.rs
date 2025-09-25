@@ -5,11 +5,11 @@ pub fn borrowing_definition() {
 	 * - References are pointers with rules/restrictions
 	 * - References do not take ownership
 	 *
-	 * pod: Why borrow?
+	 * Why borrow?
 	 * - Performance
 	 * - When ownership is not needed/desired
 	 *
-	 * pod: Rules
+	 * Rules
 	 * - At any given time, you can have either one mutable reference
 	 *   or any number of immutable references
 	 * - References must always be valid
@@ -56,15 +56,16 @@ pub fn borrowing_mutable_reference() {
 }
 
 pub fn borrowing_dangling_reference() {
-	/*
-	pod: Dangling reference
-	fn generate_string() -> &String {
-		let s: String = String::from("Ferris");
-		&s //dangling reference
-	} // s is dropped
-	*/
-
-	// let s3 = generate_string();
+	/**
+	 * pod: Dangling reference
+	 *
+	 * fn generate_string() -> &String {
+	 *   let s: String = String::from("Ferris");
+	 *   &s //dangling reference
+	 * } // s is dropped
+	 *
+	 * let s3 = generate_string();
+	 */
 	println!("Dangling reference")
 }
 

@@ -31,7 +31,7 @@ pub fn flow_loop() {
 }
 
 pub fn flow_labeling_loops() {
-	/***
+	/**
 	 * pod: Labeling loops
 	 * - The name must start with a tick (')
 	 */

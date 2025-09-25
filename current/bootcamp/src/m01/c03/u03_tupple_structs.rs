@@ -31,8 +31,7 @@ pub fn tuple_structs_definition() {
 
 pub fn tuple_structs_unit_like() {
 	/**
-	 * pod: Unit-like Structs
-	 * - don't have any fields
+	 * pod: Unit-like Structs don't have any fields
 	 */
 	println!("unit-like: {:?}", MyStruct);
 }

@@ -1,5 +1,7 @@
 pub fn greet() {
-	// pod: println! is a macro
+	/**
+	 * pod: println! is a macro
+	 */
 	println!("Hello, pod!");
 }
 

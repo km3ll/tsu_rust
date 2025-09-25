@@ -36,8 +36,8 @@ pub fn vectors_index_brackets() {
 }
 
 pub fn vectors_index_get() {
-	/***
-	 * Index using the 'get' method
+	/**
+	 * pod: Index a vector using the 'get' method
 	 * - Does not panic, because it returns an option instead
 	 */
 	let v1: Vec<i32> = vec![1, 2, 3, 4, 5];
@@ -51,7 +51,7 @@ pub fn vectors_index_get() {
 }
 
 pub fn vectors_remove() {
-	/***
+	/**
 	 * pod: Removing elements with 'remove' method
 	 * - Removes an element at a given index
 	 * - Shifts all the elements after it to the left

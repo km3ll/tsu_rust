@@ -1,5 +1,6 @@
 /**
- * pod: Structs allow to group related data together
+ * pod: Structs
+ * - Allow to group related data together
  */
 #[derive(Debug)]
 struct Product {

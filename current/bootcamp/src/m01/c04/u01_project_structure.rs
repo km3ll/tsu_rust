@@ -46,7 +46,9 @@ pub fn structure_overview() {
 	 * - Convention: if a main.rs file exists in the source directory,
 	 *   then it will be the crate root of a binary crate with the same
 	 *   name as the package.
-	 *
+	 */
+	 
+	/** 
 	 * pod: Library Crate
 	 * - Convention: if a bin.rs file exists in the source directory,
 	 *   then it will be the crate root of a library crate.

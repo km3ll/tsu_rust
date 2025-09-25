@@ -19,12 +19,6 @@ pub fn slices_string_types() {
 	/**
 	 * pod: String
 	 * - Growable, heap allocated string (UTF-8 encoded)
-	 *
-	 * pod: String slice '&str'
-	 * - Immutable sequence of UTF-8 bytes somewhere in memory
-	 *   (stack, heap, or static memory)
-	 * - Handle behind a reference (&str) because length of
-	 *   sequence is unknown at compile time.
 	 */
 	let tweet: String = String::from("This is my tweet and it's very long.");
 	let t1: &str = &tweet[..20];
@@ -33,9 +27,13 @@ pub fn slices_string_types() {
 }
 
 pub fn slices_string_literal() {
-	/**
-	 * pod: String literals
-	 * - all string literals are string slices
+	/** 
+	 * pod: String slice '&str'
+	 * - Immutable sequence of UTF-8 bytes somewhere in memory
+	 *   (stack, heap, or static memory)
+	 * - Handle behind a reference (&str) because length of
+	 *   sequence is unknown at compile time.
+	 * - All string literals are string slices
 	 */
 	let s4: &str = "Ferris the crab";
 	println!("s4: {s4}");
@@ -60,7 +58,7 @@ pub fn slices_dref_cohersion() {
 	}
 
 	/**
-	 * pod: Dref Coercion
+	 * pod: DRef Coercion
 	 * - Parameter type '&str' works for both: reference to string and string slice
 	 */
 	let tweet: String = String::from("This is my tweet and it's very long.");
@@ -73,7 +71,9 @@ pub fn slices_dref_cohersion() {
 pub fn slices_vector_slices() {
 	let v1: [i32; 6] = [1, 2, 3, 4, 5, 6];
 	let v2: &[i32] = &v1[..3];
-	// pod: {:?} syntax for debug formatting
+	/**
+	 * pod: {:?} syntax for debug formatting
+	 */
 	println!("{:?}", v1);
 	println!("{:?}", v2);
 }

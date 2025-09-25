@@ -44,8 +44,11 @@ pub fn ownership_out_of_function() {
 
 pub fn ownership_in_and_out_functions() {
 	fn add_to_string(mut p1: String) -> String {
-		// pod: use method 'push_str' to append to a String
-		// p1.push_str(" is awesome!"); error: cannot borrow 'p1' as mutable
+		/**
+		 * pod: 'push_str' method
+		 * - Appends to a String
+		 * - p1.push_str(" is awesome!"); error: cannot borrow 'p1' as mutable
+		 */
 		p1.push_str(" is awesome!");
 		p1
 	}

@@ -12,6 +12,7 @@ pub fn ownership_strategy() {
 
 pub fn ownership_scope() {
 	/**
+	 * pod: Ownership scope
 	 * s1: stack frame (pointer) to the value in the heap
 	 * pod: actual string allocated on the heap
 	 *

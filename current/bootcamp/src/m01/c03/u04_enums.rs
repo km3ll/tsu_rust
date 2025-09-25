@@ -1,7 +1,10 @@
 use serde::Serialize;
 
 /**
- * pod: Enums allow to define a type enumerating its variance
+ * pod: Enums
+ * - Allow to define a type enumerating its variance
+ * - Variants can have data associated with them
+ * - Support methods and associated functions
  */
 #[derive(Debug)]
 enum Category {
@@ -16,9 +19,6 @@ struct Product {
 	category: Category,
 }
 
-/**
- * pod: Enum variants can have data associated with them
- */
 #[derive(Debug, Serialize)]
 enum Command {
 	Undo,
@@ -27,9 +27,6 @@ enum Command {
 	Replace { from: String, to: String },
 }
 
-/**
- * pod: Enums support methods and associated functions
- */
 impl Command {
 	fn serialize(&self) -> String {
 		serde_json::to_string(self).unwrap()

@@ -2,14 +2,15 @@ use unicode_segmentation::UnicodeSegmentation;
 
 pub fn strings_acronyms() {
 	/**
-	 * pod: ASCII. American Standard Code for Information Interchange
-	 * An encoding which maps integers to characters.
+	 * pod: ASCII.
+	 * - American Standard Code for Information Interchange
+	 * - An encoding which maps integers to characters.
 	 */
 	println!("ASCII. American Standard Code for Information Interchange");
 
 	/**
 	 * pod: UTF-8. Unicode Transformation Format
-	 * (8 bits = 1 byte)  
+	 * - (8 bits = 1 byte)  
 	 */
 	println!("UTF-8. Unicode Transformation Format");
 }
@@ -117,7 +118,7 @@ pub fn strings_extracting() {
 
 pub fn strings_different_bytes() {
 	/**
-	 * pod: Different byte lenght
+	 * pod: Different byte length
 	 * - 🦀 is 8-byte long
 	 * - Letters 'the' are 1-byte long
 	 */
