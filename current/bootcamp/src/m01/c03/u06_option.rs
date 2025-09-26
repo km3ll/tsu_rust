@@ -9,7 +9,7 @@ fn find_name(id: u32) -> Option<String> {
 
 pub fn option_enum() {
 	/**
-	 * pod: Option 
+	 * pod: Option
 	 * - Defined and loaded in the prelude
 	 */
 	let op: Option<String> = find_name(2);

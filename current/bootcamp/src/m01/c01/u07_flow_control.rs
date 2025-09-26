@@ -22,7 +22,7 @@ pub fn flow_ifelse_in_let() {
 pub fn flow_loop() {
 	loop {
 		/**
-		 * pod: 'break' statement 
+		 * pod: 'break' statement
 		 * - exits a loop
 		 */
 		println!("loops forever");

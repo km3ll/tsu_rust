@@ -72,7 +72,7 @@ pub fn types_chars_slices_strings() {
 }
 
 /**
- * pod: Compound data types 
+ * pod: Compound data types
  * - store multiple values
  */
 pub fn types_arrays() {

@@ -58,7 +58,7 @@ pub fn matching_expression() {
 		13..19 => println!("You're a teenager!"),
 		// With binding value
 		x => println!("You are {x} years old!"), // Catch-all pattern (no binding value)
-		// _ => println!("Other age")
+		                                         // _ => println!("Other age")
 	}
 }
 

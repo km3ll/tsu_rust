@@ -20,7 +20,7 @@ fn find_name(query: String) -> Option<String> {
 
 pub fn result_enum() {
 	/**
-	 * pod: Result 
+	 * pod: Result
 	 * - Defined and loaded in the prelude
 	 */
 	let rs1 = run(String::from(""));

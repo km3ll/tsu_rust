@@ -27,7 +27,7 @@ pub fn slices_string_types() {
 }
 
 pub fn slices_string_literal() {
-	/** 
+	/**
 	 * pod: String slice '&str'
 	 * - Immutable sequence of UTF-8 bytes somewhere in memory
 	 *   (stack, heap, or static memory)
