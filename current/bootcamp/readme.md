@@ -59,6 +59,8 @@ bootcamp
     - u03 Trait bounds
     - u04 Super traits
     - u05 Trait objects
+    - u06 Deriving traits
+    - u07 The orphan rule
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
