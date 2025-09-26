@@ -58,6 +58,7 @@ bootcamp
     - u02 Traits
     - u03 Trait bounds
     - u04 Super traits
+    - u05 Trait objects
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
