@@ -1,0 +1,68 @@
+pub fn variable_creation() {
+	/**
+	 * pod: Immutability
+	 * - Variables are immutable by default
+	 */
+	let a1: i16 = 5;
+	let a2: f32 = 5.0;
+	println!("a1: {a1}");
+	println!("a2: {a2}");
+}
+
+pub fn variable_mutability() {
+	/**
+	 * pod: Mutability
+	 * - Add 'mut' keyword after 'let', you modify a single variable
+	 */
+	let mut m1: i16 = 4;
+	println!("m1: {m1}");
+	m1 = 6;
+	println!("m1: {m1}");
+}
+
+pub fn variable_shadowing() {
+	/**
+	 * pod: Shadowing
+	 * - You create two separate variables
+	 */
+	let s1: i32 = 10;
+	let s1: i32 = 20;
+	println!("s1: {s1}");
+}
+
+pub fn variable_scope() {
+	/**
+	 * pod: Outer scope
+	 */
+	let d1: i16 = 40;
+	/**
+	 * pod: Inner Scope
+	 * - This varible lives within the scope of brackets {}
+	 */
+	{
+		let d1: i16 = 30;
+		println!("inner d1: {d1}");
+	}
+	println!("outer d1: {d1}");
+}
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+
+	#[test]
+	fn run_variable_creation() {
+		variable_creation();
+		assert!(true)
+	}
+
+	#[test]
+	fn run_variable_mutability() {
+		variable_mutability();
+	}
+
+	#[test]
+	fn run_variable_scope() {
+		variable_scope();
+	}
+}
