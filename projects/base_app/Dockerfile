@@ -14,4 +14,4 @@ RUN cargo build --release
 COPY ./src ./src
 RUN cargo build --release
 
-CMD ./target/release/app_base
+CMD ./target/release/base_app

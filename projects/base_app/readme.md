@@ -1,4 +1,11 @@
-# app_base
+# base_app
+
+## features
+
+- config file
+- serde
+- serde_json
+- serde-xml-rs
 
 ## commands
 
