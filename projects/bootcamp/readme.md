@@ -63,6 +63,7 @@ bootcamp
     - u07 The orphan rule
   - c02 Advanced memory management
     - u01 Concrete lifetimes
+    - u02 Generic lifetimes
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
