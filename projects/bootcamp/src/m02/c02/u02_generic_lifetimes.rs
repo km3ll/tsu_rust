@@ -79,7 +79,7 @@ fn first_turn_one_lifetime<'a>(p1: &'a str, p2: &str) -> &'a str {
 /**
  * pod: Static lifetime
  * - A lifetime that lasts for the entire duration of the program
- * - One example are strins slices
+ * - One example are string slices
  * - They live in the program's binary
  * - The lifetime must be at least as long as p1 or p2
  */
