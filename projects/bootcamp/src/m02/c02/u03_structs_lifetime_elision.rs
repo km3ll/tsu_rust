@@ -1,6 +1,3 @@
-use core::str;
-use std::mem::take;
-
 #[derive(Debug)]
 struct TweetV1 {
 	content: String,
