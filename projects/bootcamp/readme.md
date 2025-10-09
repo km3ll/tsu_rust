@@ -63,6 +63,10 @@ bootcamp
     - u07 The orphan rule
   - c02 Advanced memory management
     - u01 Concrete lifetimes
+    - u02 Generic lifetimes
+    - u03 Structs and lifetime elision
+    - u04 Box smart pointer
+    - u05 Rc smart pointer
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
