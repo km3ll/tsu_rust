@@ -7,6 +7,7 @@ struct Database {}
  * RC Reference Counting Smart Pointer
  * - Not included in the prelude
  * - Can only be used in single-threaded applications
+ * - Only allows immutable shared ownership of a value
  */
 struct AuthService {
 	db: Rc<Database>,
