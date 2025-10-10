@@ -68,6 +68,9 @@ bootcamp
     - u04 Box smart pointer
     - u05 Rc smart pointer
     - u06 RefCell smart pointer
+  - c03 Understanding error handling
+    - u01 Unrecoverable errors
+    - u02 Recoverable errors
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp

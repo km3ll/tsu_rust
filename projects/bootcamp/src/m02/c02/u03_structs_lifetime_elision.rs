@@ -1,4 +1,3 @@
-#![allow(mismatched_lifetime_syntaxes)]
 /**
  * pod: allow
  * - locally: #[allow(mismatched_lifetime_syntaxes)]
