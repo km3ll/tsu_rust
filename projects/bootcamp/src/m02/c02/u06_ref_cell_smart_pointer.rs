@@ -45,6 +45,18 @@ fn ref_cell_smart_pointer_valid() {
 	println!("max connections: {}", db.borrow().max_connections)
 }
 
+fn ref_cell_smart_pointer_panic() {
+	let db: Rc<RefCell<Database>> = Rc::new(RefCell::new(Database {
+		max_connections: 100,
+	}));
+	let auth_service = AuthService { db: Rc::clone(&db) };
+	let content_service = AuthService { db: Rc::clone(&db) };
+
+	// let mut r1 = db.borrow_mut();
+	// let mut r2 = db.borrow_mut();
+	println!("error: thread 'main' panicked at 'already borrowed: BorrowMutError'");
+}
+
 #[cfg(test)]
 mod tests {
 	use super::*;
@@ -57,5 +69,10 @@ mod tests {
 	#[test]
 	fn run_ref_cell_smart_pointer_valid() {
 		ref_cell_smart_pointer_valid();
+	}
+
+	#[test]
+	fn run_ref_cell_smart_pointer_panic() {
+		ref_cell_smart_pointer_panic();
 	}
 }
