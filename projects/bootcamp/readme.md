@@ -67,6 +67,7 @@ bootcamp
     - u03 Structs and lifetime elision
     - u04 Box smart pointer
     - u05 Rc smart pointer
+    - u06 RefCell smart pointer
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
