@@ -73,6 +73,7 @@ bootcamp
     - u02 Recoverable errors
     - u03 Propagating errors
     - u04 Result and Option
+    - u05 Multiple error types
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
