@@ -76,6 +76,7 @@ bootcamp
     - u05 Multiple error types
   - c04 Advanced error handling
     - u01 Overview of error handling
+    - u02 Basic error handling
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
