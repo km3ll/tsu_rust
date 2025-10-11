@@ -71,6 +71,7 @@ bootcamp
   - c03 Understanding error handling
     - u01 Unrecoverable errors
     - u02 Recoverable errors
+    - u03 Propagating errors
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
