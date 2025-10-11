@@ -1,3 +1,9 @@
+/**
+ * pod: allow
+ * - locally: #[allow(mismatched_lifetime_syntaxes)]
+ * - globally at crate level: #![allow(mismatched_lifetime_syntaxes)]
+ */
+
 #[derive(Debug)]
 struct TweetV1 {
 	content: String,

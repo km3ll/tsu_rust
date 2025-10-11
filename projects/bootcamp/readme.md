@@ -67,6 +67,16 @@ bootcamp
     - u03 Structs and lifetime elision
     - u04 Box smart pointer
     - u05 Rc smart pointer
+    - u06 RefCell smart pointer
+  - c03 Understanding error handling
+    - u01 Unrecoverable errors
+    - u02 Recoverable errors
+    - u03 Propagating errors
+    - u04 Result and Option
+    - u05 Multiple error types
+  - c04 Advanced error handling
+    - u01 Overview of error handling
+    - u02 Basic error handling
 - m03 advanced
 - m04 masterclass
 - m05 after bootcamp
