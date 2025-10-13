@@ -7,11 +7,18 @@ description = "tsu"
 license = "MIT"
 
 [dependencies]
-rand = "0.9.2"
+
+# pod: error logging
+# - log: lightweight facade 
+# - env_logger: implementation that uses env-vars to set log levels
+log = { version = "0.4.28" }
+env_logger = { version = "0.11.8"}
+
+rand = { version = "0.9.2" }
 
 # pod: serialize & deserialize
-serde = { version = "1.0", features = ["derive"]}
-serde_json = { version = "1.0" }
+serde = { version = "1.0.228", features = ["derive"]}
+serde_json = { version = "1.0.145" }
 
 # pod: Graphemes
 unicode-segmentation = { version = "1.9.0"}

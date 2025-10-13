@@ -109,9 +109,9 @@ fn cli_app() {
 	};
 }
 
-fn custom_errors_1_cli_app() {
+fn custom_errors_2_cli_app() {
 	println!("custom error cli-app");
-	//cli_app();
+	cli_app();
 }
 
 #[cfg(test)]
@@ -119,7 +119,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn run_custom_errors_1_cli_app() {
-		custom_errors_1_cli_app();
+	fn run_custom_errors_2_cli_app() {
+		custom_errors_2_cli_app();
 	}
 }
