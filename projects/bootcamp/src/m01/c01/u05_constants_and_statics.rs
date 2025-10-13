@@ -10,7 +10,7 @@ pub fn const_constants() {
 	println!("Max players: {MAX_PLAYERS}");
 }
 
-pub fn conts_static() {
+pub fn const_static() {
 	/**
 	 * pod: Static
 	 * - Can be mutable, but it's unsafe.
@@ -31,7 +31,7 @@ mod tests {
 	}
 
 	#[test]
-	fn run_conts_static() {
-		conts_static();
+	fn run_const_static() {
+		const_static();
 	}
 }

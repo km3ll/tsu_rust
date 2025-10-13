@@ -160,7 +160,7 @@ pub fn strings_and_functions() {
 	let s1 = "Hello Ferris";
 	let s2 = String::from("Hello 🦀");
 
-	println!("Deref cohersion");
+	println!("Deref coercion");
 	let s3: String = format_it(s1);
 	let s4: String = format_it(&s2);
 	println!(" s3: {}", s3);
