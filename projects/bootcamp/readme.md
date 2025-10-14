@@ -77,7 +77,8 @@ bootcamp
   - c04 Advanced error handling
     - u01 Overview of error handling
     - u02 Basic error handling
-- m03 advanced
+    - u03 Custom errors 1
+    - u04 Custom errors 2
 - m04 masterclass
 - m05 after bootcamp
 ```
