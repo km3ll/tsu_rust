@@ -1,3 +1,2 @@
-server:
-  host: "127.c00.c00.1"
-  port: 8080
+app:
+  name: "tsu-pod"

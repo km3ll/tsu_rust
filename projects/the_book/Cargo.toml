@@ -4,7 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-# pod: Config
-# Library to load config files
 config = { version = "0.15.14" }
 serde = { version = "1.0.219", features = ["derive"] }
