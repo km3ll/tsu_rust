@@ -5,9 +5,10 @@
 ## content
 
 ```
-the_book
+The Rust Programming Language
 - c01 Getting Started
-  - u01 installation
+  - u01 Installation
+  - u02 Hello, World!
 ```
 
 ## commands

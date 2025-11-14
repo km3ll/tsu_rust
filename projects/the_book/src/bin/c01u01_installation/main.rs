@@ -6,7 +6,7 @@ fn main() {
     - rustc --version
     - rustup update
     - rustup doc (local documentation)
-    - cargo ... --offline (cached dependencies)
+    - cargo --offline (cached dependencies)
      */
     println!("Installation")
 }
