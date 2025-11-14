@@ -9,7 +9,7 @@
  * - Cargo runs code in doc blocks as tests
  */
 pub fn documentation_() {
-	println!("Base");
+	println!("Documentation");
 }
 
 /// A savings account

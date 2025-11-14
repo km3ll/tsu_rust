@@ -71,7 +71,14 @@ bootcamp
   - c03 Understanding error handling
     - u01 Unrecoverable errors
     - u02 Recoverable errors
-- m03 advanced
+    - u03 Propagating errors
+    - u04 Result and Option
+    - u05 Multiple error types
+  - c04 Advanced error handling
+    - u01 Overview of error handling
+    - u02 Basic error handling
+    - u03 Custom errors 1
+    - u04 Custom errors 2
 - m04 masterclass
 - m05 after bootcamp
 ```
