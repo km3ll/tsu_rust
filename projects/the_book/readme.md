@@ -2,9 +2,15 @@
 
 - [The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result)
 
-## commands
+## content
 
-### `cargo`
+```
+the_book
+- c01 Getting Started
+  - u01 installation
+```
+
+## commands
 
 ```bash
 # project
@@ -19,7 +25,6 @@ cargo run --release
 
 cargo run --bin the_book
 cargo run --bin app
-cargo run --bin c01u03_hello_cargo
 
 # projects
 cargo new package_name # binary crate
@@ -27,4 +32,8 @@ cargo new --lib package_name # library crate
 cargo install cargo-modules
 cargo install cargo-make
 cargo --version
+
+rustc --version
+rustup update
+rustup doc
 ```
