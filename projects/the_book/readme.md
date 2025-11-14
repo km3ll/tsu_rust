@@ -19,6 +19,7 @@ cargo run --release
 
 cargo run --bin the_book
 cargo run --bin app
+cargo run --bin c01u03_hello_cargo
 
 # projects
 cargo new package_name # binary crate
