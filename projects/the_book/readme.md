@@ -31,6 +31,9 @@ cargo run --bin app
 # projects
 cargo new package_name # binary crate
 cargo new --lib package_name # library crate
+cargo new hello_cargo --vcs=git # existing repository
+
+cargo init # create a Cargo.toml file 
 cargo install cargo-modules
 cargo install cargo-make
 cargo --version
