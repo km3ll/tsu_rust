@@ -19,7 +19,7 @@ The Rust Programming Language
 cargo clean
 cargo fmt
 cargo build
-
+cargo test -- --nocapture
 # target/debug
 cargo run
 # target/release

@@ -1,9 +1,7 @@
 #![allow(unused)]
 
-/*
-pod:
+mod c01;
 
- */
 fn main() {
 	println!("Hello, pod");
 }
