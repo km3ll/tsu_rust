@@ -1,6 +1,6 @@
 # the_book
 
-- [The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result)
+[The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result)
 
 ## content
 
@@ -10,6 +10,7 @@ The Rust Programming Language
   - u01 Installation
   - u02 Hello, World!
   - u03 Hello, Cargo!
+- c02 Programming a Guessing Game
 ```
 
 ## commands
@@ -42,3 +43,7 @@ rustc --version
 rustup update
 rustup doc
 ```
+
+## references
+
+- [Cargo documentation](https://doc.rust-lang.org/cargo/)

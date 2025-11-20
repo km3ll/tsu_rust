@@ -3,9 +3,20 @@ fn hello_cargo() {
 	pod: 1.3. Hello, Cargo!
 	- Cargo is Rust's build system and package manager
 	pod: TOML
-	- Tom's Obvious, Minimal Language (configurational format)
+	- Tom's Obvious, Minimal Language (configuration format)
+	pod: Crates
+	- Packages of code (dependencies
+	pod: Cargo.lock
+	- Keeps track of the exact versions of dependencies
 	cmd:
 	- cargo --version
+	- cargo new <name> (initializes git)
+	- cargo new <name> --vcs=git (uses git)
+	- cargo build (target/debug/<name>)
+	- ./target/debug/<name>
+	- cargo build --release (optimized, target/release/<name>)
+	- cargo run
+	- cargo check (faster, compiles, doesn't produce executable)
 	-----"#;
 	println!("{n1}")
 }
