@@ -1,15 +1,10 @@
-pub fn comments_line() {
-	/**
-	 * pod: Line comments
-	 */
-	println!("Line comments")
-}
-
-pub fn comments_block() {
-	/**
-	 * pod: Block comments
-	 */
-	println!("Block comments")
+pub fn comments() {
+	let n1 = r#"
+	pod: Comments
+	- line
+	- block
+	-----"#;
+	println!("{n1}");
 }
 
 #[cfg(test)]
@@ -17,12 +12,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn run_comments_line() {
-		comments_line();
-	}
-
-	#[test]
-	fn run_comments_block() {
-		comments_block();
+	fn run_comments() {
+		comments()
 	}
 }

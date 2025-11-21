@@ -1,35 +1,42 @@
-/**
- * pod: Naming convention
- * - Snake-case for functions
- */
+#[allow(unused)]
+
+pub fn functions() {
+	let n1 = r#"
+	pod: Functions
+	- Naming convention is snake-case
+	- To use the last expression as return type, we have to
+	  ommit the semicolon.
+	-----"#;
+	println!("{n1}");
+}
+
 pub fn functions_statement(x: u32) {
-	/**
-	 * pod: Statements
-	 * - Instructions that do not return a value
-	 */
-	println!("Function called with: {}", x);
+	let n1 = r#"
+	pod: Statements
+	- Instructions that do not return a value (println!())
+	-----"#;
+	println!("{n1}");
 }
 
 pub fn functions_expression(x: u32) -> u32 {
-	/**
-	 * pod: Expressions
-	 * - Code that evaluate to a value
-	 */
-	let y: u32 = x * 2;
+	let n1 = r#"
+	pod: Expressions
+	- Code that evaluates to a value
+	-----"#;
+	println!("{n1}");
 
-	/***
-	 * pod: Function's return type
-	 * - For a function to use the last expression as return type,
-	 *   we have to omit the semicolon. This syntax only works for
-	 *   the last expression in a function
-	 */
-	println!("New value of y: {}", y);
+	let y: u32 = x * 2;
 	y
 }
 
 #[cfg(test)]
 mod tests {
 	use super::*;
+
+	#[test]
+	fn run_functions() {
+		functions();
+	}
 
 	#[test]
 	fn run_functions_statement() {
