@@ -14,7 +14,7 @@ pub fn types() {
 	- Store multiple values
 	- Arrays
 	- Tuples
-	-----"#;
+	---"#;
 	println!("{n1}");
 }
 
@@ -74,7 +74,7 @@ pub fn types_alias() {
 	let n1 = r#"
 	pod: Type Alias
 	- A new name for an existing type
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	type Age = u8;

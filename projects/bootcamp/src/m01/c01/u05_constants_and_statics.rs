@@ -5,7 +5,7 @@ pub fn const_constants() {
 	- The value of the constants is inline (replaced)
 	- They do not occupy a location in memory
 	- Their naming convention is screaming snake-case
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	const MAX_PLAYERS: u8 = 10;
@@ -17,7 +17,7 @@ pub fn const_static() {
 	- Can be mutable, but it's unsafe
 	- Statics occupy space in memory
 	- There is one instance of the value
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	static CASINO_NAME: &str = "Rusty Casino";

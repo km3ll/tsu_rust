@@ -15,7 +15,7 @@ pub fn flow_ifelse_in_let() {
 	let n1 = r#"
 	pod: If-Else Expressions
 	- Can be used in let statements
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	let a: i8 = 25;
@@ -26,7 +26,7 @@ pub fn flow_loop() {
 	let n1 = r#"
 	pod: Loop 'break'
 	- Exits a loop
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	loop {
@@ -38,7 +38,7 @@ pub fn flow_labeling_loops() {
 	let n1 = r#"
 	pod: Labeling loops
 	- The name must start with a tick (')
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	'outer: loop {
@@ -53,7 +53,7 @@ pub fn flow_labeling_loops() {
 pub fn flow_loop_returning_value() {
 	let n1 = r#"
 	pod: Loop 'break' with value
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	let x: i8 = loop {

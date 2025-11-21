@@ -8,7 +8,7 @@ fn setup() {
 	- Error Lens
 	- TODO Tree
 	- GitHub Copilot
-	-----"#;
+	---"#;
 	println!("{n1}")
 }
 

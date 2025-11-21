@@ -1,8 +1,7 @@
 pub fn greet() {
 	let n1 = r#"
-	pod: Macros
-	- println!()
-	-----"#;
+	pod: Macro: println!()
+	---"#;
 	println!("{n1}");
 }
 

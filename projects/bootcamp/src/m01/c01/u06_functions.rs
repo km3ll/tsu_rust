@@ -6,7 +6,7 @@ pub fn functions() {
 	- Naming convention is snake-case
 	- To use the last expression as return type, we have to
 	  ommit the semicolon.
-	-----"#;
+	---"#;
 	println!("{n1}");
 }
 
@@ -14,7 +14,7 @@ pub fn functions_statement(x: u32) {
 	let n1 = r#"
 	pod: Statements
 	- Instructions that do not return a value (println!())
-	-----"#;
+	---"#;
 	println!("{n1}");
 }
 
@@ -22,7 +22,7 @@ pub fn functions_expression(x: u32) -> u32 {
 	let n1 = r#"
 	pod: Expressions
 	- Code that evaluates to a value
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	let y: u32 = x * 2;

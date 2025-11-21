@@ -3,7 +3,7 @@ pub fn comments() {
 	pod: Comments
 	- line
 	- block
-	-----"#;
+	---"#;
 	println!("{n1}");
 }
 

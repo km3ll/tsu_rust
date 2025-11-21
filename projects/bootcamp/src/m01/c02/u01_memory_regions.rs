@@ -1,44 +1,54 @@
 pub fn memory_stack() {
-	/**
-	 * pod: Stack
-	 * - Contents:
-	 *   - Function arguments
-	 *   - Local variables
-	 *   - Known size at compile time
-	 * - Size: dynamic / fixed upper limit
-	 * - Lifetime: lifetime of function
-	 * - Cleanup: automatic when function returns
-	 */
-	println!("Stack")
+	let n1 = r#"
+	pod: Stack
+	- Contents
+	  - Function arguments
+	  - Local variables
+	  - Known size at compile time
+	- Size
+	  - Dynamic
+	  - Fixed upper limit
+	- Lifecycle
+	  - Lifetime of a function
+	- Cleanup
+	  - Automatic when function returns
+	---"#;
+	println!("{n1}");
 }
 
 pub fn memory_heap() {
-	/**
-	 * pod: Heap
-	 * - Contents:
-	 *   - Values that live beyond a function's lifetime
-	 *   - Values accessed by multiple threads
-	 *   - Large values
-	 *   - Unknown size at compile time
-	 * - Size: dynamic
-	 * - Lifetime: determined by programmer
-	 * - Cleanup: manual
-	 */
-	println!("Heap")
+	let n1 = r#"
+	pod: Heap
+	- Contents
+	  - Values that live beyond a function's lifetime
+	  - Values accessed by multiple threads
+	  - Large values
+	  - Unknown size at compile time
+	- Size
+	  - Dynamic
+	- Lifetime
+	  - Determined by programmer
+	- Cleanup
+	  - Manual
+	---"#;
+	println!("{n1}");
 }
 
 pub fn memory_static() {
-	/**
-	 * pod: Static Memory
-	 * - Contents:
-	 *   - Program's binary
-	 *   - Static variables
-	 *   - String literals
-	 * - Size: fixed size
-	 * - Lifetime: lifetime of program
-	 * - Cleanup: automatic when program terminates
-	 */
-	println!("Static")
+	let n1 = r#"
+	pod: Static
+	- Contents
+	  - Program's binary
+	  - Static variables
+	  - String literals
+	- Size
+	  - Fixed size
+	- Lifetime
+	  - Lifetime of programm
+	- Cleanup
+	  - Automatic when program terminates
+	---"#;
+	println!("{n1}");
 }
 
 #[cfg(test)]

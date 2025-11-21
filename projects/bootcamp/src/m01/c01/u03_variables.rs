@@ -4,7 +4,7 @@ pub fn variable_creation() {
 	let n1 = r#"
 	pod: Immutability
 	- Variables are immutable by default
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	let a1: i16 = 5;
@@ -15,7 +15,7 @@ pub fn variable_mutability() {
 	let n1 = r#"
 	pod: Mutability
 	- Add 'mut' keyword after 'let' to modify a single variable
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	let mut m1: i16 = 4;
@@ -26,7 +26,7 @@ pub fn variable_shadowing() {
 	let n1 = r#"
 	pod: Shadowing
 	- You create two separate variables
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	let s1: i32 = 10;
@@ -39,7 +39,7 @@ pub fn variable_scope() {
 	- Outer
 	- Inner
 	  - Variable lives within the scope of brackets {}
-	-----"#;
+	---"#;
 	println!("{n1}");
 
 	let d1: i16 = 40;
