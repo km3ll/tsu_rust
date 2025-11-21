@@ -1,40 +1,46 @@
+#[allow(unused)]
+
 pub fn flow_ifelse() {
 	let a: i8 = 25;
 	if a > 30 {
-		println!("Bigger than 30");
+		// println!("Bigger than 30");
 	} else if a > 20 {
-		println!("Bigger than 20");
+		// println!("Bigger than 20");
 	} else {
-		println!("Smaller or equal to 20")
+		// println!("Smaller or equal to 20")
 	}
 }
 
 pub fn flow_ifelse_in_let() {
-	/**
-	 * pod: if-else expressions
-	 * - can be used in let statements
-	 */
+	let n1 = r#"
+	pod: If-Else Expressions
+	- Can be used in let statements
+	---"#;
+	println!("{n1}");
+
 	let a: i8 = 25;
 	let b: i8 = if a > 18 { 1 } else { -1 };
-	println!("b: {b}");
 }
 
 pub fn flow_loop() {
+	let n1 = r#"
+	pod: Loop 'break'
+	- Exits a loop
+	---"#;
+	println!("{n1}");
+
 	loop {
-		/**
-		 * pod: 'break' statement
-		 * - exits a loop
-		 */
-		println!("loops forever");
 		break;
 	}
 }
 
 pub fn flow_labeling_loops() {
-	/**
-	 * pod: Labeling loops
-	 * - The name must start with a tick (')
-	 */
+	let n1 = r#"
+	pod: Labeling loops
+	- The name must start with a tick (')
+	---"#;
+	println!("{n1}");
+
 	'outer: loop {
 		println!("outer loop");
 		loop {
@@ -45,17 +51,21 @@ pub fn flow_labeling_loops() {
 }
 
 pub fn flow_loop_returning_value() {
+	let n1 = r#"
+	pod: Loop 'break' with value
+	---"#;
+	println!("{n1}");
+
 	let x: i8 = loop {
-		println!("loop returning 5");
+		// println!("loop returning 5");
 		break 5;
 	};
-	println!("Value from loop: {}", x)
 }
 
 pub fn flow_while_loop() {
 	let mut count: i8 = 1;
 	while count <= 5 {
-		println!("count: {count}");
+		// println!("count: {count}");
 		count = count + 1;
 	}
 }
@@ -63,7 +73,7 @@ pub fn flow_while_loop() {
 pub fn flow_for_loop() {
 	let numbers: [i8; 4] = [10, 20, 30, 40];
 	for element in numbers {
-		println!("element: {}", element)
+		// println!("element: {}", element)
 	}
 }
 

@@ -3,9 +3,6 @@
 ## features
 
 - config file
-- serde
-- serde_json
-- serde-xml-rs
 
 ## commands
 

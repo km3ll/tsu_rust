@@ -1,16 +1,3 @@
-pub fn greet() {
-	println!("Hello, Cargo!");
-}
-
-// pod: Module for testing
-#[cfg(test)]
-mod c01_tests {
-	// pod: Import functions from parent module
-	use super::*;
-
-	#[test]
-	fn greet_prints_message() {
-		greet();
-		assert!(true);
-	}
-}
+pub mod u01_installation;
+pub mod u02_hello_world;
+pub mod u03_hello_cargo;

@@ -1,8 +1,7 @@
-pub fn comments() {
+fn base_() {
 	let n1 = r#"
-	pod: Comments
-	- line
-	- block
+	pod:
+	-
 	---"#;
 	println!("{n1}");
 }
@@ -12,7 +11,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn run_comments() {
-		comments()
+	fn run_() {
+		base_();
 	}
 }
