@@ -1,8 +1,9 @@
 pub fn greet() {
-	/**
-	 * pod: println! is a macro
-	 */
-	println!("Hello, pod!");
+	let n1 = r#"
+	pod: Macros
+	- println!()
+	-----"#;
+	println!("{n1}");
 }
 
 #[cfg(test)]
