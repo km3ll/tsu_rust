@@ -1,5 +1,3 @@
-use base_app::game;
-
 fn main() {
-	game::start_game()
+	println!("Hello, pod!")
 }
