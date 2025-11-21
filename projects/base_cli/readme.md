@@ -1,4 +1,4 @@
-# base_app
+# base_cli
 
 ## features
 
