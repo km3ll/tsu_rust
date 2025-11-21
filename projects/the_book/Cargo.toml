@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 config = { version = "0.15.14" }
 serde = { version = "1.0.219", features = ["derive"] }
+rand = {  version = "0.8.5"}

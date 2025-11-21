@@ -3,12 +3,13 @@ fn installation() {
 	pod: 1.1. Installation
 	- rustup
 	- linker (C compiler)
+
 	cmd:
 	- rustc --version
 	- rustup update
 	- rustup doc (local documentation)
 	- cargo --offline (cached dependencies)
-	-----"#;
+	---"#;
 	println!("{n1}");
 }
 
