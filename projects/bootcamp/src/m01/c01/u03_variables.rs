@@ -40,8 +40,7 @@ pub fn variable_shadowing() {
 pub fn variable_scope() {
 	let n1 = r#"
 	pod: Scopes
-	- Outer
-	- Inner
+	- Inner / Outer
 	- Variables live within the scope of brackets {}
 	---"#;
 	println!("{n1}");

@@ -9,6 +9,7 @@ pub fn const_constants() {
 	println!("{n1}");
 
 	const MAX_PLAYERS: u8 = 10;
+	println!("const MAX_PLAYERS: {MAX_PLAYERS}")
 }
 
 pub fn const_static() {
@@ -21,6 +22,7 @@ pub fn const_static() {
 	println!("{n1}");
 
 	static CASINO_NAME: &str = "Rusty Casino";
+	println!("static CASINO_NAME: {CASINO_NAME}")
 }
 
 #[cfg(test)]
