@@ -106,8 +106,8 @@ pub fn strings_concatenation() {
 
 	let s18: String = String::from("Hello ");
 	let s19: String = s18 + "there"; // String type must be first
-	// println!("concat!: string + slice");
-	// println!(" s19: {s19}\n");
+	                              // println!("concat!: string + slice");
+	                              // println!(" s19: {s19}\n");
 }
 
 pub fn strings_extracting() {

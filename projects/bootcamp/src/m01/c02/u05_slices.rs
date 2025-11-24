@@ -9,7 +9,7 @@ pub fn slices_range_syntax() {
 	let tweet: String = String::from("This is my tweet and it's very long.");
 	let s1: &str = &tweet[..20]; // beginning
 	let s2: &str = &tweet[20..]; // ending
-	let s3: &str = &tweet[..];   // entire
+	let s3: &str = &tweet[..]; // entire
 }
 
 pub fn slices_string_types() {
