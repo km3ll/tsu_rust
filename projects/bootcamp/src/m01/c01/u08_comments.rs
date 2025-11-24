@@ -1,8 +1,7 @@
 pub fn comments() {
 	let n1 = r#"
 	pod: Comments
-	- line
-	- block
+	- Line / Block
 	---"#;
 	println!("{n1}");
 }

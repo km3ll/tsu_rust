@@ -1,6 +1,5 @@
-use rand::Rng;
-
 #[allow(unused)]
+use rand::Rng;
 
 pub fn flow_ifelse() {
 	let a1 = rand::rng()
