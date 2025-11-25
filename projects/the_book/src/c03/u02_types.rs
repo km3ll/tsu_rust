@@ -117,8 +117,42 @@ fn types_compound_tuple() {
 	println!("tuple (destructured): y: {y}");
 }
 
-fn types_() {
+fn types_compound_array() {
+	let n1 = r#"
+	pod: Array
+	- Every element must have the same type
+	- Its data is allocated on the stack
+	- Have a fixed length
+	- The first index is Zero (0)
+	- Panics when attempting to access an invalid index
+	---"#;
+	println!("{n1}");
 
+	let a1 = [1, 2, 3, 4, 5];
+	println!("array: {:?}", a1);
+
+	let days: [&str; 7] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	println!("array: {:?}", days);
+	println!("array: first: {}", days[0]);
+
+	let switches = [false; 5];
+	println!("array (repeated): {:?}", switches);
+}
+
+fn types_compound_vector() {
+	let n1 = r#"
+	pod: Vector
+	- It is allowed to grow or shrink in size
+	- Its data is allocated on the heap
+	---"#;
+	println!("{n1}");
+
+	let v1: Vec<String> = vec![
+		String::from("One"),
+		String::from("Two"),
+		String::from("Three"),
+	];
+	println!("vector: {:?}", v1)
 }
 
 #[cfg(test)]
@@ -161,8 +195,12 @@ mod tests {
 	}
 
 	#[test]
-	fn run_() {
-		types_();
+	fn run_types_compound_array() {
+		types_compound_array();
 	}
 
+	#[test]
+	fn run_types_compound_vector() {
+		types_compound_vector();
+	}
 }
