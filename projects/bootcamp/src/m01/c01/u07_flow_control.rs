@@ -2,8 +2,7 @@
 use rand::Rng;
 
 pub fn flow_ifelse() {
-	let a1 = rand::rng()
-		.random_range(-40..40);
+	let a1 = rand::rng().random_range(-40..40);
 	if a1 > 30 {
 		println!("ifelse: Bigger than 30");
 	} else if 1 > 20 {
