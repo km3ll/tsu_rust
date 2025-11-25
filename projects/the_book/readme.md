@@ -11,6 +11,7 @@ The Rust Programming Language
   - u02 Hello, World!
   - u03 Hello, Cargo!
 - c02 Programming a Guessing Game
+- c03 Common Programming Concepts
 ```
 
 ## commands
