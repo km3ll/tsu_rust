@@ -12,6 +12,8 @@ The Rust Programming Language
   - u03 Hello, Cargo!
 - c02 Programming a Guessing Game
 - c03 Common Programming Concepts
+  - u01 Variables and Mutability
+  - u02 Data Types
 ```
 
 ## commands
