@@ -11,6 +11,7 @@ cargo clean
 cargo build
 cargo fmt
 cargo run
+cargo run -- start game
 carto test -- --nocapture
 
 docker build .

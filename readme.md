@@ -3,6 +3,7 @@
 ## projects
 
 - [base_app](projects/base_app)
+- [base_cli](projects/base_cli)
 - [exploratory](projects/exploratory)
 - [the_book](projects/the_book)
 
