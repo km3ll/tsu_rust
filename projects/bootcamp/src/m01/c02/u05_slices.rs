@@ -82,8 +82,7 @@ pub fn slices_vector_slices() {
 
 	let v1: [i32; 6] = [1, 2, 3, 4, 5, 6];
 	let v2: &[i32] = &v1[..3];
-	println!("Debug format: s1: {:?}", v1);
-	println!("Debug format: s2: {:?}", v2);
+	println!("Debug format: v2: {:?}", v2);
 }
 
 #[cfg(test)]
@@ -111,7 +110,7 @@ mod tests {
 	}
 
 	#[test]
-	fn run_slices_deref_cohersion() {
+	fn run_slices_deref_coercion() {
 		slices_deref_coercion();
 	}
 
