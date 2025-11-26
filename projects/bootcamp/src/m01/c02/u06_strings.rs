@@ -1,57 +1,51 @@
 use unicode_segmentation::UnicodeSegmentation;
 
+fn format_it(p1: &str) -> String {
+	format!("[{}]", p1)
+}
+
 pub fn strings_acronyms() {
 	let n1 = r#"
 	pod: ASCII
 	- American Standard Code for Information Interchange
-	- An encoding which maps integers to characters.
+	- An encoding which maps integers to characters
+	---
+	pod: UTF-8
+	- Unicode Transformation Format (8 bits = 1 byte)
 	---"#;
 	println!("{n1}");
-
-	let n2 = r#"
-	pod: UTF-8. Unicode Transformation Format
-	- (8 bits = 1 byte)
-	---"#;
-	println!("{n2}");
 }
 
 pub fn strings_utf_8() {
 	let s1: &str = "Hello Ferris 🦀";
-	// println!("UTF-8 Encoded");
-	// println!(" s1: {s1}\n");
+	println!("Slice: UTF-8 Encoded &str s1: {s1}");
 
 	let s2: String = String::from("Hello 🦀");
-	// println!("String::from");
-	// println!(" s2: {s2}\n");
+	println!("String::from s2: {s2}");
 
 	let s3: String = "Ferris 🦀".to_string();
-	// println!("to_string");
-	// println!(" s3: {s3}\n");
+	println!("Slice: to_string s3: {s3}");
 
 	let s4: String = "🦀 Hello".to_owned();
-	// println!("to_owned");
-	// println!(" s4: {s4}\n");
+	println!("Slice: to_owned s4: {s4}");
 
 	let s5: &str = &s4[..];
-	// println!("slice");
-	// println!(" s5: {s5}\n");
+	println!("Slice: from slice s5: {s5}");
 
 	let mut s6: String = String::from("Hello ");
 	s6.push_str("Ferris ");
 	s6.push_str("🦀");
-	// println!("push_str");
-	// println!(" s6: {s6}\n");
+	println!("String: mutable push_str s6: {s6}");
 
 	s6.replace_range(.., "Hello Pod!");
-	// println!("replace_range");
-	// println!(" s6: {s6}\n");
+	println!("String: mutable replace_range s6: {s6}");
 }
 
 pub fn strings_slice() {
 	let n1 = r#"
-	pod: String Slice Type (&str)
-	- Is a view of a sequence of UTF-8 encoded bytes
-	- Does not own the underlying data
+	pod: String Slice (&str)
+	- Is a borrowed view of a sequence of UTF-8 encoded bytes
+	- Does not own the underlying data, just references part (or all) of a String
 	---"#;
 	println!("{n1}");
 }
@@ -59,8 +53,7 @@ pub fn strings_slice() {
 pub fn strings_string() {
 	let n1 = r#"
 	pod: String Type
-	- Is a growable, mutable, owned UTF-8 encoded string
-	- Always allocated on the Heap
+	- Is a owned, growable, heap-allocated UTF-8 text type
 	---"#;
 	println!("{n1}");
 }
@@ -69,11 +62,12 @@ pub fn strings_concatenation() {
 	let s7: String = String::from("Hello ");
 	let s8: String = String::from("Ferris");
 	let s9 = s7 + &s8;
-	// println!("plus operator (+)");
-	// println!(" s9: {s9}\n");
+	println!("String: plus operator (+) s9: {s9}");
 
 	let n1 = r#"
 	pod: Macro: format!()
+	- Creates a String using interpolation and formatting
+	- It just returns the formatted text as an owned String
 	- Less efficient because it copies the contents of strings
 	- Can take string and string slices as parameters
 	---"#;
@@ -83,31 +77,16 @@ pub fn strings_concatenation() {
 	let s12: String = String::from("tac");
 	let s13: &str = "toe";
 	let s14: String = format!("{}, {}, {}", s11, s12, s13);
-	// println!("format!");
-	// println!(" s14: {s14}\n");
+	println!("String format!() s14: {s14}");
 
-	let n2 = r#"
-	pod: Concatenating a Vector
-	---"#;
-	println!("{n2}");
-
-	let s15: String = ["Hello ", "Motto"].concat();
-	// println!("vector.concat");
-	// println!(" s15: {s15}\n");
-
-	let n3 = r#"
+	let n1 = r#"
 	pod: Macro: concat!()
+	- Joins constant string expressions at compile time returning them as a string slice
 	---"#;
-	println!("{n3}");
+	println!("{n1}");
 
-	let s17: &str = concat!("Hello ", "Pod");
-	// println!("concat!: slice");
-	// println!(" s17: {s17}\n");
-
-	let s18: String = String::from("Hello ");
-	let s19: String = s18 + "there"; // String type must be first
-	// println!("concat!: string + slice");
-	// println!(" s19: {s19}\n");
+	let s17: &str = concat!("cargo-", "run");
+	println!("Slice concat!() s17: {s17}");
 }
 
 pub fn strings_extracting() {
@@ -119,9 +98,7 @@ pub fn strings_extracting() {
 
 	let s20: &str = "🦀🦀🦀🦀🦀";
 	let s21: &str = &s20[..4];
-	// println!("Extracting");
-	// println!(" s20: {s20}");
-	// println!(" s21: {s21}");
+	println!("Extracting from String s21: {s21}");
 }
 
 pub fn strings_different_bytes() {
@@ -133,55 +110,47 @@ pub fn strings_different_bytes() {
 	println!("{n1}");
 
 	let s22: &str = "🦀the🦀";
-	// println!("Different bytes");
-	// println!(" s22: {s22}");
+	println!("Extracting bytes s22: {s22}");
 }
 
 pub fn strings_iterating() {
 	let n1 = r#"
 	pod: Linear Time
-	- Finding a character takes linear time.
-	  We have to iterate over each character
+	- Finding a character takes linear time because we have to iterate over each character
 	---"#;
 	println!("{n1}");
 
-	// println!("Iterating over bytes .bytes()");
+	println!("Iterating over bytes .bytes()");
 	for b1 in "Hello 🦀".bytes() {
-		// println!(" {}", b1);
+		println!("> {b1}");
 	}
 }
 
 pub fn strings_graphemes() {
 	let n1 = r#"
-	pod: Graphemes
-	- User-perceived characters
+	pod: Grapheme (grapheme cluster)
+	- A user-perceived character, which may consist of multiple Unicode code points
+	- The smallest unit of a written language that users recognize as a single character
 	---"#;
 	println!("{n1}");
 
-	// println!("Graphemes .chars()");
+	println!("Grapheme .chars()");
 	for c1 in "Hello 🦀".chars() {
-		// println!(" {}", c1);
+		println!("> {c1}");
 	}
 
-	// println!("Graphemes .graphemes()");
+	println!("Grapheme .graphemes()");
 	for c1 in "Hello 🦀".graphemes(true) {
-		// println!(" {}", c1);
+		println!("> {c1}");
 	}
 }
 
 pub fn strings_and_functions() {
-	fn format_it(p1: &str) -> String {
-		return format!("[{}]", p1);
-	}
-
 	let s1 = "Hello Ferris";
 	let s2 = String::from("Hello 🦀");
-
 	let s3: String = format_it(s1);
 	let s4: String = format_it(&s2);
-	// println!("Deref coercion");
-	// println!(" s3: {}", s3);
-	// println!(" s4: {}", s4);
+	println!("Deref Coercion in parameters: s3: '{s3}', s4: '{s4}'");
 }
 
 #[cfg(test)]

@@ -1,8 +1,5 @@
-pub fn greet() {
-	let n1 = r#"
-	pod: Macro: println!()
-	---"#;
-	println!("{n1}");
+pub fn hello_world() {
+	println!("Hello, world!");
 }
 
 #[cfg(test)]
@@ -10,7 +7,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn run_greet() {
-		greet();
+	fn run_hello_world() {
+		hello_world();
 	}
 }

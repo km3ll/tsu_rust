@@ -1,7 +1,7 @@
-pub fn comments() {
+fn ownership_() {
 	let n1 = r#"
-	pod: Comments
-	- Line / Block
+	pod:
+	-
 	---"#;
 	println!("{n1}");
 }
@@ -11,7 +11,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn run_comments() {
-		comments()
+	fn run_() {
+		ownership_();
 	}
 }

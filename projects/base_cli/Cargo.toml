@@ -1,8 +1,10 @@
 [package]
-name = "base_app"
+name = "base_cli"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 config = { version = "0.15.9" }
+clap = { version = "4.5.32", features = ["derive"] }
+rand = {  version = "0.8.5"}
 serde = { version = "1.0.219", features = ["derive"] }

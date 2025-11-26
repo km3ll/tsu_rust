@@ -11,6 +11,14 @@ The Rust Programming Language
   - u02 Hello, World!
   - u03 Hello, Cargo!
 - c02 Programming a Guessing Game
+- c03 Common Programming Concepts
+  - u01 Variables and Mutability
+  - u02 Data Types
+  - u03 Functions
+  - u04 Comments
+  - u05 Control Flow
+- c04 Understanding Ownership
+  - u01- What is Owenership?
 ```
 
 ## commands

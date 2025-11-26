@@ -9,6 +9,8 @@ pub fn variable_creation() {
 
 	let a1: i16 = 5;
 	let a2: f32 = 5.0;
+	println!("a1: {a1}");
+	println!("a2: {a2}");
 }
 
 pub fn variable_mutability() {
@@ -20,32 +22,36 @@ pub fn variable_mutability() {
 
 	let mut m1: i16 = 4;
 	m1 = 6;
+	println!("m1: {m1}")
 }
 
 pub fn variable_shadowing() {
 	let n1 = r#"
 	pod: Shadowing
-	- You create two separate variables
+	- You create two separate variables using the same name
 	---"#;
 	println!("{n1}");
 
 	let s1: i32 = 10;
 	let s1: i32 = 20;
+	println!("s1: {s1}")
 }
 
 pub fn variable_scope() {
 	let n1 = r#"
 	pod: Scopes
-	- Outer
-	- Inner
-	  - Variable lives within the scope of brackets {}
+	- Inner / Outer
+	- Variables live within the scope of brackets {}
 	---"#;
 	println!("{n1}");
 
+	// Outer scope
 	let d1: i16 = 40;
 	{
+		// Inner scope
 		let d1: i16 = 30;
 	}
+	println!("d1: {d1}")
 }
 
 #[cfg(test)]

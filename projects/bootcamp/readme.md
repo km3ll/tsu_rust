@@ -90,6 +90,9 @@ cargo clean build
 cargo new package_name       # binary crate
 cargo new --lib package_name # library crate
 
+cargo test -- --nocapture
+cargo test -- --test-threads=1
+
 # target/debug
 cargo run
 cargo run --bin base_package
