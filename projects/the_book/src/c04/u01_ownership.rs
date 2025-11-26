@@ -61,7 +61,70 @@ fn ownership_heap() {
 }
 
 fn ownership_variable_scope() {
-	// TODO
+	let n1 = r#"
+	pod: Scope
+	- The range within a program for which an item is valid
+	- When an item comes into scope, it is valid
+	- It remains valid until it goes out of scope
+	---"#;
+	println!("{n1}");
+}
+
+fn ownership_string_type() {
+	let n1 = r#"
+	pod: String Type
+	- Manages data allocated on the heap
+	- Stores an amount of text that is unknown at compile time
+	---
+	pod: Memory Allocator
+	- Memory must be requested from the allocator at runtime
+	- We need a way of returning this memory to the allocator
+	- We need to pair exactly one 'allocate' with exactly one 'free'
+	- Rust calls the 'drop' function to return memory automatically at the closing curly bracket
+	---
+	pod: RAII
+	- Resource Acquisition Is Initialization: a pattern of deallocating resources
+	---"#;
+	println!("{n1}");
+
+	let s1 = String::from("Hello");
+	println!("String immutable s1: {s1}");
+
+	let mut s2 = String::from("Hello");
+	s2.push_str(", pod!");
+	println!("String mutable s2: {s2}");
+}
+
+fn ownership_literal_allocation() {
+	let n1 = r#"
+	pod: String Literal
+	- The content is known at compile time, so the text is hardcoded directly into the final executable
+	---"#;
+	println!("{n1}");
+
+	let s1: &str = "Greetings!";
+	println!("Literal allocation: s1: {s1}");
+}
+
+
+fn ownership_string_allocation() {
+	let n1 = r#"
+	pod: String In Memory
+	- A String is made up of three parts
+	  - A pointer to the memory that holds the contents
+	  - A length
+	  - A capacity
+	- This group of data is stored on the stack
+	---"#;
+	println!("{n1}");
+
+	let s1 = String::from("Hello");
+	let s2 = s1;
+	println!("String in memory: s2: {s2}");
+}
+
+fn ownership_() {
+
 }
 
 #[cfg(test)]
@@ -92,4 +155,21 @@ mod tests {
 	fn run_ownership_variable_scope() {
 		ownership_variable_scope();
 	}
+
+	#[test]
+	fn run_ownership_string_type() {
+		ownership_string_type();
+	}
+
+	#[test]
+	fn run_ownership_literal_allocation() {
+		ownership_literal_allocation();
+	}
+
+	#[test]
+	fn run_() {
+		ownership_();
+	}
+
 }
+
