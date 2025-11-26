@@ -15,8 +15,7 @@ fn hello_world() {
 	- Using a ! means we're calling a macro
 	---
 	pod: Ahead-Of-Time Compiled Language
-	- You can give the executable to someone else, and hey can
-	  run it, even without having Rust installed
+	- You can give the executable to someone else, and they can run it, even without having Rust installed
 	---"#;
 	println!("{n1}")
 }

@@ -19,8 +19,8 @@ fn ownership_stack_and_heap() {
 	let n1 = r#"
 	pod: The Stack And The Heap
 	- Parts of memory available to your code to use at runtime
-	- Because pointers to the heap has a known, fixed size, you can store them on the stack,
-	  but when you want the actual data, you must follow the pointer
+	- Because pointers to the heap has a known, fixed size, you can store them on the stack
+	- When you want the actual data, you must follow the pointer (stack) to the heap
 	- Think of a server at a restaurant taking orders from many tables
 	---"#;
 	println!("{n1}");
@@ -34,8 +34,8 @@ fn ownership_stack() {
 	- Pushing onto the stack: adding data
 	- Popping off the stack: removing data
 	- All data on the stack must have a known, fixed size
-	- Pushing to the stack is faster because the allocator never has to search for a place to
-	  store new data: the location is always at the top
+	- Pushing to the stack is faster because the allocator never has to search for a place to store new data
+	- The location to store data is always at the top
 	- Values passed to a function and the function's local variables get pushed onto the stack.
 	- When a function is over, its values and variables get popped off the stack
 	- Think of a stack of plates

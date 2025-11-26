@@ -9,6 +9,7 @@ struct Product {
 	in_stock: bool,
 }
 
+// TODO.
 fn calculate_tax(product: &Product) -> f32 {
 	product.price * 0.1
 }
