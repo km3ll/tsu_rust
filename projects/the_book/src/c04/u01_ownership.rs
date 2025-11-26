@@ -106,26 +106,60 @@ fn ownership_literal_allocation() {
 	println!("Literal allocation: s1: {s1}");
 }
 
-
 fn ownership_string_allocation() {
 	let n1 = r#"
 	pod: String In Memory
 	- A String is made up of three parts
 	  - A pointer to the memory that holds the contents
-	  - A length
-	  - A capacity
+	  - A length (memory used in bytes)
+	  - A capacity (total amount received from allocator)
 	- This group of data is stored on the stack
+	- A memory region on the heap holds the contents
+	- Assigning s1 to s2 copies the pointer (stack), not the actual data (heap)
+	---
+	pod: Double Free Error
+	- When s2 and s1 go out of scope, they will both try to free the same memory
+	- Rust considers s1 as no longer valid (moved)
+	---
+	pod: Move (Shallow Copy)
+	- Copying the pointer, length, and capacity
+	- Also invalidating the first variable
+	- Rust will never automatically create 'deep' copies of data
 	---"#;
 	println!("{n1}");
 
 	let s1 = String::from("Hello");
 	let s2 = s1;
-	println!("String in memory: s2: {s2}");
+	let s3 = s2.clone();
+	println!("String in memory: s2: {s2}, cloned s3: {s3}");
 }
 
-fn ownership_() {
+fn ownership_scope_assignment() {
+	let n1 = r#"
+	pod: Scope And Assignment
+	- When assigning a completely new value to an existing variable, Rust frees the original variable's memory
+	---"#;
+	println!("{n1}");
 
+	let mut s1 = String::from("Hello");
+	s1 = String::from("Hola");
+	println!("Scope assignment: s1: {s1}");
 }
+
+fn ownership_clone() {
+	let n1 = r#"
+	pod: Clone
+	- A deep copy
+	- The heap data does get copied
+	---"#;
+	println!("{n1}");
+
+	let s1 = String::from("Hola");
+	let s2 = s1.clone();
+	println!("Clone: s1: {s1}, s2: {s2}");
+}
+
+fn ownership_() {}
 
 #[cfg(test)]
 mod tests {
@@ -167,9 +201,22 @@ mod tests {
 	}
 
 	#[test]
+	fn run_ownership_string_allocation() {
+		ownership_string_allocation();
+	}
+
+	#[test]
+	fn run_ownership_scope_assignment() {
+		ownership_scope_assignment();
+	}
+
+	#[test]
+	fn run_ownership_clone() {
+		ownership_clone();
+	}
+
+	#[test]
 	fn run_() {
 		ownership_();
 	}
-
 }
-

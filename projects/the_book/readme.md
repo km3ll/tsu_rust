@@ -47,6 +47,7 @@ cargo install cargo-modules
 cargo install cargo-make
 cargo --version
 
+rustc --explain E0382
 rustc --version
 rustup update
 rustup doc
