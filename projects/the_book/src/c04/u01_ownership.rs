@@ -17,7 +17,7 @@ fn ownership() {
 
 fn ownership_stack_and_heap() {
 	let n1 = r#"
-	pod: The Stack and the Heap
+	pod: The Stack And The Heap
 	- Parts of memory available to your code to use at runtime
 	- Because pointers to the heap has a known, fixed size, you can store them on the stack,
 	  but when you want the actual data, you must follow the pointer
@@ -51,7 +51,7 @@ fn ownership_heap() {
 	- Accessing data in the heap is generally slower because you have to follow a pointer
 	- Think of being seated at a restaurant
 	---
-	pod: Allocating on the heap
+	pod: Allocating On The Heap
 	- The memory allocator
 	  - (1) finds an empty spot that is big enough
 	  - (2) marks it as being in use
