@@ -33,7 +33,6 @@ fn types_scalar_integer() {
 	println!("integer literal: x: {x}")
 }
 
-
 fn types_scalar_floating() {
 	let n1 = r#"
 	pod: Floating-Point Numbers
@@ -70,7 +69,6 @@ fn types_numeric_operations() {
 	// remainder
 	let remainder = 43 % 5;
 	println!("> remainder: {remainder}")
-
 }
 
 fn types_scalar_boolean() {
@@ -131,7 +129,15 @@ fn types_compound_array() {
 	let a1 = [1, 2, 3, 4, 5];
 	println!("array: {:?}", a1);
 
-	let days: [&str; 7] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	let days: [&str; 7] = [
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+		"Sunday",
+	];
 	println!("array: {:?}", days);
 	println!("array: first: {}", days[0]);
 

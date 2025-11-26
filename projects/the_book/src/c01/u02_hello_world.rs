@@ -1,6 +1,6 @@
 fn hello_world() {
 	let n1 = r#"
-	pod: 1.2. Hello, World!
+	pod: Hello, World!
 	- Rust files end with .rs extension
 	- Naming convention is snake case for multiple words
 	- Function main() in the entry point of Rust executables

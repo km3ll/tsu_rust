@@ -44,8 +44,6 @@ fn game_match() {
 
 fn game_v1() {
 	let n1 = r#"
-	pod: 2.0 Guessing Game
-	---
 	pod: Prelude
 	- Set of items defined in the standard library that it brings into the scope of every program
 	---
