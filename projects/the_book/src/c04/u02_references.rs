@@ -6,6 +6,13 @@ fn change(s: &mut String) {
 	s.push_str(", pod!")
 }
 
+/*
+fn dangle() -> &String {
+	let s = String::from("Hello");
+	&s
+} // s goes out of scope and is
+*/
+
 fn references() {
 	let n1 = r#"
 	pod: Reference
@@ -29,7 +36,6 @@ fn references() {
 	println!("Reference: s1: {s1}");
 	println!("Reference: r1: {r1}");
 }
-
 
 fn references_mutable() {
 	let n1 = r#"
@@ -82,17 +88,15 @@ fn references_scope() {
 	println!("Reference: mutable r3: {r3}");
 }
 
-
 fn references_dangling() {
-	//TODO
 	let n1 = r#"
-	pod:
+	pod: Dangling Pointer (Reference)
+	- A pointer that references a location in memory given to someone else
+	- In Rust, the compiler guarantees that references will never be dangling references
 	---"#;
 	println!("{n1}");
-}
 
-fn references_() {
-
+	//dangle();
 }
 
 #[cfg(test)]
