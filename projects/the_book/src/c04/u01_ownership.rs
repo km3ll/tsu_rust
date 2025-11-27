@@ -159,7 +159,68 @@ fn ownership_clone() {
 	println!("Clone: s1: {s1}, s2: {s2}");
 }
 
-fn ownership_() {}
+fn ownership_stack_data_copy() {
+	let n1 = r#"
+	pod: Copy Trait
+	- Types that have known size at compile time are stored on the stack, so copies are quick to make
+	- If a type implements the Copy trait, variables that use it do not move
+	- Cannot be used if the type, or any of its parts, implements the Drop trait
+	- Types that implement Copy: integers, boolean, floating-point, char, tuples (with types implementing Copy as well)
+	---"#;
+	println!("{n1}");
+
+	let x1 = 5;
+	let x2 = x1;
+	println!("Copied primitive: x1: {x1}, x2: {x2} ");
+}
+
+fn ownership_functions() {
+	let n1 = r#"
+	pod: Ownership And Functions
+	- Passing a variable to a function will move or copy, just as assignment does
+	---"#;
+	println!("{n1}");
+
+	fn takes_ownership(s1: String) {
+		println!("Ownership: taken in function: s1: {s1}");
+	}
+
+	fn makes_copy(u1: u16) {
+		println!("Ownership: copied in function: u1: {u1}");
+	}
+
+	let s = String::from("Hello");
+	takes_ownership(s);
+	// println!("s: {s}"); // value used after being moved
+
+	let u1: u16 = 10;
+	makes_copy(u1);
+	println!("Ownership: original u1: {u1}");
+}
+
+fn ownership_return_values() {
+	let n1 = r#"
+	pod: Return Values
+	- Returning values can also transfer ownership
+	---"#;
+	println!("{n1}");
+
+	fn gives_ownership() -> String {
+		String::from("Hello, pod!")
+	}
+
+	fn takes_and_gives_back(s1: String) -> String {
+		println!("Ownership: taken and given: s1: {s1}");
+		s1
+	}
+
+	let s1 = gives_ownership();
+	println!("Ownership: given: s1: {s1}");
+
+	let s2 = String::from("Hello!");
+	let s3 = takes_and_gives_back(s2);
+	println!("Ownership: given and taken: s3: {s3}");
+}
 
 #[cfg(test)]
 mod tests {
@@ -216,7 +277,17 @@ mod tests {
 	}
 
 	#[test]
-	fn run_() {
-		ownership_();
+	fn run_ownership_stack_data_copy() {
+		ownership_stack_data_copy();
+	}
+
+	#[test]
+	fn run_ownership_functions() {
+		ownership_functions();
+	}
+
+	#[test]
+	fn run_ownership_return_values() {
+		ownership_return_values();
 	}
 }
