@@ -7,53 +7,25 @@ struct Product {
 	in_stock: bool,
 }
 
-/**
- * pod: Implementation Blocks
- * - Add functionality for a given type
- */
 impl Product {
-	/**
-	 * pod: 'self' refers to the instance of product
-	 */
-
-	/**
-	 * pod: Immutable borrow to self
-	 */
 	fn calculate_tax(&self) -> f32 {
 		self.price * 0.1
 	}
 
-	/**
-	 * pod: Mutable borrow to self
-	 */
 	fn set_price(&mut self, price: f32) {
 		self.price = price
 	}
 
-	/**
-	 * pod: Owned form of self
-	 * - Usually done when you want to transform to another type
-	 * - while preventing the caller from using the original
-	 * - At the end of the method, self is dropped
-	 */
 	fn buy(self) -> u32 {
 		let name = self.name;
 		println!("{name} was bought!");
 		rand::rng().random()
 	}
 
-	/**
-	 * pod: Associated Functions
-	 * - Called static functions in other languages
-	 * - Don't take 'self' as a parameter
-	 */
 	fn get_default_sales_tax() -> f32 {
 		0.1
 	}
 
-	/**
-	 * pod: Constructor as associated function 'new'
-	 */
 	fn new(name: String, price: f32) -> Product {
 		Product {
 			name: name,
@@ -61,6 +33,25 @@ impl Product {
 			in_stock: true,
 		}
 	}
+}
+
+pub fn impl_blocks() {
+	let n1 = r#"
+	pod: Implementation Blocks
+	- Add functionality for a given type
+	- 'self' refers to the instance of product (mutable/immutable)
+	---
+	pod: Owned Form Of Self
+	- Usually done when you want to transform to another type
+	- while preventing the caller from using the original
+	- At the end of the method, self is dropped
+	---
+	pod: Associated Functions
+	- Called static functions in other languages
+	- Don't take 'self' as a parameter
+	- 'new' is a constructor as associated function
+	---"#;
+	println!("{n1}");
 }
 
 pub fn impl_blocks_immutable_borrow() {
@@ -108,6 +99,11 @@ pub fn impl_blocks_constructor_new() {
 #[cfg(test)]
 mod tests {
 	use super::*;
+
+	#[test]
+	fn run_impl_blocks() {
+		impl_blocks();
+	}
 
 	#[test]
 	fn run_impl_blocks_immutable_borrow() {

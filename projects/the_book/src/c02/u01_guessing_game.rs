@@ -97,7 +97,7 @@ fn game_v2() {
 	pod: Method: cmp()
 	- Compares two values and returns an Ordering type
 	---
-	pod: Match expression
+	pod: Match Expression
 	- Made up of arms
 	- Arms are patterns to match against and the code that should be run
 	- The underscore (_) is a catch-all value

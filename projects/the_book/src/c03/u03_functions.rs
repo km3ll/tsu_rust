@@ -11,8 +11,7 @@ fn functions_statement() {
 	pod: Statements
 	- Instructions that perform some action and do not return a value
 	- Cannot assign a let statement to another variable
-	- Adding a semicolon to the end of an expression turns it into a statement,
-	  and it will not return a value
+	- Adding a semicolon to the end of an expression turns it into a statement
 	---"#;
 
 	let x = 6;

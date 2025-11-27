@@ -18,7 +18,8 @@ The Rust Programming Language
   - u04 Comments
   - u05 Control Flow
 - c04 Understanding Ownership
-  - u01- What is Owenership?
+  - u01 What is Ownership?
+  - u02 References and Borrowing
 ```
 
 ## commands
@@ -47,9 +48,25 @@ cargo install cargo-modules
 cargo install cargo-make
 cargo --version
 
+rustc --explain E0382
 rustc --version
 rustup update
 rustup doc
+```
+
+## Error Codes
+
+```
+rustc --explain <code>
+
+- E0106 A lifetime is missing from a type
+- E0284 The compiler is unable to unambiguously infer the return type of a function
+- E0308 Expected type did not match the received type
+- E0382 A variable was used after its contents have been moved elsewhere
+- E0384 An immutable variable was reassigned
+- E0499 A variable was borrowed as mutable more than once
+- E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
+- E0596 Tried to mutably borrow a non-mutable variable
 ```
 
 ## references
