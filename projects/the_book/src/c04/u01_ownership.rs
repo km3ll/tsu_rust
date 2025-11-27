@@ -19,7 +19,7 @@ fn ownership_stack_and_heap() {
 	let n1 = r#"
 	pod: The Stack And The Heap
 	- Parts of memory available to your code to use at runtime
-	- Because pointers to the heap has a known, fixed size, you can store them on the stack
+	- Because pointers to the heap have a known, fixed size, you can store them on the stack
 	- When you want the actual data, you must follow the pointer (stack) to the heap
 	- Think of a server at a restaurant taking orders from many tables
 	---"#;
@@ -148,8 +148,7 @@ fn ownership_scope_assignment() {
 
 fn ownership_clone() {
 	let n1 = r#"
-	pod: Clone
-	- A deep copy
+	pod: Clone (Deep Copy)
 	- The heap data does get copied
 	---"#;
 	println!("{n1}");
