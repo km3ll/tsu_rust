@@ -1,8 +1,10 @@
 fn run(query: String) -> Result<String, String> {
-	/**
-	 * pod: If statements
-	 * - Parenthesis can be omitted
-	 */
+	let n1 = r#"
+	pod: If statements
+	- Parenthesis can be omitted
+	---"#;
+	println!("{n1}");
+
 	if query.is_empty() {
 		Err(String::from("Query is empty"))
 	} else {
@@ -11,18 +13,18 @@ fn run(query: String) -> Result<String, String> {
 }
 
 fn find_name(query: String) -> Option<String> {
-	/**
-	 * pod: Convert Result into Option
-	 */
 	let result: Result<String, String> = run(query);
 	result.ok()
 }
 
 pub fn result_enum() {
-	/**
-	 * pod: Result
-	 * - Defined and loaded in the prelude
-	 */
+	let n1 = r#"
+	pod: Result
+	- Defined and loaded in the prelude
+	- ok() converts Result into Option
+	---"#;
+	println!("{n1}");
+
 	let rs1 = run(String::from(""));
 	println!("rs1: {:?}", rs1);
 	let rs2 = run(String::from("query"));

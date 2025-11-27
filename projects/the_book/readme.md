@@ -18,7 +18,8 @@ The Rust Programming Language
   - u04 Comments
   - u05 Control Flow
 - c04 Understanding Ownership
-  - u01- What is Owenership?
+  - u01 What is Ownership?
+  - u02 References and Borrowing
 ```
 
 ## commands

@@ -42,14 +42,16 @@ impl Command {
 }
 
 pub fn matching_expression() {
-	/**
-	 * pod: Match Expression
-	 * - Flow-control operator
-	 * - Allows to compare a value against the series of patterns (match arms)
-	 *   to determine which code path to execute
-	 * - Exhaustive on match arms
-	 * - Patterns can be literal values, ranges, variable names, wildcards, etc
-	 */
+	let n1 = r#"
+	pod: Match Expression
+	- Flow-control operator
+	- Allows to compare a value against the series of patterns (match arms)
+	- Exhaustive on match arms
+	- Patterns can be literal values, ranges, variable names, wildcards, etc
+	- '_' Catch-all pattern (no binding value)
+	---"#;
+	println!("{n1}");
+
 	let age: u32 = 32;
 	match age {
 		// Literal value

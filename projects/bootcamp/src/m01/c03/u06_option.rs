@@ -8,10 +8,13 @@ fn find_name(id: u32) -> Option<String> {
 }
 
 pub fn option_enum() {
-	/**
-	 * pod: Option
-	 * - Defined and loaded in the prelude
-	 */
+	let n1 = r#"
+	pod: Option
+	- Defined and loaded in the prelude
+	- if-let syntax works when you only care about one variant
+	---"#;
+	println!("{n1}");
+
 	let op: Option<String> = find_name(2);
 	match op {
 		Some(name) => println!("name: {name}"),
@@ -20,10 +23,6 @@ pub fn option_enum() {
 }
 
 pub fn option_if_let_syntax() {
-	/**
-	 * pod: Options if-let syntax
-	 * * - works when you only care about one variant
-	 */
 	let op1 = find_name(1);
 	if let Some(name) = op1 {
 		println!("name: {name}")

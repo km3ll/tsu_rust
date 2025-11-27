@@ -1,12 +1,14 @@
 pub fn vectors_definition() {
-	/**
-	 * pod: Vectors
-	 * - Hold a sequence of elements of the same type
-	 * - Growable and allocate memory on the heap
-	 * - When adding elements, they are moved into the vector
-	 * - The vector has ownership of the elements
-	 * - When the vector is dropped, all of its elements are also dropped
-	 */
+	let n1 = r#"
+	pod: Vectors
+	- Hold a sequence of elements of the same type
+	- Growable and allocate memory on the heap
+	- When adding elements, they are moved into the vector
+	- The vector has ownership of the elements
+	- When the vector is dropped, all of its elements are also dropped
+	---"#;
+	println!("{n1}");
+
 	let mut v1: Vec<String> = Vec::new();
 	v1.push(String::from("One"));
 	v1.push(String::from("Two"));
@@ -15,31 +17,37 @@ pub fn vectors_definition() {
 }
 
 pub fn vectors_macro() {
-	/**
-	 * pod: vec! macro defines a vector and initialize it
-	 */
+	let n1 = r#"
+	pod: Macro: vec!()
+	- Defines a vector and initialize it
+	---"#;
+	println!("{n1}");
+
 	let v2: Vec<i32> = vec![1, 2, 3];
 	println!("v2: {:#?}", v2);
 }
 
 pub fn vectors_index_brackets() {
-	/**
-	 * pod: Indexing vector using brackets syntax
-	 * - Can panic when passed an invalid index
-	 * - Cannot move elements using this syntax because
-	 *   it would leave the vector in invalid state.
-	 *   We can borrow instead
-	 */
+	let n1 = r#"
+	pod: Vector: Brackets Syntax
+	- Can panic when passed an invalid index
+	- Cannot move elements using this syntax because it would leave the vector in invalid state.
+	- We can borrow instead
+	---"#;
+	println!("{n1}");
+
 	let v1: Vec<i32> = vec![10, 20, 30];
 	let s1: &i32 = &v1[0];
 	println!("s1: {s1}");
 }
 
 pub fn vectors_index_get() {
-	/**
-	 * pod: Index a vector using the 'get' method
-	 * - Does not panic, because it returns an option instead
-	 */
+	let n1 = r#"
+	pod: Vector: get Method
+	- Does not panic, because it returns an option instead
+	---"#;
+	println!("{n1}");
+
 	let v1: Vec<i32> = vec![1, 2, 3, 4, 5];
 	let s1: Option<&i32> = v1.get(3);
 	println!("s1: {:#?}", s1);
@@ -51,11 +59,13 @@ pub fn vectors_index_get() {
 }
 
 pub fn vectors_remove() {
-	/**
-	 * pod: Removing elements with 'remove' method
-	 * - Removes an element at a given index
-	 * - Shifts all the elements after it to the left
-	 */
+	let n1 = r#"
+	pod: Vector: remove Method
+	- Removes an element at a given index
+	- Shifts all the elements after it to the left
+	---"#;
+	println!("{n1}");
+
 	let mut v1 = vec![1, 2, 3, 4, 5];
 	v1.remove(2);
 	println!("v1: {:#?}", v1);
@@ -94,11 +104,13 @@ pub fn vectors_iteration_consuming() {
 
 	let mut v2: Vec<String> = Vec::new();
 
-	/**
-	 * pod: Iterating with a for-loop that consumes a vector
-	 * - Taking the first vector by value
-	 * - After the for-loop call v2 is no longer valid
-	 */
+	let n1 = r#"
+	pod: Vector: For-Loop
+	- Taking the first vector by value
+	- After the for-loop call v2 is no longer valid
+	---"#;
+	println!("{n1}");
+
 	for value in v1 {
 		v2.push(value);
 	}

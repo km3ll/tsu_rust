@@ -1,11 +1,5 @@
 use serde::Serialize;
 
-/**
- * pod: Enums
- * - Allow to define a type enumerating its variance
- * - Variants can have data associated with them
- * - Support methods and associated functions
- */
 #[derive(Debug)]
 enum Category {
 	Books,
@@ -34,6 +28,14 @@ impl Command {
 }
 
 pub fn enums_instance() {
+	let n1 = r#"
+	pod: Enums
+	- Allow to define a type enumerating its variance
+	- Variants can have data associated with them
+	- Support methods and associated functions
+	---"#;
+	println!("{n1}");
+
 	let book = Product {
 		name: String::from("1984"),
 		category: Category::Books,

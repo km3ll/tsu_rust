@@ -1,7 +1,3 @@
-/**
- * pod: Structs
- * - Allow to group related data together
- */
 #[derive(Debug)]
 struct Product {
 	name: String,
@@ -9,9 +5,16 @@ struct Product {
 	in_stock: bool,
 }
 
-// TODO.
 fn calculate_tax(product: &Product) -> f32 {
 	product.price * 0.1
+}
+
+pub fn structs() {
+	let n1 = r#"
+	pod: Structs
+	- Allow to group related data together
+	---"#;
+	println!("{n1}");
 }
 
 pub fn structs_instance() {
@@ -47,6 +50,11 @@ pub fn structs_function() {
 #[cfg(test)]
 mod tests {
 	use super::*;
+
+	#[test]
+	fn run_structs() {
+		structs();
+	}
 
 	#[test]
 	fn run_structs_instance() {
