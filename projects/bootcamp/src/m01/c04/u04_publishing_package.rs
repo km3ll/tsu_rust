@@ -1,14 +1,13 @@
 pub fn publishing_crates_io() {
-	/**
-	 * pod: crates.io
-	 * - Changes must be committed to GitHub
-	 * - Required fields: description and license
-	 * - The name of the package must be unique
-	 * - When you publish a package it's permanent
-	 * - Cargo uses semantic versioning
-	 */
-	println!("cargo login <token>");
-	println!("cargo publish");
+	let n1 = r#"
+	pod: crates.io
+	- Changes must be committed to GitHub
+	- Required fields: description and license
+	- The name of the package must be unique
+	- When you publish a package it's permanent
+	- Cargo uses semantic versioning
+	---"#;
+	println!("{n1}");
 }
 
 #[cfg(test)]
