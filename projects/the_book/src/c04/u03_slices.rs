@@ -72,7 +72,6 @@ fn slices_string() {
 	let s6 = &s1[0..s1.len()];
 	let s7 = &s1[..];
 	println!("Slices: s6: {s6}, s7: {s7}");
-
 }
 
 fn slices_first_word_v1() {
@@ -82,12 +81,11 @@ fn slices_first_word_v1() {
 	---"#;
 	println!("{n1}");
 
-	let mut s1= String::from("Hello World");
-	let index = first_word_v2(&s1);
+	let mut s1 = String::from("Hello World");
+	let index = first_word_v1(&s1);
 	s1.clear();
 	println!("Slices cleared s1: {s1}, index: {index}");
 }
-
 
 fn slices_first_word_v2() {
 	let mut s1 = String::from("Hello World");
@@ -116,13 +114,35 @@ fn slices_as_parameters() {
 	---"#;
 	println!("{n1}");
 
-	let s1 = String::from("Hello, pod");
-	let s2 = first_word_v3(&s1[0..6]);
-	println!("Slices: deref: ");
+	let my_string: String = String::from("Hello, Pod");
 
+	let s2: &str = first_word_v3(&my_string[0..6]);
+	println!("Slices: deref string: s2: {s2}");
+
+	let s3: &str = first_word_v3(&my_string[..]);
+	println!("Slices: deref string: s3: {s3}");
+
+	let s4: &str = first_word_v3(&my_string);
+	println!("Slices: deref string: s4: {s4}");
+
+	let my_literal: &str = "Hello, Ferris!";
+
+	let s5: &str = first_word_v3(&my_literal[0..6]);
+	println!("Slices: deref literal: s5: {s5}");
+
+	let s6: &str = first_word_v3(&my_literal[..]);
+	println!("Slices: deref literal: s6: {s6}");
+
+	let s7: &str = first_word_v3(my_literal);
+	println!("Slices: deref literal: s7: {s7}");
 }
 
-fn slices_() {
+fn slices_array() {
+	let nums: [i8; 5] = [1, 2, 3, 4, 5];
+	let slice: &[i8] = &nums[1..3];
+	for num in slice {
+		println!("Slices: vector: num: {num}");
+	}
 }
 
 #[cfg(test)]
@@ -155,7 +175,7 @@ mod tests {
 	}
 
 	#[test]
-	fn run_() {
-		slices();
+	fn run_slices_array() {
+		slices_array();
 	}
 }

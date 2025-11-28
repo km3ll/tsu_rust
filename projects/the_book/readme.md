@@ -21,6 +21,8 @@ The Rust Programming Language
   - u01 What is Ownership?
   - u02 References and Borrowing
   - u03 The Slice Type
+- c05 Using Structs to Structure Related Data
+  - u01 Defining and Instantiating Structs
 ```
 
 ## commands
