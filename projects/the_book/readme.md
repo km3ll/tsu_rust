@@ -23,6 +23,7 @@ The Rust Programming Language
   - u03 The Slice Type
 - c05 Using Structs to Structure Related Data
   - u01 Defining and Instantiating Structs
+  - u02 An Example Program Using Structs
 ```
 
 ## commands
@@ -63,6 +64,7 @@ rustup doc
 rustc --explain <code>
 
 - E0106 A lifetime is missing from a type
+- E0277 Tried to use a type which doesn't implement some trait in a place which expected that trait
 - E0284 The compiler is unable to unambiguously infer the return type of a function
 - E0308 Expected type did not match the received type
 - E0382 A variable was used after its contents have been moved elsewhere
