@@ -25,6 +25,16 @@ fn first_word_v2(s: &String) -> &str {
 	&s[..]
 }
 
+fn first_word_v3(s: &str) -> &str {
+	let bytes = s.as_bytes();
+	for (i, &item) in bytes.iter().enumerate() {
+		if item == b' ' {
+			return &s[0..i];
+		}
+	}
+	&s[..]
+}
+
 fn slices() {
 	let n1 = r#"
 	pod: Slices
@@ -86,6 +96,32 @@ fn slices_first_word_v2() {
 	s1.clear()
 }
 
+fn slices_string_literals() {
+	let n1 = r#"
+	pod: String Literals As Slices
+	- Literals are stored inside the binary
+	- A &str (immutable reference) is a slice pointing to a specific point in the binary
+	---"#;
+	println!("{n1}");
+
+	let s1 = "Hello, pod!";
+	println!("Slices: immutable reference s1: {s1}");
+}
+
+fn slices_as_parameters() {
+	let n1 = r#"
+	pod: String Slices As Parameters
+	- Function parameter 's: &str' allows to use the function on both &String and &str values
+	- This flexibility takes advantages of Deref Coercion
+	---"#;
+	println!("{n1}");
+
+	let s1 = String::from("Hello, pod");
+	let s2 = first_word_v3(&s1[0..6]);
+	println!("Slices: deref: ");
+
+}
+
 fn slices_() {
 }
 
@@ -111,6 +147,11 @@ mod tests {
 	#[test]
 	fn run_slices_first_word_v2() {
 		slices_first_word_v2();
+	}
+
+	#[test]
+	fn run_slices_string_literals() {
+		slices_string_literals();
 	}
 
 	#[test]
