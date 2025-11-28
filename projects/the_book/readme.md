@@ -24,6 +24,9 @@ The Rust Programming Language
 - c05 Using Structs to Structure Related Data
   - u01 Defining and Instantiating Structs
   - u02 An Example Program Using Structs
+  - u03 Method Syntax
+- c06 Enums and Pattern Matching
+  - u01 Defining an Enum
 ```
 
 ## commands
