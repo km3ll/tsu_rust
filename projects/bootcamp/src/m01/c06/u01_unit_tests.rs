@@ -13,6 +13,7 @@ impl Account {
 		self.balance
 	}
 
+	// TODO
 	/**
 	 * pod: panic! macro
 	 */
