@@ -27,6 +27,7 @@ The Rust Programming Language
   - u03 Method Syntax
 - c06 Enums and Pattern Matching
   - u01 Defining an Enum
+  - u02 The match Control Flow Construct
 ```
 
 ## commands
