@@ -1,3 +1,5 @@
+use rand::Rng;
+
 #[derive(Debug)]
 enum CoinV1 {
 	Penny,
@@ -44,7 +46,41 @@ fn value_in_cents_v2(coin: CoinV2) -> u8 {
 		CoinV2::Quarter(state) => {
 			println!("Match: Quarter from state: {state:?}");
 			25
-		},
+		}
+	}
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+	match x {
+		Some(i) => Some(i + 1),
+		None => None,
+	}
+}
+
+fn check_v1(dice_roll: u8) {
+	println!("Match: roll v1");
+	match dice_roll {
+		3 => println!("> add fancy hat"),
+		7 => println!("> remove fancy hat"),
+		other => println!("> move {other} spaces"),
+	}
+}
+
+fn check_v2(dice_roll: u8) {
+	println!("Match: roll v2");
+	match dice_roll {
+		3 => println!("> add fancy hat"),
+		7 => println!("> remove fancy hat"),
+		_ => println!("> roll again"),
+	}
+}
+
+fn check_v3(dice_roll: u8) {
+	println!("Match: roll v3");
+	match dice_roll {
+		3 => println!("> add fancy hat"),
+		7 => println!("> remove fancy hat"),
+		_ => (),
 	}
 }
 
@@ -53,7 +89,6 @@ fn match_definition() {
 	pod: Match
 	- Compares a value against a series of patterns
 	- The compiler confirms that all possible cases are handled
-	- Match arms have two parts: a pattern and some code
 	- The code associated with each arm is an expression
 	---"#;
 	println!("{n1}");
@@ -65,7 +100,11 @@ fn match_definition() {
 fn match_binding() {
 	let n1 = r#"
 	pod: Match Arms
+	- Have two parts: a pattern and some code
 	- They can bind to the parts of the values that match the pattern
+	- The catch-all pattern binds the pattern to a value
+	- The underscore (_) pattern does not bind to any value
+	- The unit value / empty tuple () does not run any code
 	---"#;
 	println!("{n1}");
 
@@ -73,8 +112,22 @@ fn match_binding() {
 	value_in_cents_v2(coin);
 }
 
-fn match_() {
+fn match_option() {
+	let i1 = rand::thread_rng().gen_range(1..=100);
+	let op1 = plus_one(Some(i1));
+	let op2 = plus_one(None);
+	println!("Match: op1: {op1:?}, op2: {op2:?}");
+}
 
+fn match_catch_all() {
+	let r1: u8 = rand::thread_rng().gen_range(1..=6);
+	check_v1(r1);
+
+	let r2 = rand::thread_rng().gen_range(1..=6);
+	check_v2(r2);
+
+	let r3 = rand::thread_rng().gen_range(1..=6);
+	check_v3(r3);
 }
 
 #[cfg(test)]
@@ -92,7 +145,12 @@ mod tests {
 	}
 
 	#[test]
-	fn run_() {
-		match_();
+	fn run_match_option() {
+		match_option();
+	}
+
+	#[test]
+	fn run_match_catch_all() {
+		match_catch_all();
 	}
 }

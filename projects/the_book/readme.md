@@ -28,6 +28,9 @@ The Rust Programming Language
 - c06 Enums and Pattern Matching
   - u01 Defining an Enum
   - u02 The match Control Flow Construct
+  - u03 Concise Control Flow with if let and let else
+- c07 Managing Growing Projects with Packages, Crates, and Modules
+  - u01 - Packages and Crates
 ```
 
 ## commands
@@ -67,6 +70,7 @@ rustup doc
 ```
 rustc --explain <code>
 
+- E0004 Non-exhaustive patterns
 - E0106 A lifetime is missing from a type
 - E0277 Tried to use a type which doesn't implement some trait in a place which expected that trait
 - E0284 The compiler is unable to unambiguously infer the return type of a function
