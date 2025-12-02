@@ -1,4 +1,4 @@
-fn packages_crates_() {
+fn modules_() {
 	let n1 = r#"
 	pod:
 	-
@@ -12,6 +12,6 @@ mod tests {
 
 	#[test]
 	fn run_() {
-		packages_crates_();
+		modules_();
 	}
 }

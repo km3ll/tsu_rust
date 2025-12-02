@@ -31,6 +31,7 @@ The Rust Programming Language
   - u03 Concise Control Flow with if let and let else
 - c07 Managing Growing Projects with Packages, Crates, and Modules
   - u01 - Packages and Crates
+  - u02 - Defining Modules to Control Scope and Privacy
 ```
 
 ## commands
