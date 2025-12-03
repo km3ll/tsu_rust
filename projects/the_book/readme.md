@@ -81,8 +81,12 @@ rustc --explain <code>
 - E0499 A variable was borrowed as mutable more than once
 - E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
 - E0596 Tried to mutably borrow a non-mutable variable
+- E0603 A private item was used outside its scope.
 ```
 
 ## references
 
+- [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
+- [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
 - [Cargo documentation](https://doc.rust-lang.org/cargo/)
