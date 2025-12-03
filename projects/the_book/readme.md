@@ -30,8 +30,10 @@ The Rust Programming Language
   - u02 The match Control Flow Construct
   - u03 Concise Control Flow with if let and let else
 - c07 Managing Growing Projects with Packages, Crates, and Modules
-  - u01 - Packages and Crates
-  - u02 - Defining Modules to Control Scope and Privacy
+  - u01 Packages and Crates
+  - u02 Defining Modules to Control Scope and Privacy
+  - u03 Paths for Referring to an Item in the Module Tree
+  - u04 Bringing Paths Into Scope with the use keyword
 ```
 
 ## commands

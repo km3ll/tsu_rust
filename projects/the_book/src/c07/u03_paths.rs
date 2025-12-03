@@ -1,8 +1,47 @@
 mod front_of_house {
-	mod hosting {
-		fn add_to_waitlist() {
+	pub mod hosting {
+		pub fn add_to_waitlist() {
 			println!("Paths: added to waitlist");
 		}
+	}
+}
+
+mod restaurant {
+	use std::ops::ControlFlow::Break;
+
+	#[derive(Debug)]
+	pub enum Appetizer {
+		Soup,
+		Salad,
+	}
+
+	#[derive(Debug)]
+	pub struct Breakfast {
+		pub toast: String,
+		seasonal_fruit: String,
+	}
+
+	impl Breakfast {
+		pub fn summer(toast: &str) -> Breakfast {
+			Breakfast {
+				toast: String::from(toast),
+				seasonal_fruit: String::from("peaches"),
+			}
+		}
+	}
+
+	pub mod front_of_house {
+		pub fn deliver_order() {
+			println!("Paths: order delivered");
+		}
+	}
+
+	pub mod back_of_house {
+		pub fn fix_incorrect_order() {
+			cook_order();
+			super::front_of_house::deliver_order();
+		}
+		fn cook_order() {}
 	}
 }
 
@@ -21,7 +60,7 @@ fn paths_definition() {
 	- Absolute path: the full path starting from a crate root
 	- Relative path: starts from the current module and uses 'self', 'super' or an identifier
 	- Using the 'crate' name is like using '/' to start from the filesystem root
-	- Our preference is to specify absilute paths
+	- Our preference is to specify absolute paths
 	---"#;
 	println!("{n1}");
 }
@@ -35,9 +74,11 @@ fn paths_modules() {
 	- Making a module public doesn't make its contents public ('pub')
 	---"#;
 	println!("{n1}");
+
+	front_of_house::hosting::add_to_waitlist();
 }
 
-fn path_library_and_binary() {
+fn paths_library_and_binary() {
 	let n1 = r#"
 	pod: Best Practices with Binary and Library
 	- Library crate
@@ -49,6 +90,40 @@ fn path_library_and_binary() {
 	  - Becomes a user of the library crate. It can only use the public API
 	---"#;
 	println!("{n1}");
+}
+
+fn paths_super() {
+	let n1 = r#"
+	pod: Relative Paths with 'super'
+	- 'super' starts a relative path in the parent module
+	- It is like starting a filesystem path with the '..' syntax
+	---"#;
+	println!("{n1}");
+
+	restaurant::back_of_house::fix_incorrect_order()
+}
+
+fn paths_structs() {
+	let n1 = r#"
+	pod: Paths of Structs
+	- We can make each field public or not on a case-by-case basis
+	- Because it has private fields, the struct needs to provide a public associated constructor
+	---"#;
+	println!("{n1}");
+
+	let meal = restaurant::Breakfast::summer("Rye");
+	println!("Paths: structs meal: {meal:?}");
+}
+
+fn paths_enums() {
+	let n1 = r#"
+	pod: Paths of Enums
+	- Making an enum public, all of its variants are then public
+	---"#;
+	println!("{n1}");
+
+	let appetizer = restaurant::Appetizer::Salad;
+	println!("Paths: enums appetizer: {appetizer:?}");
 }
 
 #[cfg(test)]
@@ -66,7 +141,22 @@ mod tests {
 	}
 
 	#[test]
-	fn run_path_library_and_binary() {
-		path_library_and_binary();
+	fn run_paths_library_and_binary() {
+		paths_library_and_binary();
+	}
+
+	#[test]
+	fn run_paths_super() {
+		paths_super();
+	}
+
+	#[test]
+	fn run_paths_structs() {
+		paths_structs();
+	}
+
+	#[test]
+	fn run_paths_enums() {
+		paths_enums();
 	}
 }
