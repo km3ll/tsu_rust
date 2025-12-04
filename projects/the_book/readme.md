@@ -34,6 +34,9 @@ The Rust Programming Language
   - u02 Defining Modules to Control Scope and Privacy
   - u03 Paths for Referring to an Item in the Module Tree
   - u04 Bringing Paths Into Scope with the use keyword
+  - u05 Separating Modules into Different Files
+- c08 Common Collections
+  - u01 Storing Lists of Values with Vectors
 ```
 
 ## commands
@@ -80,6 +83,7 @@ rustc --explain <code>
 - E0308 Expected type did not match the received type
 - E0382 A variable was used after its contents have been moved elsewhere
 - E0384 An immutable variable was reassigned
+- E0433 An undeclared crate, module, or type was used
 - E0499 A variable was borrowed as mutable more than once
 - E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
 - E0596 Tried to mutably borrow a non-mutable variable
