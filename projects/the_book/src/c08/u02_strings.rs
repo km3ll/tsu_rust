@@ -81,7 +81,7 @@ fn strings_concatenation() {
 	println!("Strings: + s3: {s3}");
 
 	let n1 = r#"
-	pod: Macro: format!()
+	pod: Macro: format!
 	- Combines strings in more complicated ways
 	- Does not take ownership of any of its parameters
 	---"#;
