@@ -81,7 +81,7 @@ fn strings_concatenation() {
 	println!("Strings: + s3: {s3}");
 
 	let n1 = r#"
-	pod: Macro: format!()
+	pod: Macro: format!
 	- Combines strings in more complicated ways
 	- Does not take ownership of any of its parameters
 	---"#;
@@ -137,10 +137,36 @@ fn strings_in_rust() {
 }
 
 fn strings_slicing() {
-	// TODO
+	let n1 = r#"
+	pod: Strings: slices
+	- You can use [] with a range to create a slice containing particular bytes
+	---"#;
+	println!("{n1}");
+
+	let s1 = "Здравствуйте";
+	let s2 = &s1[0..4];
+
+	println!("Strings: slice with range: s1: {s1}, s2: {s2}");
 }
 
-fn strings_() {}
+fn strings_iterating() {
+	let n1 = r#"
+	pod: Strings: iterating chars or bytes
+	- 'char' returns individual Unicode scalar values
+	---"#;
+	println!("{n1}");
+
+	let s1 = "Здрав";
+	println!("Strings: chars of s1: {s1}");
+	for c1 in s1.chars() {
+		println!("> {c1}");
+	}
+
+	println!("Strings: bytes of s1: {s1}");
+	for b1 in s1.bytes() {
+		println!("> {b1}");
+	}
+}
 
 #[cfg(test)]
 mod tests {
@@ -187,7 +213,7 @@ mod tests {
 	}
 
 	#[test]
-	fn run_strings_() {
-		strings_();
+	fn run_strings_iterating() {
+		strings_iterating();
 	}
 }

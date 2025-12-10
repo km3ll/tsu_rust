@@ -38,6 +38,10 @@ The Rust Programming Language
 - c08 Common Collections
   - u01 Storing Lists of Values with Vectors
   - u02 Storing UTF-8 Encoded Text with Strings
+  - u03 Storing Keys with Associated Values in Hash Maps
+- c09 Error Handling
+  - u01 Unrecoverable Errors with panic!
+  - u02 Recoverable Errors with Result
 ```
 
 ## commands
