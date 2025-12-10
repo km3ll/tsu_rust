@@ -8,6 +8,7 @@ mod c05; // Using Structs to Structure Related Data
 mod c06; // Enums and Pattern Matching
 mod c07; // Managing Growing Projects with Packages, Crates, and Modules
 mod c08; // Common Collections
+mod c09; // Error Handling
 
 fn main() {
 	println!("The Book");
