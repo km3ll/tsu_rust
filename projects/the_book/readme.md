@@ -43,6 +43,8 @@ The Rust Programming Language
   - u01 Unrecoverable Errors with panic!
   - u02 Recoverable Errors with Result
   - u03 To panic! or Not to panic!
+- c10 Generic Types, Traits, and Lifetimes
+  - u01 Generic Data Types
 ```
 
 ## commands
