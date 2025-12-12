@@ -93,6 +93,7 @@ rustc --explain <code>
 - E0277 Tried to use a type which doesn't implement some trait in a place which expected that trait
 - E0284 The compiler is unable to unambiguously infer the return type of a function
 - E0308 Expected type did not match the received type
+- E0369 A binary operation was attempted on a type which doesn't support it
 - E0382 A variable was used after its contents have been moved elsewhere
 - E0384 An immutable variable was reassigned
 - E0391 A type dependency cycle has been encountere
