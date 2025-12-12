@@ -42,6 +42,9 @@ The Rust Programming Language
 - c09 Error Handling
   - u01 Unrecoverable Errors with panic!
   - u02 Recoverable Errors with Result
+  - u03 To panic! or Not to panic!
+- c10 Generic Types, Traits, and Lifetimes
+  - u01 Generic Data Types
 ```
 
 ## commands
@@ -82,17 +85,27 @@ rustup doc
 rustc --explain <code>
 
 - E0004 Non-exhaustive patterns
+- E0005 Patterns used to bind names must be irrefutable
+- E0040 It is not allowed to manually call destructors in Rust
+- E0072 A recursive type has infinite size because it doesn't have an indirection
 - E0106 A lifetime is missing from a type
+- E0133 Unsafe code was used outside of an unsafe block
 - E0277 Tried to use a type which doesn't implement some trait in a place which expected that trait
 - E0284 The compiler is unable to unambiguously infer the return type of a function
 - E0308 Expected type did not match the received type
 - E0382 A variable was used after its contents have been moved elsewhere
 - E0384 An immutable variable was reassigned
+- E0391 A type dependency cycle has been encountere
 - E0433 An undeclared crate, module, or type was used
 - E0499 A variable was borrowed as mutable more than once
 - E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
+- E0507 A borrowed value was moved out
+- E0515 A reference to a local variable was returne
 - E0596 Tried to mutably borrow a non-mutable variable
-- E0603 A private item was used outside its scope.
+- E0603 A private item was used outside its scope
+- E0614 Attempted to dereference a variable which cannot be dereference
+- E0752 The entry point of the program was marked as async
+- E0790 You need to specify a specific implementation of the trait in order to call the method
 ```
 
 ## references
