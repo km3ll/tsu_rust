@@ -43,10 +43,22 @@ impl<T> PointV1<T> {
 	}
 }
 
+impl PointV1<f32> {
+	fn distance(&self) -> f32 {
+		(self.x.powi(2) + self.y.powi(2)).sqrt()
+	}
+}
+
 #[derive(Debug)]
-struct PointV2<T, U> {
-	x: T,
-	y: U,
+struct PointV2<X1, Y1> {
+	x: X1,
+	y: Y1,
+}
+
+impl<X1, Y1> PointV2<X1, Y1> {
+	fn mixup<X2, Y2>(self) -> () {
+		println!("Generics: X2 and Y2 are only relevant to the method");
+	}
 }
 
 fn generics_definition() {
@@ -54,6 +66,10 @@ fn generics_definition() {
 	pod: Generics
 	- Abstract stand-ins for concrete types or other properties
 	- Allow to replace specific types with a placeholder that represent multiple types
+	- We can specify constraints on generic types when defining methods on the type
+	- Other instances will not have this method defined
+	- Some generics can be declared after 'impl' because they go with the struct definition
+	- Other generics can be declared after a method name because they are only relevant to the method
 	---"#;
 	println!("{n1}");
 }
@@ -107,7 +123,14 @@ fn generics_in_methods() {
 	println!("Generics: methods p1.x: {}", p1.x());
 }
 
-fn generics_() {}
+fn generics_monomorphization() {
+	let n1 = r#"
+	pod: Monomorphization
+	- The process of turning generic code into specific code by filling in concrete types when compiled
+	- We pay no runtime cost for using generics
+	---"#;
+	println!("{n1}");
+}
 
 #[cfg(test)]
 mod tests {
@@ -149,7 +172,7 @@ mod tests {
 	}
 
 	#[test]
-	fn run_() {
-		generics_();
+	fn run_generics_monomorphization() {
+		generics_monomorphization();
 	}
 }
