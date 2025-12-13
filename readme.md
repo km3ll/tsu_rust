@@ -6,6 +6,7 @@
 - [base_cli](projects/base_cli)
 - [exploratory](projects/exploratory)
 - [the_book](projects/the_book)
+- [rust-by-example](projects/rust-by-example)
 
 - [bootcamp](projects/bootcamp)
   - projects

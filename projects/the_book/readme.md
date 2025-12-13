@@ -114,6 +114,7 @@ rustc --explain <code>
 - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
+- [mdBook](https://rust-lang.github.io/mdBook/index.html)
 - [The Rust Standard Library](https://doc.rust-lang.org/stable/std/)
   - [Module collections](https://doc.rust-lang.org/std/collections/index.html)
   - [Struct Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html)
