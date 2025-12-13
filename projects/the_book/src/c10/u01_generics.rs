@@ -8,7 +8,7 @@ fn largest_v1() {
 			largest = number;
 		}
 	}
-	println!("Generics: largest v1: {largest}");
+	println!("Generics: function v1: {largest}");
 }
 
 fn largest_v2(numbers: &[i32]) {
@@ -18,7 +18,7 @@ fn largest_v2(numbers: &[i32]) {
 			largest = number;
 		}
 	}
-	println!("Generics: largest v2: {largest}");
+	println!("Generics: function v2: {largest}");
 }
 
 fn largest_v3<T: PartialOrd>(list: &[T]) -> &T {
@@ -29,6 +29,24 @@ fn largest_v3<T: PartialOrd>(list: &[T]) -> &T {
 		}
 	}
 	largest
+}
+
+#[derive(Debug)]
+struct PointV1<T> {
+	x: T,
+	y: T,
+}
+
+impl<T> PointV1<T> {
+	fn x(&self) -> &T {
+		&self.x
+	}
+}
+
+#[derive(Debug)]
+struct PointV2<T, U> {
+	x: T,
+	y: U,
 }
 
 fn generics_definition() {
@@ -61,15 +79,32 @@ fn generics_in_functions() {
 
 	let numbers = vec![34, 50, 25, 100, 65, 98];
 	let r1 = largest_v3(&numbers);
-	println!("Generics: largest v3: {r1}");
+	println!("Generics: function v3: {r1}");
 
 	let chars = vec!['h', 'a', 'k', 'u'];
 	let r2 = largest_v3(&chars);
-	println!("Generics: largest v3: {r2}");
+	println!("Generics: function v3: {r2}");
 }
 
 fn generics_in_structs() {
-	// TODO
+	let p1 = PointV1 { x: 5, y: 10 };
+	println!("Generics: structs p1: {p1:?}");
+
+	let p2 = PointV1 { x: 1.1, y: 4.3 };
+	println!("Generics: structs p2: {p2:?}");
+
+	let p3 = PointV2 { x: 6, y: 7.8 };
+	println!("Generics: structs p3: {p3:?}");
+}
+
+fn generics_in_enums() {
+	let op1 = Some("Hello");
+	println!("Generics: enums op1: {op1:?}");
+}
+
+fn generics_in_methods() {
+	let p1 = PointV1 { x: 5, y: 10 };
+	println!("Generics: methods p1.x: {}", p1.x());
 }
 
 fn generics_() {}
@@ -101,6 +136,16 @@ mod tests {
 	#[test]
 	fn run_generics_in_structs() {
 		generics_in_structs();
+	}
+
+	#[test]
+	fn run_generics_in_enums() {
+		generics_in_enums();
+	}
+
+	#[test]
+	fn run_generics_in_methods() {
+		generics_in_methods();
 	}
 
 	#[test]
