@@ -2,7 +2,7 @@
 
 ## features
 
-- 
+- tbd
 
 ## commands
 
@@ -16,10 +16,6 @@ carto test -- --nocapture
 docker build .
 ```
 
-## pod
+## references
 
-```rust
-let n1 = r#"
----"#;
-println!("{n1}");
-```
+- [Creating an Axum Web Server in Rust is easy!](https://www.youtube.com/watch?v=FDWKlJmHv6k)
