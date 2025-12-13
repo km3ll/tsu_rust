@@ -45,6 +45,7 @@ The Rust Programming Language
   - u03 To panic! or Not to panic!
 - c10 Generic Types, Traits, and Lifetimes
   - u01 Generic Data Types
+  - u02 Defining Shared Behavior with Traits
 ```
 
 ## commands
