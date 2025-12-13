@@ -2,10 +2,12 @@
 
 ## projects
 
+- [axum_web_server](projects/axum_web_server)
 - [base_app](projects/base_app)
 - [base_cli](projects/base_cli)
 - [exploratory](projects/exploratory)
 - [the_book](projects/the_book)
+- [rust-by-example](projects/rust-by-example)
 
 - [bootcamp](projects/bootcamp)
   - projects

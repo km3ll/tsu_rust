@@ -45,6 +45,7 @@ The Rust Programming Language
   - u03 To panic! or Not to panic!
 - c10 Generic Types, Traits, and Lifetimes
   - u01 Generic Data Types
+  - u02 Defining Shared Behavior with Traits
 ```
 
 ## commands
@@ -93,6 +94,7 @@ rustc --explain <code>
 - E0277 Tried to use a type which doesn't implement some trait in a place which expected that trait
 - E0284 The compiler is unable to unambiguously infer the return type of a function
 - E0308 Expected type did not match the received type
+- E0369 A binary operation was attempted on a type which doesn't support it
 - E0382 A variable was used after its contents have been moved elsewhere
 - E0384 An immutable variable was reassigned
 - E0391 A type dependency cycle has been encountere
@@ -113,6 +115,7 @@ rustc --explain <code>
 - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
+- [mdBook](https://rust-lang.github.io/mdBook/index.html)
 - [The Rust Standard Library](https://doc.rust-lang.org/stable/std/)
   - [Module collections](https://doc.rust-lang.org/std/collections/index.html)
   - [Struct Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html)
