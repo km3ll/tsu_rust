@@ -1,8 +1,8 @@
 # axum_web_server
 
-## features
+## endpoints
 
-- tbd
+- http://localhost:3000/health
 
 ## commands
 
