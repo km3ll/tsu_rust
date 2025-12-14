@@ -4,7 +4,7 @@
 
 - http://localhost:3000/health
 
-## api
+### samples
 
 ```
 curl -X GET -H "accept: application/json" http://localhost:3000/health | jq
