@@ -1,9 +1,9 @@
+use crate::db::{create_task, delete_task, get_tasks, update_task};
 use axum::Router;
-use tokio::net::TcpListener;
-use std::time::Duration;
-use axum::routing::{delete, get, post};
+use axum::routing::{delete, get, patch, post};
 use sqlx::postgres::PgPoolOptions;
-use crate::db::{create_task, delete_task, get_tasks};
+use std::time::Duration;
+use tokio::net::TcpListener;
 
 mod db;
 
@@ -32,6 +32,7 @@ async fn main() {
 		.route("/tasks", get(get_tasks))
 		.route("/tasks", post(create_task))
 		.route("/tasks/:task_id", delete(delete_task))
+		.route("/tasks/:task_id", patch(update_task))
 		.with_state(db_pool);
 
 	axum::serve(listener, app)

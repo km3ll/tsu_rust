@@ -29,6 +29,15 @@ curl -X POST -H "Content-Type: application/json" \
 http://localhost:3000/tasks | jq
 ```
 
+**Create update**
+
+```bash
+curl -X PATCH -H "Content-Type: application/json" \
+-d '{"name": "Read tokyo documentation", "priority": 1 }' \
+http://localhost:3000/tasks/2 | jq
+```
+
+
 **Delete task**
 
 ```bash
