@@ -1,0 +1,32 @@
+networks:
+  localnet:
+    driver: bridge
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - ./local-data/postgres:/var/lib/postgresql/data
+    networks:
+      - localnet
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    container_name: pgadmin
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - ./local-data/pgadmin:/var/lib/pgadmin
+    networks:
+      - localnet
+    depends_on:
+      - postgres
