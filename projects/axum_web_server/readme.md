@@ -1,8 +1,14 @@
 # axum_web_server
 
-## features
+## endpoints
 
-- 
+- http://localhost:3000/health
+
+### samples
+
+```
+curl -X GET -H "accept: application/json" http://localhost:3000/health | jq
+```
 
 ## commands
 
@@ -16,10 +22,6 @@ carto test -- --nocapture
 docker build .
 ```
 
-## pod
+## references
 
-```rust
-let n1 = r#"
----"#;
-println!("{n1}");
-```
+- [Creating an Axum Web Server in Rust is easy!](https://www.youtube.com/watch?v=FDWKlJmHv6k)
