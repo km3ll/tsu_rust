@@ -29,7 +29,7 @@ curl -X POST -H "Content-Type: application/json" \
 http://localhost:3000/tasks | jq
 ```
 
-**Create update**
+**Update task**
 
 ```bash
 curl -X PATCH -H "Content-Type: application/json" \
