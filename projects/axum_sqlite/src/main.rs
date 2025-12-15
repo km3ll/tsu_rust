@@ -36,6 +36,7 @@ async fn main() -> Result<()> {
 	let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
 
 	// Start the server
+	println!("Starting server on localhost:3000");
 	axum::Server::bind(&addr)
 		.serve(app.into_make_service())
 		.await?;

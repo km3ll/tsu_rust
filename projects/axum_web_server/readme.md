@@ -1,16 +1,6 @@
 # axum_web_server
 
-## endpoints
-
-- http://localhost:3000/health
-
-### samples
-
-```
-curl -X GET -H "accept: application/json" http://localhost:3000/health | jq
-```
-
-## commands
+## Commands
 
 ```bash
 cargo clean
@@ -22,6 +12,15 @@ carto test -- --nocapture
 docker build .
 ```
 
-## references
+## API
+
+**Get health check**
+
+```bash
+curl -X GET -H "Accept: application/json" \
+http://localhost:3000/health | jq
+```
+
+## References
 
 - [Creating an Axum Web Server in Rust is easy!](https://www.youtube.com/watch?v=FDWKlJmHv6k)
