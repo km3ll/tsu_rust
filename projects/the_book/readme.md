@@ -46,6 +46,7 @@ The Rust Programming Language
 - c10 Generic Types, Traits, and Lifetimes
   - u01 Generic Data Types
   - u02 Defining Shared Behavior with Traits
+  - u03 Validating References with Lifetimes
 ```
 
 ## commands
