@@ -1,0 +1,10 @@
+[package]
+name = "askama_todos"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.39.3", features = ["full"] }
+askama = { version = "0.12.1" }
+axum = { version = "0.7.5", features = ["macros"] }
+tower-http = { version = "0.5.2", features = ["fs"] }
