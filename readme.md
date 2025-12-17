@@ -2,16 +2,17 @@
 
 ## projects
 
-- [axum_postgres](projects/axum_postgres)
+- [askama_todos](projects/askama_todos)
+- [axum_postgres_crud](projects/axum_postgres_crud)
 - [axum_sqlite](projects/axum_sqlite)
 - [axum_web_server](projects/axum_web_server)
 - [base_app](projects/base_app)
 - [base_cli](projects/base_cli)
 - [exploratory](projects/exploratory)
-- [the_book](projects/the_book)
 - [rust-by-example](projects/rust-by-example)
+- [the_book](projects/the_book)
 
-- [bootcamp](projects/bootcamp)
+- [the_bootcamp](projects/bootcamp)
   - projects
     - [p01_basic](projects/p01_basic) - library and binary crate
   - modules

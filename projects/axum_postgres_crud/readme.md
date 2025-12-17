@@ -1,4 +1,4 @@
-# axum_postgres
+# axum_postgres_crud
 
 ## Commands
 

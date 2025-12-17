@@ -1,5 +1,5 @@
 [package]
-name = "bootcamp"
+name = "the_bootcamp"
 version = "0.1.0"
 edition = "2021"
 # pod: fields for publishing into crates.io

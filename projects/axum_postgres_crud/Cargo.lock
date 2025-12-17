@@ -109,7 +109,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "axum_postgres"
+name = "axum_postgres_crud"
 version = "0.1.0"
 dependencies = [
  "axum",
