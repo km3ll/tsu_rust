@@ -1,9 +1,9 @@
-# bootcamp
+# the_bootcamp
 
 ## content
 
 ```
-bootcamp
+the_bootcamp
 - m01 beginner
   - c01 Get up and running fast
     - u01 Setup
