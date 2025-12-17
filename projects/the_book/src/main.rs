@@ -10,6 +10,7 @@ mod c07; // Managing Growing Projects with Packages, Crates, and Modules
 mod c08; // Common Collections
 mod c09; // Error Handling
 mod c10; // Generic Types, Traits, and Lifetimes
+mod c11; // Writing Automated Tests
 
 fn main() {
 	println!("The Book");

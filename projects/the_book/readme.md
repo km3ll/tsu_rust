@@ -47,6 +47,8 @@ The Rust Programming Language
   - u01 Generic Data Types
   - u02 Defining Shared Behavior with Traits
   - u03 Validating References with Lifetimes
+- c11 Writing Automated Tests
+  - u01 How to Write Tests  
 ```
 
 ## commands
@@ -103,8 +105,9 @@ rustc --explain <code>
 - E0499 A variable was borrowed as mutable more than once
 - E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
 - E0507 A borrowed value was moved out
-- E0515 A reference to a local variable was returne
+- E0515 A reference to a local variable was returned
 - E0596 Tried to mutably borrow a non-mutable variable
+- E0597 A value was dropped while it was still borrowed
 - E0603 A private item was used outside its scope
 - E0614 Attempted to dereference a variable which cannot be dereference
 - E0752 The entry point of the program was marked as async
