@@ -13,7 +13,10 @@ tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 
 # Config
 config = { version = "0.15.9" }
+
+# Serialization
 serde = { version = "1.0.219", features = ["derive"] }
+validator = { version = "0.18.1", features = ["derive"] }
 
 # Env Vars
 dotenvy = "0.15.7"
