@@ -18,8 +18,8 @@ cargo clean
 cargo build
 cargo fmt
 cargo run
-carto test -- --nocapture
-
+cargo test -- --nocapture
+cargo watch -x run
 docker build .
 ```
 
