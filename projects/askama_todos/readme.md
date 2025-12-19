@@ -5,6 +5,7 @@
 ```
 Rust Axum Askama Tutorial
 - u01 Initial setup, routing, navigation and serving static files
+- u02 Logging and extracting form data
 ```
 
 ## API
@@ -18,8 +19,8 @@ cargo clean
 cargo build
 cargo fmt
 cargo run
-carto test -- --nocapture
-
+cargo test -- --nocapture
+cargo watch -x run
 docker build .
 ```
 
@@ -28,3 +29,4 @@ docker build .
 - [Rust Axum Askama Tutorial](https://www.youtube.com/playlist?list=PLo5Oa5DU0IYnXbSRNQrFrAW804drtEqeU)
 - [GitHub: axum_askama_tutorial](https://github.com/watery-desert/axum_askama_tutorial)
 - [axum::response::IntoResponse](https://docs.rs/axum/latest/axum/response/trait.IntoResponse.html#required-methods)
+- [axum::extract](https://docs.rs/axum/latest/axum/extract/index.html#common-extractors)
