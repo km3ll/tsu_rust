@@ -22,7 +22,11 @@ pub struct ServerErrorTemplate {}
 
 #[derive(Template)]
 #[template(path = "pages/sign-up.html")]
-pub struct SignupTemplate {}
+pub struct SignupTemplate<'a> {
+	pub email: &'a str,
+	pub email_error: &'a str,
+	pub password_error: &'a str,
+}
 
 #[derive(Template)]
 #[template(path = "pages/todos.html")]
