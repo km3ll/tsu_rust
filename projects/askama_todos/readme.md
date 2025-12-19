@@ -6,6 +6,7 @@
 Rust Axum Askama Tutorial
 - u01 Initial setup, routing, navigation and serving static files
 - u02 Logging and extracting form data
+- u03 Form validation and setup PostgreSQL database connection
 ```
 
 ## API
@@ -21,12 +22,16 @@ cargo fmt
 cargo run
 cargo test -- --nocapture
 cargo watch -x run
-docker build .
+
+sqlx database create
+sqlx migrate add create_users_table
 ```
 
 ## References
 
 - [Rust Axum Askama Tutorial](https://www.youtube.com/playlist?list=PLo5Oa5DU0IYnXbSRNQrFrAW804drtEqeU)
 - [GitHub: axum_askama_tutorial](https://github.com/watery-desert/axum_askama_tutorial)
+- [Jinja template engine](https://jinja.palletsprojects.com/en/stable/)
 - [axum::response::IntoResponse](https://docs.rs/axum/latest/axum/response/trait.IntoResponse.html#required-methods)
 - [axum::extract](https://docs.rs/axum/latest/axum/extract/index.html#common-extractors)
+- [crate SQLx CLI](https://crates.io/crates/sqlx-cli)

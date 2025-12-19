@@ -20,3 +20,9 @@ validator = { version = "0.18.1", features = ["derive"] }
 
 # Env Vars
 dotenvy = "0.15.7"
+
+# Database
+sqlx = { version = "0.8.6", features = ["runtime-tokio", "tls-rustls", "postgres", "macros"] }
+
+# Validations
+regex = "1.10.6"

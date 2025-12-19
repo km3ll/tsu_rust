@@ -16,8 +16,21 @@ Sign up
 <div class="auth-container">
     <h1 class="auth-heading">Create Account</h1>
     <form method="POST" action="/sign-up">
-        <input type="text" placeholder="Email" name="email">
-        <input type="text" placeholder="Password" name="password">
+
+        {%  if email_error.is_empty() %}
+            <input type="text" placeholder="Enter your email" name="email" value="{{email}}">
+        {%  else %}
+            <input class="invalid-input-field animate_animated animate_shakeX" type="text" placeholder="Enter your email" name="email" value="{{email}}">
+            <label>{{email_error}}</label>
+        {%  endif %}
+
+        {%  if password_error.is_empty() %}
+            <input type="password" placeholder="Enter your password" name="password">
+        {%  else %}
+            <input class="invalid-input-field animate_animated animate_shakeX" type="password" placeholder="Enter your password" name="password">
+            <label>{{password_error}}</label>
+        {%  endif %}
+
         <button class="filled-button" type="submit">Submit</button>
     </form>
     <form method="GET" action="/log-in">
