@@ -32,6 +32,10 @@ sqlx migrate add create_users_table
 - [Rust Axum Askama Tutorial](https://www.youtube.com/playlist?list=PLo5Oa5DU0IYnXbSRNQrFrAW804drtEqeU)
 - [GitHub: axum_askama_tutorial](https://github.com/watery-desert/axum_askama_tutorial)
 - [Jinja template engine](https://jinja.palletsprojects.com/en/stable/)
-- [axum::response::IntoResponse](https://docs.rs/axum/latest/axum/response/trait.IntoResponse.html#required-methods)
-- [axum::extract](https://docs.rs/axum/latest/axum/extract/index.html#common-extractors)
-- [crate SQLx CLI](https://crates.io/crates/sqlx-cli)
+- axum
+  - [extract](https://docs.rs/axum/latest/axum/extract/index.html#common-extractors)
+  - [response::IntoResponse](https://docs.rs/axum/latest/axum/response/trait.IntoResponse.html#required-methods)
+- crates
+  - [sqlx-cli](https://crates.io/crates/sqlx-cli)
+  - [thiserror](https://docs.rs/thiserror/2.0.17/thiserror/)
+  
