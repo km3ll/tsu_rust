@@ -26,3 +26,9 @@ sqlx = { version = "0.8.6", features = ["runtime-tokio", "tls-rustls", "postgres
 
 # Validations
 regex = "1.10.6"
+
+# Encryption
+bcrypt = "0.15.1"
+
+# Error mapping
+thiserror = "1.0.63"
