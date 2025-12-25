@@ -13,8 +13,11 @@ fn minigrep() {
 	pod: problems
 	- (1) The main function has multiple resposabilities
 	- (2) Configuration variables are not grouped together
-	- (3) Error message while reading the file does not give any information
+	- (3) Error message does not share detailed information
 	- (4) Error-handling code is defined in multiple places
+	---
+	pod: errors
+	- A call to panic!() is more appropriate for a programming problem thatn a usage problem
 	---"#;
     println!("{n1}");
 }
@@ -44,6 +47,11 @@ struct Config {
 impl Config {
     // pod: creating a constructor for Config
     fn new(args: &[String]) -> Self {
+        // pod: improving the error message
+        if args.len() < 3 {
+            panic!("🦀 not enough arguments")
+        }
+
         let query = args[1].clone();
         let file_path = args[2].clone();
         Config { query, file_path }
