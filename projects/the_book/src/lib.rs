@@ -10,3 +10,4 @@ pub mod c08; // Common Collections
 pub mod c09; // Error Handling
 pub mod c10; // Generic Types, Traits, and Lifetimes
 pub mod c11; // Writing Automated Tests
+pub mod c12; // An I/O Project: Building a Command Line Program

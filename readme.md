@@ -9,6 +9,7 @@
 - [base_app](projects/base_app)
 - [base_cli](projects/base_cli)
 - [exploratory](projects/exploratory)
+- [minigrep](projects/minigrep)
 - [rust-by-example](projects/rust-by-example)
 - [the_book](projects/the_book)
 
