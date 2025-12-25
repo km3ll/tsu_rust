@@ -49,7 +49,9 @@ The Rust Programming Language
   - u03 Validating References with Lifetimes
 - c11 Writing Automated Tests
   - u01 How to Write Tests
-  - u02 Controlling How Tests Are Run 
+  - u02 Controlling How Tests Are Run
+  - u03 Test Organization
+- c12 An I/O Project: Building a Command Line Program
 ```
 
 ## commands
@@ -118,6 +120,8 @@ rustc --explain <code>
 ## references
 
 - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
+- [The rustc Book](https://doc.rust-lang.org/rustc/what-is-rustc.html)
+  - [tests](https://doc.rust-lang.org/rustc/tests/index.html)
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
 - [mdBook](https://rust-lang.github.io/mdBook/index.html)
