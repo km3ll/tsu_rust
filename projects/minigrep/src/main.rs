@@ -1,7 +1,7 @@
 #![allow(unused)]
 use std::{env, fs};
 
-fn main() {
+fn minigrep() {
     let n1 = r#"
 	pod: grep
 	- [G]lobally search a [R]egular [E]xpression and [P]rint
@@ -9,19 +9,54 @@ fn main() {
 	---
 	pod: args
 	- The first value in the vector is the name of our binary
+	---
+	pod: problems
+	- (1) The main function has multiple resposabilities
+	- (2) Configuration variables are not grouped together
+	- (3) Error message while reading the file does not give any information
+	- (4) Error-handling code is defined in multiple places
 	---"#;
+    println!("{n1}");
+}
 
+// pod: separating concerns in Binary projects
+fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let query: &str = &args[1];
-    let file_path: &str = &args[2];
+    let config = Config::new(&args);
 
-    println!("🦀 searching for {query}");
-    println!("🦀 in file {file_path}");
+    println!("🦀 searching for {}", config.query);
+    println!("🦀 in file {}", config.file_path);
 
-    let contents = fs::read_to_string(file_path)
-        .expect("🦀 should have been able to read the file");
+    let contents =
+        fs::read_to_string(config.file_path).expect("🦀 should have been able to read the file");
 
     println!("🦀 with text:\n{contents}");
-
 }
+
+// pod: grouping configuration values
+#[derive(Debug)]
+struct Config {
+    query: String,
+    file_path: String,
+}
+
+impl Config {
+    // pod: creating a constructor for Config
+    fn new(args: &[String]) -> Self {
+        let query = args[1].clone();
+        let file_path = args[2].clone();
+        Config { query, file_path }
+    }
+}
+
+/*
+pod: extracting the argument parser
+
+fn parse_config(args: &[String]) -> Config {
+    let query = args[1].clone();
+    let file_path  = args[2].clone();
+
+    Config { query, file_path }
+}
+ */
