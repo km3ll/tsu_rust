@@ -7,6 +7,7 @@ An I/o Project: Building a Command Line Program
 - u01 Accepting Command Line Arguments
 - u02 Reading a File
 - u03 Refactoring to Improve Modularity and Error Handling
+- u04 Adding Functionality with Test Driven Development (TDD
 ```
 
 ## commands
