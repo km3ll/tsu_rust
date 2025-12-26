@@ -58,6 +58,7 @@ The Rust Programming Language
   - u04 Adding Functionality with Test Driven Development (TDD)
   - u05 Working with Environment Variables
   - u06 Redirecting Errors to Standard Error
+- c13 Functional Language Features: Iterators and Closures
 ```
 
 ## commands
