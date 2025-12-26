@@ -1,5 +1,5 @@
 #![allow(unused)]
-use minigrep::search;
+use minigrep::{search, search_case_insensitive};
 use std::error::Error;
 use std::{env, fs, process};
 
@@ -25,6 +25,7 @@ fn minigrep() {
 	- Programs panic by calling .expect() method
 	---
 	pod: Macro: unimplemented!()
+	- Indicates unimplemented code by panicking with a message of "not implemented"
 	---
 	pod: Multi-line String
 	- The backslash after the openning double quote tells Rust not to put a new line character at the beginning of the contents of this string literal
@@ -32,6 +33,17 @@ fn minigrep() {
 	pod: Vector lifetimes
 	- The data referenced by a slice needs to be valid for the reference to be valid
 	- 'content' is the only parameter that should be connected to the return value using lifetime syntax
+	---
+	pod: Function: to_lowercase()
+	- Calling it creates new data rather than referencing existing data
+	---
+	pod: Standard outputs in terminal
+	- Standard output: for general information
+	- Standard error: for error messages
+	- This distinction enables users to choose to direct the successful output to a file but still print error messages to the screen
+	---
+	pod: Macro: eprintln!()
+	- Prints to the standard error, with a newline
 	---"#;
     println!("{n1}");
 }
@@ -40,7 +52,7 @@ fn minigrep() {
 fn main() {
     let args: Vec<String> = env::args().collect();
     let config = Config::build(&args).unwrap_or_else(|err| {
-        println!("🦀 problem parsing arguments: {err}");
+        eprintln!("🦀 problem parsing arguments: {err}");
         process::exit(1);
     });
 
@@ -49,16 +61,17 @@ fn main() {
 
     // pod: handling error returned from 'run' in main
     if let Err(err) = run(config) {
-        println!("🦀 application error: {err}");
+        eprintln!("🦀 application error: {err}");
         process::exit(1);
     }
 }
 
 // pod: grouping configuration values
 #[derive(Debug)]
-struct Config {
-    query: String,
-    file_path: String,
+pub struct Config {
+    pub query: String,
+    pub file_path: String,
+    pub ignore_case: bool,
 }
 
 impl Config {
@@ -84,16 +97,26 @@ impl Config {
         let query = args[1].clone();
         let file_path = args[2].clone();
 
-        Ok(Config { query, file_path })
+        let ignore_case = env::var("IGNORE_CASE").is_ok();
+
+        Ok(Config { query, file_path, ignore_case })
     }
 }
 
 fn run(config: Config) -> Result<(), Box<dyn Error>> {
     // pod: returning error from run
     let contents = fs::read_to_string(config.file_path)?;
-    for line in search(&config.query, &contents) {
+
+    let results = if config.ignore_case {
+        search_case_insensitive(&config.query, &contents)
+    } else {
+        search(&config.query, &contents)
+    };
+
+    for line in results {
         println!("{line}");
     }
+
     Ok(())
 }
 

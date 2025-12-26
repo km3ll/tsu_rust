@@ -8,6 +8,8 @@ An I/o Project: Building a Command Line Program
 - u02 Reading a File
 - u03 Refactoring to Improve Modularity and Error Handling
 - u04 Adding Functionality with Test Driven Development (TDD
+- u05 Working with Environment Variables
+- u06 Redirecting Errors to Standard Error
 ```
 
 ## commands
@@ -15,6 +17,10 @@ An I/o Project: Building a Command Line Program
 ```bash
 cargo new minigrep
 cargo run -- test poem.txt
+IGNORE_CASE=1 cargo run -- to poem.txt
+
+cargo run > output.txt 
+cargo run -- to poem.txt > output.txt
 ```
 
 ## references
