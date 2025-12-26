@@ -49,7 +49,16 @@ The Rust Programming Language
   - u03 Validating References with Lifetimes
 - c11 Writing Automated Tests
   - u01 How to Write Tests
-  - u02 Controlling How Tests Are Run 
+  - u02 Controlling How Tests Are Run
+  - u03 Test Organization
+- c12 An I/O Project: Building a Command Line Program
+  - u01 Accepting Command Line Arguments
+  - u02 Reading a File
+  - u03 Refactoring to Improve Modularity and Error Handling
+  - u04 Adding Functionality with Test Driven Development (TDD)
+  - u05 Working with Environment Variables
+  - u06 Redirecting Errors to Standard Error
+- c13 Functional Language Features: Iterators and Closures
 ```
 
 ## commands
@@ -59,7 +68,7 @@ The Rust Programming Language
 cargo clean
 cargo fmt
 cargo build
-cargo test -- --nocapture
+
 # target/debug
 cargo run
 # target/release
@@ -67,6 +76,17 @@ cargo run --release
 
 cargo run --bin the_book
 cargo run --bin app
+
+# tests
+cargo test -- --nocapture
+cargo test --help
+cargo test -- --help
+cargo test -- --test-threads=1
+cargo test -- --show-output
+cargo test run_test_control_definition
+cargo test -- --ignored
+cargo test -- --include-ignored
+cargo test --test integration_test
 
 # projects
 cargo new package_name # binary crate
@@ -118,6 +138,8 @@ rustc --explain <code>
 ## references
 
 - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
+- [The rustc Book](https://doc.rust-lang.org/rustc/what-is-rustc.html)
+  - [tests](https://doc.rust-lang.org/rustc/tests/index.html)
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
 - [mdBook](https://rust-lang.github.io/mdBook/index.html)

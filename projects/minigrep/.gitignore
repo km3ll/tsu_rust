@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+.vascode
+target
+local-data
+logs
