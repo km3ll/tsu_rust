@@ -59,6 +59,8 @@ The Rust Programming Language
   - u05 Working with Environment Variables
   - u06 Redirecting Errors to Standard Error
 - c13 Functional Language Features: Iterators and Closures
+  - u01 Closures
+  - u02 Processing a Series of Items with Iterators
 ```
 
 ## commands
