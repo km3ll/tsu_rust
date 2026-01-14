@@ -4,7 +4,7 @@ use std::{collections::HashMap, io, num::ParseIntError};
 
 /**
  * pod: Error improvements
- * - We can't react programatically to different error cases, as distinguishing
+ * - We can't react programmatically to different error cases, as distinguishing
  *   between user errors vs internal errors
  * - Users should get a friendly error message if their input is invalid,
  *   because that's something they can fix.

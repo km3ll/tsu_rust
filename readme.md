@@ -8,6 +8,7 @@
 - [axum_web_server](projects/axum_web_server)
 - [base_app](projects/base_app)
 - [base_cli](projects/base_cli)
+- [coursera/packt_masterclass](coursera/packt_masterclass)
 - [exploratory](projects/exploratory)
 - [minigrep](projects/minigrep)
 - [rust-by-example](projects/rust-by-example)
