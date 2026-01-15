@@ -61,6 +61,7 @@ The Rust Programming Language
 - c13 Functional Language Features: Iterators and Closures
   - u01 Closures
   - u02 Processing a Series of Items with Iterators
+  - u03 Improving Our I/O Project
 ```
 
 ## commands

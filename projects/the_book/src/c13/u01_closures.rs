@@ -13,11 +13,10 @@ enum ShirtColor {
 }
 
 struct Inventory {
-	shirts: Vec<ShirtColor>
+	shirts: Vec<ShirtColor>,
 }
 
 impl Inventory {
-
 	fn giveaway(&self, user_preference: Option<ShirtColor>) -> ShirtColor {
 		user_preference.unwrap_or_else(|| self.most_stocked())
 	}
@@ -29,7 +28,7 @@ impl Inventory {
 		for color in &self.shirts {
 			match color {
 				ShirtColor::Blue => num_blue += 1,
-				ShirtColor::Red => num_red += 1
+				ShirtColor::Red => num_red += 1,
 			}
 		}
 
@@ -38,9 +37,7 @@ impl Inventory {
 		} else {
 			ShirtColor::Red
 		}
-
 	}
-
 }
 
 fn closures_inventory() {
@@ -65,11 +62,9 @@ fn closures_inventory() {
 	let up2 = None;
 	let g2 = store.giveaway(up2);
 	println!("Closures: User with preference {:?} gets {:?}", up2, g2);
-
 }
 
 fn closures_explicit() {
-
 	let n1 = r#"
 	pod: Closure Types
 	- Type annotations are required in functions because the types are part of an explicit interface exposed to users
@@ -80,10 +75,12 @@ fn closures_explicit() {
 	println!("{n1}");
 
 	// Function
-	fn add_one_v1(x: u32) -> u32 { x + 1 };
+	fn add_one_v1(x: u32) -> u32 {
+		x + 1
+	};
 	// Closures
 	let add_one_v2 = |x: u32| -> u32 { x + 1 };
-	let add_one_v3 = |x| { x + 1 };
+	let add_one_v3 = |x| x + 1;
 	let add_one_v4 = |x| x + 1;
 
 	let r2 = add_one_v2(10);
@@ -95,7 +92,6 @@ fn closures_explicit() {
 	let s = same_value(String::from("hello"));
 
 	println!("Closures: same value: {s}");
-
 }
 
 fn closures_references_immutable() {
@@ -114,7 +110,6 @@ fn closures_references_immutable() {
 	only_borrows();
 
 	println!("Closures: after calling: v1: {v1:?}");
-
 }
 
 fn closures_references_mutable() {
@@ -125,11 +120,9 @@ fn closures_references_mutable() {
 
 	borrows_mutably();
 	println!("Closures: mutable after calling v2: {v2:?}");
-
 }
 
 fn closures_move_ownership() {
-
 	let n1 = r#"
 	pod: Closures moving ownership
 	- Use the 'move' keyword before the parameter list
@@ -143,7 +136,6 @@ fn closures_move_ownership() {
 	thread::spawn(move || println!("Closures: from thread: v3: {v3:?}"))
 		.join()
 		.unwrap();
-
 }
 
 fn closures_values_out() {
@@ -179,7 +171,7 @@ fn closures_values_out() {
 			}
 		}
 	}
- 	*/
+	 */
 	println!("{n1}");
 }
 
@@ -194,7 +186,6 @@ fn closures_functions() {
 }
 
 fn closures_valid_fn_mut() {
-
 	let n1 = r#"
 	pod: Closures: FnMut
 	- The closure doesn't capture, mutate, or move anything from its environment, so it can be called multiple times
@@ -202,21 +193,38 @@ fn closures_valid_fn_mut() {
 	println!("{n1}");
 
 	let mut l1 = [
-		Rectangle{ width: 10, height: 1 },
-		Rectangle{ width: 3, height: 5 },
-		Rectangle{ width: 5, height: 12 },
+		Rectangle {
+			width: 10,
+			height: 1,
+		},
+		Rectangle {
+			width: 3,
+			height: 5,
+		},
+		Rectangle {
+			width: 5,
+			height: 12,
+		},
 	];
 
-	l1.sort_by_key(|r| r.width );
+	l1.sort_by_key(|r| r.width);
 	println!("Closures: FnMut l1: {l1:#?}");
-
 }
 
 fn closures_invalid_fn_mut() {
 	let mut l2 = [
-		Rectangle{ width: 10, height: 1 },
-		Rectangle{ width: 3, height: 5 },
-		Rectangle{ width: 5, height: 12 },
+		Rectangle {
+			width: 10,
+			height: 1,
+		},
+		Rectangle {
+			width: 3,
+			height: 5,
+		},
+		Rectangle {
+			width: 5,
+			height: 12,
+		},
 	];
 
 	let mut sort_operations: Vec<String> = vec![];
@@ -231,7 +239,6 @@ fn closures_invalid_fn_mut() {
 		r.width
 	});
 	println!("Closures: FnMut l2: {l2:#?}, counter: {counter}");
-
 }
 
 #[cfg(test)]
