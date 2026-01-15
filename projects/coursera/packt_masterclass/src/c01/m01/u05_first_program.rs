@@ -1,14 +1,13 @@
 fn first_program() {
-	println!("Hello, pod!");
+    println!("Hello, pod!");
 }
 
 #[cfg(test)]
 mod tests {
-	use super::*;
+    use super::*;
 
-	#[test]
-	fn run_first_program() {
-		first_program();
-	}
-
+    #[test]
+    fn run_first_program() {
+        first_program();
+    }
 }

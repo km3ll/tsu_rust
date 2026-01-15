@@ -1,9 +1,4 @@
 fn base_() {
-	let n1 = r#"
-	pod:
-	-
-	---"#;
-	println!("{n1}");
 }
 
 #[cfg(test)]
