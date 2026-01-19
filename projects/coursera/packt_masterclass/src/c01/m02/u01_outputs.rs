@@ -19,6 +19,14 @@ fn outputs_escape_seq() {
 }
 
 fn outputs_arguments() {
+    let n1 = r#"
+    pod: Macro: println!()
+    - Positional arguments {0} {1}
+    - Named arguments {one} {other}
+    - Math arguments {}, 25 + 10
+    - Grouped arguments {:?}, (x, y)
+    ---"#;
+    println!("{n1}");
     println!("Outputs: {1} {0}", "arguments", "positional");
     println!("Outputs: {one} {other}", one = "named", other = "arguments");
     println!("Outputs: math arguments: 25 + 10 = {}", 25 + 10);

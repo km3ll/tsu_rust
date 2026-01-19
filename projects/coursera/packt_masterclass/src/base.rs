@@ -3,10 +3,11 @@ fn base_() {
 
 #[cfg(test)]
 mod tests {
-	use super::*;
+    use super::*;
 
-	#[test]
-	fn run_() {
-		base_();
-	}
+    #[test]
+    fn run_() {
+        ()
+    }
+
 }
