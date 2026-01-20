@@ -1,5 +1,5 @@
 #![allow(unused)]
-use minigrep::{search, search_case_insensitive};
+use minigrep_v1::{search, search_case_insensitive};
 use std::error::Error;
 use std::{env, fs, process};
 
@@ -99,7 +99,11 @@ impl Config {
 
         let ignore_case = env::var("IGNORE_CASE").is_ok();
 
-        Ok(Config { query, file_path, ignore_case })
+        Ok(Config {
+            query,
+            file_path,
+            ignore_case,
+        })
     }
 }
 

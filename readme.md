@@ -10,7 +10,8 @@
 - [base_cli](projects/base_cli)
 - [coursera/packt_masterclass](coursera/packt_masterclass)
 - [exploratory](projects/exploratory)
-- [minigrep](projects/minigrep)
+- [minigrep_v1](projects/minigrep_v1)
+- [minigrep_v2](projects/minigrep_v2)
 - [rust-by-example](projects/rust-by-example)
 - [the_book](projects/the_book)
 
