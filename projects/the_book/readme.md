@@ -62,6 +62,7 @@ The Rust Programming Language
   - u01 Closures
   - u02 Processing a Series of Items with Iterators
   - u03 Improving Our I/O Project
+  - u04 Performance in Loops vs Iterators
 ```
 
 ## commands

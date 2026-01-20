@@ -3,6 +3,10 @@ fn iterators_definition() {
 	pod: Iterator
 	- Pattern that allows to perform some task on a sequence of items in turn
 	- In Rust, iterators are lazy
+	---
+	pod: Zero-Cost Abstractions
+	- Iterators, although a high-level abstraction, get compiled down to roughly the same code as if you'd written the lower-level code yourself
+	- "What you don't use, you don't pay for. And further: What you do use, you couldn't hand code any better" -Bjarne Stroustrup
 	---"#;
 	println!("{n1}");
 
