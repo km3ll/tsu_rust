@@ -59,6 +59,9 @@ The Rust Programming Language
   - u05 Working with Environment Variables
   - u06 Redirecting Errors to Standard Error
 - c13 Functional Language Features: Iterators and Closures
+  - u01 Closures
+  - u02 Processing a Series of Items with Iterators
+  - u03 Improving Our I/O Project
 ```
 
 ## commands
@@ -68,6 +71,8 @@ The Rust Programming Language
 cargo clean
 cargo fmt
 cargo build
+
+#
 
 # target/debug
 cargo run
@@ -137,15 +142,17 @@ rustc --explain <code>
 
 ## references
 
+- [Benchmark Tests](https://doc.rust-lang.org/unstable-book/library-features/test.html)
+- - [Cargo documentation](https://doc.rust-lang.org/cargo/)
+- [Clippy](https://doc.rust-lang.org/stable/clippy/index.html)
+- [mdBook](https://rust-lang.github.io/mdBook/index.html)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
+- [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
+- [Rust Playground](https://play.rust-lang.org)
 - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
 - [The rustc Book](https://doc.rust-lang.org/rustc/what-is-rustc.html)
   - [tests](https://doc.rust-lang.org/rustc/tests/index.html)
-- [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
-- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
-- [mdBook](https://rust-lang.github.io/mdBook/index.html)
-- [Benchmark Tests](https://doc.rust-lang.org/unstable-book/library-features/test.html)
 - [The Rust Standard Library](https://doc.rust-lang.org/stable/std/)
   - [Module collections](https://doc.rust-lang.org/std/collections/index.html)
   - [Struct Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html)
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/intro.html)
-- [Cargo documentation](https://doc.rust-lang.org/cargo/)

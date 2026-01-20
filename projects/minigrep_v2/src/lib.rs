@@ -1,0 +1,75 @@
+// pod: splitting code into a library crate
+pub fn search_v1<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let mut results: Vec<&str> = Vec::new();
+
+    for line in contents.lines() {
+        if line.contains(query) {
+            results.push(line)
+        }
+    }
+
+    results
+}
+
+pub fn search_v2<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
+}
+
+pub fn search_case_insensitive_v1<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let query = query.to_lowercase();
+    let mut results: Vec<&str> = Vec::new();
+
+    for line in contents.lines() {
+        if line.to_lowercase().contains(&query) {
+            results.push(line)
+        }
+    }
+
+    results
+}
+
+pub fn search_case_insensitive_v2<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let query: String = query.to_lowercase();
+    contents
+        .lines()
+        .filter(|line| line.to_lowercase().contains(&query))
+        .collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn case_sensitive() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Duct tape.";
+        assert_eq!(vec!["safe, fast, productive."], search_v1(query, contents));
+        assert_eq!(vec!["safe, fast, productive."], search_v2(query, contents));
+    }
+
+    #[test]
+    fn case_insensitive() {
+        let query = "rUsT";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Trust me.";
+        assert_eq!(
+            vec!["Rust:", "Trust me."],
+            search_case_insensitive_v1(query, contents)
+        );
+        assert_eq!(
+            vec!["Rust:", "Trust me."],
+            search_case_insensitive_v2(query, contents)
+        );
+    }
+}

@@ -25,7 +25,7 @@ impl<T> DerefMut for MySmartPointer<T> {
 
 /**
  * pod: Implicit Deref Coercion
- * - The type we're passing in is different than the type accepted
+ * - The type we're passing in is different from the type accepted
  * - To coerce a reference of one type into a reference of another type
  *   &Box -> &String -> &str
  * - Only works on types that implement the 'Deref' and 'Deref mut' traits
