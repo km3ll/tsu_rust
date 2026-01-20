@@ -63,6 +63,8 @@ The Rust Programming Language
   - u02 Processing a Series of Items with Iterators
   - u03 Improving Our I/O Project
   - u04 Performance in Loops vs Iterators
+- c14 More about Cargo and Crates.io
+  - u01 Customizing Builds with Release Profiles
 ```
 
 ## commands
@@ -144,7 +146,8 @@ rustc --explain <code>
 ## references
 
 - [Benchmark Tests](https://doc.rust-lang.org/unstable-book/library-features/test.html)
-- - [Cargo documentation](https://doc.rust-lang.org/cargo/)
+- [Cargo documentation](https://doc.rust-lang.org/cargo/)
+- [Cargo profiles](https://doc.rust-lang.org/cargo/reference/profiles.html)
 - [Clippy](https://doc.rust-lang.org/stable/clippy/index.html)
 - [mdBook](https://rust-lang.github.io/mdBook/index.html)
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
