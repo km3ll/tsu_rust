@@ -1,3 +1,5 @@
+//! # The Rust Programming Language
+
 #![allow(unused)]
 pub mod c01; // Getting Started
 pub mod c02; // Programming a Guessing Game

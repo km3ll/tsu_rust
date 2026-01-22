@@ -1,3 +1,5 @@
+//! # Data Types
+
 fn types_core() {
 	let n1 = r#"
 	pod: Data Types

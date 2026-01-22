@@ -1,3 +1,5 @@
+//! # Processing a Series of Items with Iterators
+
 fn iterators_definition() {
 	let n1 = r#"
 	pod: Iterator

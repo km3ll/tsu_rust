@@ -1,3 +1,12 @@
+//! # Command Line Program
+//!
+//! - Accepting Command Line Arguments
+//! - Reading a File
+//! - Refactoring to Improve Modularity and Error Handling
+//! - Adding Functionality with Test Driven Development (TDD)
+//! - Working with Environment Variables
+//! - Redirecting Errors to Standard Error
+
 fn minigrep() {
 	let n1 = r#"
 	pod: grep

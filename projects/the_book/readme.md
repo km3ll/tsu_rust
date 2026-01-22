@@ -10,6 +10,7 @@ The Rust Programming Language
   - u01 Installation
   - u02 Hello, World!
   - u03 Hello, Cargo!
+  - u04 Hello, Tests!
 - c02 Programming a Guessing Game
 - c03 Common Programming Concepts
   - u01 Variables and Mutability
@@ -65,6 +66,7 @@ The Rust Programming Language
   - u04 Performance in Loops vs Iterators
 - c14 More about Cargo and Crates.io
   - u01 Customizing Builds with Release Profiles
+  - u02 Publishing a Crate to Crates.io
 ```
 
 ## commands
@@ -95,6 +97,10 @@ cargo test run_test_control_definition
 cargo test -- --ignored
 cargo test -- --include-ignored
 cargo test --test integration_test
+
+# documentation
+# target/doc/the_book/index.html
+cargo doc --open 
 
 # projects
 cargo new package_name # binary crate

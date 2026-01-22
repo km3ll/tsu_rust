@@ -1,3 +1,5 @@
+//! # Storing Lists of Values with Vectors
+
 #[derive(Debug)]
 enum Cell {
 	Int(i32),

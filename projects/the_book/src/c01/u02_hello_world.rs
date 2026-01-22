@@ -1,3 +1,5 @@
+//! # Hello, World!
+
 fn hello_world() {
 	let n1 = r#"
 	pod: Hello, World!

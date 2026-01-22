@@ -1,3 +1,5 @@
+//! # Defining and Instantiating Structs
+
 #[derive(Debug)]
 struct User {
 	active: bool,

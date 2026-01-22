@@ -1,3 +1,5 @@
+//! # Programming a Guessing Game
+
 use rand::Rng;
 use std::cmp::Ordering::{Equal, Greater, Less};
 use std::io;

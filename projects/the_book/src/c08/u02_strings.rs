@@ -1,3 +1,5 @@
+//! # Storing UTF-8 Encoded Text with Strings
+
 fn strings_definition() {
 	let n1 = r#"
 	pod: Strings

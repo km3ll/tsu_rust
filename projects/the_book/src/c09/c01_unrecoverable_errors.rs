@@ -1,3 +1,5 @@
+//! # Unrecoverable Errors with panic!
+
 fn unrecoverable_errors() {
 	let n1 = r#"
 	pod: Errors

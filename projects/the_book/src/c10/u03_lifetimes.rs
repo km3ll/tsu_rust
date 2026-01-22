@@ -1,3 +1,5 @@
+//! # Validating References with Lifetimes
+
 use std::fmt::Display;
 
 fn valid_lifetime() {

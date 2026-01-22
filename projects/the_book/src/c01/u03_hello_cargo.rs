@@ -1,3 +1,5 @@
+//! # Hello, Cargo!
+
 fn hello_cargo() {
 	let n1 = r#"
 	pod: Hello, Cargo!

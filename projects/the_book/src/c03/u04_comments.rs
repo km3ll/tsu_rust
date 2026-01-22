@@ -1,3 +1,5 @@
+//! # Comments
+
 fn comments() {
 	// This is a comment
 	println!("Hello, pod!");

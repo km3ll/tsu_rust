@@ -1,3 +1,5 @@
+//! # Storing Keys with Associated Values in Hash Maps
+
 use std::collections::HashMap;
 
 fn load_scores() -> HashMap<String, i32> {

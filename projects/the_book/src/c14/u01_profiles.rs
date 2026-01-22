@@ -1,3 +1,5 @@
+//! # Customizing Builds with Release Profiles
+
 fn profiles() {
 	let n1 = r#"
 	pod: Release Profiles
