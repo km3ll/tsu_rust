@@ -1,3 +1,5 @@
+//! # Functions
+
 fn functions_core() {
 	let n1 = r#"
 	pod: Snake Case

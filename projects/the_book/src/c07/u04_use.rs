@@ -1,3 +1,5 @@
+//! # Bringing Paths Into Scope with the use keyword
+
 mod front_of_house {
 	pub mod hosting {
 		pub fn add_to_waitlist(name: &str) {

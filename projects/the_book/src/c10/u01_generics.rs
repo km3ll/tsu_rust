@@ -1,3 +1,5 @@
+//! # Generic Data Types
+
 use std::cmp::PartialOrd;
 
 fn largest_v1() {

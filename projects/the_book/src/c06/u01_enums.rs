@@ -1,3 +1,5 @@
+//! # Defining an Enum
+
 #[derive(Debug)]
 enum IpKindV1 {
 	V4,

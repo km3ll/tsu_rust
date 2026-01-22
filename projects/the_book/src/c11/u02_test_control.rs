@@ -1,3 +1,5 @@
+//! # Controlling How Tests Are Run
+
 fn test_control_definition() {
 	let n1 = r#"
 	pod: Cargo test

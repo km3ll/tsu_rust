@@ -1,3 +1,5 @@
+//! # Common Programming Concepts
+
 pub mod u01_variables_mutability;
 pub mod u02_types;
 pub mod u03_functions;

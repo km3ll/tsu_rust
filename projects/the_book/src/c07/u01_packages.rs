@@ -1,3 +1,5 @@
+//! # Packages and Crates
+
 fn packages_definition() {
 	let n1 = r#"
 	pod: Module System

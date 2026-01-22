@@ -1,3 +1,5 @@
+//! # Defining Modules to Control Scope and Privacy
+
 mod restaurant {
 	mod hosting {
 		fn add_to_waitlist() {}

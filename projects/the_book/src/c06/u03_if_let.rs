@@ -1,3 +1,5 @@
+//! # Concise Control Flow with if let and let else
+
 use rand::Rng;
 
 fn if_let_definition() {

@@ -1,3 +1,5 @@
+//! # Variables and Mutability
+
 use std::thread::Thread;
 
 fn variables_core() {

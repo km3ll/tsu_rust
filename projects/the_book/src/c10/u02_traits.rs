@@ -1,3 +1,5 @@
+//! # Defining Shared Behavior with Traits
+
 use serde::Deserialize;
 use std::fmt::{Debug, Display};
 use std::thread::sleep;

@@ -1,3 +1,5 @@
+//! # Closures
+
 use std::thread;
 
 #[derive(Debug)]

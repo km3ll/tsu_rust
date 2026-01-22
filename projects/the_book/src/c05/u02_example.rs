@@ -1,3 +1,5 @@
+//! # An Example Program Using Structs
+
 fn area_v1(width: u32, height: u32) -> u32 {
 	width * height
 }

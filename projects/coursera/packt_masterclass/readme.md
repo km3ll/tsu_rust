@@ -13,6 +13,7 @@ Rust Programming Masterclass from Beginner to Expert
     - u03 Shadowing and Constants
     - u04 Compound Data Types: Strings
     - u05 Compound Data Types: Tuples, Arrays
+    - u06 Compound Data Types: Vectors
 ```
 
 ## commands

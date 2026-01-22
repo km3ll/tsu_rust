@@ -1,3 +1,5 @@
+//! # Control Flow
+
 use rand::Rng;
 
 fn flow_if_expression() {

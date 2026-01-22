@@ -1,3 +1,5 @@
+//! # The Rust Programming Language
+
 #![allow(unused)]
 pub mod c01; // Getting Started
 pub mod c02; // Programming a Guessing Game
@@ -12,3 +14,4 @@ pub mod c10; // Generic Types, Traits, and Lifetimes
 pub mod c11; // Writing Automated Tests
 pub mod c12; // An I/O Project: Building a Command Line Program
 pub mod c13; // Functional Language Features: Iterators and Closures
+pub mod c14; // Customizing Builds with Release Profiles

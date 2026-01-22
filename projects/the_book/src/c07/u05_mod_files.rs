@@ -1,3 +1,5 @@
+//! # Separating Modules into Different Files
+
 fn mod_files() {
 	let n1 = r#"
 	pod: Module Files

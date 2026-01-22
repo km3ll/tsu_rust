@@ -1,3 +1,5 @@
+//! # Test Organization
+
 fn test_organization_definition() {
 	let n1 = r#"
 	pod: Unit Tests

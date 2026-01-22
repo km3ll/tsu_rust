@@ -2,8 +2,16 @@
 name = "the_book"
 version = "0.1.0"
 edition = "2024"
+description = "A basic project to learn about Rust"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
 config = { version = "0.15.19" }
 rand = {  version = "0.8.5"}
 serde = { version = "1.0.219", features = ["derive"] }
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3

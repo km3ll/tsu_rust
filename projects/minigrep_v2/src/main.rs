@@ -1,5 +1,5 @@
 #![allow(unused)]
-use minigrep_v2::{search, search_case_insensitive};
+use minigrep_v2::{search_case_insensitive_v2, search_v2};
 use std::error::Error;
 use std::{env, fs, process};
 
@@ -11,7 +11,7 @@ fn main() {
     - 'args' can be any type that implements the Iterator trait and returns String items
     ---"#;
     println!("{n1}");
-    
+
     let config = Config::build(env::args()).unwrap_or_else(|err| {
         eprintln!("🦀 Problem parsing arguments: {err}");
         process::exit(1);
@@ -36,27 +36,25 @@ pub struct Config {
 }
 
 impl Config {
-    fn build(
-        mut args: impl Iterator<Item = String>,
-    ) -> Result<Config, &'static str> {
+    fn build(mut args: impl Iterator<Item = String>) -> Result<Config, &'static str> {
         let n1 = r#"
         pod: args
-        - The first value in env::args() is the name of the program. 
+        - The first value in env::args() is the name of the program.
         - We want to ignore that and get to the next value.
         ---"#;
         println!("{n1}");
         args.next();
- 
+
         let query = match args.next() {
             Some(arg) => arg,
-            None => return Err("Didn't get a query string")
+            None => return Err("Didn't get a query string"),
         };
-        
+
         let file_path = match args.next() {
             Some(arg) => arg,
-            None => return Err("Didn't get a file path")
+            None => return Err("Didn't get a file path"),
         };
-        
+
         let ignore_case = env::var("IGNORE_CASE").is_ok();
 
         Ok(Config {
@@ -72,9 +70,9 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
 
     let results = if config.ignore_case {
-        search_case_insensitive(&config.query, &contents)
+        search_case_insensitive_v2(&config.query, &contents)
     } else {
-        search(&config.query, &contents)
+        search_v2(&config.query, &contents)
     };
 
     for line in results {

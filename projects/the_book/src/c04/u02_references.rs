@@ -1,3 +1,5 @@
+//! # References and Borrowing
+
 fn length(s: &String) -> usize {
 	s.len()
 }

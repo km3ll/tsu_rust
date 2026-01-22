@@ -1,3 +1,5 @@
+//! # The match Control Flow Construct
+
 use rand::Rng;
 
 #[derive(Debug)]

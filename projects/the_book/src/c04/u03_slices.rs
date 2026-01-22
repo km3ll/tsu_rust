@@ -1,3 +1,5 @@
+//! # The Slice Type
+
 fn first_word_v1(s: &String) -> usize {
 	let n1 = r#"
 	pod: Byte Literal Syntax

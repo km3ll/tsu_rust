@@ -1,3 +1,5 @@
+//! # Installation
+
 fn installation() {
 	let n1 = r#"
 	pod: Installation

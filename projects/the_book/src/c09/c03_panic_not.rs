@@ -1,3 +1,5 @@
+//! # To panic! or Not to panic!
+
 use std::net::IpAddr;
 
 fn game_v1() {
