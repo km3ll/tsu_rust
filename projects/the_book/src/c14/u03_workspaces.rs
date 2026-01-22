@@ -1,6 +1,6 @@
-//! # 
+//! # Cargo Workspaces
 
-fn base_() {
+fn workspaces() {
 	let n1 = r#"
 	pod:
 	-
@@ -13,7 +13,7 @@ mod tests {
 	use super::*;
 
 	#[test]
-	fn run_() {
-		base_();
+	fn run_workspaces() {
+		workspaces();
 	}
 }

@@ -67,6 +67,7 @@ The Rust Programming Language
 - c14 More about Cargo and Crates.io
   - u01 Customizing Builds with Release Profiles
   - u02 Publishing a Crate to Crates.io
+  - u03 Cargo Workspaces
 ```
 
 ## commands
@@ -76,8 +77,6 @@ The Rust Programming Language
 cargo clean
 cargo fmt
 cargo build
-
-#
 
 # target/debug
 cargo run
@@ -101,6 +100,12 @@ cargo test --test integration_test
 # documentation
 # target/doc/the_book/index.html
 cargo doc --open 
+
+# crates.io
+cargo login
+cargo publish
+cargo yank --vers 1.0.1
+cargo yank --vers 1.0.1 --undo
 
 # projects
 cargo new package_name # binary crate
@@ -159,6 +164,8 @@ rustc --explain <code>
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
 - [Rust By Example](https://doc.rust-lang.org/rust-by-example/index.html)
 - [Rust Playground](https://play.rust-lang.org)
+- [Semantic Versioning 2.0.0](https://semver.org/)
+- [The Linux Foundation’s SPDX License List](https://spdx.org/licenses/)
 - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
 - [The rustc Book](https://doc.rust-lang.org/rustc/what-is-rustc.html)
   - [tests](https://doc.rust-lang.org/rustc/tests/index.html)
