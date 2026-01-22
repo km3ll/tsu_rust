@@ -1,2 +1,4 @@
+//! # Rust Programming Masterclass from Beginner to Expert
+
 #![allow(unused)]
-pub mod c01; // Introduction to Rust Programming and Core Concepts
+pub mod c01;

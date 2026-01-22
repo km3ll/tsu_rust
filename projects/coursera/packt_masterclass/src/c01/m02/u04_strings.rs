@@ -1,3 +1,5 @@
+//! # Compound Data Types - Strings
+
 use std::fmt::format;
 
 fn strings_definition() {

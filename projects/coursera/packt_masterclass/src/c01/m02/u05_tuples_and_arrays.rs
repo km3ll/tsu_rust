@@ -1,3 +1,5 @@
+//! # Compound Data Types - Tuples, Arrays
+
 fn tuples() {
     let n1 = r#"
     pod: Tuples

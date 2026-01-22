@@ -1,3 +1,5 @@
+//! # Variables and Scalar Types
+
 fn variables() {
     let n1 = r#"
 	pod: Variable

@@ -1,3 +1,5 @@
+//! # More on Variables - Shadowing, Constants
+
 fn variables_definition() {
     let (is_active, ferris) = (true, '🦀');
     println!("Variables: grouped definition: ({}, {})", is_active, ferris);

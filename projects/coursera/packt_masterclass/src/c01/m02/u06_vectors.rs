@@ -1,3 +1,5 @@
+//! # Compound Data Types - Vectors
+
 use std::ops::Range;
 use std::slice::Iter;
 

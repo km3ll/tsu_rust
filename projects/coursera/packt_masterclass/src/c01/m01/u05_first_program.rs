@@ -1,3 +1,5 @@
+//! # Running and Compiling Your First Program
+
 fn first_program() {
     println!("Hello, pod!");
 }

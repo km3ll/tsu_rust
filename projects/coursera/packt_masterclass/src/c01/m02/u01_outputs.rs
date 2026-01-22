@@ -1,3 +1,5 @@
+//! # Program Outputs and Comments
+
 fn outputs_definition() {
     println!("Outputs: println! moves to next line");
     print!("Outputs: print! ");
