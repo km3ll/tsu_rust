@@ -1,17 +1,18 @@
 //! # The Rust Programming Language
 
 #![allow(unused)]
-pub mod c01; // Getting Started
-pub mod c02; // Programming a Guessing Game
-pub mod c03; // Common Programming Concepts
-pub mod c04; // Understanding Ownership
-pub mod c05; // Using Structs to Structure Related Data
-pub mod c06; // Enums and Pattern Matching
-pub mod c07; // Managing Growing Projects with Packages, Crates, and Modules
-pub mod c08; // Common Collections
-pub mod c09; // Error Handling
-pub mod c10; // Generic Types, Traits, and Lifetimes
-pub mod c11; // Writing Automated Tests
-pub mod c12; // An I/O Project: Building a Command Line Program
-pub mod c13; // Functional Language Features: Iterators and Closures
-pub mod c14; // Customizing Builds with Release Profiles
+pub mod c01;
+pub mod c02;
+pub mod c03;
+pub mod c04;
+pub mod c05;
+pub mod c06;
+pub mod c07;
+pub mod c08;
+pub mod c09;
+pub mod c10;
+pub mod c11;
+pub mod c12;
+pub mod c13;
+pub mod c14;
+pub mod c15;

@@ -68,6 +68,9 @@ The Rust Programming Language
   - u01 Customizing Builds with Release Profiles
   - u02 Publishing a Crate to Crates.io
   - u03 Cargo Workspaces
+- c15 Smart Pointers
+  - u01 Using Box<T> to Point to Data on the Heap
+  - u02 Treating Smart Pointers Like Regular References
 ```
 
 ## commands
@@ -144,7 +147,7 @@ rustc --explain <code>
 - E0369 A binary operation was attempted on a type which doesn't support it
 - E0382 A variable was used after its contents have been moved elsewhere
 - E0384 An immutable variable was reassigned
-- E0391 A type dependency cycle has been encountere
+- E0391 A type dependency cycle has been encountered
 - E0433 An undeclared crate, module, or type was used
 - E0499 A variable was borrowed as mutable more than once
 - E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
