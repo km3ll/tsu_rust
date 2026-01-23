@@ -5,7 +5,7 @@ fn workspaces() {
 	pod: Workspaces
 	- To split your package further into multiple library crates
 	- A set of packages that share the same Cargo.lock and output directory
-	- Crates in a workspace are meant to depend on each other
+	- Crates in a workspace will always be compatible with each other
 	---"#;
 	println!("{n1}");
 }

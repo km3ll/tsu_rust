@@ -2,4 +2,4 @@
 # Latest and greatest version of Cargo's resolver algorithm
 resolver = "3"
 
-members = [ "add_one","adder"]
+members = [ "add_one", "add_two","adder"]

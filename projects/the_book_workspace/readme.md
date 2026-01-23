@@ -1,5 +1,12 @@
 # the_book_workspace
 
+## commands
+
+```
+cargo run -p adder
+cargo test -p add_one
+```
+
 ## content
 
 ```

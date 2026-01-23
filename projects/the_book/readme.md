@@ -107,6 +107,10 @@ cargo publish
 cargo yank --vers 1.0.1
 cargo yank --vers 1.0.1 --undo
 
+# workspaces
+cargo run -p adder
+cargo test -p add_one
+
 # projects
 cargo new package_name # binary crate
 cargo new --lib package_name # library crate
