@@ -14,6 +14,7 @@
 - [minigrep_v2](projects/minigrep_v2)
 - [rust-by-example](projects/rust-by-example)
 - [the_book](projects/the_book)
+- [the_book_workspace](projects/the_book_workspace)
 
 - [the_bootcamp](projects/bootcamp)
   - projects
