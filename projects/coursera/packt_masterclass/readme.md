@@ -21,6 +21,8 @@ Rust Programming Masterclass from Beginner to Expert
     - u02 Application Memory - Hean and Stack
     - u03 Ownership and References in Functions
     - u04 Mutable and Immutable References
+    - u05 Dereferencing
+    - u06 Understanding Ownership
 ```
 
 ## commands
