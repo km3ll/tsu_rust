@@ -14,6 +14,13 @@ Rust Programming Masterclass from Beginner to Expert
     - u04 Compound Data Types: Strings
     - u05 Compound Data Types: Tuples, Arrays
     - u06 Compound Data Types: Vectors
+    - u07 Functions and Inputs
+    - u08 Mastering Comments and Print
+  - m03 Ownership - The Heart of Rust Programming
+    - u01 Ownership, Primitive, and Non-Primitive Types
+    - u02 Application Memory - Hean and Stack
+    - u03 Ownership and References in Functions
+    - u04 Mutable and Immutable References
 ```
 
 ## commands
