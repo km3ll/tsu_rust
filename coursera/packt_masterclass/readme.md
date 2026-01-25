@@ -1,4 +1,4 @@
-# coursera_packt_masterclass
+# packt_masterclass
 
 ## content
 

@@ -1,4 +1,4 @@
-# the_book_rust_by_example
+# rust_by_example
 
 [![Build Status](https://github.com/rust-lang/rust-by-example/actions/workflows/rbe.yml/badge.svg)](https://github.com/rust-lang/rust-by-example/actions)
 
