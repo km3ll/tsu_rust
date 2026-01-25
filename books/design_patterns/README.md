@@ -1,6 +1,6 @@
-[![Design Patterns in Rust](https://github.com/fadeevab/design-patterns-rust/workflows/Test%20All%20Patterns/badge.svg)](https://github.com/fadeevab/design-patterns-rust)
+# design_patterns
 
-# Design Patterns in Rust
+[![Design Patterns in Rust](https://github.com/fadeevab/design-patterns-rust/workflows/Test%20All%20Patterns/badge.svg)](https://github.com/fadeevab/design-patterns-rust)
 
 [<img width="150" height="150" src="https://avatars.githubusercontent.com/u/8557932?s=200&v=4" align="left" />](https://refactoring.guru)
 [<img width="150" height="150" src="https://www.rust-lang.org/logos/rust-logo-512x512.png" style="padding-left:20px" />](https://www.rust-lang.org/)

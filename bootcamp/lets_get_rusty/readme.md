@@ -1,4 +1,4 @@
-# lgr_bootcamp
+# lets_get_rusty
 
 ## content
 
