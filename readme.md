@@ -1,22 +1,5 @@
 # tsu_rust
 
-- [the_bootcamp](projects/bootcamp)
-  - projects
-    - [p01_basic](projects/p01_basic) - library and binary crate
-  - modules
-    - [p02_in_line](projects/p02_in_line) - in-line definitions
-    - [p03_mod_file](projects/p03_mod_file) - file mod.rs
-    - [p04_mod_folder](projects/p04_mod_folder) - folder name and file
-  - features
-    - [p05_features_lib](projects/p05_features_lib) - feature definition
-    - [p06_features_bin](projects/p06_features_bin) - feature usage
-  - workspaces
-    - [p07_workspace](projects/p07_workspace)
-  - tests
-    - [p08_tests](projects/p08_tests) - integration tests
-  - benchmark
-    - [p09_benchmark](projects/p09_benchmark) - benchmark tests
-
 ## askama
 
 - [askama_todos](askama/askama_todos)
@@ -32,6 +15,28 @@
 - [base_app](base/base_app)
 - [base_cli](base/base_cli)
 - [base_exploratory](base/base_exploratory)
+
+## bootcamp
+
+- [the_bootcamp](bootcamp/the_bootcamp)
+
+- projects
+  - [p01_basic](bootcamp/p01_basic) - library and binary crate
+
+- modules
+  - [p02_in_line](bootcamp/p02_in_line) - in-line definitions
+  - [p03_mod_file](bootcamp/p03_mod_file) - file mod.rs
+  - [p04_mod_folder](bootcamp/p04_mod_folder) - folder name and file
+
+- features
+  - [p05_features_lib](bootcamp/p05_features_lib) - feature definition
+  - [p06_features_bin](bootcamp/p06_features_bin) - feature usage
+- workspaces
+  - [p07_workspace](bootcamp/p07_workspace)
+- tests
+  - [p08_tests](bootcamp/p08_tests) - integration tests
+- benchmark
+  - [p09_benchmark](bootcamp/p09_benchmark) - benchmark tests
 
 ## coursera
 
