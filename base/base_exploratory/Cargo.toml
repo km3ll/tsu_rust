@@ -1,5 +1,5 @@
 [package]
-name = "exploratory"
+name = "base_exploratory"
 version = "0.1.0"
 edition = "2021"
 

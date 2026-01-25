@@ -28,10 +28,10 @@
 ## the_book
 
 - [the_book](the_book/the_book)
-- [the_book_workspace](the_book/the_book_workspace)
-- [the_book_rust_by_example](the_book/the_book_rust_by_example)
 - [the_book_minigrep_v1](the_book/the_book_minigrep_v1)
 - [the_book_minigrep_v2](the_book/the_book_minigrep_v2)
+- [the_book_rust_by_example](the_book/the_book_rust_by_example)
+- [the_book_workspace](the_book/the_book_workspace)
 
 ## zip
 
