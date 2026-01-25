@@ -10,10 +10,6 @@
 - [exploratory](projects/exploratory)
 - [minigrep_v1](projects/minigrep_v1)
 - [minigrep_v2](projects/minigrep_v2)
-- [rust-by-example](projects/rust-by-example)
-- [the_book](projects/the_book)
-- [the_book_workspace](projects/the_book_workspace)
-
 - [the_bootcamp](projects/bootcamp)
   - projects
     - [p01_basic](projects/p01_basic) - library and binary crate
@@ -30,6 +26,12 @@
     - [p08_tests](projects/p08_tests) - integration tests
   - benchmark
     - [p09_benchmark](projects/p09_benchmark) - benchmark tests
+
+## the_book
+
+- [the_book](the_book/the_book)
+- [the_book_workspace](the_book/the_book_workspace)
+- [the_book_rust_by_example](the_book/the_book_rust_by_example)
 
 ## zip
 
