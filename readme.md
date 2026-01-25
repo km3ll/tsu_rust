@@ -1,9 +1,6 @@
 # tsu_rust
 
 - [askama_todos](projects/askama_todos)
-- [axum_postgres_crud](projects/axum_postgres_crud)
-- [axum_sqlite](projects/axum_sqlite)
-- [axum_web_server](projects/axum_web_server)
 - [coursera/packt_masterclass](coursera/packt_masterclass)
 - [the_bootcamp](projects/bootcamp)
   - projects
@@ -21,6 +18,13 @@
     - [p08_tests](projects/p08_tests) - integration tests
   - benchmark
     - [p09_benchmark](projects/p09_benchmark) - benchmark tests
+
+
+## axum
+
+- [axum_postgres_crud](axum/axum_postgres_crud)
+- [axum_sqlite](axum/axum_sqlite)
+- [axum_web_server](axum/axum_web_server)
 
 ## base
 
