@@ -1,4 +1,4 @@
-# minigrep_v2
+# the_book_minigrep_v1
 
 ## content
 
@@ -15,7 +15,7 @@ An I/o Project: Building a Command Line Program
 ## commands
 
 ```bash
-cargo new minigrep_v2
+cargo new minigrep_v1
 cargo run -- test poem.txt
 IGNORE_CASE=1 cargo run -- to poem.txt
 

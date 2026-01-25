@@ -8,8 +8,6 @@
 - [base_cli](projects/base_cli)
 - [coursera/packt_masterclass](coursera/packt_masterclass)
 - [exploratory](projects/exploratory)
-- [minigrep_v1](projects/minigrep_v1)
-- [minigrep_v2](projects/minigrep_v2)
 - [the_bootcamp](projects/bootcamp)
   - projects
     - [p01_basic](projects/p01_basic) - library and binary crate
@@ -32,6 +30,8 @@
 - [the_book](the_book/the_book)
 - [the_book_workspace](the_book/the_book_workspace)
 - [the_book_rust_by_example](the_book/the_book_rust_by_example)
+- [the_book_minigrep_v1](the_book/the_book_minigrep_v1)
+- [the_book_minigrep_v2](the_book/the_book_minigrep_v2)
 
 ## zip
 
