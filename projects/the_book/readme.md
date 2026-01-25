@@ -71,6 +71,8 @@ The Rust Programming Language
 - c15 Smart Pointers
   - u01 Using Box<T> to Point to Data on the Heap
   - u02 Treating Smart Pointers Like Regular References
+  - u03 Running Code on Cleanup with the Drop Trait
+  - u04 Rc<T> The Reference Counted Smart Pointer
 ```
 
 ## commands

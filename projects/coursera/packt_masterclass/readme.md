@@ -23,6 +23,8 @@ Rust Programming Masterclass from Beginner to Expert
     - u04 Mutable and Immutable References
     - u05 Dereferencing
     - u06 Understanding Ownership
+  - m04 Control Structures
+    - u01 Conditional If and Its Variants
 ```
 
 ## commands
