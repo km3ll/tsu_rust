@@ -1,7 +1,5 @@
 # tsu_rust
 
-## projects
-
 - [askama_todos](projects/askama_todos)
 - [axum_postgres_crud](projects/axum_postgres_crud)
 - [axum_sqlite](projects/axum_sqlite)
@@ -33,11 +31,7 @@
   - benchmark
     - [p09_benchmark](projects/p09_benchmark) - benchmark tests
 
+## zip
 
-## backup
-
-- [book_design_patterns](backup/book_design_patterns)
-- [book_rust_lang](backup/book_rust_lang)
-- [lgr_accelerator](backup/lgr_accelerator)
-- [lgr_bootcamp](backup/lgr_bootcamp)
-- [workflows-github](backup/workflows-github)
+- [book_design_patterns](zip/book_design_patterns)
+- [lgr_bootcamp](zip/lgr_bootcamp)
