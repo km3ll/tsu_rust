@@ -4,10 +4,7 @@
 - [axum_postgres_crud](projects/axum_postgres_crud)
 - [axum_sqlite](projects/axum_sqlite)
 - [axum_web_server](projects/axum_web_server)
-- [base_app](projects/base_app)
-- [base_cli](projects/base_cli)
 - [coursera/packt_masterclass](coursera/packt_masterclass)
-- [exploratory](projects/exploratory)
 - [the_bootcamp](projects/bootcamp)
   - projects
     - [p01_basic](projects/p01_basic) - library and binary crate
@@ -24,6 +21,12 @@
     - [p08_tests](projects/p08_tests) - integration tests
   - benchmark
     - [p09_benchmark](projects/p09_benchmark) - benchmark tests
+
+## base
+
+- [base_app](base/base_app)
+- [base_cli](base/base_cli)
+- [base_exploratory](base/base_exploratory)
 
 ## the_book
 
