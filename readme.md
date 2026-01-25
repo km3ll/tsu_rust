@@ -1,7 +1,5 @@
 # tsu_rust
 
-- [askama_todos](projects/askama_todos)
-- [coursera/packt_masterclass](coursera/packt_masterclass)
 - [the_bootcamp](projects/bootcamp)
   - projects
     - [p01_basic](projects/p01_basic) - library and binary crate
@@ -19,6 +17,9 @@
   - benchmark
     - [p09_benchmark](projects/p09_benchmark) - benchmark tests
 
+## askama
+
+- [askama_todos](askama/askama_todos)
 
 ## axum
 
@@ -31,6 +32,10 @@
 - [base_app](base/base_app)
 - [base_cli](base/base_cli)
 - [base_exploratory](base/base_exploratory)
+
+## coursera
+
+- [coursera_packt_masterclass](coursera/coursera_packt_masterclass)
 
 ## the_book
 
