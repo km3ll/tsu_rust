@@ -84,7 +84,62 @@ Let's Get Rusty
     - u02 Basic error handling
     - u03 Custom errors 1
     - u04 Custom errors 2
+    - u05 Custom errors 3
+    - u06 thiserror & anyhow
+    - u07 error-stack
+  - c05 Functional Features in Rust
+    - u01 Closures
+    - u02 Closures Continued
+    - u03 Function Pointers
+    - u04 Iterator Pattern
+    - u05 Iterator Pattern Continued
+    - u06 Iterating Over Collections
+    - u07 Combinators 
+  - c06 CLI Project
+    - u01 Jira CLI Clone
+- m03 Advanced
+  - c01 Concurrency & async/await
+    - u01 Intro to Concurrency 
+    - u02 Creating Threads
+    - u03 Moving Values into Threads
+    - u04 Message Passing Between Threads
+    - u05 Sharing State Between Threads
+    - u06 Sharing State Between Threads Continued
+    - u07 Send & Sync Traits
+    - u08 async/await Basics
+    - u09 Tokio Tasks
+    - u10 CPU Intensive Code
+    - u11 Streams
+  - c02 Rust's Powerful Macro System
+    - u01 Intro to Macros
+    - u02 Declarative Macros
+    - u03 Declarative Macros Continued
+    - u04 Procedural Macros
+    - u05 Procedural Macros - Function Like
+    - u06 Procedural Macros - Custom Derive
+    - u07 Procedural Macros - Attribute Like
+    - u08 Procedural Macros - Attribute Continued
+  - c03 Unsafe Rust and FFI
+    - u01 Unsafe Basics
+    - u02 Dereferencing a Raw Pointer
+    - u03 Calling an Unsafe Function
+    - u04 Implementing an Unsafe Trait
+    - u05 Mutable Static Variables
+    - u06 Inline Assembly
+    - u07 FFI C from Rust
+    - u08 FFI Rust from C
+    - u09 Rust from Python
+  - c04 API Project
+    - u01 StackOverflow API Project
 - m04 Masterclass
-- m05 After Bootcamp
+  - c01 Microservices
+    - u01 What are microservices
+    - u02 Why Rust is great for microservices
+    - u03 Communication with gRPC
+    - u04 Containerization with Docker
+    - u05 CI/CD with GitHub Actions
+    - u06 Cloud Providers
+    - u07 Microservices Project
+  - c02 Advanced Embedded Project
+    - u01 Project Description
 ```
-
