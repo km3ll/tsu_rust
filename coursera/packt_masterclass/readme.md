@@ -25,6 +25,8 @@ Rust Programming Masterclass from Beginner to Expert
     - u06 Understanding Ownership
   - m04 Control Structures
     - u01 Conditional If and Its Variants
+    - u02 If Let and Nested If
+    - u03 Match Statement
 ```
 
 ## commands
