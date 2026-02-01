@@ -1,5 +1,9 @@
 //! # RefCell<T> and the Interior Mutability Pattern
 
+use crate::c15::u05_refcell_smart_pointer::List::{Cons, Nil};
+use std::cell::RefCell;
+use std::rc::Rc;
+
 fn refcell() {
 	let n1 = r#"
 	pod: Interior Mutability
@@ -47,13 +51,31 @@ where
 
 		if percentage_of_max >= 1.0 {
 			self.messenger.send("Error: you are over your quota!")
-		} else if percentage_of_max >= 9.0 {
+		} else if percentage_of_max >= 0.9 {
 			self.messenger
 				.send("Urgent Warning: you've used up over 90% of your quota!");
-		} else if percentage_of_max >= 7.5 {
+		} else if percentage_of_max >= 0.75 {
 			self.messenger
 				.send("Warning: you've used up over 75% of your quota!");
 		}
+	}
+}
+
+struct MockMessenger {
+	sent_messages: RefCell<Vec<String>>,
+}
+
+impl MockMessenger {
+	fn new() -> MockMessenger {
+		MockMessenger {
+			sent_messages: RefCell::new(vec![]),
+		}
+	}
+}
+
+impl Messenger for MockMessenger {
+	fn send(&self, msg: &str) {
+		self.sent_messages.borrow_mut().push(String::from(msg));
 	}
 }
 
@@ -62,8 +84,36 @@ fn refcell_mocks() {
 	pod: Mock Objects
 	- Specific types that record what happens during a test so that you can assert that the correct action took place
 	- For example, to keep track of a user's quota for the number of API calls they're allowed to make
+	---
+	pod: RefCell<T>
+	- Keeps track of how many Ref<T> (`borrow()`) and RefMut<T> (`borrow_mut()`) smart pointers are currently active
 	---"#;
 	println!("{n1}");
+}
+
+#[derive(Debug)]
+enum List {
+	Cons(Rc<RefCell<i32>>, Rc<List>),
+	Nil,
+}
+
+fn refcell_lists() {
+	let value = Rc::new(RefCell::new(5));
+
+	let list_a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
+	let list_b = Cons(Rc::new(RefCell::new(3)), Rc::clone(&list_a));
+	let list_c = Cons(Rc::new(RefCell::new(4)), Rc::clone(&list_a));
+
+	println!("RefCell: lists before");
+	println!(" > a: {:?}", list_a);
+	println!(" > b: {:?}", list_b);
+	println!(" > c: {:?}", list_c);
+
+	*value.borrow_mut() += 10;
+	println!("RefCell: lists after");
+	println!(" > a: {:?}", list_a);
+	println!(" > b: {:?}", list_b);
+	println!(" > c: {:?}", list_c);
 }
 
 #[cfg(test)]
@@ -71,7 +121,26 @@ mod tests {
 	use super::*;
 
 	#[test]
+	fn run_it_sends_an_over_75_percent_warning_message() {
+		let mock_messenger = MockMessenger::new();
+		let mut limit_tracker = LimitTracker::new(&mock_messenger, 100);
+		limit_tracker.set_value(80);
+
+		assert_eq!(mock_messenger.sent_messages.borrow().len(), 1);
+	}
+
+	#[test]
 	fn run_refcell() {
 		refcell();
+	}
+
+	#[test]
+	fn run_refcell_mocks() {
+		refcell_mocks()
+	}
+
+	#[test]
+	fn run_refcell_lists() {
+		refcell_lists()
 	}
 }
