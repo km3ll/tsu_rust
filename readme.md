@@ -34,6 +34,10 @@
   - [p09_benchmark](bootcamp/p09_benchmark) <!-- benchmark tests --> 
 - [lets_get_rusty](bootcamp/lets_get_rusty)
 
+## client
+
+- [pod_cli](client/pod_cli)
+
 ## coursera
 
 - [packt_masterclass](coursera/packt_masterclass)
