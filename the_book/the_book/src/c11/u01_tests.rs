@@ -47,7 +47,7 @@ fn tests_definition() {
 	- Setup, run and assert
 	- Fail when something in the test function panics
 	- Each test runs in a new thread, when the main thread sees that a test thread has died, the test is marked as failed
-	- assert!, assert_eq!, assert_ne!
+	- `assert!`, `assert_eq!`, `assert_ne!`
 	- Assertion macros print their arguments using 'Debug' formatting
 	- The values being compared must implement the 'PartialEq' and 'Debug' traits
 	- A should_panic test would pass even if the test panics for a different reason from the one we were expecting

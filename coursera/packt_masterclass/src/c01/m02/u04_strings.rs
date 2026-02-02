@@ -90,7 +90,7 @@ fn strings_new() {
 
 fn strings_format() {
     let n1 = r#"
-    pod: Macro: format!()
+    pod: macro: format!()
     - Combines input strings by replacing placeholders with their values
     ---"#;
     println!("{n1}");

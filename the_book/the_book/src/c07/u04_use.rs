@@ -10,7 +10,7 @@ mod front_of_house {
 
 fn use_definition() {
 	let n1 = r#"
-	pod: Keyword: 'use'
+	pod: Keyword 'use'
 	- Creates a shortcut to a path
 	- Paths brought into scope with 'use' also check privacy
 	---"#;
@@ -39,7 +39,7 @@ fn use_idiomatic() {
 
 fn use_new_names() {
 	let n1 = r#"
-	pod: Keyword: 'as'
+	pod: Keyword 'as'
 	- Sets a new local name, or alias
 	- Brings two types of the same name into the same scope
 	---"#;
@@ -52,7 +52,7 @@ fn use_new_names() {
 
 fn use_re_exporting() {
 	let n1 = r#"
-	pod: Re-Exporting Names 'pub use'
+	pod: Re-Exporting Names with 'pub use'
 	- When the internal structure of your code differs from how callers would think about the domain
 	- We can write our code with one structure but expose a different structure
 	---"#;
@@ -61,7 +61,7 @@ fn use_re_exporting() {
 
 fn use_nested_paths() {
 	let n1 = r#"
-	pod: Nested Paths 'self'
+	pod: Nested Paths with 'self'
 	- Specifying the common part of the path first
 	- The common first path can be merged with 'self'
 	---"#;
@@ -73,7 +73,7 @@ fn use_nested_paths() {
 
 fn use_glob_operator() {
 	let n1 = r#"
-	pod: The Glob Operator: '*'
+	pod: The Glob Operator '*'
 	- To bring all public items defined in a path into scope
 	- Often used when testing to bring everything under test into the tests module
 	---"#;

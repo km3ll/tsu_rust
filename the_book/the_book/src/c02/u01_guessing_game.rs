@@ -51,10 +51,10 @@ fn game_v1() {
 	---
 	pod: Associated Function
 	- A function that’s implemented on a type
-	- The :: syntax indicates that 'new' is an associated function of the String type
+	- The `::` syntax indicates that 'new' is an associated function of the String type
 	---
 	pod: References
-	- Identified with ampersand '&'
+	- Identified with ampersand `&`
 	- A way to let multiple parts of your code access one piece of data without copying it
 	---
 	pod: Enumeration
@@ -90,32 +90,32 @@ fn game_v1() {
 
 fn game_v2() {
 	let n1 = r#"
-	pod: Range:
+	pod: Range
 	- Inclusive (1..=100)
 	---
 	pod: Ordering Enum
 	- Less / Greater / Equal
 	---
-	pod: Method: cmp()
+	pod: Method cmp()
 	- Compares two values and returns an Ordering type
 	---
 	pod: Match Expression
 	- Made up of arms
 	- Arms are patterns to match against and the code that should be run
-	- The underscore (_) is a catch-all value
+	- The underscore `_` is a catch-all value
 	---
 	pod: Shadowing
 	- Lets reusing a variable name rather than creating two unique variables
 	---
-	pod: Method: trim()
+	pod: Method trim()
 	- Eliminates new-line (\n) and carriage-return (\r)
 	---
 	pod: Loop
-	- break: exits the loop
-	- continue: goes to the next iteration
+	- `break`: exits the loop
+	- `continue` goes to the next iteration
 	---
 	cmd:
-	- cargo doc --open (local documentation)
+	- `cargo doc --open` (local documentation)
 	---"#;
 	println!("{n1}");
 }

@@ -10,7 +10,7 @@ fn variables_definition() {
 
 fn variables_bases() {
     let n1 = r#"
-    pod: Bases of Numbers
+    pod: Println Bases of Numbers
     - Octal (:o), Binary (:b) and Hexa (:x)
     ---"#;
     println!("{n1}");
@@ -37,11 +37,12 @@ fn shadowing() {
     let n1 = r#"
     pod: Shadowing
     - Using, updating or declaring a variable with the same name which has been previously used or declared
-    - The first variables is being shadowed by the second using:
-      - The 'let' keyword
-      - A mutable variable by an immutable variable
-      - A change in data type
-      - A code segment (scope limited to the segment)
+    ---
+    pod: Shadowing Styles
+    - The 'let' keyword
+    - A mutable variable by an immutable variable
+    - A change in data type
+    - A code segment (scope limited to the segment)
     ---"#;
     println!("{n1}");
 

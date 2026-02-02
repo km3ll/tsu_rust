@@ -21,7 +21,7 @@ fn crates_documentation() {
 
 fn crates_re_exporting() {
 	let n1 = r#"
-	pod: Exporting a Convenient Public API
+	pod: Exporting Public APIs
 	- You can re-export items to make a public structure that's different from your native structure
 	- A common use of 'pub use' is to re-export definitions of a dependency in the current crate
 	---"#;

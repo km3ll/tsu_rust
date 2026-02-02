@@ -27,7 +27,7 @@ fn profiles() {
 
 fn profiles_optimization() {
 	let n1 = r#"
-	pod: opt-level
+	pod: Cargo Feature opt-level
 	- Controls the number of optimizations Rust will apply to your code
 	---"#;
 	println!("{n1}");

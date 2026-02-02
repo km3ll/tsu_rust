@@ -6,7 +6,7 @@ fn variables_core() {
 	let n1 = r#"
 	pod: Variables
 	- Immutable by default
-	- Adding 'mut' conveys intent of changing its value
+	- Adding `mut` conveys intent of changing its value
 	---"#;
 	println!("{n1}");
 
@@ -18,7 +18,7 @@ fn variables_core() {
 fn variables_constants() {
 	let n1 = r#"
 	pod: Constants
-	- Declared using the 'const' keyword
+	- Declared using the `const` keyword
 	- The type of value must be annotated
 	- Can be declared in any scope
 	- May be set to a constant expression, not the result of  value computed at runtime
@@ -35,9 +35,10 @@ fn variables_shadowing() {
 	pod: Shadowing
 	- Declaring a new variable with the same name as a previous variable
 	- The second variable takes any uses of the name until either it itself is shadowed or the scope ends
-	- By using 'let'
-	  - We transform a value, but have immutability after the transformation is complete
-	  - We create a new variable, so we can change the type of the value
+	---
+	pod: Shadowing let keyword
+	- We transform a value, but have immutability after the transformation is complete
+	- We create a new variable, so we can change the type of the value
 	---"#;
 	println!("{n1}");
 

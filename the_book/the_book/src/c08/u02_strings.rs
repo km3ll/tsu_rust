@@ -3,8 +3,8 @@
 fn strings_definition() {
 	let n1 = r#"
 	pod: Strings
-	- 'str' (string slice) is the only string type in the core language
-	- 'String' (provided in standard library) is a growable, mutable, owned, UTF-8 encoded string type
+	- `str` (string slice) is the only string type in the core language
+	- `String` (provided in standard library) is a growable, mutable, owned, UTF-8 encoded string type
 	- Implemented as a wrapper around a vector of bytes
 	---"#;
 	println!("{n1}");
@@ -12,8 +12,8 @@ fn strings_definition() {
 
 fn strings_creation() {
 	let n1 = r#"
-	pod: Trait: Display
-	- 'to_string' method is available on any type that implements the Display trait
+	pod: trait: Display
+	- `to_string` method is available on any type that implements the Display trait
 	---"#;
 	println!("{n1}");
 
@@ -51,10 +51,10 @@ fn strings_utf8() {
 
 fn strings_update() {
 	let n1 = r#"
-	pod: Strings: push_str()
+	pod: Method push_str()
 	- Does not take ownership of the parameter (&str)
 	---
-	pod: Strings: push()
+	pod: Method push()
 	- Adds a single character to the String
 	---"#;
 	println!("{n1}");
@@ -83,7 +83,7 @@ fn strings_concatenation() {
 	println!("Strings: + s3: {s3}");
 
 	let n1 = r#"
-	pod: Macro: format!
+	pod: macro: format!()
 	- Combines strings in more complicated ways
 	- Does not take ownership of any of its parameters
 	---"#;
@@ -98,7 +98,7 @@ fn strings_concatenation() {
 
 fn strings_indexing() {
 	let n1 = r#"
-	pod: Strings: indexing
+	pod: Indexing Strings
 	- Strings don't support indexing
 	- String is wrapper over a Vec<u8>
 	- Each Unicode scalar value takes 2 bytes of storage
@@ -140,8 +140,8 @@ fn strings_in_rust() {
 
 fn strings_slicing() {
 	let n1 = r#"
-	pod: Strings: slices
-	- You can use [] with a range to create a slice containing particular bytes
+	pod: Strings Slices
+	- You can use `[]` with a range to create a slice containing particular bytes
 	---"#;
 	println!("{n1}");
 
@@ -153,8 +153,8 @@ fn strings_slicing() {
 
 fn strings_iterating() {
 	let n1 = r#"
-	pod: Strings: iterating chars or bytes
-	- 'char' returns individual Unicode scalar values
+	pod: Iterating Chars or Bytes
+	- `char` returns individual Unicode scalar values
 	---"#;
 	println!("{n1}");
 

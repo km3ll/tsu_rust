@@ -6,11 +6,8 @@ fn types_core() {
 	- Rust is a statically typed language (must know types at compile time)
 	---
 	pod: Scalar Types
-	- Represent a single value. Rust has four:
-	  - Integers
-	  - Floating Point
-	  - Booleans
-	  - Characters
+	- Represent a single value
+	- Rust has four: integers, floating point, booleans, and characters
 	---
 	pod: Compound Types
 	- Group multiple values into one type: tuples and arrays
@@ -27,7 +24,7 @@ fn types_scalar_integer() {
 	- A number without a fractional component
 	- Signed variants: i8, i16, i32, i64, i128, isize
 	- Unsigned variants: u8, u16, u32, u64, u128, usize
-	- Number literals can use underscore (_) as a visual separator
+	- Number literals can use underscore `_` as a visual separator
 	---"#;
 	println!("{n1}");
 
@@ -80,7 +77,7 @@ fn types_scalar_boolean() {
 
 fn types_scalar_character() {
 	let n1 = r#"
-	pod: Type: char
+	pod: Char Type
 	- Language's most primitive alphabetic type
 	- Literals are specified with single quotes
 	---"#;

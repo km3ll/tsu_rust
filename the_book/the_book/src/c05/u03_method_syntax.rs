@@ -34,10 +34,10 @@ fn methods_definition() {
 	let n1 = r#"
 	pod: Methods
 	- Defined within the context of a struct, enum or trait object
-	- Their first parameter is always 'self', which represents the instance
-	- The 'self' is an alias for the type that the impl block is for
+	- Their first parameter is always `self`, which represents the instance
+	- The `self` is an alias for the type that the impl block is for
 	- Can take ownership of self, borrow immutably or borrow mutably
-	- &mut self is used to transform 'self' into something else preventing usage of the original instance
+	- `&mut self` is used to transform `self` into something else preventing usage of the original instance
 	- Can have multiple parameters added after the 'self' parameter
 	---
 	pod: Implementation Block
@@ -77,9 +77,8 @@ fn methods_ref_deref() {
 	let n1 = r#"
 	pod: Automatic Referencing and Dereferencing
 	- Calling methods is one of the few places in Rust with this behavior
-	- Rust automatically adds in '&', '&mut' or '*' so objects match the signature of methods
-	  - p1.distance(&p2);
-	  - (&p1).distance(&p2);
+	- Rust automatically adds in `&`, `&mut` or `*` so objects match the signature of methods
+	- Example: `p1.distance(&p2)` | `(&p1).distance(&p2)`
 	---"#;
 	println!("{n1}");
 }
@@ -103,10 +102,10 @@ fn methods_associated_functions() {
 	let n1 = r#"
 	pod: Associated Functions
 	- All functions defined within impl blocks are associated functions
-	- We can define functions that don't have 'self' as their first parameter
+	- We can define functions that don't have `self` as their first parameter
 	- They aren't methods, because they don't need an instance of the type to work (String::from)
 	- Often used for constructors, often called new()
-	- 'Self' is an alias for the type that appears after the 'impl' keyword
+	- `Self` is an alias for the type that appears after the 'impl' keyword
 	---"#;
 	println!("{n1}");
 

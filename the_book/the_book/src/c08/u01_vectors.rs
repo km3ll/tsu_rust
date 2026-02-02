@@ -26,7 +26,7 @@ fn vectors_definition() {
 	- Indexed by number, starting at zero
 	- Indexing method panics when referencing a nonexistent element
 	---
-	pod: Macro: vec!
+	pod: macro: vec!()
 	- Creates a vector that holds the values you give it
 	---"#;
 	println!("{n1}");

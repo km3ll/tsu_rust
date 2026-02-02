@@ -57,8 +57,8 @@ fn structs_usage() {
 fn structs_update_syntax() {
 	let n1 = r#"
 	pod: Struct Update Syntax
-	- The base instance must come last after colons (..)
-	- Uses equals (=) operator because it moves the data
+	- The base instance must come last after colons `..`
+	- Uses equals `=` operator because it moves the data
 	---"#;
 	println!("{n1}");
 

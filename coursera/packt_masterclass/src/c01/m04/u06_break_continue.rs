@@ -6,8 +6,8 @@ use rand::prelude::ThreadRng;
 fn loops_break() {
     let n1 = r#"
     pod: Loops
-    - 'break' stops a loop
-    - 'continue' skips the current iteration and continues with the next
+    - `break` stops a loop
+    - `continue` skips the current iteration and continues with the next
     ---"#;
     println!("{n1}");
 

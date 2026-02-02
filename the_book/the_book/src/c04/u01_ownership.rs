@@ -4,10 +4,11 @@ fn ownership() {
 	let n1 = r#"
 	pod: Ownership
 	- A set of rules that govern how a Rust program manages memory
-	- Ownership addresses:
-	  - Keeping track of what parts of code are using what data on the heap
-	  - Minimizing the amount of duplicate data on the heap
-	  - Cleaning up unused data on the heap
+	---
+	pod: Ownership Features
+	- Keeping track of what parts of code are using what data on the heap
+	- Minimizing the amount of duplicate data on the heap
+	- Cleaning up unused data on the heap
 	---
 	pod: Ownership Rules
 	- Each value has an 'owner'
@@ -53,11 +54,10 @@ fn ownership_heap() {
 	- Accessing data in the heap is generally slower because you have to follow a pointer
 	- Think of being seated at a restaurant
 	---
-	pod: Allocating On The Heap
-	- The memory allocator
-	  - (1) finds an empty spot that is big enough
-	  - (2) marks it as being in use
-	  - (3) returns a pointer, which is the address of that location
+	pod: Memory Allocator
+    - 1.finds an empty spot that is big enough
+    - 2. marks it as being in use
+	- 3. returns a pointer, which is the address of that location
 	---"#;
 	println!("{n1}");
 }
@@ -85,7 +85,8 @@ fn ownership_string_type() {
 	- Rust calls the 'drop' function to return memory automatically at the closing curly bracket
 	---
 	pod: RAII
-	- Resource Acquisition Is Initialization: a pattern of deallocating resources
+	- Resource Acquisition Is Initialization
+	- Pattern of deallocating resources
 	---"#;
 	println!("{n1}");
 
@@ -110,11 +111,12 @@ fn ownership_literal_allocation() {
 
 fn ownership_string_allocation() {
 	let n1 = r#"
+	pod: Parts Of String
+	- A pointer to the memory that holds the contents
+	- A length (memory used in bytes)
+	- A capacity (total amount received from allocator)
+	---
 	pod: String In Memory
-	- A String is made up of three parts
-	  - A pointer to the memory that holds the contents
-	  - A length (memory used in bytes)
-	  - A capacity (total amount received from allocator)
 	- This group of data is stored on the stack
 	- A memory region on the heap holds the contents
 	- Assigning s1 to s2 copies the pointer (stack), not the actual data (heap)
@@ -123,7 +125,7 @@ fn ownership_string_allocation() {
 	- When s2 and s1 go out of scope, they will both try to free the same memory
 	- Rust considers s1 as no longer valid (moved)
 	---
-	pod: Move (Shallow Copy)
+	pod: Move or Shallow Copy
 	- Copying the pointer, length, and capacity
 	- Also invalidating the first variable
 	- Rust will never automatically create 'deep' copies of data
@@ -150,7 +152,7 @@ fn ownership_scope_assignment() {
 
 fn ownership_clone() {
 	let n1 = r#"
-	pod: Clone (Deep Copy)
+	pod: Clone or Deep Copy
 	- The heap data does get copied
 	---"#;
 	println!("{n1}");

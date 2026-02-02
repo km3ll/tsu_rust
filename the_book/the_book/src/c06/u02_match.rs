@@ -105,8 +105,8 @@ fn match_binding() {
 	- Have two parts: a pattern and some code
 	- They can bind to the parts of the values that match the pattern
 	- The catch-all pattern binds the pattern to a value
-	- The underscore (_) pattern does not bind to any value
-	- The unit value / empty tuple () does not run any code
+	- The underscore `_` pattern does not bind to any value
+	- The unit value / empty tuple `()` does not run any code
 	---"#;
 	println!("{n1}");
 

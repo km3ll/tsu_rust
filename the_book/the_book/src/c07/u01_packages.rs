@@ -4,10 +4,12 @@ fn packages_definition() {
 	let n1 = r#"
 	pod: Module System
 	- Rust features that allow to manage code organization
-	  - Package: feature that lets you build, test, and share crates
-	  - Crate: a tree of modules that produces a library or executable
-	  - Module: to control the organization, scope, and privacy of paths
-	  - Path: a way of naming an item (struct, function, module)
+	---
+	pod: Code Organization
+	- Package: feature that lets you build, test, and share crates
+	- Crate: a tree of modules that produces a library or executable
+	- Module: to control the organization, scope, and privacy of paths
+	- Path: a way of naming an item (struct, function, module)
 	---"#;
 	println!("{n1}");
 }

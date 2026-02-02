@@ -30,11 +30,11 @@ fn flow_loops() {
 fn flow_loop() {
 	let n1 = r#"
 	pod: Loop
-	- 'break' stops executing the loop
-	- 'continue' skips over any remaining code and goes to next iteration
-	- 'return' always exits the current function
-	- A return value can be added after the 'break' expression
-	- Loop labels must begin with a single quote (')
+	- `break` stops executing the loop
+	- `continue` skips over any remaining code and goes to next iteration
+	- `return` always exits the current function
+	- A return value can be added after the `break` expression
+	- Loop labels must begin with a single quote `'`
 	---"#;
 	println!("{n1}");
 }

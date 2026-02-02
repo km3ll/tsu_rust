@@ -2,15 +2,15 @@
 
 fn hello_world() {
 	let n1 = r#"
-	pod: Hello, World!
-	- Rust files end with .rs extension
+	pod: Hello World
+	- Rust files end with `.rs` extension
 	- Naming convention is snake case for multiple words
-	- Function main() in the entry point of Rust executables
+	- Function `main()` is the entry point of Rust executables
 	---
 	cmd:
-	- rustc main.rs
-	- ./main
-	- cargo test -- --nocapture
+	- `rustc main.rs`
+	- `./main`
+	- `cargo test -- --nocapture`
 	---
 	pod: Macros
 	- A way to write code that generates code

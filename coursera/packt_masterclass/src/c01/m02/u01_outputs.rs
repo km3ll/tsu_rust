@@ -22,7 +22,7 @@ fn outputs_escape_seq() {
 
 fn outputs_arguments() {
     let n1 = r#"
-    pod: Macro: println!()
+    pod: macro: println!()
     - Positional arguments {0} {1}
     - Named arguments {one} {other}
     - Math arguments {}, 25 + 10
