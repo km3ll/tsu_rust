@@ -82,14 +82,14 @@ fn paths_modules() {
 
 fn paths_library_and_binary() {
 	let n1 = r#"
-	pod: Best Practices with Binary and Library
-	- Library crate
-	  - Code that can be shared
-	  - The module tree should be defined in src/lib.rs
-	  - Any public items can be used in the binary crate
-	- Binary crate
-	  - Code to start and executable that calls code in the library crate
-	  - Becomes a user of the library crate. It can only use the public API
+	pod: Library Crate
+	- Code that can be shared
+	- The module tree should be defined in src/lib.rs
+	- Any public items can be used in the binary crate
+	---
+	pod: Binary Crate
+	- Code to start and executable that calls code in the library crate
+	- Becomes a user of the library crate. It can only use the public API
 	---"#;
 	println!("{n1}");
 }
@@ -97,7 +97,7 @@ fn paths_library_and_binary() {
 fn paths_super() {
 	let n1 = r#"
 	pod: Relative Paths with 'super'
-	- 'super' starts a relative path in the parent module
+	- `super` starts a relative path in the parent module
 	- It is like starting a filesystem path with the '..' syntax
 	---"#;
 	println!("{n1}");

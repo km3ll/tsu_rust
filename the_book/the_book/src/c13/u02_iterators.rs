@@ -23,7 +23,7 @@ fn iterators_definition() {
 
 fn iterators_trait() {
 	let n1 = r#"
-	pod: Trait: Iterator
+	pod: trait: Iterator
 	- Requires implementors to define one method: next()
 	- next() returns one item at a time, wrapped in Some and when iteration is over, returns None
 	- Calling the 'next' method changes the internal state of the iterator

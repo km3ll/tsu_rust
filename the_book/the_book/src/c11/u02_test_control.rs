@@ -9,16 +9,16 @@ fn test_control_definition() {
 	- If a test passes, Rust captures anything printed to standard output by default
 	- The module in which a test appears becomes part of the test's name
 	- We can run all the tests in a module by filtering on the module's name
-	- We can ignore a test unless specifically requested with #[ignore]
+	- We can ignore a test unless specifically requested with `#[ignore]`
 	---
 	cmd:
-	- cargo test --help
-	- cargo test -- --help
-	- cargo test -- --test-threads=1
-	- cargo test -- --show-output
-	- cargo test run_test_control_definition
-	- cargo test -- --ignored
-	- cargo test -- --include-ignored
+	- `cargo test --help`
+	- `cargo test -- --help`
+	- `cargo test -- --test-threads=1`
+	- `cargo test -- --show-output`
+	- `cargo test run_test_control_definition`
+	- `cargo test -- --ignored`
+	- `cargo test -- --include-ignored`
 	---"#;
 	println!("{n1}");
 }

@@ -11,7 +11,7 @@ fn unrecoverable_errors() {
 
 fn unrecoverable_definition() {
 	let n1 = r#"
-	pod: Macro: panic!
+	pod: macro: panic!()
 	- Panics print a failure message, unwind, clean up the stack, and quit
 	---
 	pod: Unwinding vs Aborting

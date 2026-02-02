@@ -23,9 +23,9 @@ fn longest_v2<'a>(x: &'a str, y: &'a str) -> &'a str {
 	- Describe the relationships of the lifetimes of multiple references to each other
 	- Do not affect lifetimes
 	- Their names start with an apostrophe ('), are usually lowercased and very short
-	  - &i32 = reference
-	  - &'a i32 = refere with explicit lifetime
-	  - &'a mut i32 = mutable reference with explicit lifetime
+	- `&i32` = reference
+	- `&'a i32` = refere with explicit lifetime
+	- `&'a mut i32` = mutable reference with explicit lifetime
 	---"#;
 	println!("{n1}");
 	if x.len() > y.len() { x } else { y }
@@ -53,8 +53,10 @@ fn lifetimes_definition() {
 	- Ensure that references are valid as long as we need them to be
 	- Every reference has a lifetime: the scope for which that reference is valid
 	- Aim to prevent dangling references
-	  - A referenced value goes out of scope before it's used
-	  - The subject of the reference doesn't live as long as the reference
+	---
+	pod: Dangling Reference
+	- A referenced value goes out of scope before it's used
+	- The subject of the reference doesn't live as long as the reference
 	---
 	pod: Input Lifetimes
 	- On function or method parameters
@@ -110,10 +112,9 @@ fn lifetimes_elision() {
 	let n1 = r#"
 	pod: Lifetime Elision Rules
 	- A set of particular cases that the compiler will consider, and if your code fits these cases, you don't need to write lifetimes explicitly
-	- (1) The compiler assigns a different lifetime parameter to each parameter that is a reference
-	- (2) If there is exactly one input lifetime parameter, that lifetime is asigned to all output lifetime parameters
-	- (3) If there are multiple input lifetime parameters, but one of the is &self or &mut self because this is a method,
-	  the lifetime of self is assigned to all output parameters.
+	- 1. The compiler assigns a different lifetime parameter to each parameter that is a reference
+	- 2. If there is exactly one input lifetime parameter, that lifetime is asigned to all output lifetime parameters
+	- 3. If there are multiple input lifetime parameters, but one of the is &self or &mut self because this is a method, the lifetime of self is assigned to all output parameters.
 	---"#;
 	println!("{n1}");
 }

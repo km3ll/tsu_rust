@@ -2,7 +2,7 @@
 
 fn hello_cargo() {
 	let n1 = r#"
-	pod: Hello, Cargo!
+	pod: Hello Cargo
 	- Cargo is Rust's build system and package manager
 	---
 	pod: TOML
@@ -15,14 +15,14 @@ fn hello_cargo() {
 	- Keeps track of the exact versions of dependencies
 	---
 	cmd:
-	- cargo --version
-	- cargo new <name> (initializes git)
-	- cargo new <name> --vcs=git (uses git)
-	- cargo build (target/debug/<name>)
-	- ./target/debug/<name>
-	- cargo build --release (optimized, target/release/<name>)
-	- cargo run
-	- cargo check (faster, compiles, doesn't produce executable)
+	- `cargo --version`
+	- `cargo new <name>` (initializes git)
+	- `cargo new <name> --vcs=git` (uses git)
+	- `cargo build` (target/debug/<name>)
+	- `./target/debug/<name>`
+	- `cargo build --release` (optimized, target/release/<name>)
+	- `cargo run`
+	- `cargo check` (faster, compiles, doesn't produce executable)
 	---"#;
 	println!("{n1}")
 }

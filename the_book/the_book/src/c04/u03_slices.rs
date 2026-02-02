@@ -4,7 +4,7 @@ fn first_word_v1(s: &String) -> usize {
 	let n1 = r#"
 	pod: Byte Literal Syntax
 	- A notation that expresses a single byte (or sequence) in a clear, machine-aligned format
-	- b' ' (space)
+	- `b ` (space)
 	---"#;
 	println!("{n1}");
 
@@ -79,7 +79,7 @@ fn slices_string() {
 fn slices_first_word_v1() {
 	let n1 = r#"
 	pod: State Disconnection
-	- 'index' is not connected to the state of s1
+	- index is not connected to the state of s1
 	---"#;
 	println!("{n1}");
 
@@ -98,9 +98,9 @@ fn slices_first_word_v2() {
 
 fn slices_string_literals() {
 	let n1 = r#"
-	pod: String Literals As Slices
+	pod: String Literals as Slices
 	- Literals are stored inside the binary
-	- A &str (immutable reference) is a slice pointing to a specific point in the binary
+	- A `&str` (immutable reference) is a slice pointing to a specific point in the binary
 	---"#;
 	println!("{n1}");
 
@@ -110,8 +110,8 @@ fn slices_string_literals() {
 
 fn slices_as_parameters() {
 	let n1 = r#"
-	pod: String Slices As Parameters
-	- Function parameter 's: &str' allows to use the function on both &String and &str values
+	pod: String Slices as Parameters
+	- Function parameter `s: &str` allows to use the function on both &String and &str values
 	- This flexibility takes advantages of Deref Coercion
 	---"#;
 	println!("{n1}");

@@ -89,7 +89,7 @@ fn generics_largest_v2() {
 
 fn generics_in_functions() {
 	let n1 = r#"
-	pod: Trait: PartialOrd
+	pod: trait: PartialOrd
 	- We want to compare values of type T. We can only use types whose values can be ordered
 	- The standard library implementes this trait on both i32 and char
 	---"#;

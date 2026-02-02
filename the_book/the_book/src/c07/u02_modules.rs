@@ -15,14 +15,14 @@ mod restaurant {
 fn modules_example() {
 	let n1 = r#"
 	pod: Crate Tree Example
-	backyard
-	├── Cargo.lock
-	├── Cargo.toml
-	└── src
-	    ├── garden
-	    │   └── vegetables.rs
-	    ├── garden.rs
-	    └── main.rs
+	- `backyard`
+	- `├── Cargo.lock`
+	- `├── Cargo.toml`
+	- `└── src`
+	- `    ├── garden`
+	- `    │   └── vegetables.rs`
+	- `    ├── garden.rs`
+	- `    └── main.rs`
 	---"#;
 	println!("{n1}");
 }
@@ -34,18 +34,20 @@ fn modules_code() {
 	- Private items are internal implementation details
 	- Group related definitions together
 	- Sibling modules are defined in the same module
-	- If module A is contained inside module B
-	  - A is the 'child' of module B
-	  - B is the parent of module A
+	---
+	pod: Module A contained inside B
+	- A is the `child` of module B
+	- B is the `parent` of module A
 	---
 	pod: Module crate
-	- Files src/main.rs and src/lib.rs are crate roots
+	- Files `src/main.rs` and `src/lib.rs` are crate roots
 	- Their content form a module name 'crate' at the root of module tree
 	---
 	pod: Module Tree
 	- The crate's module structure
+	---
 	cmd:
-	- cargo new restaurant --lib
+	- `cargo new restaurant --lib`
 	---"#;
 	println!("{n1}");
 }

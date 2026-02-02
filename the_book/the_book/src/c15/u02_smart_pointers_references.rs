@@ -66,7 +66,7 @@ fn dereference_my_box() {
 	pod: MyBox
 	- To enabling dereferencing we implement the Deref trait
 	- We don't want to take ownership of the inner value inside MyBox<T>
-	- *y = *(y.deref())
+	- `*y = *(y.deref())`
 	---"#;
 	println!("{n1}");
 

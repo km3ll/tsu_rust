@@ -16,11 +16,12 @@ fn hashmap_definition() {
 	- Values have the same type
 	- Types that implement the 'Copy' trait are copied into the hash map
 	- Owned values are moved and the hash map is the owner
-	- Update Operations
+	- Iterating over a hash map happens in an arbitrary order
+	---
+	pod: Hash Maps Update Operations
 	  - Overwrite (insert)
 	  - Adding key-value only if key isn't present
 	  - Updating a value based on old value
-	- Iterating over a hash map happens in an arbitrary order
 	---"#;
 	println!("{n1}");
 

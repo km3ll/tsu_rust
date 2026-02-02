@@ -43,8 +43,8 @@ fn recoverable_definition() {
 	let n1 = r#"
 	pod: Result
 	- Loaded into scope by the prelude
-	- 'unwrap' returns the value inside the Ok variant or calls the panic! macro upon the Err variant
-	- 'expect' lets choose the error message for the panic! macro
+	- `unwrap` returns the value inside the Ok variant or calls the panic! macro upon the Err variant
+	- `expect` lets choose the error message for the panic! macro
 	- Most Rustaceans choose 'expect' rather than 'unwrap' and give more context about why the operation is expected to succeed
 	---
 	pod: ErrorKind
@@ -98,16 +98,17 @@ fn recoverable_propagating_v1() {
 
 fn recoverable_propagating_v2() {
 	let n1 = r#"
-	pod: Operator: question mark (?)
+	pod: Question Mark (?) Operator
 	- Placed after a Result value
 	- Upon an Ok, the value inside will be returned from this expression
 	- Upon an Err, the err will be returned from the whole function, as if we had used the return keyword
-	- When ? is called on an error
-	  - it goes through the 'from' function of the 'From' trait
-	  - the error type is converted into the error defined in the return type of the function
-	  - then only one error type represents all the ways a function might fail
 	- Can be used in functions whose return type is compatible with the value the ? is used on
 	- Can be used with Result, Option or another type that implements FromResidual
+	---
+	pod: Question Mark On An Error
+    - It goes through the 'from' function of the 'From' trait
+	- The error type is converted into the error defined in the return type of the function
+	- Then only one error type represents all the ways a function might fail
 	---"#;
 	println!("{n1}");
 

@@ -98,8 +98,8 @@ fn closures_explicit() {
 
 fn closures_references_immutable() {
 	let n1 = r#"
-	pod: Closures, references and ownership
-	- Closure capture values: borrowing immutably, borrowing mutably and taking ownership.
+	pod: Closure Capture
+	- Closures capture values: borrowing immutably, borrowing mutably and taking ownership.
 	---"#;
 	println!("{n1}");
 
@@ -126,8 +126,8 @@ fn closures_references_mutable() {
 
 fn closures_move_ownership() {
 	let n1 = r#"
-	pod: Closures moving ownership
-	- Use the 'move' keyword before the parameter list
+	pod: Closures Moving Ownership
+	- Use the `move` keyword before the parameter list
 	- This technique is mostly used when passing a closure to a new thread to move the data
 	---"#;
 	println!("{n1}");
@@ -142,25 +142,24 @@ fn closures_move_ownership() {
 
 fn closures_values_out() {
 	let n1 = r#"
-	pod: Closure Fn Traits
-	- A Closure body:
-	  - can move a captured value out
-	  - can mutate a captured value
-	  - can neither move nor mutate a value
-	  - can capture nothing from the environment
+	pod: Closure Body
+	- can move a captured value out
+	- can mutate a captured value
+	- can neither move nor mutate a value
+	- can capture nothing from the environment
+	---
+	pod: Closure Fn Trait
 	- The way a closure captures and handles values affect which traits the closure implements
 	- Traits are how functions and struct specify what kinds of closures they can use
+	- Closures that don-t move captured values out of their body and don't mutate captured values
+	- Closures that capture nothing from their environment
 	---
-	pod: Closure: FnOnce
+	pod: Closure FnOnce Trait
 	- Closures that can be called once
 	- A closure that moves captured values out of its body implements only FnOnce and none of the other 'Fn' traits
 	---
-	pod: Closure: FnMut
+	pod: Closure FnMut Trait
 	- Closures that don't move captured values out of their body but might mutate the captured values
-	---
-	pod: Closure: Fn
-	- Closures that don-t move captured values out of their body and don't mutate captured values
-	- Closures that capture nothing from their environment
 	---"#;
 
 	/*
@@ -179,7 +178,7 @@ fn closures_values_out() {
 
 fn closures_functions() {
 	let n1 = r#"
-	pod: Functions instead of Closures
+	pod: Functions Instead of Closures
 	- We can use the name of a function if what we want doesn't require a value from the environment
 	- On an Option<Vec<T>> we could call unwrap_or_else(Vec::new)
 	- The compiler automatically implements whichever of the Fn traits is applicable
@@ -189,7 +188,7 @@ fn closures_functions() {
 
 fn closures_valid_fn_mut() {
 	let n1 = r#"
-	pod: Closures: FnMut
+	pod: Closure FnMut Trait
 	- The closure doesn't capture, mutate, or move anything from its environment, so it can be called multiple times
 	---"#;
 	println!("{n1}");

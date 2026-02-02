@@ -15,12 +15,14 @@ fn test_organization_definition() {
 	- Each file in the tests directory is a separate crate
 	- If any test in a section fails, the following section will not be run
 	- Files in subdirectories of the 'tests' directory don't get compiled as separate crates or have sections in the test output
-	- If our project doesn't have a 'src/lib.rs' file, we can't create integration tests
-	  - Only binary crates (src/lib) expose functions that other crates can use
-	  - Binary crates (src/main) are meant to run on their own
+	---
+	pod: Integration Tests Requirements
+	- If our project doesn't have a `src/lib.rs` file, we can't create integration tests
+	- Only binary crates (src/lib) expose functions that other crates can use
+	- Binary crates (src/main) are meant to run on their own
 	---
 	cmd:
-	- cargo test --test integration_test
+	- `cargo test --test integration_test`
 	---"#;
 	println!("{n1}");
 }

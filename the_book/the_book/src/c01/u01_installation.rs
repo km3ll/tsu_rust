@@ -7,10 +7,10 @@ fn installation() {
 	- linker (C compiler)
 	---
 	cmd:
-	- rustc --version
-	- rustup update
-	- rustup doc (local documentation)
-	- cargo --offline (cached dependencies)
+	- `rustc --version`
+	- `rustup update`
+	- `rustup doc` (local documentation)
+	- `cargo --offline` (cached dependencies)
 	---"#;
 	println!("{n1}");
 }

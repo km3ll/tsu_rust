@@ -26,11 +26,12 @@ fn box_smart_pointer() {
 	pod: Box<T>
 	- Allows to store data on the heap
 	- What remains on the stack is the pointer to the heap data
-	- Used when:
-	  - You have a type whose size can't be known at compile time, and you want to use a value of that type in a context that requires an exact size
-	  - You have a large amount of data, and you want to transfer ownership but ensure that the data won't be copied
-	  - You want to own a value, and you care only that it's a type that implements a particular trait rather than being of a specific type
 	- A box pointer's size doesn't change based on the amount of data it's pointing to.
+	---
+	pod: Box<T> Usage
+	- You have a type whose size can't be known at compile time, and you want to use a value of that type in a context that requires an exact size
+	- You have a large amount of data, and you want to transfer ownership but ensure that the data won't be copied
+	- You want to own a value, and you care only that it's a type that implements a particular trait rather than being of a specific type
 	---"#;
 	println!("{n1}");
 
@@ -77,7 +78,7 @@ fn box_recursive_types() {
  	---
  	pod: Indirection
  	- Instead of storing a value directly, we should change the data structure to store the value indirectly by storing a pointer to the value instead
- 	- Cons size = i32 + Box< usize >
+ 	- Cons size = i32 + Box<usize>
 	---"#;
 	println!("{n1}");
 

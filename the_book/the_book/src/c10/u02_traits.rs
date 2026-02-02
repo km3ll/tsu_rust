@@ -117,7 +117,7 @@ fn traits_definition() {
 
 fn traits_coherence() {
 	let n1 = r#"
-	pod: Coherence (The Orphan Rule)
+	pod: Coherence or The Orphan Rule
 	- We can implement a trait on a type only if either the trait or the type, or both, are local to our crate
 	---"#;
 	println!("{n1}");
@@ -151,7 +151,7 @@ fn traits_bound_syntax() {
 	pod: Trait Bound Syntax
 	- Is equivalent to the 'impl Trait' syntax
 	- A generic type constraints the function
-	- Multiple bounds are expressed with the '+' syntax
+	- Multiple bounds are expressed with the `+` syntax
 	---"#;
 	println!("{n1}");
 
@@ -200,8 +200,8 @@ fn traits_returning_impl() {
 	pod: Blanket Implementations
 	- Conditionally implementing a trait for any type that implements another trait
 	- The standard library implements ToString on any type that implements Display
-	  - We can call the to_string method on integers, for example
-	  - impl<T: Display> ToString for T {...}
+	- We can call the to_string method on integers, for example
+	- impl<T: Display> ToString for T {...}
   	- Blanket implementations appear in the documentation for the trait in the 'implementors' section
 	---"#;
 	println!("{n1}");
@@ -212,7 +212,7 @@ fn traits_returning_impl() {
 
 fn traits_conditional_impl() {
 	let n1 = r#"
-	pod: Trait bounds to conditionally implement methods
+	pod: Trait Bounds to Conditionally Implement Methods
 	- Always implements new() on PairV2
 	- Implements cmd_display() if Display and PartialOrd implemented
 	---"#;

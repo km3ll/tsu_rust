@@ -26,7 +26,7 @@ fn references() {
 	- Just as variables, references are immutable by default
 	---
 	pod: Dereferencing
-	- Represented by asterisk '*'
+	- Represented by asterisk `*`
 	---
 	pod: Borrowing
 	- The action of creating a reference
@@ -45,11 +45,10 @@ fn references_mutable() {
 	- If you have a mutable reference to a value, you cannot have other references to that value
 	- We can use curly brackets to create new scopes, allowing multiple non-simultaneous references
 	---
-	pod: Data Race
-	- Happens when
-	  - (1) Two or more pointers access the same data at the same time
-	  - (2) At least one of the pointers is being used to write to the data
-	  - (3) There's no mechanism being used to synchronize access to the data
+	pod: Data Race Scenarios
+    - 1. Two or more pointers access the same data at the same time
+	- 2. At least one of the pointers is being used to write to the data
+	- 3. There's no mechanism being used to synchronize access to the data
 	---
 	pod: Multiple References
 	- Multiple immutable references are allowed
@@ -92,7 +91,7 @@ fn references_scope() {
 
 fn references_dangling() {
 	let n1 = r#"
-	pod: Dangling Pointer (Reference)
+	pod: Dangling Pointer
 	- A pointer that references a location in memory given to someone else
 	- In Rust, the compiler guarantees that references will never be dangling references
 	---"#;

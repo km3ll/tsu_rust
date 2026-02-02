@@ -53,7 +53,7 @@ fn example_using_structs() {
 
 fn example_derived_traits() {
 	let n1 = r#"
-	pod: Derived Trait: Display
+	pod: trait: Display
 	- User consumption
 	- Curly brackets {} tell println!() to use Display formatting
 	- Structs don't have a provided implementation of Display
@@ -61,7 +61,7 @@ fn example_derived_traits() {
 	  - Do you want to print the curly brackets?
 	  - Should all the fields be shown?
 	---
-	pod: Derived Trait: Debug
+	pod: trait: Debug
 	- Developer consumption
 	- Specifiers ':?' or ':#?' (pretty-print)
 	---
@@ -79,7 +79,7 @@ fn example_derived_traits() {
 
 fn example_dbg_macro() {
 	let n1 = r#"
-	pod: Macro: dbg!
+	pod: macro: dbg!()
 	- Takes ownership of an expression (println! takes a reference)
 	- Prints the file and line number of where that macro call occurs
 	- Prints also the resultant value of that expression
