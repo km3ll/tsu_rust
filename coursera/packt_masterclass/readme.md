@@ -31,6 +31,7 @@ Rust Programming Masterclass from Beginner to Expert
     - u05 For Loops and Their Variants
     - u06 Break and Continue
     - u08 Understanding Conditional Control Structures
+  - m05 Project: Stack Implementation
 ```
 
 ## commands
