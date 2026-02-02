@@ -7,7 +7,7 @@ fn deref_stack() {
     - The deref operation (*) can be used to change the value of the original variable
     - It is not logical to use a mutable reference to transfer ownership
     - Moving a value out of a mutable reference could potentially leave the reference invalid
-    -  A mutable reference can be copied only once, regardless of data being stack or heap allocated
+    - A mutable reference can be copied only once, regardless of data being stack or heap allocated
     ---"#;
     println!("{n1}");
 

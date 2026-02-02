@@ -2,7 +2,7 @@
 
 fn references_rules() {
     let n1 = r#"
-    pod: References Rules
+    pod: Reference Rules
     - One mutable reference in a scope
     - Many immutable references
     - Mutable and immutable cannot coexist

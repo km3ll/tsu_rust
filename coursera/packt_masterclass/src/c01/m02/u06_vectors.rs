@@ -7,7 +7,7 @@ fn vectors() {
     let n1 = r#"
     pod: Vector
     - A collection of similar elements that can be resized
-    - Elements are store in contiguous memory locations
+    - Elements are stored in contiguous memory locations
     ---"#;
     println!("{n1}");
 
