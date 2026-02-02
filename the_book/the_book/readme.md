@@ -73,6 +73,9 @@ The Rust Programming Language
   - u02 Treating Smart Pointers Like Regular References
   - u03 Running Code on Cleanup with the Drop Trait
   - u04 Rc<T> The Reference Counted Smart Pointer
+  - u05 RefCell<T> and the Interior Mutability Pattern
+  - u06 Reference Cycles Can Leak Memory
+- c16 Fearless Concurrency
 ```
 
 ## commands
