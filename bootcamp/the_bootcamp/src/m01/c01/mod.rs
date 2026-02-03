@@ -1,5 +1,3 @@
-pub mod u01_setup;
-pub mod u02_hello_world;
 pub mod u03_variables;
 pub mod u04_data_types;
 pub mod u05_constants_and_statics;

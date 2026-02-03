@@ -16,7 +16,7 @@ pub fn variable_creation() {
 pub fn variable_mutability() {
 	let n1 = r#"
 	pod: Mutability
-	- Add 'mut' keyword after 'let' to modify a single variable
+	- Add `mut` keyword after `let` to modify a single variable
 	---"#;
 	println!("{n1}");
 
