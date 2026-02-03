@@ -31,6 +31,19 @@ Rust Programming Masterclass from Beginner to Expert
     - u05 For Loops and Their Variants
     - u06 Break and Continue
     - u08 Understanding Conditional Control Structures
+  - m05 Project: Stack Implementation
+    - u01 Implementing Stack
+    - u02 String Reversal Using Stacks
+  - m06 Structures, Traits, Generics, Enums
+    - u01 Structures Basics
+    - u02 Traits and Default Implementations
+    - u03 Functions within a Trait
+    - u04 Enums
+    - u05 Generics
+    - u06 Option Enum
+    - u07 Result Enum
+    - u08 Hash Maps
+    - u09 Defining and Using Structs in Rust
 ```
 
 ## commands
