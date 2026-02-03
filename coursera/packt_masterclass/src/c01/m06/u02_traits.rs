@@ -14,6 +14,10 @@ struct Student {
 
 trait GeneralInfo {
     fn info(&self) -> (&str, u32);
+
+    fn greet(&self) -> () {
+        println!(" > Hello, Someone!");
+    }
 }
 
 impl GeneralInfo for Person {
@@ -25,6 +29,10 @@ impl GeneralInfo for Person {
 impl GeneralInfo for Student {
     fn info(&self) -> (&str, u32) {
         (self.name.as_str(), self.age)
+    }
+
+    fn greet(&self) -> () {
+        println!(" > Hello, {}!", self.name);
     }
 }
 
@@ -39,12 +47,27 @@ fn traits() {
 
     println!("Traits");
     let person = Person {
-        name: String::from("John Wick"),
+        name: String::from("John"),
         age: 30,
     };
     println!(" > person: {person:?}");
     let info = person.info();
     println!(" > info: {info:?}");
+}
+
+fn traits_defaults() {
+    println!("Traits: default implementation");
+    let person = Person {
+        name: String::from("John"),
+        age: 30,
+    };
+    person.greet();
+
+    let student = Student {
+        name: String::from("Spike"),
+        age: 35,
+    };
+    student.greet();
 }
 
 #[cfg(test)]
@@ -54,5 +77,10 @@ mod tests {
     #[test]
     fn run_traits() {
         traits()
+    }
+
+    #[test]
+    fn run_traits_defaults() {
+        traits_defaults()
     }
 }

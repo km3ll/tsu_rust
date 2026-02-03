@@ -22,6 +22,7 @@
 
 ## bootcamp
 
+- [bootcamp_lgt](bootcamp/bootcamp_lgr)
 - [the_bootcamp](bootcamp/the_bootcamp)
   - [p01_basic](bootcamp/p01_basic) <!-- projects: library and binary crate --> 
   - [p02_in_line](bootcamp/p02_in_line) <!-- in-line definitions --> 
