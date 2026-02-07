@@ -2,7 +2,7 @@
 
 fn find_name(id: u32) -> Option<String> {
     let name = String::from("Ferris");
-    if (id == 1) { Some(name) } else { None }
+    if id == 1 { Some(name) } else { None }
 }
 
 pub fn option_enum() {
