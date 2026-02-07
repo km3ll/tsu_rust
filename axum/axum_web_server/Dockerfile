@@ -1,4 +1,4 @@
-FROM rust:1.76-alpine
+FROM rust:1.85-alpine
 
 RUN apk add musl-dev
 
@@ -14,4 +14,4 @@ RUN cargo build --release
 COPY ./src ./src
 RUN cargo build --release
 
-CMD ./target/release/base_app
+CMD ./target/release/axum_web_server

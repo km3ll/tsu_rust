@@ -67,10 +67,11 @@ fn create_app() -> Router {
 async fn main() {
 	let app = create_app();
 
-	let listener = TcpListener::bind("localhost:3000")
+	let listener = TcpListener::bind("0.0.0.0:3000")
 		.await
 		.expect("Failed to bind tcp listener");
-	println!("Server running on http://localhost:3000");
+	println!("Server running on http://0.0.0.0\
+	:3000");
 
 	axum::serve(listener, app)
 		.await
