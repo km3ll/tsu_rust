@@ -8,11 +8,6 @@ struct Command<T> {
 
 impl<T> Command<T> {
     fn new(name: String, payload: T) -> Self {
-        let n1 = r#"
-        pod:  Self Return Type
-        - If we change the name of the struct, we don't have to change the return type
-        ---"#;
-        println!("{n1}");
         Command {
             name: name,
             payload: payload,
@@ -20,22 +15,12 @@ impl<T> Command<T> {
     }
 
     fn get_payload(&self) -> &T {
-        let n1 = r#"
-        pod: Generics In Methods
-        - `fn get_payload(&self) -> &T {}`
-        ---"#;
-        println!("{n1}");
         &self.payload
     }
 }
 
 impl Command<String> {
     fn print_payload(&self) {
-        let n1 = r#"
-        pod: Implementation Block
-        - For a concrete type
-        ---"#;
-        println!("{n1}");
         println!("payload: {}", self.payload)
     }
 }
@@ -49,6 +34,18 @@ pub fn generics() {
     ---
     pod: Implementation Blocks
     - For any command type: `impl<T> Command<T> {}`
+    ---
+    pod: Self Return Type
+    - If we change the name of the struct, we don't have to change the return type
+    ---
+    pod: Generics In Methods
+    - `fn get_payload(&self) -> &T {}`
+    ---
+    pod: Implementation Block
+    - For a concrete type
+    ---
+    pod: Monomorphization
+    - Rust resolves generics at compile time as concrete implementations
     ---"#;
     println!("{n1}");
 }
@@ -109,12 +106,6 @@ pub fn generics_emum() {
 }
 
 fn serialize_payload<T>(payload: T) -> String {
-    let n1 = r#"
-    pod: Monomorphization
-    - Rust resolves generics at compile time as concrete implementations
-    ---"#;
-    println!("{n1}");
-
     // Convert into JSON string
     "placeholder".to_owned()
 }

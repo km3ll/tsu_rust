@@ -18,11 +18,6 @@ trait Park {
 
 trait Paint {
     fn paint(&self, color: &str) {
-        let n1 = r#"
-        pod:  Trait's Default Implementation
-        - Called if not overridden
-        ---"#;
-        println!("{n1}");
         println!("painting object: {}", color)
     }
 }
@@ -54,6 +49,9 @@ pub fn traits() {
     - Similar to interfaces in Java
     - Used in implementation blocks
     - Only functionality can be shared
+    ---
+    pod: Trait's Default Implementation
+    - Called if not overridden
     ---"#;
     println!("{n1}");
 }
