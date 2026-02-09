@@ -1,13 +1,37 @@
 //! # Unrecoverable Errors
 
-fn base() {}
+fn unrecoverable_errors_panic_macro() {
+    let n1 = r#"
+    pod: macro: panic!()
+    - Error state that is unrecoverable
+    - The program shows an error message and exits abruptly
+    - For more verbose error trace we can set: `RUST_BACKTRACE=1` or `RUST_BACKTRACE=full`
+    ---"#;
+    println!("{n1}");
+
+    panic!("Something went wrong!");
+}
+
+fn unrecoverable_errors_bug() {
+    let vec: Vec<&str> = vec!["one", "two", "three"];
+    println!("{}", vec[3]);
+}
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
-    fn run_() {
-        base();
+    #[should_panic]
+    fn run_unrecoverable_errors_panic_macro() {
+        println!("panic macro");
+        unrecoverable_errors_panic_macro();
+    }
+
+    #[test]
+    #[should_panic]
+    fn run_unrecoverable_errors_bug() {
+        println!("vector index");
+        unrecoverable_errors_bug();
     }
 }
