@@ -1,12 +1,6 @@
 //! # Sharing State Between Threads Part 2
 
-fn base() {
-    let n1 = r#"
-	pod:
-	-
-	---"#;
-    println!("{n1}");
-}
+fn base() {}
 
 #[cfg(test)]
 mod tests {

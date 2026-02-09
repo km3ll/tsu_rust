@@ -1,9 +1,12 @@
 //! # Cargo Workspaces
 
-fn base() {
+pub fn workspaces() {
     let n1 = r#"
-	pod:
-	-
+	pod: Workspace
+	- A collection of related cargo packages
+	- Packages in a workspace share a `Cargo.lock` file
+	- If multiple packages have the same dependency, it will be resolved to one version
+	- Packages in a workspace are called `members` and they share one output directory
 	---"#;
     println!("{n1}");
 }
@@ -13,7 +16,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn run_() {
-        base();
+    fn run_workspaces() {
+        workspaces();
     }
 }

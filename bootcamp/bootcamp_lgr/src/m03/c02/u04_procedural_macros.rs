@@ -1,12 +1,6 @@
 //! # Procedural Macros
 
-fn base() {
-    let n1 = r#"
-	pod:
-	-
-	---"#;
-    println!("{n1}");
-}
+fn base() {}
 
 #[cfg(test)]
 mod tests {

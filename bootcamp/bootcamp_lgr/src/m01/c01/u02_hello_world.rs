@@ -1,11 +1,7 @@
-//! # Hello World
+//! # Hello, World!
 
-fn base() {
-    let n1 = r#"
-	pod:
-	-
-	---"#;
-    println!("{n1}");
+pub fn hello_world() {
+    println!("Hello, world!");
 }
 
 #[cfg(test)]
@@ -13,7 +9,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn run_() {
-        base();
+    fn run_hello_world() {
+        hello_world();
     }
 }

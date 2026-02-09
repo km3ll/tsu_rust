@@ -1,9 +1,9 @@
 //! # Comments
 
-fn base() {
+pub fn comments() {
     let n1 = r#"
-	pod:
-	-
+	pod: Comments
+	- Line / Block
 	---"#;
     println!("{n1}");
 }
@@ -13,7 +13,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn run_() {
-        base();
+    fn run_comments() {
+        comments()
     }
 }
