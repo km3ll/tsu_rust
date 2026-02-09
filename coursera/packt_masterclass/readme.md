@@ -44,6 +44,9 @@ Rust Programming Masterclass from Beginner to Expert
     - u07 Result Enum
     - u08 Hash Maps
     - u09 Defining and Using Structs in Rust
+  - m07 Iterators, Lifetimes, and Closures
+    - u01 Lifetimes - Part 1
+    - u02 Lifetimes - Part 2
 ```
 
 ## commands

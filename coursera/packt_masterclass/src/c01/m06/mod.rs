@@ -8,4 +8,3 @@ pub mod u05_generics;
 pub mod u06_option_enum;
 pub mod u07_result_enum;
 pub mod u08_hash_maps;
-pub mod u09_structs;
