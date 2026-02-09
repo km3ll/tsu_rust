@@ -40,6 +40,20 @@ fn hash_map_functions() {
     println!(" > entry_or_insert: Green: {:?}", colors.get("Green"));
 }
 
+fn hash_map_from_vector() {
+    let vector: Vec<i32> = vec![5, 5, 8, 8, 1, 0, 1, 5, 5, 5, 5];
+    let mut frequency: HashMap<i32, u32> = HashMap::new();
+
+    for element in &vector {
+        let freq: &mut u32 = frequency.entry(*element).or_insert(0);
+        *freq += 1;
+    }
+
+    println!("Hashmaps");
+    println!(" > vector: {:?}", vector);
+    println!(" > frequency: {:?}", frequency);
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -52,5 +66,10 @@ mod tests {
     #[test]
     fn run_hash_map_functions() {
         hash_map_functions()
+    }
+
+    #[test]
+    fn run_hash_map_from_vector() {
+        hash_map_from_vector()
     }
 }
