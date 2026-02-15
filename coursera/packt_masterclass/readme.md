@@ -47,6 +47,12 @@ Rust Programming Masterclass from Beginner to Expert
   - m07 Iterators, Lifetimes, and Closures
     - u01 Lifetimes - Part 1
     - u02 Lifetimes - Part 2
+    - u03 Eliding Lifetimes
+    - u04 Closures - Part 1
+    - u05 Closures - Part 2
+    - u06 Function Types
+    - u07 Iterators - Part 1
+    - u08 Iterators - Part 2  
 ```
 
 ## commands
