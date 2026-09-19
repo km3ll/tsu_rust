@@ -1,21 +1,20 @@
-//! # Hello, World!
-
 fn hello_world() {
 	let n1 = r#"
+	---
 	pod: Hello World
 	- Rust files end with `.rs` extension
 	- Naming convention is snake case for multiple words
 	- Function `main()` is the entry point of Rust executables
-	---
+	
 	cmd:
-	- `rustc main.rs`
-	- `./main`
-	- `cargo test -- --nocapture`
-	---
+	- `rustc main.rs` # Compile
+	- `./main` # Run compiled file
+	- `cargo test -- --nocapture` # Don't capture stdout/stderr of each task, allow printing directly
+	
 	pod: Macros
 	- A way to write code that generates code
-	- Using a ! means we're calling a macro
-	---
+	- Using a `!` means we're calling a macro
+	
 	pod: Ahead-Of-Time Compiled Language
 	- You can give the executable to someone else, and they can run it, even without having Rust installed
 	---"#;

@@ -2,6 +2,99 @@
 
 [The Rust Programming Language](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result)
 
+- [commands](#commands)
+- [error-codes](#error-codes)
+- [content](#content)
+- [references](#references)
+
+## commands
+
+```bash
+# project
+cargo clean
+cargo fmt
+cargo build
+
+# target/debug
+cargo run
+# target/release
+cargo run --release
+
+cargo run --bin the_book
+cargo run --bin app
+
+# tests
+cargo test -- --nocapture
+cargo test --help
+cargo test -- --help
+cargo test -- --test-threads=1
+cargo test -- --show-output
+cargo test run_test_control_definition
+cargo test -- --ignored
+cargo test -- --include-ignored
+cargo test --test integration_test
+
+# documentation
+# target/doc/the_book/index.html
+cargo doc --open 
+
+# crates.io
+cargo login
+cargo publish
+cargo yank --vers 1.0.1
+cargo yank --vers 1.0.1 --undo
+
+# workspaces
+cargo run -p adder
+cargo test -p add_one
+
+# projects
+cargo new package_name # binary crate
+cargo new --lib package_name # library crate
+cargo new hello_cargo --vcs=git # existing repository
+
+cargo init # create a Cargo.toml file 
+cargo install cargo-modules
+cargo install cargo-make
+cargo --version
+
+rustc --explain E0382
+rustc --version
+rustup update
+rustup doc
+```
+
+## error-codes
+
+```
+rustc --explain <code>
+
+- E0004 Non-exhaustive patterns
+- E0005 Patterns used to bind names must be irrefutable
+- E0040 It is not allowed to manually call destructors in Rust
+- E0072 A recursive type has infinite size because it doesn't have an indirection
+- E0106 A lifetime is missing from a type
+- E0133 Unsafe code was used outside of an unsafe block
+- E0277 Tried to use a type which doesn't implement some trait in a place which expected that trait
+- E0284 The compiler is unable to unambiguously infer the return type of a function
+- E0308 Expected type did not match the received type
+- E0369 A binary operation was attempted on a type which doesn't support it
+- E0382 A variable was used after its contents have been moved elsewhere
+- E0384 An immutable variable was reassigned
+- E0391 A type dependency cycle has been encountered
+- E0433 An undeclared crate, module, or type was used
+- E0499 A variable was borrowed as mutable more than once
+- E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
+- E0507 A borrowed value was moved out
+- E0515 A reference to a local variable was returned
+- E0596 Tried to mutably borrow a non-mutable variable
+- E0597 A value was dropped while it was still borrowed
+- E0603 A private item was used outside its scope
+- E0614 Attempted to dereference a variable which cannot be dereference
+- E0752 The entry point of the program was marked as async
+- E0790 You need to specify a specific implementation of the trait in order to call the method
+```
+
 ## content
 
 ```
@@ -76,94 +169,6 @@ The Rust Programming Language
   - u05 RefCell<T> and the Interior Mutability Pattern
   - u06 Reference Cycles Can Leak Memory
 - c16 Fearless Concurrency
-```
-
-## commands
-
-```bash
-# project
-cargo clean
-cargo fmt
-cargo build
-
-# target/debug
-cargo run
-# target/release
-cargo run --release
-
-cargo run --bin the_book
-cargo run --bin app
-
-# tests
-cargo test -- --nocapture
-cargo test --help
-cargo test -- --help
-cargo test -- --test-threads=1
-cargo test -- --show-output
-cargo test run_test_control_definition
-cargo test -- --ignored
-cargo test -- --include-ignored
-cargo test --test integration_test
-
-# documentation
-# target/doc/the_book/index.html
-cargo doc --open 
-
-# crates.io
-cargo login
-cargo publish
-cargo yank --vers 1.0.1
-cargo yank --vers 1.0.1 --undo
-
-# workspaces
-cargo run -p adder
-cargo test -p add_one
-
-# projects
-cargo new package_name # binary crate
-cargo new --lib package_name # library crate
-cargo new hello_cargo --vcs=git # existing repository
-
-cargo init # create a Cargo.toml file 
-cargo install cargo-modules
-cargo install cargo-make
-cargo --version
-
-rustc --explain E0382
-rustc --version
-rustup update
-rustup doc
-```
-
-## Error Codes
-
-```
-rustc --explain <code>
-
-- E0004 Non-exhaustive patterns
-- E0005 Patterns used to bind names must be irrefutable
-- E0040 It is not allowed to manually call destructors in Rust
-- E0072 A recursive type has infinite size because it doesn't have an indirection
-- E0106 A lifetime is missing from a type
-- E0133 Unsafe code was used outside of an unsafe block
-- E0277 Tried to use a type which doesn't implement some trait in a place which expected that trait
-- E0284 The compiler is unable to unambiguously infer the return type of a function
-- E0308 Expected type did not match the received type
-- E0369 A binary operation was attempted on a type which doesn't support it
-- E0382 A variable was used after its contents have been moved elsewhere
-- E0384 An immutable variable was reassigned
-- E0391 A type dependency cycle has been encountered
-- E0433 An undeclared crate, module, or type was used
-- E0499 A variable was borrowed as mutable more than once
-- E0502 A variable already borrowed with a certain mutability was borrowed again with a different mutability
-- E0507 A borrowed value was moved out
-- E0515 A reference to a local variable was returned
-- E0596 Tried to mutably borrow a non-mutable variable
-- E0597 A value was dropped while it was still borrowed
-- E0603 A private item was used outside its scope
-- E0614 Attempted to dereference a variable which cannot be dereference
-- E0752 The entry point of the program was marked as async
-- E0790 You need to specify a specific implementation of the trait in order to call the method
 ```
 
 ## references

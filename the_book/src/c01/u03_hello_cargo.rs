@@ -2,15 +2,25 @@
 
 fn hello_cargo() {
 	let n1 = r#"
+	---
 	pod: Hello Cargo
 	- Cargo is Rust's build system and package manager
-	---
+	
 	pod: TOML
-	- Tom's Obvious, Minimal Language (configuration format)
-	---
-	pod: Crates
-	- Packages of code (dependencies)
-	---
+	- Tom's Obvious, Minimal Language
+	- A config file format for humans
+	
+	pod: Crate
+	- The smallest amount of code that the Rust compiler considers at a time
+	- Crates can contain modules
+	
+	pod: Binary Crate
+	- Programs you can compile to an executable that you can run
+	
+	pod: Library Crate
+	- Don't have a `main` function, and they don't compile to an executable
+	- They define functionality intented to be shared
+	
 	pod: Cargo.lock
 	- Keeps track of the exact versions of dependencies
 	---
