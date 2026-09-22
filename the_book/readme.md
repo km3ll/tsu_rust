@@ -34,7 +34,8 @@ cargo test -- --ignored
 cargo test -- --include-ignored
 cargo test --test integration_test
 
-# documentation
+# Generate documentation for your project, and open it in your browser.
+# Add the flag `--document-private-items` to also show items not marked as `pub`.
 # target/doc/the_book/index.html
 cargo doc --open 
 

@@ -3,8 +3,8 @@
 fn hello_cargo() {
 	let n1 = r#"
 	---
-	pod: Hello Cargo
-	- Cargo is Rust's build system and package manager
+	pod: Cargo
+	- Rust's build system and package manager
 	
 	pod: TOML
 	- Tom's Obvious, Minimal Language
@@ -23,16 +23,15 @@ fn hello_cargo() {
 	
 	pod: Cargo.lock
 	- Keeps track of the exact versions of dependencies
-	---
+
 	cmd:
 	- `cargo --version`
-	- `cargo new <name>` (initializes git)
-	- `cargo new <name> --vcs=git` (uses git)
-	- `cargo build` (target/debug/<name>)
-	- `./target/debug/<name>`
-	- `cargo build --release` (optimized, target/release/<name>)
-	- `cargo run`
-	- `cargo check` (faster, compiles, doesn't produce executable)
+	- `cargo new <name>` # initializes git
+	- `cargo new <name> --vcs=git` # uses git
+	- `cargo build` # ./target/debug/<name>
+	- `cargo build --release` # optimized, ./target/release/<name>
+	- `cargo run` # doestn't rebuild if files haven't changed
+	- `cargo check` # faster, compiles, doesn't produce executable
 	---"#;
 	println!("{n1}")
 }
