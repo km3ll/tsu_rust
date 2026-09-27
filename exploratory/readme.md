@@ -23,6 +23,7 @@
 ## bootcamp
 
 - [bootcamp_lgt](bootcamp/bootcamp_lgr)
+- [bootcamp-main](bootcamp-main)
 - [bootcamp-project](bootcamp-project)
 - [lets_get_rusty](bootcamp/lets_get_rusty)
 

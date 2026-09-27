@@ -1,0 +1,17 @@
+[package]
+name = "environment"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actuator_temperature = { path = "../actuator_temperature" }
+datum = { path = "../datum" }
+device = { path = "../device" }
+
+chrono = { version = "0.4.31", features = [] }
+local-ip-address = "0.5.6"
+log = "0.4.20"
+mdns-sd = "0.10.1"
+rand = "0.8.5"
