@@ -3,7 +3,9 @@
 fn installation() {
 	let n1 = r#"
 	---
-	pod: Rustup
+	pod: rustup
+	- A toolchain multiplexer. It installs and manages many Rust toolchains
+	- Presents toolchains through a single set of tools installed to ~/.cargo/bin
 	- Installs Rust from the official release channels
 	- Makes cross-compiling simpler with binary builds of the standard library
 

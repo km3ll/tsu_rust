@@ -10,10 +10,11 @@
 ## commands
 
 ```bash
-# project
+# project-level
 cargo clean
 cargo fmt
 cargo build
+cargo test
 
 # target/debug
 cargo run

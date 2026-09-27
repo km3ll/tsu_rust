@@ -7,7 +7,7 @@ pub fn add_two(a: u64) -> u64 {
 	- Compiles and runs test code only when you run `cargo test`, not when you run `cargo build`
 
 	pod: The tests Directory
-	- Definet at the top level of projects, next to `src`
+	- Defined at the top level of projects, next to `src`
 	- Cargo looks for integration test files in this directory
 	- Cargo compiles each test file as an individual crate
 	---"#;
