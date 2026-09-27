@@ -23,8 +23,8 @@
 ## bootcamp
 
 - [bootcamp_lgt](bootcamp/bootcamp_lgr)
+- [bootcamp-project](bootcamp-project)
 - [lets_get_rusty](bootcamp/lets_get_rusty)
-- [live-bootcamp-project](live-bootcamp-project)
 
 ### chapters
 
