@@ -2,7 +2,8 @@
 
 ### current
 
-- [the_book](the_book)
+- [The Book](the_book)
+- [Packt Module 1 - Core Concepts](packt_m01_introduction)
 
 ### exploratory
 

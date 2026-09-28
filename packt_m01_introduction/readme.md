@@ -1,4 +1,16 @@
-# packt_masterclass
+# packt_m1_introduction
+
+Packt - Introduction to Rust Programming and Core Concepts
+
+## commands
+
+```bash
+cargo build
+cargo build --release
+cargo clippy # A collection of lints to catch common mistakes and improve your Rust code.
+cargo run
+cargo test
+```
 
 ## content
 
@@ -8,7 +20,9 @@ Rust Programming Masterclass from Beginner to Expert
   - m01 Introduction
     - u05 Running and Compiling Your First Program
   - m02 Basic Programming
-    - u01 Program Outputs and Comments
+
+[°°]
+    - u01 Program Outputs and Comments 
     - u02 Variables and Scalar Data Types
     - u03 Shadowing and Constants
     - u04 Compound Data Types: Strings
@@ -53,16 +67,6 @@ Rust Programming Masterclass from Beginner to Expert
     - u06 Function Types
     - u07 Iterators - Part 1
     - u08 Iterators - Part 2  
-```
-
-## commands
-
-```bash
-cargo build
-cargo build --release
-cargo clippy
-cargo run
-cargo test
 ```
 
 ## references

@@ -108,6 +108,8 @@ The Rust Programming Language
   - u04 Hello, Tests!
 - c02 Programming a Guessing Game
 - c03 Common Programming Concepts
+
+[°°]
   - u01 Variables and Mutability
   - u02 Data Types
   - u03 Functions
