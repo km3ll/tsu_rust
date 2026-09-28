@@ -3,7 +3,7 @@
 #![allow(unused)]
 pub mod c01_introduction;
 pub mod c02_guessing_game;
-pub mod c03;
+pub mod c03_common_concepts;
 pub mod c04;
 pub mod c05;
 pub mod c06;

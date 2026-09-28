@@ -4,9 +4,10 @@ use rand::Rng;
 
 fn flow_if_expression() {
 	let n1 = r#"
+	---
 	pod: If Expressions
 	- Allow to branch code depending on conditions
-	- Blocks of code associated with the conditions are called 'arms'
+	- Blocks of code associated with the conditions are called `arms`
 	---"#;
 	println!("{n1}");
 
@@ -21,14 +22,16 @@ fn flow_if_expression() {
 
 fn flow_loops() {
 	let n1 = r#"
+	---
 	pod: Loops
-	- Rust has three kinds of loops: loop, while, and for
+	- Rust has three kinds of loops: `loop`, `while`, and `for`
 	---"#;
 	println!("{n1}");
 }
 
 fn flow_loop() {
 	let n1 = r#"
+	---
 	pod: Loop
 	- `break` stops executing the loop
 	- `continue` skips over any remaining code and goes to next iteration
@@ -40,16 +43,19 @@ fn flow_loop() {
 }
 
 fn flow_loop_break() {
+	println!("Loop random number:");
 	loop {
 		let x = rand::thread_rng().gen_range(0..=10);
-		println!("Loop random: x: {x}");
+		println!(" > x: {x}");
 		if x >= 5 {
+			println!(" > break: {x}");
 			break;
 		}
 	}
 }
 
 fn flow_loop_return_value() {
+	println!("Loop returning value:");
 	let mut i: u8 = 0;
 	let result: u8 = loop {
 		i += 1;
@@ -57,22 +63,23 @@ fn flow_loop_return_value() {
 			break i * 2;
 		}
 	};
-	println!("Loop result: {result}");
+	println!(" > result: {result}");
 }
 
 fn flow_loop_label() {
+	println!("Labeled loop:");
 	let mut count = 0;
 	'counting_up: loop {
-		println!("labeled: count: {count}");
+		println!(" > count: {count}");
 
 		let mut remaining = 10;
 		loop {
-			println!("labeled: remaining: {remaining}");
+			println!(" > remaining: {remaining}");
 			if remaining == 9 {
 				break;
 			}
 			if count == 2 {
-				println!("labeled: break");
+				println!(" > break 'counting_up");
 				break 'counting_up;
 			}
 			remaining -= 1;
@@ -83,26 +90,29 @@ fn flow_loop_label() {
 }
 
 fn flow_while_loop() {
+	println!("While loop:");
 	let mut count = 3;
 	while count != 0 {
-		println!("while: {count}");
+		println!(" > {count}");
 		count -= 1;
 	}
-	println!("while: liftoff!");
+	println!(" > liftoff!");
 }
 
 fn flow_for_loop() {
-	let numbers = [10, 20, 30];
+	println!("For loop:");
+	let numbers: [i32; 3] = [10, 20, 30];
 	for n in numbers {
-		println!("for: n: {n}")
+		println!(" > {n}")
 	}
 }
 
 fn flow_for_loop_range() {
+	println!("Range For loop:");
 	for n in (1..=3).rev() {
-		println!("for: {n}");
+		println!(" > {n}");
 	}
-	println!("for: liftoff!");
+	println!(" > liftoff!");
 }
 
 #[cfg(test)]

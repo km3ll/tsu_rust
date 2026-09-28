@@ -2,16 +2,17 @@
 
 fn types_core() {
 	let n1 = r#"
+	---
 	pod: Data Types
 	- Rust is a statically typed language (must know types at compile time)
-	---
+
 	pod: Scalar Types
 	- Represent a single value
-	- Rust has four: integers, floating point, booleans, and characters
-	---
+	- Rust has four: `integers`, `floating point`, `booleans`, and `characters`
+
 	pod: Compound Types
-	- Group multiple values into one type: tuples and arrays
-	---
+	- Group multiple values into one type: `tuples` and `arrays`
+
 	pod: Panicking
 	- Term used when a program exits with an error
 	---"#;
@@ -20,6 +21,7 @@ fn types_core() {
 
 fn types_scalar_integer() {
 	let n1 = r#"
+	---
 	pod: Integer
 	- A number without a fractional component
 	- Signed variants: i8, i16, i32, i64, i128, isize
@@ -34,6 +36,7 @@ fn types_scalar_integer() {
 
 fn types_scalar_floating() {
 	let n1 = r#"
+	---
 	pod: Floating-Point Numbers
 	- Numbers with decimal points (f32, f64)
 	- All floating-point types are signed
@@ -77,6 +80,7 @@ fn types_scalar_boolean() {
 
 fn types_scalar_character() {
 	let n1 = r#"
+	---
 	pod: Char Type
 	- Language's most primitive alphabetic type
 	- Literals are specified with single quotes
@@ -90,19 +94,20 @@ fn types_scalar_character() {
 
 fn types_compound_tuple() {
 	let n1 = r#"
+	---
 	pod: Tuple
 	- Groups values with a variety of types
-	- Types can be different
-	- Have fixed length
+	- Value types can be different
+	- Has fixed length
 	- Can be destructured using pattern matching
-	- Elements can be accessed by using a period (.)
-	- The first index is Zero (0)
-	---
+	- Elements can be accessed by using a period (`.`)
+	- The first index is Zero (`0`)
+
 	pod: Destructuring
 	- Breaking a tuple into its parts
-	---
+
 	pod: Unit
-	- A tuple without any values ()
+	- A tuple without any values `()`
 	- Represents an empty value or an empty return type
 	---"#;
 	println!("{n1}");
@@ -116,16 +121,17 @@ fn types_compound_tuple() {
 
 fn types_compound_array() {
 	let n1 = r#"
+	---
 	pod: Array
 	- Every element must have the same type
 	- Its data is allocated on the stack
-	- Have a fixed length
-	- The first index is Zero (0)
+	- Has a fixed length
+	- The first index is Zero (`0`)
 	- Panics when attempting to access an invalid index
 	---"#;
 	println!("{n1}");
 
-	let a1 = [1, 2, 3, 4, 5];
+	let a1: [i32; 5] = [1, 2, 3, 4, 5];
 	println!("array: {:?}", a1);
 
 	let days: [&str; 7] = [
@@ -140,12 +146,13 @@ fn types_compound_array() {
 	println!("array: {:?}", days);
 	println!("array: first: {}", days[0]);
 
-	let switches = [false; 5];
+	let switches: [bool; 5] = [false; 5];
 	println!("array (repeated): {:?}", switches);
 }
 
 fn types_compound_vector() {
 	let n1 = r#"
+	---
 	pod: Vector
 	- It is allowed to grow or shrink in size
 	- Its data is allocated on the heap
@@ -157,7 +164,7 @@ fn types_compound_vector() {
 		String::from("Two"),
 		String::from("Three"),
 	];
-	println!("vector: {:?}", v1)
+	println!("vector: {:?}, length: {}", v1, v1.len())
 }
 
 #[cfg(test)]
