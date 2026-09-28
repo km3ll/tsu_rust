@@ -10,8 +10,9 @@ fn variables_definition() {
 
 fn variables_bases() {
     let n1 = r#"
-    pod: Println Bases of Numbers
-    - Octal (:o), Binary (:b) and Hexa (:x)
+    ---
+    pod: Bases of Numbers in println!
+    - Octal `{:o}`, Binary `{:b}` and Hexa `{:x}`
     ---"#;
     println!("{n1}");
 
@@ -35,11 +36,12 @@ fn variables_convert() {
 
 fn shadowing() {
     let n1 = r#"
+    ---
     pod: Shadowing
     - Using, updating or declaring a variable with the same name which has been previously used or declared
-    ---
+    
     pod: Shadowing Styles
-    - The 'let' keyword
+    - The `let` keyword
     - A mutable variable by an immutable variable
     - A change in data type
     - A code segment (scope limited to the segment)
@@ -70,9 +72,10 @@ fn shadowing() {
 
 fn constants() {
     let n1 = r#"
+    ---
     pod: Constants
     - Data values that remain the same, not changed, every time the program executes
-    - Keyword 'mut' is not allowed
+    - Keyword `mut` is not allowed
     - Require explicit type definition (not auto-inferred)
     ---"#;
     println!("{n1}");
