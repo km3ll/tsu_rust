@@ -1,9 +1,10 @@
 # tsu_rust
 
-## current
+### current
 
 - [the_book](the_book)
 
-## reference
+### exploratory
 
-- [exploratory](exploratory)
+- [guessing_game](exploratory/guessing_game)
+- [projects](exploratory/projects)
