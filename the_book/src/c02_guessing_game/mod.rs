@@ -1,3 +1,3 @@
 //! # Programming a Guessing Game
 
-pub mod u01_guessing_game;
+pub mod u01_game;
