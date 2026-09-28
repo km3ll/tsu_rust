@@ -7,7 +7,4 @@
 ### exploratory
 
 - [guessing_game](exploratory/guessing_game)
-
-### side-quest
-
-- [projects](projects)
+- [projects](exploratory/projects)
