@@ -55,7 +55,7 @@ fn game() {
 	pod: Ordering Enum
 	- Variants: `Less`, `Greater`, and `Equal`
 
-	pod: `cmp()` method
+	method: `std::cmp()`
 	- Compares two values and returns an `Ordering` type
 
 	pod: Match Expression
@@ -66,7 +66,7 @@ fn game() {
 	pod: Shadowing
 	- Lets reusing a variable name rather than creating two unique variables
 
-	pod: `trim()` method
+	method: `str::trim()`
 	- Eliminates new-line (\n) and carriage-return (\r)
 
 	pod: Loop
