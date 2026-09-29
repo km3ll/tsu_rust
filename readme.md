@@ -3,7 +3,7 @@
 ### current
 
 - [The Book](the_book)
-- [Packt Module 1 - Core Concepts](packt_m01_introduction)
+- [Coursera Packt - Introduction to Rust](packt_m01_introduction)
 
 ### exploratory
 

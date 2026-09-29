@@ -2,17 +2,18 @@
 
 fn ownership() {
 	let n1 = r#"
+	---
 	pod: Ownership
 	- A set of rules that govern how a Rust program manages memory
-	---
+
 	pod: Ownership Features
 	- Keeping track of what parts of code are using what data on the heap
 	- Minimizing the amount of duplicate data on the heap
 	- Cleaning up unused data on the heap
-	---
+
 	pod: Ownership Rules
-	- Each value has an 'owner'
-	- There an only be one owner at a time
+	- Each value has an `owner`
+	- There can only be one owner at a time
 	- When the owner goes out of scope, the value is dropped
 	---"#;
 	println!("{n1}");
@@ -20,6 +21,7 @@ fn ownership() {
 
 fn ownership_stack_and_heap() {
 	let n1 = r#"
+	---
 	pod: The Stack And The Heap
 	- Parts of memory available to your code to use at runtime
 	- Because pointers to the heap have a known, fixed size, you can store them on the stack
@@ -31,6 +33,7 @@ fn ownership_stack_and_heap() {
 
 fn ownership_stack() {
 	let n1 = r#"
+	---
 	pod: The Stack
 	- LIFO: Last In First Out
 	- Stores values in the order it gets them and removes the values in the opposite order
@@ -48,22 +51,24 @@ fn ownership_stack() {
 
 fn ownership_heap() {
 	let n1 = r#"
+	---
 	pod: The Heap
 	- Data with an unknown size at compile time or a size that might change must be stored on the heap
 	- The heap is less organized: you request a certain amount of space
 	- Accessing data in the heap is generally slower because you have to follow a pointer
 	- Think of being seated at a restaurant
-	---
+
 	pod: Memory Allocator
-    - 1.finds an empty spot that is big enough
-    - 2. marks it as being in use
-	- 3. returns a pointer, which is the address of that location
+    - Finds an empty spot that is big enough
+    - Marks a spot as being in use
+    - Returns a pointer, which is the address of used spots
 	---"#;
 	println!("{n1}");
 }
 
 fn ownership_variable_scope() {
 	let n1 = r#"
+	---
 	pod: Scope
 	- The range within a program for which an item is valid
 	- When an item comes into scope, it is valid
@@ -74,16 +79,17 @@ fn ownership_variable_scope() {
 
 fn ownership_string_type() {
 	let n1 = r#"
+	---
 	pod: String Type
 	- Manages data allocated on the heap
 	- Stores an amount of text that is unknown at compile time
-	---
+
 	pod: Memory Allocator
 	- Memory must be requested from the allocator at runtime
 	- We need a way of returning this memory to the allocator
-	- We need to pair exactly one 'allocate' with exactly one 'free'
-	- Rust calls the 'drop' function to return memory automatically at the closing curly bracket
-	---
+	- We need to pair exactly one `allocate` with exactly one `free`
+	- Rust calls the `drop` function to return memory automatically at the closing curly bracket
+
 	pod: RAII
 	- Resource Acquisition Is Initialization
 	- Pattern of deallocating resources
@@ -100,6 +106,7 @@ fn ownership_string_type() {
 
 fn ownership_literal_allocation() {
 	let n1 = r#"
+	---
 	pod: String Literal
 	- The content is known at compile time, so the text is hardcoded directly into the final executable
 	---"#;
@@ -111,24 +118,25 @@ fn ownership_literal_allocation() {
 
 fn ownership_string_allocation() {
 	let n1 = r#"
-	pod: Parts Of String
+	---
+	pod: Parts Of String Type
 	- A pointer to the memory that holds the contents
 	- A length (memory used in bytes)
 	- A capacity (total amount received from allocator)
-	---
-	pod: String In Memory
-	- This group of data is stored on the stack
+
+	pod: String Type In Memory
+	- The string pointer, length, and capacity are stored on the stack
 	- A memory region on the heap holds the contents
-	- Assigning s1 to s2 copies the pointer (stack), not the actual data (heap)
-	---
+	- Assigning s1 to s2 copies the pointer (`stack`), not the actual data (`heap`)
+
 	pod: Double Free Error
 	- When s2 and s1 go out of scope, they will both try to free the same memory
-	- Rust considers s1 as no longer valid (moved)
-	---
+	- Rust considers s1 as no longer valid (`moved`)
+
 	pod: Move or Shallow Copy
 	- Copying the pointer, length, and capacity
 	- Also invalidating the first variable
-	- Rust will never automatically create 'deep' copies of data
+	- Rust will never automatically create `deep` copies of data
 	---"#;
 	println!("{n1}");
 
@@ -140,6 +148,7 @@ fn ownership_string_allocation() {
 
 fn ownership_scope_assignment() {
 	let n1 = r#"
+	---
 	pod: Scope And Assignment
 	- When assigning a completely new value to an existing variable, Rust frees the original variable's memory
 	---"#;
@@ -152,6 +161,7 @@ fn ownership_scope_assignment() {
 
 fn ownership_clone() {
 	let n1 = r#"
+	---
 	pod: Clone or Deep Copy
 	- The heap data does get copied
 	---"#;
@@ -164,11 +174,12 @@ fn ownership_clone() {
 
 fn ownership_stack_data_copy() {
 	let n1 = r#"
-	pod: Copy Trait
+	---
+	trait: Copy
 	- Types that have known size at compile time are stored on the stack, so copies are quick to make
 	- If a type implements the Copy trait, variables that use it do not move
 	- Cannot be used if the type, or any of its parts, implements the Drop trait
-	- Types that implement Copy: integers, boolean, floating-point, char, tuples (with types implementing Copy as well)
+	- Types that implement Copy: `integers`, `boolean`, `floating-point`, `char`, `tuples` (with types implementing Copy as well)
 	---"#;
 	println!("{n1}");
 
@@ -179,6 +190,7 @@ fn ownership_stack_data_copy() {
 
 fn ownership_functions() {
 	let n1 = r#"
+	---
 	pod: Ownership And Functions
 	- Passing a variable to a function will move or copy, just as assignment does
 	---"#;
@@ -194,7 +206,7 @@ fn ownership_functions() {
 
 	let s = String::from("Hello");
 	takes_ownership(s);
-	// println!("s: {s}"); // value used after being moved
+	// println!("s: {s}"); // error: value used after being moved
 
 	let u1: u16 = 10;
 	makes_copy(u1);
@@ -203,6 +215,7 @@ fn ownership_functions() {
 
 fn ownership_return_values() {
 	let n1 = r#"
+	---
 	pod: Return Values
 	- Returning values can also transfer ownership
 	---"#;
