@@ -17,17 +17,18 @@ fn dangle() -> &String {
 
 fn references() {
 	let n1 = r#"
+	---
 	pod: Reference
 	- An address we can follow to access some data
 	- That data is owned by some other variable
 	- Unlike a pointer, a reference is guaranteed to point to a valid value for the life of that reference
-	- Represented by ampersand '&', allowing to refer some value without taking ownership of it
+	- Represented by ampersand (`&`), allowing to refer some value without taking ownership of it
 	- Actual value is not dropped when the reference stops being used
 	- Just as variables, references are immutable by default
-	---
+
 	pod: Dereferencing
-	- Represented by asterisk `*`
-	---
+	- Represented by asterisk (`*`)
+
 	pod: Borrowing
 	- The action of creating a reference
 	---"#;
@@ -41,15 +42,16 @@ fn references() {
 
 fn references_mutable() {
 	let n1 = r#"
+	---
 	pod: Mutable References
 	- If you have a mutable reference to a value, you cannot have other references to that value
 	- We can use curly brackets to create new scopes, allowing multiple non-simultaneous references
-	---
+
 	pod: Data Race Scenarios
-    - 1. Two or more pointers access the same data at the same time
-	- 2. At least one of the pointers is being used to write to the data
-	- 3. There's no mechanism being used to synchronize access to the data
-	---
+    - Two or more pointers access the same data at the same time
+	- At least one of the pointers is being used to write to the data
+	- There's no mechanism being used to synchronize access to the data
+
 	pod: Multiple References
 	- Multiple immutable references are allowed
 	- We cannot have multiple mutable references simultaneously
@@ -72,8 +74,9 @@ fn references_mutable() {
 
 fn references_scope() {
 	let n1 = r#"
+	---
 	pod: Reference Scope
-	- Reference scope starts from where it is introduced until the last time it is used
+	- Starts from where a reference is introduced until the last time it is used
 	- When scopes don't overlap, we can have immutable references and after that a mutable reference
 	---"#;
 	println!("{n1}");
@@ -91,9 +94,10 @@ fn references_scope() {
 
 fn references_dangling() {
 	let n1 = r#"
-	pod: Dangling Pointer
+	---
+	pod: Dangling Reference
 	- A pointer that references a location in memory given to someone else
-	- In Rust, the compiler guarantees that references will never be dangling references
+	- The compiler guarantees that references will never be dangling references
 	---"#;
 	println!("{n1}");
 

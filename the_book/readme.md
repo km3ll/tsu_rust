@@ -113,12 +113,11 @@ The Rust Programming Language
   - u03 Functions
   - u04 Comments
   - u05 Control Flow
-
-[°°]
 - c04 Understanding Ownership
   - u01 What is Ownership?
   - u02 References and Borrowing
   - u03 The Slice Type
+[°°]
 - c05 Using Structs to Structure Related Data
   - u01 Defining and Instantiating Structs
   - u02 An Example Program Using Structs

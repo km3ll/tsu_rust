@@ -175,7 +175,7 @@ fn ownership_clone() {
 fn ownership_stack_data_copy() {
 	let n1 = r#"
 	---
-	trait: Copy
+	trait: `Copy`
 	- Types that have known size at compile time are stored on the stack, so copies are quick to make
 	- If a type implements the Copy trait, variables that use it do not move
 	- Cannot be used if the type, or any of its parts, implements the Drop trait
