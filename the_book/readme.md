@@ -113,7 +113,7 @@ The Rust Programming Language
   - u03 Functions
   - u04 Comments
   - u05 Control Flow
-- c04 Understanding Ownership
+- c04 Understanding Ownership[Cargo.toml](../lgr_bootcamp/Cargo.toml)
   - u01 What is Ownership?
   - u02 References and Borrowing
   - u03 The Slice Type
