@@ -43,7 +43,7 @@ enum Message {
 
 impl Message {
 	fn call(&self) {
-		println!("Enums with variants: msg: {self:?}");
+		println!(" > variant: {self:?}");
 	}
 }
 
@@ -52,25 +52,28 @@ fn caller(message: &Message) {
 }
 
 fn route(ip_kind: IpKindV1) {
-	println!("Enums: ip: {ip_kind:?}");
+	println!(" > IpKindV1: {ip_kind:?}");
 }
 
 fn enums() {
 	let n1 = r#"
+	---
 	pod: Enums
 	- Enumerations define a type by enumerating its possible variants
 	- An enum value can only be one of its variants
 	- We can put data into enum variants: strings, numeric types, enums, or structs
 	- The name of each enum becomes a function that constructs an instance of the enum
-	- We can also define methods on structs using impl blocks
+	- We can also define methods on structs using `impl blocks`
 	---"#;
 	println!("{n1}");
 
+	println!("Enums");
 	let ip1 = IpKindV1::V4;
-	println!("Enums: ip1: {ip1:?}");
+	println!(" > ip1: {ip1:?}");
 }
 
 fn enums_in_structs() {
+	println!("Enums in structs");
 	let home = IpAddr {
 		kind: IpKindV1::V4,
 		address: String::from("127.0.0.1"),
@@ -79,42 +82,54 @@ fn enums_in_structs() {
 		kind: IpKindV1::V6,
 		address: String::from("::1"),
 	};
-	println!("Enums in structs: home: {home:?}, loopback: {loopback:?}");
+	println!(" > home: {home:?}");
+	println!(" > loopback: {loopback:?}");
 }
 
 fn enums_with_values() {
+	println!("Enums with values");
 	let home = IpKindV2::V4(127, 0, 0, 1);
 	let loopback = IpKindV2::V6(String::from("::1"));
-	println!("Enums with values: home: {home:?}, loopback: {loopback:?}");
+	println!(" > home: {home:?}");
+	println!(" > loopback: {loopback:?}");
 }
 
 fn enums_with_structs() {
+	println!("Enums with structs");
 	let ip1 = IpV4Addr {
 		value: String::from("172.0.0.1"),
 	};
 	let home = IpKindV3::V4(ip1);
-	println!("Enums with structs: home: {home:?}");
+	println!(" > home: {home:?}");
 }
 
 fn enums_variants() {
+	println!("Enums with variants");
 	let m1 = Message::Quit;
+	caller(&m1);
 	let m2 = Message::Move { x: -10, y: 20 };
+	caller(&m2);
 	let m3 = Message::Write(String::from("Success"));
 	caller(&m3);
 }
 
 fn enums_option() {
 	let n1 = r#"
-	pod: Option<T>
+	---
+	pod: Option<T> Type
 	- A value could be something or could be nothing
-	- Rust doesn't have the null feature
-	- A null is a value that is currently invalid or absent for some reason
 	- It's included in the prelude
+	- Rust doesn't have the `null` feature
+	- A null is a value that is currently invalid or absent for some reason
 	---"#;
 	println!("{n1}");
 
+	println!("Option type");
 	let op1: Option<i32> = Some(5);
-	println!("Enums option op1: {op1:?}");
+	println!(" > op1: {op1:?}");
+
+	let op2: Option<i32> = None;
+	println!(" > op2: {op2:?}");
 }
 
 #[cfg(test)]

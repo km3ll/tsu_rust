@@ -117,13 +117,13 @@ The Rust Programming Language
   - u01 What is Ownership?
   - u02 References and Borrowing
   - u03 The Slice Type
-[°°]
 - c05 Using Structs to Structure Related Data
   - u01 Defining and Instantiating Structs
   - u02 An Example Program Using Structs
   - u03 Method Syntax
 - c06 Enums and Pattern Matching
   - u01 Defining an Enum
+[°°]
   - u02 The match Control Flow Construct
   - u03 Concise Control Flow with if let and let else
 - c07 Managing Growing Projects with Packages, Crates, and Modules
