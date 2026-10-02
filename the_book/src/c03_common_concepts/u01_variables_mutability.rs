@@ -13,7 +13,8 @@ fn variables_core() {
 
 	let mut x = 5;
 	x = 6;
-	println!("Mutable value of x: {x}")
+	println!("Mutability");
+	println!(" > value of x: {x}")
 }
 
 fn variables_constants() {
@@ -28,8 +29,9 @@ fn variables_constants() {
 	---"#;
 	println!("{n1}");
 
+	println!("Constants");
 	const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
-	println!("Const: {THREE_HOURS_IN_SECONDS}")
+	println!(" > const: {THREE_HOURS_IN_SECONDS}")
 }
 
 fn variables_shadowing() {
@@ -43,18 +45,19 @@ fn variables_shadowing() {
 	---"#;
 	println!("{n1}");
 
+	println!("Shadowing");
 	let x = 5;
 	let x = x + 1;
 	{
 		let x = x * 2;
-		println!("Inner scope x (shadowed): {x}")
+		println!(" > inner scope (shadowed) x: {x}")
 	}
-	println!("Outer scope x: {x}");
+	println!(" > outer scope x: {x}");
 
 	let spaces: &str = "    ";
-	println!("Spaces: '{spaces}'");
+	println!(" > spaces: '{spaces}'");
 	let spaces: usize = spaces.len();
-	println!("Spaces (shadowed): '{spaces}'");
+	println!(" > spaces (shadowed): '{spaces}'");
 }
 
 #[cfg(test)]

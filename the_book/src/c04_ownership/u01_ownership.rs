@@ -93,15 +93,23 @@ fn ownership_string_type() {
 	pod: RAII
 	- Resource Acquisition Is Initialization
 	- Pattern of deallocating resources
+
+	method: `from()`
+	- Used to do value-to-value conversions while consuming the input value.
+	- It is the reciprocal of `Into`.
+
+	method: `push_str()`
+	- Appends a given string slice onto the end of this String.
 	---"#;
 	println!("{n1}");
 
+	println!("Ownership");
 	let s1 = String::from("Hello");
-	println!("String immutable s1: {s1}");
+	println!(" > immutable s1: {s1}");
 
 	let mut s2 = String::from("Hello");
 	s2.push_str(", pod!");
-	println!("String mutable s2: {s2}");
+	println!(" > mutable s2: {s2}");
 }
 
 fn ownership_literal_allocation() {
@@ -112,8 +120,9 @@ fn ownership_literal_allocation() {
 	---"#;
 	println!("{n1}");
 
+	println!("String literal");
 	let s1: &str = "Greetings!";
-	println!("Literal allocation: s1: {s1}");
+	println!(" > literal allocation s1: {s1}");
 }
 
 fn ownership_string_allocation() {
@@ -140,10 +149,11 @@ fn ownership_string_allocation() {
 	---"#;
 	println!("{n1}");
 
+	println!("String allocation");
 	let s1 = String::from("Hello");
 	let s2 = s1;
 	let s3 = s2.clone();
-	println!("String in memory: s2: {s2}, cloned s3: {s3}");
+	println!(" > in memory: s2: {s2}, cloned s3: {s3}");
 }
 
 fn ownership_scope_assignment() {
@@ -154,9 +164,10 @@ fn ownership_scope_assignment() {
 	---"#;
 	println!("{n1}");
 
+	println!("Scope assignment");
 	let mut s1 = String::from("Hello");
 	s1 = String::from("Hola");
-	println!("Scope assignment: s1: {s1}");
+	println!(" > s1: {s1}");
 }
 
 fn ownership_clone() {
@@ -167,9 +178,10 @@ fn ownership_clone() {
 	---"#;
 	println!("{n1}");
 
+	println!("Clone");
 	let s1 = String::from("Hola");
 	let s2 = s1.clone();
-	println!("Clone: s1: {s1}, s2: {s2}");
+	println!(" > s1: {s1}, s2: {s2}");
 }
 
 fn ownership_stack_data_copy() {
@@ -183,9 +195,10 @@ fn ownership_stack_data_copy() {
 	---"#;
 	println!("{n1}");
 
+	println!("Copy");
 	let x1 = 5;
 	let x2 = x1;
-	println!("Copied primitive: x1: {x1}, x2: {x2} ");
+	println!(" > primitive x1: {x1}, x2: {x2} ");
 }
 
 fn ownership_functions() {
@@ -196,12 +209,13 @@ fn ownership_functions() {
 	---"#;
 	println!("{n1}");
 
+	println!("Ownership and functions");
 	fn takes_ownership(s1: String) {
-		println!("Ownership: taken in function: s1: {s1}");
+		println!(" > taken in function s1: {s1}");
 	}
 
 	fn makes_copy(u1: u16) {
-		println!("Ownership: copied in function: u1: {u1}");
+		println!(" > copied in function u1: {u1}");
 	}
 
 	let s = String::from("Hello");
@@ -210,7 +224,7 @@ fn ownership_functions() {
 
 	let u1: u16 = 10;
 	makes_copy(u1);
-	println!("Ownership: original u1: {u1}");
+	println!(" > original u1: {u1}");
 }
 
 fn ownership_return_values() {
@@ -225,17 +239,18 @@ fn ownership_return_values() {
 		String::from("Hello, pod!")
 	}
 
+	println!("Ownership return values");
 	fn takes_and_gives_back(s1: String) -> String {
-		println!("Ownership: taken and given: s1: {s1}");
+		println!(" > taken and given s1: {s1}");
 		s1
 	}
 
 	let s1 = gives_ownership();
-	println!("Ownership: given: s1: {s1}");
+	println!(" > given s1: {s1}");
 
 	let s2 = String::from("Hello!");
 	let s3 = takes_and_gives_back(s2);
-	println!("Ownership: given and taken: s3: {s3}");
+	println!(" > given and taken s3: {s3}");
 }
 
 #[cfg(test)]

@@ -18,8 +18,9 @@ fn functions_statement() {
 	- Adding a semicolon to the end of an expression turns it into a statement
 	---"#;
 
+	println!("Statement");
 	let x = 6;
-	println!("Statement x: {x}");
+	println!(" > x: {x}");
 }
 
 fn functions_expression() {
@@ -31,11 +32,12 @@ fn functions_expression() {
 	---"#;
 	println!("{n1}");
 
+	println!("Expression");
 	let y = {
 		let x = 3;
 		x + 1
 	};
-	println!("Expression y: {y}");
+	println!(" > y: {y}");
 }
 
 #[cfg(test)]

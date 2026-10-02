@@ -34,10 +34,11 @@ fn references() {
 	---"#;
 	println!("{n1}");
 
+	println!("Borrowing");
 	let s1 = String::from("Hello, pod!");
 	let r1 = length(&s1);
-	println!("Reference: s1: {s1}");
-	println!("Reference: r1: {r1}");
+	println!(" > reference s1: {s1}");
+	println!(" > reference r1: {r1}");
 }
 
 fn references_mutable() {
@@ -59,9 +60,10 @@ fn references_mutable() {
 	---"#;
 	println!("{n1}");
 
+	println!("Mutable references");
 	let mut s1 = String::from("Hello");
 	change(&mut s1);
-	println!("Reference: mutable s1: {s1}");
+	println!(" > mutable s1: {s1}");
 
 	let mut s2 = String::from("Greetings");
 	{
@@ -69,7 +71,7 @@ fn references_mutable() {
 	} // r1 goes out of scope
 
 	let r2: &mut String = &mut s2;
-	println!("Reference: mutable r2: {r2}");
+	println!(" > mutable r2: {r2}");
 }
 
 fn references_scope() {
@@ -81,15 +83,16 @@ fn references_scope() {
 	---"#;
 	println!("{n1}");
 
+	println!("Scope");
 	let mut s1 = String::from("Hello, Ferris!");
 
 	let r1 = &s1;
 	let r2 = &s1;
-	println!("Reference: immutable r1: {r1}, r2: {r2}");
+	println!(" > immutable r1: {r1}, r2: {r2}");
 	// r1 and r2 will not be used after this point
 
 	let r3 = &mut s1;
-	println!("Reference: mutable r3: {r3}");
+	println!(" > mutable r3: {r3}");
 }
 
 fn references_dangling() {
@@ -100,8 +103,6 @@ fn references_dangling() {
 	- The compiler guarantees that references will never be dangling references
 	---"#;
 	println!("{n1}");
-
-	//dangle();
 }
 
 #[cfg(test)]

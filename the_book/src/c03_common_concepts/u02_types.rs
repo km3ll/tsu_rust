@@ -30,8 +30,9 @@ fn types_scalar_integer() {
 	---"#;
 	println!("{n1}");
 
+	println!("Integer");
 	let x: i16 = 1_000;
-	println!("integer literal: x: {x}")
+	println!(" > literal: x: {x}")
 }
 
 fn types_scalar_floating() {
@@ -43,39 +44,41 @@ fn types_scalar_floating() {
 	---"#;
 	println!("{n1}");
 
+	println!("Floating-point numbers");
 	let x: f32 = 2.0;
 	let y: f64 = 3.0;
-	println!("floating-point numbers: x: {x}, y: {y}")
+	println!(" > x: {x}, y: {y}")
 }
 
 fn types_numeric_operations() {
-	println!("operation");
+	println!("Operations");
 	// addition
 	let sum = 5 + 10;
-	println!("> addition: {sum}");
+	println!(" > addition: {sum}");
 
 	// subtraction
 	let difference = 95.5 - 4.3;
-	println!("> subtraction: {difference}");
+	println!(" > subtraction: {difference}");
 
 	// multiplication
 	let product = 4 * 30;
-	println!("> multiplication: {product}");
+	println!(" > multiplication: {product}");
 
 	// division
 	let quotient = 56.7 / 32.2;
-	println!("> division: quotient: {quotient}");
+	println!(" > division: quotient: {quotient}");
 	let truncated = -5 / 3;
-	println!("> division: truncated: {truncated}");
+	println!(" > division: truncated: {truncated}");
 
 	// remainder
 	let remainder = 43 % 5;
-	println!("> remainder: {remainder}")
+	println!(" > remainder: {remainder}")
 }
 
 fn types_scalar_boolean() {
+	println!("Boolean");
 	let b1: bool = true;
-	println!("boolean: {b1}")
+	println!(" > b1: {b1}")
 }
 
 fn types_scalar_character() {
@@ -87,9 +90,10 @@ fn types_scalar_character() {
 	---"#;
 	println!("{n1}");
 
+	println!("Char");
 	let c1: char = 'f';
 	let c2: char = '🦀';
-	println!("char: ferris: {c2}")
+	println!(" > ferris: {c2}")
 }
 
 fn types_compound_tuple() {
@@ -112,11 +116,12 @@ fn types_compound_tuple() {
 	---"#;
 	println!("{n1}");
 
+	println!("Tuple");
 	let tup1: (i32, f64, i8) = (5, 6.4, -3);
-	println!("tuple: {:?}", tup1);
+	println!(" > tup1: {:?}", tup1);
 
 	let (x, y, z): (i32, f64, i8) = tup1;
-	println!("tuple (destructured): y: {y}");
+	println!(" > tup1 (destructured) y: {y}, z: {z}");
 }
 
 fn types_compound_array() {
@@ -131,8 +136,9 @@ fn types_compound_array() {
 	---"#;
 	println!("{n1}");
 
+	println!("Array");
 	let a1: [i32; 5] = [1, 2, 3, 4, 5];
-	println!("array: {:?}", a1);
+	println!(" > a1: {:?}", a1);
 
 	let days: [&str; 7] = [
 		"Monday",
@@ -143,11 +149,11 @@ fn types_compound_array() {
 		"Saturday",
 		"Sunday",
 	];
-	println!("array: {:?}", days);
-	println!("array: first: {}", days[0]);
+	println!(" > days: {:?}", days);
+	println!(" > first day: {}", days[0]);
 
 	let switches: [bool; 5] = [false; 5];
-	println!("array (repeated): {:?}", switches);
+	println!(" > repeated: {:?}", switches);
 }
 
 fn types_compound_vector() {
@@ -159,12 +165,13 @@ fn types_compound_vector() {
 	---"#;
 	println!("{n1}");
 
+	println!("Vector");
 	let v1: Vec<String> = vec![
 		String::from("One"),
 		String::from("Two"),
 		String::from("Three"),
 	];
-	println!("vector: {:?}, length: {}", v1, v1.len())
+	println!(" > v1: {:?}, length: {}", v1, v1.len())
 }
 
 #[cfg(test)]

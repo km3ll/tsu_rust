@@ -11,13 +11,14 @@ fn flow_if_expression() {
 	---"#;
 	println!("{n1}");
 
+	println!("if expression");
 	let x = rand::thread_rng().gen_range(1..=10);
 	if x > 5 {
-		println!("if expression: x: {x}");
+		println!(" > x: {x}");
 	}
 
 	let y = if x == 5 { "is five" } else { "is not five" };
-	println!("if expression: y: {y}");
+	println!(" > y: {y}");
 }
 
 fn flow_loops() {
@@ -43,7 +44,7 @@ fn flow_loop() {
 }
 
 fn flow_loop_break() {
-	println!("Loop random number:");
+	println!("Loop (random number)");
 	loop {
 		let x = rand::thread_rng().gen_range(0..=10);
 		println!(" > x: {x}");
@@ -55,11 +56,12 @@ fn flow_loop_break() {
 }
 
 fn flow_loop_return_value() {
-	println!("Loop returning value:");
+	println!("Loop (returning value)");
 	let mut i: u8 = 0;
 	let result: u8 = loop {
 		i += 1;
 		if i == 10 {
+			println!(" > break i * 2");
 			break i * 2;
 		}
 	};
@@ -67,7 +69,7 @@ fn flow_loop_return_value() {
 }
 
 fn flow_loop_label() {
-	println!("Labeled loop:");
+	println!("Labeled loop");
 	let mut count = 0;
 	'counting_up: loop {
 		println!(" > count: {count}");
@@ -90,7 +92,7 @@ fn flow_loop_label() {
 }
 
 fn flow_while_loop() {
-	println!("While loop:");
+	println!("While loop");
 	let mut count = 3;
 	while count != 0 {
 		println!(" > {count}");
@@ -100,7 +102,7 @@ fn flow_while_loop() {
 }
 
 fn flow_for_loop() {
-	println!("For loop:");
+	println!("For loop");
 	let numbers: [i32; 3] = [10, 20, 30];
 	for n in numbers {
 		println!(" > {n}")
@@ -108,7 +110,7 @@ fn flow_for_loop() {
 }
 
 fn flow_for_loop_range() {
-	println!("Range For loop:");
+	println!("For loop (range)");
 	for n in (1..=3).rev() {
 		println!(" > {n}");
 	}
