@@ -2,44 +2,46 @@
 
 fn variables() {
     let n1 = r#"
+    ---
 	pod: Variable
 	- A named storage that programs can manipulate
 	- Identifiers to refer to memory allocations
-	- Immutable by default (let / let mut)
-	---
+	- Immutable by default: `let` / `let mut`
+
 	pod: Data Type
     - Size and layout of the variable in memory
 	- Range of values that it can store
 	- Set of operations that can be performed
-	---
+
 	pod: Variable Naming Rules
 	- Composed of letters, digits and underscore character
 	- Must beging with letter or underscore
 	- Names are case sensitive
-	---
+
 	pod: Rust
-	- Statically typed programming language
+	- A statically-typed programming language
 	---"#;
     println!("{n1}");
 }
 
 fn scalar_types() {
     let n1 = r#"
+    ---
 	pod: Scalar Type
 	- Represents a single value
-	- Integer, float, boolen and character
-	---
+	- Integer, float, boolean and character
+
 	pod: Integer
-	- A number without a fraction component
-	- Categorized as signed ("i") and unsigned ("u")
+	- Numbers without a fraction component
+	- Categorized as signed `i` and unsigned `u`
 	- Bits used inside the memory to represent variables of these types: 8, 16, 32, and 64
-	---
+
 	pod: Float
-	- Store numbers with decimal points
-	---
+	- Stores numbers with decimal points
+
 	pod: Boolean
-	- Has two possible values: true or false
-	---
+	- Has two possible values: `true` or `false`
+
 	pod: Character
 	- Can represent a single letter, digit, emoji, unicode scalar value or special character
 	- Always in single quotes

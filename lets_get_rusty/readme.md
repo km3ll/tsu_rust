@@ -1,4 +1,4 @@
-# bootcamp_lgr
+# lets_get_rusty
 
 ## commands
 

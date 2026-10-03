@@ -85,9 +85,9 @@ fn game_match() {
 	println!("guess: {guess} vs secret: {secret}");
 
 	match guess.cmp(&secret) {
-		Less => println!("Too small"),
-		Greater => println!("Too big"),
-		Equal => println!("You win"),
+		Less => println!(" > too small"),
+		Greater => println!(" > too big"),
+		Equal => println!(" > you win"),
 	}
 }
 

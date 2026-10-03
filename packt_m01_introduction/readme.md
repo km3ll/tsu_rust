@@ -20,10 +20,9 @@ Rust Programming Masterclass from Beginner to Expert
   - m01 Introduction
     - u05 Running and Compiling Your First Program
   - m02 Basic Programming
-
-[°°]
     - u01 Program Outputs and Comments 
     - u02 Variables and Scalar Data Types
+[°°]
     - u03 Shadowing and Constants
     - u04 Compound Data Types: Strings
     - u05 Compound Data Types: Tuples, Arrays

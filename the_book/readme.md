@@ -108,14 +108,12 @@ The Rust Programming Language
   - u04 Hello, Tests!
 - c02 Programming a Guessing Game
 - c03 Common Programming Concepts
-
-[°°]
   - u01 Variables and Mutability
   - u02 Data Types
   - u03 Functions
   - u04 Comments
   - u05 Control Flow
-- c04 Understanding Ownership
+- c04 Understanding Ownership[Cargo.toml](../lgr_bootcamp/Cargo.toml)
   - u01 What is Ownership?
   - u02 References and Borrowing
   - u03 The Slice Type
@@ -125,6 +123,7 @@ The Rust Programming Language
   - u03 Method Syntax
 - c06 Enums and Pattern Matching
   - u01 Defining an Enum
+[°°]
   - u02 The match Control Flow Construct
   - u03 Concise Control Flow with if let and let else
 - c07 Managing Growing Projects with Packages, Crates, and Modules

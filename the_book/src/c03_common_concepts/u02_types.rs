@@ -2,16 +2,17 @@
 
 fn types_core() {
 	let n1 = r#"
+	---
 	pod: Data Types
 	- Rust is a statically typed language (must know types at compile time)
-	---
+
 	pod: Scalar Types
 	- Represent a single value
-	- Rust has four: integers, floating point, booleans, and characters
-	---
+	- Rust has four: `integers`, `floating point`, `booleans`, and `characters`
+
 	pod: Compound Types
-	- Group multiple values into one type: tuples and arrays
-	---
+	- Group multiple values into one type: `tuples` and `arrays`
+
 	pod: Panicking
 	- Term used when a program exits with an error
 	---"#;
@@ -20,6 +21,7 @@ fn types_core() {
 
 fn types_scalar_integer() {
 	let n1 = r#"
+	---
 	pod: Integer
 	- A number without a fractional component
 	- Signed variants: i8, i16, i32, i64, i128, isize
@@ -28,105 +30,115 @@ fn types_scalar_integer() {
 	---"#;
 	println!("{n1}");
 
+	println!("Integer");
 	let x: i16 = 1_000;
-	println!("integer literal: x: {x}")
+	println!(" > literal: x: {x}")
 }
 
 fn types_scalar_floating() {
 	let n1 = r#"
+	---
 	pod: Floating-Point Numbers
 	- Numbers with decimal points (f32, f64)
 	- All floating-point types are signed
 	---"#;
 	println!("{n1}");
 
+	println!("Floating-point numbers");
 	let x: f32 = 2.0;
 	let y: f64 = 3.0;
-	println!("floating-point numbers: x: {x}, y: {y}")
+	println!(" > x: {x}, y: {y}")
 }
 
 fn types_numeric_operations() {
-	println!("operation");
+	println!("Operations");
 	// addition
 	let sum = 5 + 10;
-	println!("> addition: {sum}");
+	println!(" > addition: {sum}");
 
 	// subtraction
 	let difference = 95.5 - 4.3;
-	println!("> subtraction: {difference}");
+	println!(" > subtraction: {difference}");
 
 	// multiplication
 	let product = 4 * 30;
-	println!("> multiplication: {product}");
+	println!(" > multiplication: {product}");
 
 	// division
 	let quotient = 56.7 / 32.2;
-	println!("> division: quotient: {quotient}");
+	println!(" > division: quotient: {quotient}");
 	let truncated = -5 / 3;
-	println!("> division: truncated: {truncated}");
+	println!(" > division: truncated: {truncated}");
 
 	// remainder
 	let remainder = 43 % 5;
-	println!("> remainder: {remainder}")
+	println!(" > remainder: {remainder}")
 }
 
 fn types_scalar_boolean() {
+	println!("Boolean");
 	let b1: bool = true;
-	println!("boolean: {b1}")
+	println!(" > b1: {b1}")
 }
 
 fn types_scalar_character() {
 	let n1 = r#"
+	---
 	pod: Char Type
 	- Language's most primitive alphabetic type
 	- Literals are specified with single quotes
 	---"#;
 	println!("{n1}");
 
+	println!("Char");
 	let c1: char = 'f';
 	let c2: char = '🦀';
-	println!("char: ferris: {c2}")
+	println!(" > ferris: {c2}")
 }
 
 fn types_compound_tuple() {
 	let n1 = r#"
+	---
 	pod: Tuple
 	- Groups values with a variety of types
-	- Types can be different
-	- Have fixed length
+	- Value types can be different
+	- Has fixed length
 	- Can be destructured using pattern matching
-	- Elements can be accessed by using a period (.)
-	- The first index is Zero (0)
-	---
+	- Elements can be accessed by using a period (`.`)
+	- The first index is Zero (`0`)
+
 	pod: Destructuring
 	- Breaking a tuple into its parts
-	---
+
 	pod: Unit
-	- A tuple without any values ()
+	- A tuple without any values `()`
 	- Represents an empty value or an empty return type
 	---"#;
 	println!("{n1}");
 
+	println!("Tuple");
 	let tup1: (i32, f64, i8) = (5, 6.4, -3);
-	println!("tuple: {:?}", tup1);
+	println!(" > tup1: {:?}", tup1);
 
 	let (x, y, z): (i32, f64, i8) = tup1;
-	println!("tuple (destructured): y: {y}");
+	println!(" > tup1 (destructured) y: {y}, z: {z}");
 }
 
 fn types_compound_array() {
 	let n1 = r#"
+	---
 	pod: Array
 	- Every element must have the same type
 	- Its data is allocated on the stack
-	- Have a fixed length
-	- The first index is Zero (0)
+	- Has a fixed length
+	- The first index is Zero (`0`)
 	- Panics when attempting to access an invalid index
 	---"#;
 	println!("{n1}");
 
-	let a1 = [1, 2, 3, 4, 5];
-	println!("array: {:?}", a1);
+	println!("Array");
+	let a1: [i32; 5] = [1, 2, 3, 4, 5];
+	println!(" > a1: {:?}", a1);
 
 	let days: [&str; 7] = [
 		"Monday",
@@ -137,27 +149,29 @@ fn types_compound_array() {
 		"Saturday",
 		"Sunday",
 	];
-	println!("array: {:?}", days);
-	println!("array: first: {}", days[0]);
+	println!(" > days: {:?}", days);
+	println!(" > first day: {}", days[0]);
 
-	let switches = [false; 5];
-	println!("array (repeated): {:?}", switches);
+	let switches: [bool; 5] = [false; 5];
+	println!(" > repeated: {:?}", switches);
 }
 
 fn types_compound_vector() {
 	let n1 = r#"
+	---
 	pod: Vector
 	- It is allowed to grow or shrink in size
 	- Its data is allocated on the heap
 	---"#;
 	println!("{n1}");
 
+	println!("Vector");
 	let v1: Vec<String> = vec![
 		String::from("One"),
 		String::from("Two"),
 		String::from("Three"),
 	];
-	println!("vector: {:?}", v1)
+	println!(" > v1: {:?}, length: {}", v1, v1.len())
 }
 
 #[cfg(test)]
