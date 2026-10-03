@@ -3,7 +3,7 @@
 ### current
 
 - [Let's Get Rusty Bootcamp](lets_get_rusty)
-- [Packt - Introduction to Rust](packt_m01_introduction)
+- [Packt Introduction to Rust](packt_m01_introduction)
 - [The Book](the_book)
 
 ### exploratory

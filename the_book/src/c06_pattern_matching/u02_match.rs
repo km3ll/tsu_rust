@@ -26,27 +26,38 @@ enum UsState {
 }
 
 fn value_in_cents_v1(coin: CoinV1) -> u8 {
+	println!("Match");
 	match coin {
 		CoinV1::Penny => {
-			println!("Match: lucky penny: {:?}", coin);
+			println!(" > penny: {:?}", coin);
 			1
 		}
-		CoinV1::Nickel => 5,
-		CoinV1::Dime => 10,
-		CoinV1::Quarter => 25,
+		CoinV1::Nickel => {
+			println!(" > nickel: {:?}", coin);
+			5
+		}
+		CoinV1::Dime => {
+			println!(" > dime: {:?}", coin);
+			10
+		}
+		CoinV1::Quarter => {
+			println!(" > quarter: {:?}", coin);
+			25
+		}
 	}
 }
 
 fn value_in_cents_v2(coin: CoinV2) -> u8 {
+	println!("Match");
 	match coin {
 		CoinV2::Penny => {
-			println!("Match: lucky penny: {:?}", coin);
+			println!(" > lucky penny: {:?}", coin);
 			1
 		}
 		CoinV2::Nickel => 5,
 		CoinV2::Dime => 10,
 		CoinV2::Quarter(state) => {
-			println!("Match: Quarter from state: {state:?}");
+			println!(" > quarter from state: {state:?}");
 			25
 		}
 	}
@@ -60,38 +71,39 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
 }
 
 fn check_v1(dice_roll: u8) {
-	println!("Match: roll v1");
+	println!("Match dice roll v1");
 	match dice_roll {
-		3 => println!("> add fancy hat"),
-		7 => println!("> remove fancy hat"),
-		other => println!("> move {other} spaces"),
+		3 => println!(" > add fancy hat"),
+		7 => println!(" > remove fancy hat"),
+		other => println!(" > move {other} spaces"),
 	}
 }
 
 fn check_v2(dice_roll: u8) {
-	println!("Match: roll v2");
+	println!("Match dice roll v2");
 	match dice_roll {
-		3 => println!("> add fancy hat"),
-		7 => println!("> remove fancy hat"),
-		_ => println!("> roll again"),
+		3 => println!(" > add fancy hat"),
+		7 => println!(" > remove fancy hat"),
+		_ => println!(" > roll again"),
 	}
 }
 
 fn check_v3(dice_roll: u8) {
-	println!("Match: roll v3");
+	println!("Match dice roll v3");
 	match dice_roll {
-		3 => println!("> add fancy hat"),
-		7 => println!("> remove fancy hat"),
+		3 => println!(" > add fancy hat"),
+		7 => println!(" > remove fancy hat"),
 		_ => (),
 	}
 }
 
 fn match_definition() {
 	let n1 = r#"
+	---
 	pod: Match
 	- Compares a value against a series of patterns
 	- The compiler confirms that all possible cases are handled
-	- The code associated with each arm is an expression
+	- The code associated with each `arm` is an expression
 	---"#;
 	println!("{n1}");
 
@@ -101,12 +113,13 @@ fn match_definition() {
 
 fn match_binding() {
 	let n1 = r#"
+	---
 	pod: Match Arms
 	- Have two parts: a pattern and some code
 	- They can bind to the parts of the values that match the pattern
-	- The catch-all pattern binds the pattern to a value
+	- The `catch-all` pattern binds the pattern to a value
 	- The underscore `_` pattern does not bind to any value
-	- The unit value / empty tuple `()` does not run any code
+	- The `unit` value / empty tuple `()` does not run any code
 	---"#;
 	println!("{n1}");
 
@@ -115,10 +128,11 @@ fn match_binding() {
 }
 
 fn match_option() {
+	println!("Match");
 	let i1 = rand::thread_rng().gen_range(1..=100);
 	let op1 = plus_one(Some(i1));
 	let op2 = plus_one(None);
-	println!("Match: op1: {op1:?}, op2: {op2:?}");
+	println!(" > op1: {op1:?}, op2: {op2:?}");
 }
 
 fn match_catch_all() {
