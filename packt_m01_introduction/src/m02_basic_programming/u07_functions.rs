@@ -1,11 +1,12 @@
 fn functions() {
     let n1 = r#"
+    ---
     pod: Functions
     - Program fragment or segment designed to perform a specific task
-    ---
+    
     pod: Dot-Index Notation
     - Used to access the members of tuples and arrays
-    ---
+    
     pod: Code Blocks
     - Can return values like functions
     - Useful to initialize variables and isolating small computations

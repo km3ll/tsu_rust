@@ -1,6 +1,8 @@
 # packt_m1_introduction
 
-Packt - Introduction to Rust Programming and Core Concepts
+Packt: Rust Programming Masterclass 
+
+[Introduction to Rust Programming and Core Concepts](https://www.coursera.org/learn/packt-introduction-to-rust-programming-and-core-concepts-tb86d)
 
 ## commands
 
@@ -15,20 +17,19 @@ cargo test
 ## content
 
 ```
-Rust Programming Masterclass from Beginner to Expert
 - c01 Introduction to Rust Programming and Core Concepts
   - m01 Introduction
     - u05 Running and Compiling Your First Program
   - m02 Basic Programming
     - u01 Program Outputs and Comments 
     - u02 Variables and Scalar Data Types
-[°°]
     - u03 Shadowing and Constants
     - u04 Compound Data Types: Strings
     - u05 Compound Data Types: Tuples, Arrays
     - u06 Compound Data Types: Vectors
     - u07 Functions and Inputs
     - u08 Mastering Comments and Print
+[°°]
   - m03 Ownership - The Heart of Rust Programming
     - u01 Ownership, Primitive, and Non-Primitive Types
     - u02 Application Memory - Hean and Stack
