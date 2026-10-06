@@ -16,7 +16,7 @@ fn use_definition() {
 	---"#;
 	println!("{n1}");
 
-	use crate::c07::u04_use::front_of_house::hosting::add_to_waitlist;
+	use crate::c07_project_structure::u04_use::front_of_house::hosting::add_to_waitlist;
 	add_to_waitlist("Ferris")
 }
 
@@ -28,7 +28,7 @@ fn use_idiomatic() {
 	---"#;
 	println!("{n1}");
 
-	use crate::c07::u04_use::front_of_house::hosting;
+	use crate::c07_project_structure::u04_use::front_of_house::hosting;
 	hosting::add_to_waitlist("Ferris");
 
 	use std::collections::HashMap;

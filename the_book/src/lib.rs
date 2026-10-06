@@ -7,7 +7,7 @@ pub mod c03_common_concepts;
 pub mod c04_ownership;
 pub mod c05_structured_data;
 pub mod c06_pattern_matching;
-pub mod c07;
+pub mod c07_project_structure;
 pub mod c08;
 pub mod c09;
 pub mod c10;

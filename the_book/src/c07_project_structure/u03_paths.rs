@@ -3,7 +3,8 @@
 mod front_of_house {
 	pub mod hosting {
 		pub fn add_to_waitlist() {
-			println!("Paths: added to waitlist");
+			println!("Paths");
+			println!(" > added to waitlist");
 		}
 	}
 }
@@ -34,16 +35,19 @@ mod restaurant {
 
 	pub mod front_of_house {
 		pub fn deliver_order() {
-			println!("Paths: order delivered");
+			println!(" > order delivered");
 		}
 	}
 
 	pub mod back_of_house {
 		pub fn fix_incorrect_order() {
+			println!("Paths");
 			cook_order();
 			super::front_of_house::deliver_order();
 		}
-		fn cook_order() {}
+		fn cook_order() {
+			println!(" > order cooked");
+		}
 	}
 }
 
@@ -57,11 +61,12 @@ fn eat_at_restaurant() {
 
 fn paths_definition() {
 	let n1 = r#"
+	---
 	pod: Paths
-	- Both absolute and relative paths have identifiers separated by double colons (::)
+	- Both absolute and relative paths have identifiers separated by double colons (`::`)
 	- Absolute path: the full path starting from a crate root
-	- Relative path: starts from the current module and uses 'self', 'super' or an identifier
-	- Using the 'crate' name is like using '/' to start from the filesystem root
+	- Relative path: starts from the current module and uses `self`, `super` or an identifier
+	- Using the `crate` name is like using `/` to start from the filesystem root
 	- Our preference is to specify absolute paths
 	---"#;
 	println!("{n1}");
@@ -69,11 +74,12 @@ fn paths_definition() {
 
 fn paths_modules() {
 	let n1 = r#"
+	---
 	pod: Modules
 	- Items in parent module can't use the private items inside child modules
 	- Items in child modules can use the items in their ancertor modules
 	- Child modules can see the context in which they're defined
-	- Making a module public doesn't make its contents public ('pub')
+	- Making a module public (`pub`) doesn't make its contents public
 	---"#;
 	println!("{n1}");
 
@@ -82,11 +88,12 @@ fn paths_modules() {
 
 fn paths_library_and_binary() {
 	let n1 = r#"
+	---
 	pod: Library Crate
 	- Code that can be shared
-	- The module tree should be defined in src/lib.rs
+	- The module tree should be defined in `src/lib.rs`
 	- Any public items can be used in the binary crate
-	---
+
 	pod: Binary Crate
 	- Code to start and executable that calls code in the library crate
 	- Becomes a user of the library crate. It can only use the public API
@@ -96,9 +103,10 @@ fn paths_library_and_binary() {
 
 fn paths_super() {
 	let n1 = r#"
+	---
 	pod: Relative Paths with 'super'
 	- `super` starts a relative path in the parent module
-	- It is like starting a filesystem path with the '..' syntax
+	- It is like starting a filesystem path with the `..` syntax
 	---"#;
 	println!("{n1}");
 
@@ -107,25 +115,29 @@ fn paths_super() {
 
 fn paths_structs() {
 	let n1 = r#"
+	---
 	pod: Paths of Structs
 	- We can make each field public or not on a case-by-case basis
 	- Because it has private fields, the struct needs to provide a public associated constructor
 	---"#;
 	println!("{n1}");
 
+	println!("Paths");
 	let meal = restaurant::Breakfast::summer("Rye");
-	println!("Paths: structs meal: {meal:?}");
+	println!(" > struct meal: {meal:?}");
 }
 
 fn paths_enums() {
 	let n1 = r#"
+	---
 	pod: Paths of Enums
-	- Making an enum public, all of its variants are then public
+	- Making an enum public also makes all of its variants public
 	---"#;
 	println!("{n1}");
 
+	println!("Paths");
 	let appetizer = restaurant::Appetizer::Salad;
-	println!("Paths: enums appetizer: {appetizer:?}");
+	println!(" enum appetizer: {appetizer:?}");
 }
 
 #[cfg(test)]

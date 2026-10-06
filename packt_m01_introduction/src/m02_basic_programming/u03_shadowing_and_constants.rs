@@ -1,11 +1,12 @@
 //! # More on Variables - Shadowing, Constants
 
 fn variables_definition() {
+    println!("Variables");
     let (is_active, ferris) = (true, '🦀');
-    println!("Variables: grouped definition: ({}, {})", is_active, ferris);
+    println!(" > grouped definition: ({}, {})", is_active, ferris);
 
     let large_number: i64 = 1_000_000_000_000_000;
-    println!("Variables: large number: {}", large_number);
+    println!(" > large number: {}", large_number);
 }
 
 fn variables_bases() {
@@ -24,14 +25,16 @@ fn variables_bases() {
 }
 
 fn variables_convert() {
+    println!("Variables");
     let n1: i32 = 14;
     let n2: f64 = 15.5;
 
     let n3: i32 = n1 + n2 as i32;
-    println!("Variables: convert as i32 n3: {n3}\n > loss of value");
+    println!(" > convert `as i32` n3: {n3}");
+    println!(" > loss of value");
 
     let n4 = n1 as f64 + n2;
-    println!("Variables: convert as f64: n4: {n4}");
+    println!(" > convert `as f64`: n4: {n4}");
 }
 
 fn shadowing() {
@@ -48,20 +51,21 @@ fn shadowing() {
     ---"#;
     println!("{n1}");
 
+    println!("Shadowing");
     let s1 = 2;
     let s1 = 20;
-    println!("Shadowing: s1: {s1}");
+    println!(" > s1: {s1}");
 
     let mut s2 = 3;
     let s2 = 30;
-    println!("Shadowing: mutable s2: {s2}");
+    println!(" > mutable s2: {s2}");
 
     let s3: i32 = 4;
     let s3: char = '🦀';
-    println!("Shadowing: data type: s3: {s3}");
+    println!(" > different data type: s3: {s3}");
 
+    println!("Shadowing scope");
     let s4 = 5;
-    println!("Shadowing scopes: ");
     println!(" > outer: s4: {s4}");
     {
         let s4 = 50;
@@ -80,8 +84,9 @@ fn constants() {
     ---"#;
     println!("{n1}");
 
+    println!("Constant");
     const MAX_RANGE: u32 = 20000;
-    println!("Constants: MAX_RANGE: {MAX_RANGE}");
+    println!(" > MAX_RANGE: {MAX_RANGE}");
 }
 
 #[cfg(test)]

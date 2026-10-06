@@ -8,5 +8,7 @@
 
 ### exploratory
 
+- [backyard](exploratory/backyard)
 - [guessing_game](exploratory/guessing_game)
-- [projects](exploratory/projects)
+- [restaurant](exploratory/restaurant)
+- [zip](exploratory/zip)
