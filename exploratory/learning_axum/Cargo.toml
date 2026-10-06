@@ -1,0 +1,8 @@
+[package]
+name = "learning_axum"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.7.5", features = ["macros"] }
+tokio = { version = "1.22.0", features = ["macros", "rt-multi-thread"] }

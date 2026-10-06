@@ -10,5 +10,6 @@
 
 - [backyard](exploratory/backyard)
 - [guessing_game](exploratory/guessing_game)
+- [learning_axum](exploratory/learning_axum)
 - [restaurant](exploratory/restaurant)
 - [zip](exploratory/zip)
