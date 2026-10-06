@@ -5,95 +5,102 @@ use std::slice::Iter;
 
 fn vectors() {
     let n1 = r#"
+    ---
     pod: Vector
     - A collection of similar elements that can be resized
     - Elements are stored in contiguous memory locations
+
+    macro: `vec!()`
+    - Creates a `Vec` containing the arguments.
+    - Allows `Vec`s to be defined with the same syntax as array expressions.
     ---"#;
     println!("{n1}");
 
+    println!("Vectors");
     let v1: Vec<i32> = vec![10, 20, 30, 40, 50];
-    println!("Vectors: v1: {:?}", v1);
+    println!(" > v1: {v1:?}");
 }
 
 fn vectors_initialize() {
+    println!("Vectors");
     let v2: Vec<bool> = vec![true; 3];
-    println!("Vectors: initialize: v2: {:?}", v2);
+    println!(" > initialize [true; 3] v2: {v2:?}");
 }
 
 fn vectors_push() {
-    println!("Vectors: push");
+    println!("Vectors");
 
     let mut v3: Vec<i32> = vec![1, 2, 3];
-    println!(" > before: v3: {:?}", v3);
+    println!(" > before push mut v3: {v3:?}");
 
     v3.push(4);
-    println!(" > after : v3: {:?}", v3);
+    println!(" > after push mut v3: {v3:?}");
 }
 
 fn vectors_pop() {
-    println!("Vectors: pop");
+    println!("Vectors");
 
     let mut v4: Vec<i32> = vec![1, 2, 3];
-    println!(" > before: v4: {:?}", v4);
+    println!(" > before pop mut v4: {v4:?}");
 
     let e4: Option<i32> = v4.pop();
-    println!(" > after : v4: {:?}, e4: {:?}", v4, e4);
+    println!(" > after pop mut v4: {v4:?}, e4: {e4:?}");
 }
 
 fn vectors_remove() {
-    println!("Vectors: remove");
+    println!("Vectors");
 
     let mut v5: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > before: v5: {:?}", v5);
+    println!(" > before remove mut v5: {v5:?}");
 
     v5.remove(2);
-    println!(" > after : v5: {:?}", v5);
+    println!(" > after remove mut v5: {v5:?}");
 }
 
 fn vectors_sort() {
-    println!("Vectors: sort");
+    println!("Vectors");
 
     let mut v6 = vec![5, 3, 9, 8];
-    println!(" > before: v6: {:?}", v6);
+    println!(" > before sort mut v6: {v6:?}");
 
     v6.sort();
-    println!(" > after : v6: {:?}", v6);
+    println!(" > after sort mut v6: {v6:?}");
 }
 
 fn vectors_reverse() {
-    println!("Vectors: reverse");
+    println!("Vectors");
 
     let mut v7 = vec![1, 2, 3, 4, 5];
-    println!(" > before: v7: {:?}", v7);
+    println!(" > before reverse mut v7: {v7:?}");
 
     v7.reverse();
-    println!(" > after : v7: {:?}", v7);
+    println!(" > after reverse mut v7: {v7:?}");
 }
 
 fn vectors_slices() {
-    println!("Vectors: slices");
+    println!("Vectors slices");
 
     let v8: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > v8: {:?}", v8);
+    println!(" > v8: {v8:?}");
 
     let s1: &[i32] = &v8[1..3];
-    println!(" > start-inclusive, end-exclusive [1..3]: {:?}", s1);
+    println!(" > start-inclusive, end-exclusive [1..3]: {s1:?}");
 
     let s2: &[i32] = &v8[1..=3];
-    println!(" > start-inclusive, end-inclusive [1..=3]: {:?}", s2);
+    println!(" > start-inclusive, end-inclusive [1..=3]: {s2:?}");
 
     let s3: &[i32] = &v8[..3];
-    println!(" > from beginning to index 3 exclusive [..3]: {:?}", s3);
+    println!(" > from beginning to index 3 exclusive [..3]: {s3:?}");
 
     let s4 = &v8[..];
-    println!(" > entire collection [..]: {:?}", s4);
+    println!(" > entire collection [..]: {s4:?}");
 }
 
 fn vectors_iter() {
-    println!("Vectors: iter");
+    println!("Vectors");
 
     let v9: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > v9: {:?}", v9);
+    println!(" > before iter v9: {v9:?}");
 
     let i9: Iter<i32> = v9.iter();
     for e in i9 {
@@ -103,82 +110,83 @@ fn vectors_iter() {
 
 fn vectors_update() {
     let n1 = r#"
-    pod: Dereference Operator (*)
-    - *e dereferences first, then modify
-    - Without *, e is just a reference (pointer)
-    - With *, you get the actual value that the reference points to
+    ---
+    pod: Dereference Operator (`*`)
+    - `*e` dereferences first, then modify
+    - Without `*`, e is just a reference (pointer)
+    - With `*`, you get the actual value that the reference points to
     ---"#;
     println!("{n1}");
 
     println!("Vectors: update");
 
     let mut v10: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > before: v10: {:?}", v10);
+    println!(" > before mut v10: {v10:?}");
 
     for e in &mut v10 {
         *e += 10;
     }
-    println!(" > after: v10: {:?}", v10);
+    println!(" > after `*e` mut v10: {v10:?}");
 }
 
 fn vectors_capacity() {
-    println!("Vectors: capacity");
+    println!("Vectors");
 
     let v11 = vec![0, 1, 2, 3, 4, 5];
-    println!(" > v1: {:?}", v11);
+    println!(" > v11: {v11:?}");
 
     let u1 = v11.capacity();
-    println!(" > u1: {u1}");
+    println!(" > capacity: {u1}");
 }
 
 fn vectors_resize() {
-    println!("Vectors: resize");
+    println!("Vectors");
 
     let mut v12 = vec![1, 2, 3, 4, 5];
-    println!(" > before v12: {:?}", v12);
+    println!(" > before mut v12: {v12:?}");
 
     v12.resize(3, 0);
-    println!(" > after v12: {:?}", v12);
+    println!(" > after resize mut v12: {v12:?}");
 
     v12.resize(6, 0);
-    println!(" > after v12: {:?}", v12);
+    println!(" > after resize mut v12: {v12:?}");
 }
 
 fn vectors_len() {
-    println!("Vectors: len");
+    println!("Vectors");
 
     let v13 = vec![1, 2, 3, 4, 5];
-    println!(" > v13: {:?}", v13);
+    println!(" > v13: {v13:?}");
 
     let u1: usize = v13.len();
-    println!(" > u1: {u1}");
+    println!(" > len: {u1}");
 }
 
 fn vectors_is_empty() {
-    println!("Vectors: is_empty");
+    println!("Vectors");
 
     let v14: Vec<u16> = vec![];
-    println!(" > v14: {:?}", v14);
+    println!(" > v14: {v14:?}");
 
     let b1: bool = v14.is_empty();
-    println!(" > b1: {b1}");
+    println!(" > is_empty: {b1}");
 }
 
 fn vectors_clear() {
-    println!("Vectors: clear");
+    println!("Vectors");
 
     let mut v15 = vec![1, 2, 3, 4, 5];
-    println!(" > before: v15: {:?}", v15);
+    println!(" > before clear mut v15: {v15:?}");
 
     v15.clear();
-    println!(" > after: v15: {:?}", v15);
+    println!(" > after clear mut v15: {v15:?}");
 }
 
 fn vectors_into_iter() {
-    println!("Vectors: into_iter");
+    println!("Vectors");
 
     let v16: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > v16: {:?}", v16);
+    println!(" > before into_iter v16: {v16:?}");
 
     for e in v16.into_iter() {
         println!(" > e: {e}");
@@ -186,94 +194,92 @@ fn vectors_into_iter() {
 }
 
 fn vectors_from_range() {
-    println!("Vectors: from range");
+    println!("Vectors");
 
     let r15: Range<i32> = (0..10);
-    println!(" > r15: {:?}", r15);
+    println!(" > range r15: {r15:?}");
 
     let v15: Vec<i32> = r15.collect();
-    println!(" > v15: {:?}", v15);
+    println!(" > after collect v15: {v15:?}");
 }
 
 fn vector_contains() {
-    println!("Vectors: contains");
+    println!("Vectors");
 
     let v16: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > v16: {:?}", v16);
+    println!(" > v16: {v16:?}");
 
     let b1: bool = v16.contains(&3);
-    println!(" > b1: {b1}");
+    println!(" > v16 contains: {b1}");
 }
 
 fn vectors_binary_search() {
-    println!("Vectors: binary_search");
+    println!("Vectors");
 
     let v17: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > v17: {:?}", v17);
+    println!(" > v17: {v17:?}");
 
-    let s1: Result<usize, usize> = v17.binary_search(&3);
-    println!(" > s1: {:?}", s1);
+    let r1: Result<usize, usize> = v17.binary_search(&3);
+    println!(" > after binary-search s1: {r1:?}");
 }
 
 fn vectors_index() {
-    println!("Vectors: index");
+    println!("Vectors");
 
     let v18: Vec<char> = vec!['a', 'b', 'c'];
-    println!(" > v18: {:?}", v18);
-
-    println!(" > index #1: {:?}", v18[1]);
+    println!(" > v18: {v18:?}");
+    println!(" > index [1]: {:?}", v18[1]);
 }
 
 fn vectors_get() {
-    println!("Vectors: get");
+    println!("Vectors");
 
     let v19: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > v19: {:?}", v19);
-
-    println!(" > get index #4: {:?}", v19.get(4));
+    println!(" > v19: {v19:?}");
+    println!(" > after get(4): {:?}", v19.get(4));
 }
 
 fn vectors_get_mut() {
     println!("Vectors: get_mut");
 
     let mut v20: Vec<i32> = vec![1, 2, 3, 4, 5];
-    println!(" > before v20: {:?}", v20);
+    println!(" > before mut v20: {v20:?}");
 
     *v20.get_mut(1).unwrap() = 100;
-    println!(" > after v20: {:?}", v20);
+    println!(" > after get_mut *v20: {v20:?}");
 }
 
 fn vectors_insert() {
-    println!("Vectors: insert");
+    println!("Vectors");
 
     let mut v21: Vec<i32> = vec![1, 2, 5, 7];
-    println!(" > before v21: {:?}", v21);
+    println!(" > before insert mut v21: {v21:?}");
 
     v21.insert(2, 50);
-    println!(" > after v21: {:?}", v21);
+    println!(" > after insert mut v21: {v21:?}");
 }
 
 fn vectors_dedup() {
-    println!("Vectors: dedup");
+    println!("Vectors");
 
     let mut v22: Vec<i32> = vec![1, 2, 2, 3, 3, 3];
-    println!(" > before v22: {:?}", v22);
+    println!(" > before dedup v22: {v22:?}");
 
     v22.dedup();
-    println!(" > after v22: {:?}", v22);
+    println!(" > after dedup v22: {v22:?}");
 }
 
 fn vectors_split_at() {
     println!("Vectors: split_at");
 
     let v23: Vec<&str> = vec!["a", "b", "c", "d", "e"];
-    println!(" > v23: {:?}", v23);
+    println!(" > before split_at v23: {v23:?}");
 
-    println!(" > split at #3");
+    println!(" > split_at(3)");
     let (l1, r1) = v23.split_at(3);
 
-    println!(" > left: {:?}", l1);
-    println!(" > right: {:?}", r1);
+    println!(" > left: {l1:?}");
+    println!(" > right: {r1:?}");
 }
 
 #[cfg(test)]

@@ -70,15 +70,17 @@ fn scalar_floats() {
 }
 
 fn scalar_booleans() {
+    println!("Scalar: booleans");
     let is_active = true;
     let is_enabled = false;
-    println!("Scalar: booleans: {:?}", (is_active, is_enabled));
+    println!(" > {:?}", (is_active, is_enabled));
 }
 
 fn scalar_characters() {
+    println!("Scalar: chars");
     let c1 = 'a';
     let c2 = '🦀';
-    println!("Scalar: chars: c1: {}, c2: {}", c1, c2);
+    println!(" > c1: {}, c2: {}", c1, c2);
 }
 
 #[cfg(test)]
