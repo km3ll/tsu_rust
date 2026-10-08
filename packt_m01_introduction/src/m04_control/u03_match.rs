@@ -3,31 +3,45 @@
 use rand::Rng;
 use rand::prelude::ThreadRng;
 
+#[derive(Debug)]
+enum Grade {
+    A,
+    B,
+    C,
+    D,
+    F,
+}
+
 fn match_statement() {
     let n1 = r#"
+    ---
     pod: Match Statement
     - Control flow operator
-    - Transfers control to a particular block of code (arms) based on the value of a variable
-    - It is exhaustive and covers all possible cases
+    - Transfers control to a particular block of code (`arm`) based on the value of a variable
+    - It is `exhaustive` and covers all possible cases
     - One of the arms should execute
     ---"#;
     println!("{n1}");
 
+    println!("Match number");
     let mut rng: ThreadRng = rand::rng();
     let number = rng.random_range(1..=200);
-
-    println!("Match: number:");
+    println!(" > number");
     match number {
         1 => println!(" > is one"),
         2 | 3 => println!(" > is either two or three"),
         4..=100 => println!(" > is between four and one hundred"),
         _ => println!(" > is greater than one hundred"),
     }
+    println!(" > {number}");
 }
 
 fn match_grades() {
+    println!("Match marks");
     let mut rng: ThreadRng = rand::rng();
+
     let marks = rng.random_range(0..=100);
+    println!(" > marks: {marks}");
 
     let mut grade: char = 'N';
     match marks {
@@ -38,38 +52,40 @@ fn match_grades() {
         _ => grade = 'F',        // Failure
     }
 
-    println!("Match: marks: {marks}, grade: {grade}");
+    println!(" > grade: {grade}");
 }
 
 fn match_let() {
+    println!("Match mark blocks");
     let mut rng: ThreadRng = rand::rng();
-    let marks = rng.random_range(0..=100);
 
-    println!("Match:");
-    let mut grade = match marks {
+    let marks = rng.random_range(0..=100);
+    println!(" > marks: {marks}");
+
+    let mut grade: Grade = match marks {
         90..=100 => {
             println!(" > excellent!");
-            'A'
+            Grade::A
         }
         80..=89 => {
             println!(" > good!");
-            'B'
+            Grade::B
         }
         70..=79 => {
-            println!(" > satisfactory / fair");
-            'C'
+            println!(" > satisfactory / fair!");
+            Grade::C
         }
         60..=69 => {
-            println!(" > marginal passing");
-            'D'
+            println!(" > marginal passing!");
+            Grade::D
         }
         _ => {
-            println!(" > failure");
-            'F'
+            println!(" > failure!");
+            Grade::F
         }
     };
 
-    println!(" > marks: {marks}, grade: {grade}");
+    println!(" > grade: {grade:?}");
 }
 
 #[cfg(test)]

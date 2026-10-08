@@ -36,7 +36,6 @@ cargo test
     - u04 Mutable and Immutable References
     - u05 Dereferencing
     - u06 Understanding Ownership
-[°°]
   - m04 Control Structures
     - u01 Conditional If and Its Variants
     - u02 If Let and Nested If
@@ -44,6 +43,7 @@ cargo test
     - u04 While and Simple Loops
     - u05 For Loops and Their Variants
     - u06 Break and Continue
+[°°]
     - u08 Understanding Conditional Control Structures
   - m05 Project: Stack Implementation
     - u01 Implementing Stack

@@ -2,9 +2,10 @@
 
 fn control() {
     let n1 = r#"
+    ---
     pod: Control Structures
     - Analyze variables and chose directions in which to execute the code
-    ---
+
     pod: Conditionals
     - Programming language commands to handle decisions
     ---"#;
@@ -12,7 +13,11 @@ fn control() {
 }
 
 fn conditional_if() {
-    let marks: i32 = 95;
+    println!("Conditional if:");
+
+    let marks = rand::random_range(0..=100);
+    println!(" > marks: {marks}");
+
     let mut grade: char = 'N';
     if marks >= 90 {
         grade = 'A';
@@ -25,7 +30,7 @@ fn conditional_if() {
     } else {
         grade = 'F';
     }
-    println!("Conditional If: grade: {grade}");
+    println!(" > grade: {grade}");
 }
 
 #[cfg(test)]

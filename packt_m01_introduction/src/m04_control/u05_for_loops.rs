@@ -2,6 +2,7 @@
 
 fn for_loops() {
     let n1 = r#"
+    ---
     pod: For-Loops
     - We know the number of times a block will be executed
     - The values of vectors are consumed inside a for-loop
@@ -9,26 +10,28 @@ fn for_loops() {
     ---"#;
     println!("{n1}");
 
+    println!("For-Loop");
     let mut v1: Vec<i32> = vec![1, 2, 3, 4, 5];
+    println!(" > v1: {v1:?}");
 
-    println!("For-Loop: range");
+    println!(" > range");
     for i in 0..=4 {
         println!(" > i: {}", &v1[i]);
     }
 
-    println!("For-Loop: vector");
+    println!(" > vector");
     for e in &v1 {
         println!(" > e: {e}");
     }
 
-    println!("For-Loop: iter");
+    println!(" > iter");
     for e in v1.iter() {
-        println!(" > e: {e}");
+        println!(" > ie: {e}");
     }
 
-    println!("For-loop: iter_mut");
+    println!(" > iter_mut");
     for e in v1.iter_mut() {
-        println!(" > e: {e}");
+        println!(" > ie: {e}");
     }
 }
 

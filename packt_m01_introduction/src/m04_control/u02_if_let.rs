@@ -2,23 +2,31 @@
 
 fn mod_operator() {
     let n1 = r#"
-    pod: Mod Operator
-    - The % operator computes the reminder after dividing two numbers (remainder == 0 -> even)
+    ---
+    pod: Mod Operator `%`
+    - Computes the reminder after dividing two numbers (remainder == 0 -> even)
     ---"#;
     println!("{n1}");
 
-    let is_even = 10 % 2 == 0;
-    println!("Mod Operator: is_even: {is_even}");
+    println!("Mod operator");
+    let r1 = rand::random_range(0..=100);
+    let is_even = r1 % 2 == 0;
+    println!(" > random r1: {r1} is even: {is_even}");
 }
 
 fn if_let() {
-    let is_odd: bool = if 9 % 2 == 0 {
-        println!("If-let: number is odd");
+    println!("Conditional if-let");
+    let r1 = rand::random_range(1..=100);
+    println!(" > random r1: {r1}");
+
+    let bool1: bool = if r1 % 2 != 0 {
+        println!(" > is odd");
         true
     } else {
-        println!("If-let: number is even");
+        println!(" > is event");
         false
     };
+    println!(" > bool1: {bool1}");
 }
 
 #[cfg(test)]
