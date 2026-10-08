@@ -10,7 +10,7 @@ fn pop(stack: &mut Vec<char>) -> Option<char> {
 
 fn push(stack: &mut Vec<char>, value: char, capacity: usize) {
     if stack.len() == capacity {
-        println!("Stack: max capacity reached: {capacity}");
+        println!(" > error: max capacity reached");
     } else {
         stack.push(value)
     }
@@ -21,12 +21,14 @@ fn size(stack: &Vec<char>) -> usize {
 }
 
 fn reversal_custom() {
-    println!("Stack: reversal");
+    println!("String Reversal");
+
     let input = String::from("Hello, Ferris!");
     println!(" > input : {input}");
 
     let capacity = input.len();
     let mut stack = new_stack(capacity);
+
     for char in input.chars() {
         push(&mut stack, char, capacity)
     }
@@ -34,7 +36,8 @@ fn reversal_custom() {
 
     let mut output = String::new();
     for i in 0..size(&stack) {
-        output.push(pop(&mut stack).unwrap())
+        let popped = pop(&mut stack).unwrap();
+        output.push(popped)
     }
     println!(" > output: {output}");
 }

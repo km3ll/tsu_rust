@@ -14,8 +14,8 @@ cargo add tokio -F macros -F rt-multi-thread
 - Introduction to Axum
 - Introduction to Axum 0.6
 - Why Axum and Rust?
-[ºº]
 - Setting up VS Code
+[ºº]
 - Hello World!
 ```
 
