@@ -21,4 +21,5 @@ cargo add tokio -F macros -F rt-multi-thread
 
 ## references
 
-- [GitHub: project_solution](https://github.com/brooks-builds/full-stack-todo-rust-course/tree/main/backend/rust/axum)
+- [GitHub: project_solution](https://github.com/brooks-builds/full-stack-todo-rust-course/tree/main/backend/rust/axum/project_solution)
+- [GitHub: tokio-rs/axum](https://github.com/tokio-rs/axum)

@@ -29,7 +29,6 @@ cargo test
     - u06 Compound Data Types: Vectors
     - u07 Functions and Inputs
     - u08 Mastering Comments and Print
-[°°]
   - m03 Ownership - The Heart of Rust Programming
     - u01 Ownership, Primitive, and Non-Primitive Types
     - u02 Application Memory - Hean and Stack
@@ -44,6 +43,7 @@ cargo test
     - u04 While and Simple Loops
     - u05 For Loops and Their Variants
     - u06 Break and Continue
+[°°]
     - u08 Understanding Conditional Control Structures
   - m05 Project: Stack Implementation
     - u01 Implementing Stack
