@@ -29,7 +29,6 @@ cargo test
     - u06 Compound Data Types: Vectors
     - u07 Functions and Inputs
     - u08 Mastering Comments and Print
-[°°]
   - m03 Ownership - The Heart of Rust Programming
     - u01 Ownership, Primitive, and Non-Primitive Types
     - u02 Application Memory - Hean and Stack
@@ -37,6 +36,7 @@ cargo test
     - u04 Mutable and Immutable References
     - u05 Dereferencing
     - u06 Understanding Ownership
+[°°]
   - m04 Control Structures
     - u01 Conditional If and Its Variants
     - u02 If Let and Nested If

@@ -4,11 +4,12 @@ use std::fmt::format;
 
 fn memory() {
     let n1 = r#"
+    ---
     pod: Memory Segments
     - Code/Text: program instructions and code
     - Static/Global: variables available during whole program execution
     - Stack: function calls, local variables and primitive type variables
-    ---
+
     pod: Memory Allocation
     - The allocation of stack frames and local variables happen at runtime
     - If the stack grows beyond the reserved memory then a Stack Overflow happens
@@ -44,16 +45,17 @@ const MAX_VALUE: i32 = 40_000;
 /// `MAX_VALUE`
 /// ----------
 fn memory_main() {
+    println!("Application memory");
     let (x, y) = (2, 4);
 
     let msg: String = String::from("Memory: starts");
     let msg_ref: &String = &msg;
     let msg_cloned: String = msg.clone();
 
-    println!("{msg}");
+    println!(" > {msg}");
 
     let sum_value = square_sum(x, y);
-    println!("Memory: sum_value: {sum_value}");
+    println!(" > sum_value: {sum_value}");
 }
 
 fn square_sum(num1: i32, num2: i32) -> i32 {
