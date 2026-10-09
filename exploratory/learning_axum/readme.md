@@ -6,7 +6,23 @@
 
 ```bash
 cargo add tokio -F macros -F rt-multi-thread
+
+# Location of the DB
+# By default will be read from the DATABASE_URL env var or `.env` files]
+sqlx database create
+sqlx migrate add init
+sqlx migrate info
+sqlx migrate run
+
+# Log syntax
+RUST_LOG=default_level,module_path=level
 ```
+
+## endpoints
+
+- home: http://localhost:3000
+- pgadmin: http://localhost:8888
+- postgres: postgres:5432
 
 ## content
 
@@ -14,8 +30,8 @@ cargo add tokio -F macros -F rt-multi-thread
 - Introduction to Axum
 - Introduction to Axum 0.6
 - Why Axum and Rust?
-[ºº]
 - Setting up VS Code
+[ºº]
 - Hello World!
 ```
 

@@ -11,3 +11,12 @@ rand = "0.10.3"
 tower-http = { version = "0.7.1", features = ["trace"] }
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.23" , features = ["env-filter"]}
+
+# configuration
+config = "0.15.27"
+
+# database
+sqlx = { version = "0.8.6", features = ["runtime-tokio", "tls-rustls", "postgres", "macros"] }
+
+# environment variables
+dotenvy = "0.15.7"
