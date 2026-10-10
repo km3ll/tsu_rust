@@ -47,7 +47,6 @@ cargo test
   - m05 Practice: Stack Implementation
     - u01 Implementing Stack
     - u02 String Reversal Using Stacks
-[°°]
   - m06 Structures, Traits, Generics, Enums
     - u01 Structures Basics
     - u02 Traits and Default Implementations
@@ -59,6 +58,7 @@ cargo test
     - u08 Hash Maps
     - u09 Defining and Using Structs in Rust
   - m07 Iterators, Lifetimes, and Closures
+[°°]
     - u01 Lifetimes - Part 1
     - u02 Lifetimes - Part 2
     - u03 Eliding Lifetimes

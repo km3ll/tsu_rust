@@ -31,18 +31,20 @@ impl Stats for Data {
 
 fn functions_in_traits() {
     let n1 = r#"
-    pod: Functions in Traits
+    ---
+    pod: Functions within Traits
     - Can call other functions within the same trait
     ---"#;
     println!("{n1}");
 
-    println!("Functions in Traits");
+    println!("Functions within Trait");
     let data = Data {
         sample: vec![190, 200, 210],
     };
-    println!(" > data: {data:?}");
-    println!(" > mean: {}", data.mean());
-    println!(" > variance: {}", data.variance());
+    println!(" > struct: {data:?}");
+
+    println!(" > trait.mean: {}", data.mean());
+    println!(" > trait.variance: {}", data.variance());
 }
 #[cfg(test)]
 mod tests {

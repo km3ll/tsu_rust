@@ -1,4 +1,5 @@
 //! # Enums
+use Conveyance::{Air, Car, Train};
 
 #[derive(Debug)]
 enum Conveyance {
@@ -10,9 +11,9 @@ enum Conveyance {
 impl Conveyance {
     fn travel_allowance(&self, miles: f32) -> f32 {
         match self {
-            Conveyance::Air => miles * 14.3,
-            Conveyance::Car => miles * 18.6,
-            Conveyance::Train => miles * 30.7,
+            Air => miles * 14.3,
+            Car => miles * 18.6,
+            Train => miles * 30.7,
         }
     }
 }
@@ -45,44 +46,41 @@ enum Color {
 
 fn enumerators() {
     let n1 = r#"
+    ---
     pod: Enumerator
     - Data type consisted of named value elements or variants
     - Can have implementation blocks
     - Can be used in vectors (single type)
-    ---
+
     pod: Enumerator Variant
     - Its numeric values start at Zero `Car as i32`
     - Can be defined with associated values
     ---"#;
     println!("{n1}");
 
-    let c1: Conveyance = Conveyance::Car;
     println!("Enums");
-    println!(" > c1: {c1:?}");
+    let c1: Conveyance = Conveyance::Car;
+    println!(" > Conveyance c1: {c1:?}");
     println!(" > c1 as i32: {}", c1 as i32);
 
     let c2: Color = Color::Red;
-    println!(" > c2: {c2:?}");
+    println!(" > Color c2: {c2:?}");
     println!(" > c2 as i32: {}", c2 as i32);
 }
 
 fn enumerators_conveyance() {
+    println!("Enum");
     let miles: f32 = 60.0;
     let conveyance = Conveyance::Train;
     let allowance = conveyance.travel_allowance(miles);
-    println!(
-        "Enums: conveyance: {:?}, allowance: {:?}",
-        conveyance, allowance
-    );
+    println!(" > conveyance_v1: {conveyance:?}, allowance_v1: {allowance:?}");
 }
 
 fn enumerators_data() {
+    println!("Enum");
     let conveyance = ConveyanceV2::Air(23.7);
     let allowance = conveyance.travel_allowance();
-    println!(
-        "Enums: conveyance_v2: {:?}, allowance_v2: {:?}",
-        conveyance, allowance
-    );
+    println!(" > conveyance_v2: {conveyance:?}, allowance_v2: {allowance:?}");
 }
 
 #[cfg(test)]

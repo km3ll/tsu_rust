@@ -21,14 +21,14 @@ fn lifetimes() {
     pod: Lifetime
     - Defines the scope for which a reference is valid
     - A reference variable must live long enough for the duration in which it's being referenced
-    ---
+
     pod: Borrow Checker
     - Rust module that verifies lifetime-related issues
-    ---
+
     pod: Dangling Reference
     - Trying to access a resource that has been deallocated
     - For instance: a function taking ownership of a value an returning a reference to it
-    ---
+
     pod: Undetermined Lifetimes
     - The lifetime of a variable is not known at compile time
     - For instance: a function receives two references to return the greater reference

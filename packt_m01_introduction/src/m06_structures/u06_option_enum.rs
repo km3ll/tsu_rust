@@ -2,22 +2,24 @@
 
 fn option_enum() {
     let n1 = r#"
+    ---
     pod: Option Enum
-    - Variants: None, Some(T)
-    - Functions: unwrap()
+    - Variants: `None, Some(T)`
+    - Functions: `unwrap()`
     ---"#;
     println!("{n1}");
 
+    println!("Option Enum");
     let op1: Option<String> = None;
     let op2: Option<String> = Some(String::from("Ferris"));
-    println!("Option Enum");
     println!(" > op1: {op1:?}");
     println!(" > op2: {op2:?}");
 }
 
 fn option_functions() {
-    let op3: Option<&str> = Some("Hello, Ferris!");
     println!("Option Enum");
+    let op3: Option<&str> = Some("Hello, Ferris!");
+    println!(" > op3: {op3:?}");
     println!(" > unwrap: {}", op3.unwrap());
 }
 
