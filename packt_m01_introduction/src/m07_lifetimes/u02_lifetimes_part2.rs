@@ -17,7 +17,8 @@ struct User<'a> {
 
 fn lifetimes() {
     let n1 = r#"
-    pod: Generic Lifetime Parameter
+    ---
+    pod: Generic Lifetime Parameter ´'a´
     - Imposes a lifetime constraint on the references and return values of a function
     - Needed when we use references as output of a function
     ---"#;
@@ -29,20 +30,19 @@ fn lifetimes() {
 }
 
 fn lifetimes_structs() {
+    println!("Lifetimes");
     let name = String::from("Ferris");
     let mut user = User {
         id: 1100,
         name: &name,
     };
-    /*
-    {
-        let new_name = String::from( "Ferris");
-        user.name = &new_name; // Error: `new_name` does not live long enough
-    }
-     */
 
-    println!("Lifetimes");
-    println!(" > user id: {}, name: {}", user.id, user.name);
+    {
+        let new_name = String::from("Ferris");
+        println!(" > error: new_name does not live long enough");
+        // user.name = &new_name; // Error: `new_name` does not live long enough
+    }
+    println!(" > user: {user:?}");
 }
 
 #[cfg(test)]

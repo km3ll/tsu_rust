@@ -18,6 +18,7 @@ fn greater(x: &i32, y: &i32) -> &i32 {
 
 fn lifetimes() {
     let n1 = r#"
+    ---
     pod: Lifetime
     - Defines the scope for which a reference is valid
     - A reference variable must live long enough for the duration in which it's being referenced

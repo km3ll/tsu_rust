@@ -2,9 +2,10 @@
 
 fn lifetime_elision() {
     let n1 = r#"
+    ---
     pod: Lifetime Elision
     - The compiler automatically infers the lifetimes of references
-    ---
+
     pod: Lifetime Elision Rules
     - (1) Each parameter that is a reference, gets its own lifetime parameter
     - (2) If there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetime parameters

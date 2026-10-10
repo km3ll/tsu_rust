@@ -1,6 +1,6 @@
 # packt_m1_introduction
 
-Packt: Rust Programming Masterclass 
+[°°] Packt: Rust Programming Masterclass 
 
 [Introduction to Rust Programming and Core Concepts](https://www.coursera.org/learn/packt-introduction-to-rust-programming-and-core-concepts-tb86d)
 
@@ -58,7 +58,6 @@ cargo test
     - u08 Hash Maps
     - u09 Defining and Using Structs in Rust
   - m07 Iterators, Lifetimes, and Closures
-[°°]
     - u01 Lifetimes - Part 1
     - u02 Lifetimes - Part 2
     - u03 Eliding Lifetimes
