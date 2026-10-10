@@ -2,74 +2,87 @@
 use rand::Rng;
 
 pub fn flow_if_else() {
+    println!("If-Else");
     let a1 = rand::rng().random_range(-40..40);
     if a1 > 30 {
-        println!("ifelse: Bigger than 30");
+        println!(" > if: Bigger than 30");
     } else if 1 > 20 {
-        println!("ifelse: Bigger than 20");
+        println!(" > else if: Bigger than 20");
     } else {
-        println!("ifelse: Smaller or equal to 20")
+        println!(" > else: Smaller or equal to 20")
     }
 }
 
 pub fn flow_if_else_in_let() {
     let n1 = r#"
+    ---
 	pod: If-Else Expressions
 	- Can be used in let statements
 	---"#;
     println!("{n1}");
 
-    let a1: i8 = 25;
-    let b1: i8 = if a1 > 18 { 1 } else { -1 };
-    println!("let expression b1: {b1}")
+    println!("If-Else Let");
+    let a1: i8 = rand::rng().random_range(-100..=100);
+    let b1 = if a1 > 0 { "positive" } else { "negative" };
+    println!(" > a1: {a1}, let b1: {b1}")
 }
 
 pub fn flow_loop() {
     let n1 = r#"
+    ---
 	pod: Loop
     - inner / outer
-	- break
-	- break + 'name (starts with tick `'`)
-	- brear + value
+	- `break`
+	- `break` + `'name` (starts with tick `'`)
+	- `brear` + value
 	---"#;
     println!("{n1}");
 
+    println!("Loop");
     loop {
-        println!("loop: break");
+        println!(" > break");
         break;
     }
 }
 
 pub fn flow_labeling_loops() {
-    println!("outer loop");
+    println!("Loop Label");
+    println!(" > outer: 'name");
     'name: loop {
-        println!("inner loop");
+        println!(" > inner");
         loop {
-            println!("loop: break 'name");
+            println!(" > inner: break 'name");
             break 'name;
         }
     }
 }
 
 pub fn flow_loop_returning_value() {
-    let x: i8 = loop {
-        println!("loop: break 5");
+    println!("Loop Value");
+    let res: i8 = loop {
+        println!(" > break 5");
         break 5;
     };
+    println!(" > res: {res}");
 }
 
 pub fn flow_while_loop() {
+    println!("While Loop");
     let mut i: i8 = 1;
-    while i <= 5 {
-        println!("while-loop i: {i}");
+    println!("> loop i: {i}");
+    while i <= 3 {
+        println!(" > + 1");
         i = i + 1;
     }
+    println!("> loop i: {i}");
 }
 
 pub fn flow_for_loop() {
-    let elements: [i8; 4] = [10, 20, 30, 40];
-    for e in elements {
-        println!("for-loop e: {e}")
+    println!("For Loop");
+    let arr1: [i8; 4] = [10, 20, 30, 40];
+    println!(" > arr1: {arr1:?}");
+    for e in arr1 {
+        println!(" > e: {e}")
     }
 }
 

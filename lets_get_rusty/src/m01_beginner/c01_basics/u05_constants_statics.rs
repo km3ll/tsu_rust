@@ -2,20 +2,23 @@
 
 pub fn const_constants() {
     let n1 = r#"
+    ---
 	pod: Constants
 	- Computed at compile time
 	- The value of the constants is inline (replaced)
 	- They do not occupy a location in memory
-	- Their naming convention is screaming snake-case
+	- Their naming convention is `screaming snake-case`
 	---"#;
     println!("{n1}");
 
+    println!("Constant");
     const MAX_PLAYERS: u8 = 10;
-    println!("const MAX_PLAYERS: {MAX_PLAYERS}")
+    println!(" > MAX_PLAYERS: {MAX_PLAYERS}")
 }
 
 pub fn const_static() {
     let n1 = r#"
+    ---
 	pod: Static
 	- Can be mutable, but it's unsafe
 	- Statics occupy space in memory
@@ -23,8 +26,9 @@ pub fn const_static() {
 	---"#;
     println!("{n1}");
 
+    println!("Static");
     static CASINO_NAME: &str = "Rusty Casino";
-    println!("static CASINO_NAME: {CASINO_NAME}")
+    println!(" > CASINO_NAME: {CASINO_NAME}")
 }
 
 #[cfg(test)]

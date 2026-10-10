@@ -67,13 +67,15 @@ fn lifetime_elision_replaced() {
     println!("t3: {:?}", t3)
 }
 
-fn take_and_return_content_rule_1<'a>(content: &'a str) -> &str {
-    content
-}
+//Fix compilation warning
+//fn take_and_return_content_rule_1<'a>(content: &'a str) -> &str {
+//    content
+//}
 
-fn take_and_return_content_rule_2<'a>(content: &'a str) -> &'a str {
-    content
-}
+//Fix compilation warning
+//fn take_and_return_content_rule_2<'a>(content: &'a str) -> &'a str {
+//    content
+//}
 
 // -> &str missing lifetime specifier
 fn take_and_return_content_rule_3<'a, 'b>(content1: &'a str, content2: &'b str) -> &'a str {
@@ -81,11 +83,13 @@ fn take_and_return_content_rule_3<'a, 'b>(content1: &'a str, content2: &'b str) 
 }
 
 fn lifetime_elision_rules() {
-    let c1 = take_and_return_content_rule_1("Hello");
-    let c2 = take_and_return_content_rule_2("Hello");
+    //Fix compilation warning
+    //let c1 = take_and_return_content_rule_1("Hello");
+    //let c2 = take_and_return_content_rule_2("Hello");
     let c3 = take_and_return_content_rule_3("Hello", "Pod");
-    println!("c1: {}", c1);
-    println!("c2: {}", c2);
+    // Fix compilation warning
+    //println!("c1: {}", c1);
+    //println!("c2: {}", c2);
     println!("c3: {}", c3);
 }
 

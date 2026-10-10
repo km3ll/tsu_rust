@@ -1,5 +1,7 @@
 # lets_get_rusty
 
+Let's Get Rusty Bootcamp
+
 ## commands
 
 ```bash
@@ -42,7 +44,6 @@ docker build .
 ## content
 
 ```
-Let's Get Rusty
 - m01 beginner
   - c01 Get up and running fast
     - u01 Setup
@@ -53,6 +54,7 @@ Let's Get Rusty
     - u06 Functions
     - u07 Flow control
     - u08 Comments
+[ºº]
   - c02 How Rust achieves memory safety
     - u01 Memory regions
     - u02 Ownership part 1

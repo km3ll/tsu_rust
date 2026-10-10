@@ -1,6 +1,8 @@
 //! # Beginner
 
-pub mod c01;
+#![allow(unused)]
+
+pub mod c01_basics;
 pub mod c02;
 pub mod c03;
 pub mod c04;
