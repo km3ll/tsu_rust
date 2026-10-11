@@ -54,12 +54,12 @@ docker build .
     - u06 Functions
     - u07 Flow control
     - u08 Comments
-[ºº]
   - c02 How Rust achieves memory safety
     - u01 Memory regions
     - u02 Ownership part 1
     - u03 Ownership part 2
     - u04 Borrowing
+[ºº]
     - u05 Slices
     - u06 Strings
   - c03 Build your own data types
