@@ -16,7 +16,7 @@ trait GeneralInfo {
     fn info(&self) -> (&str, u32);
 
     fn greet(&self) -> () {
-        println!(" > Hello, Someone!");
+        println!(" > default: Hello, Someone!");
     }
 }
 
@@ -32,12 +32,13 @@ impl GeneralInfo for Student {
     }
 
     fn greet(&self) -> () {
-        println!(" > Hello, {}!", self.name);
+        println!(" > custom: Hello, {}!", self.name);
     }
 }
 
 fn traits() {
     let n1 = r#"
+    ---
     pod: Trait
     - Abstract definition of shared behavior amongst different types
     - A type's behavior consists of the function we can call on that type
@@ -52,21 +53,23 @@ fn traits() {
     };
     println!(" > person: {person:?}");
     let info = person.info();
-    println!(" > info: {info:?}");
+    println!(" > GeneralInfo.info: {info:?}");
 }
 
 fn traits_defaults() {
-    println!("Traits: default implementation");
+    println!("Traits");
     let person = Person {
         name: String::from("John"),
         age: 30,
     };
+    println!(" > {person:?}");
     person.greet();
 
     let student = Student {
         name: String::from("Spike"),
         age: 35,
     };
+    println!(" > {student:?}");
     student.greet();
 }
 

@@ -19,9 +19,10 @@ impl Person {
 
 fn structures() {
     let n1 = r#"
+    ---
     pod: Struct
     - Data type that groups items of different types
-    - The naming convention is CamelCase
+    - The naming convention is `CamelCase`
     - It is not necesary to match the order of field definitions
     - The initialization function is typically named `new()`
     - Keyword `Self` refers to the struct name itself
@@ -29,29 +30,31 @@ fn structures() {
     ---"#;
     println!("{n1}");
 
+    println!("Structs");
     let p1 = Person {
         age: 30,
         name: String::from("Ferris"),
         salary: 40_000,
     };
-    println!("Structs: p1: {p1:?}");
+    println!(" > p1: {p1:?}");
 
     let taxes1 = p1.compute_taxes();
-    println!(" > taxes1: {taxes1}");
+    println!(" > taxes: {taxes1}");
 
     let taxes2 = Person::compute_taxes(&p1);
-    println!(" > taxes2: {taxes2}");
+    println!(" > taxes: {taxes2}");
 }
 
 fn structures_impl_blocks() {
+    println!("Structs");
     let p2 = Person::new(String::from("John Wick"), 30, 200_000);
-    println!("Structs: p2: {p2:?}");
+    println!(" > p2: {p2:?}");
 
     let p3 = Person {
         name: String::from("Ferris, The Crab"),
         ..p2
     };
-    println!(" > initialized p3: {p3:?}");
+    println!(" > p2 initialized p3: {p3:?}");
 }
 
 #[derive(Debug)]
@@ -65,17 +68,19 @@ impl Coordinate {
 
 fn tuple_structs() {
     let n1 = r#"
+    ---
     pod: Tupple Structs
     - A named tuple
     - Can have implementation blocks
     ---"#;
     println!("{n1}");
 
+    println!("Tuple Struct");
     let c1 = Coordinate(0, 10);
-    println!("Tuple Structs: c1: {c1:?}");
+    println!(" > c1: {c1:?}");
 
     let greater = c1.greater();
-    println!(" > greater: {greater}");
+    println!(" > impl block greater: {greater}");
 }
 
 #[cfg(test)]

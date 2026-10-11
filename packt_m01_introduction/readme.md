@@ -1,6 +1,6 @@
 # packt_m1_introduction
 
-Packt: Rust Programming Masterclass 
+[°°] Packt: Rust Programming Masterclass 
 
 [Introduction to Rust Programming and Core Concepts](https://www.coursera.org/learn/packt-introduction-to-rust-programming-and-core-concepts-tb86d)
 
@@ -47,7 +47,6 @@ cargo test
   - m05 Practice: Stack Implementation
     - u01 Implementing Stack
     - u02 String Reversal Using Stacks
-[°°]
   - m06 Structures, Traits, Generics, Enums
     - u01 Structures Basics
     - u02 Traits and Default Implementations

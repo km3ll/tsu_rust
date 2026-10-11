@@ -1,5 +1,7 @@
 # lets_get_rusty
 
+Let's Get Rusty Bootcamp
+
 ## commands
 
 ```bash
@@ -42,7 +44,6 @@ docker build .
 ## content
 
 ```
-Let's Get Rusty
 - m01 beginner
   - c01 Get up and running fast
     - u01 Setup
@@ -58,6 +59,7 @@ Let's Get Rusty
     - u02 Ownership part 1
     - u03 Ownership part 2
     - u04 Borrowing
+[ºº]
     - u05 Slices
     - u06 Strings
   - c03 Build your own data types

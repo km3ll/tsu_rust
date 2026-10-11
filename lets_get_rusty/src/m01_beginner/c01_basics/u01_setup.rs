@@ -2,6 +2,7 @@
 
 fn setup() {
     let n1 = r#"
+    ---
 	pod: VSCode Extensions
 	- Rust Analyzer
 	- CodeLLDB (native debugger)

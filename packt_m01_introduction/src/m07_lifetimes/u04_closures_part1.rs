@@ -2,6 +2,7 @@
 
 fn closures() {
     let n1 = r#"
+    ---
     pod: Closures
     - Anonymous functions
     - Can be assigned to variables
@@ -12,26 +13,26 @@ fn closures() {
     ---"#;
     println!("{n1}");
 
+    println!("Closures");
     let x: i32 = 25;
     let closure = || println!(" > square: {}", x * x);
-    println!("Closures");
     println!(" > x: {x}");
     closure();
 }
 
 fn closures_inputs() {
-    let x = 11;
-    let y = 23;
-    let closure = |x: i32| println!(" > square of {} is {}", x, x * x);
     println!("Closures");
+    let x = 11;
+    let closure = |x: i32| println!(" > square of {} is {}", x, x * x);
+    println!(" > input x: {x}");
     closure(x);
-    closure(y);
 }
 
 fn closures_inferred_type() {
-    let x = 11;
-    let closure = |x| println!(" > square of {} is {}", x, x * x);
     println!("Closures");
+    let x = 20;
+    let closure = |x| println!(" > square of {} is {}", x, x * x);
+    println!(" > inferred type of x: {x}");
     closure(x);
 }
 
@@ -40,12 +41,14 @@ fn comparator<F: Fn(i32, i32) -> bool>(x: i32, y: i32, compare: F) -> bool {
 }
 
 fn closures_as_parameter() {
+    println!("Closures");
+    println!(" > as parameter type: comparator<F: Fn(i32, i32) -> bool>");
     let x = 55;
     let y = 10;
     let first_is_greater = |a: i32, b: i32| a > b;
+    println!(" > x: {x}, y: {y}, comparator: first_is_greater()");
     let result = comparator(x, y, first_is_greater);
-    println!("Closures");
-    println!(" > x: {x}, y: {y}, predicate result: {result}");
+    println!(" > result: {result}");
 }
 
 #[cfg(test)]

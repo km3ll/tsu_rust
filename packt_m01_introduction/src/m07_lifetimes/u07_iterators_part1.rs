@@ -1,7 +1,11 @@
 //! # Iterators - Part 1
 
+use std::iter::Rev;
+use std::slice::Iter;
+
 fn iterators() {
     let n1 = r#"
+    ---
     pod: Iterators
     - Objects that produce sequences of values
     - Their execution is lazy
@@ -10,78 +14,95 @@ fn iterators() {
     println!("{n1}");
 
     println!("Iterators");
+
     let mut vec1 = vec![1, 2, 3];
+    println!(" > vec1: {vec1:?}");
+
     let mut iter1 = vec1.iter();
-    println!(" > iter: {iter1:?}");
+    println!(" > iter1: {iter1:?}");
 
     println!(" > next: {:?}", iter1.next());
-    println!(" > next: {:?}", iter1.next());
-    println!(" > next: {:?}", iter1.next());
-    println!(" > next: {:?}", iter1.next());
+    println!(" > vec1: {vec1:?}");
 }
 
 fn iterators_any() {
-    let vec2 = vec![0, 1, 2, 3, 4, 5];
-    let res2 = vec2.iter().any(|&x| x > 10);
     println!("Iterators");
-    println!(" > vec2: {:?}", vec2);
-    println!(" > any (greater than 10): {res2}");
+
+    let vec2 = vec![0, 1, 2, 3, 4, 5];
+    println!(" > vec2: {vec2:?}");
+
+    let res2 = vec2.iter().any(|&x| x > 10);
+    println!(" > any(greater than 10): res2: {res2}");
 }
 
 fn iterators_all() {
-    let vec3 = vec![2, 4, 6, 8, 10];
-    let res3 = vec3.iter().all(|&x| x % 2 == 0);
     println!("Iterators");
-    println!(" > vec3: {:?}", vec3);
-    println!(" > all (even): {}", res3);
+
+    let vec3 = vec![2, 4, 6, 8, 10];
+    println!(" > vec3: {vec3:?}");
+
+    let res3 = vec3.iter().all(|&x| x % 2 == 0);
+    println!(" > all(are even) res3: {res3:?}");
 }
 
 fn iterators_find() {
-    let vec4 = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-    let res4 = vec4.iter().find(|&&x| x == 7);
     println!("Iterators");
-    println!(" > vec4: {:?}", vec4);
-    println!(" > find: {:?}", res4);
+
+    let vec4 = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    println!(" > vec4: {vec4:?}");
+
+    let res4 = vec4.iter().find(|&&x| x == 7);
+    println!(" > find(7): {res4:?}");
 }
 
 fn iterators_position() {
-    let vec5 = vec![10, 2, 7, 24, 76, 43, 0];
-    let res5 = vec5.iter().position(|&x| x == 43);
     println!("Iterators");
-    println!(" > vec5: {:?}", vec5);
-    println!(" > position: {:?}", res5);
+
+    let vec5 = vec![10, 2, 7, 24, 76, 43, 0];
+    println!(" > vec5: {vec5:?}");
+
+    let res5 = vec5.iter().position(|&x| x == 43);
+    println!(" > position(of 43): {res5:?}");
 }
 
 fn iterators_reverse_position() {
-    let vec6 = vec![10, 2, 7, 24, 76, 43, 0];
-    let res6 = vec6.iter().rposition(|&x| x == 43);
     println!("Iterators");
-    println!(" > vec6: {:?}", vec6);
-    println!(" > rposition: {:?}", res6);
+
+    let vec6 = vec![10, 2, 7, 24, 76, 43, 0];
+    println!(" > vec6: {vec6:?}");
+
+    let res6 = vec6.iter().rposition(|&x| x == 43);
+    println!(" > reverse position(of 43): {res6:?}");
 }
 
 fn iterators_max() {
-    let vec7 = vec![610, 298, 781, 243, 776, 493, 120];
-    let res7 = vec7.iter().max();
     println!("Iterators");
-    println!(" > vec7: {:?}", vec7);
-    println!(" > max: {:?}", res7);
+
+    let vec7 = vec![610, 298, 781, 243, 776, 493, 120];
+    println!(" > vec7: {vec7:?}");
+
+    let res7 = vec7.iter().max();
+    println!(" > max(): {res7:?}");
 }
 
 fn iterators_min() {
-    let vec8 = vec![610, 298, 781, 243, 776, 493, 120];
-    let res8 = vec8.iter().min();
     println!("Iterators");
-    println!(" > vec8: {:?}", vec8);
-    println!(" > min: {:?}", res8);
+
+    let vec8 = vec![610, 298, 781, 243, 776, 493, 120];
+    println!(" > vec8: {vec8:?}");
+
+    let res8 = vec8.iter().min();
+    println!(" > min(): {res8:?}");
 }
 
 fn iterators_reverse() {
-    let vec9 = vec![61, 29, 81, 23, 76, 93, 20];
-    let res9 = vec9.iter().rev();
     println!("Iterators");
-    println!(" > vec9: {:?}", vec9);
-    println!(" > reverse: {:?}", res9);
+
+    let vec9 = vec![61, 29, 81, 23, 76, 93, 20];
+    println!(" > vec9: Vec<i32>: {vec9:?}");
+
+    let res9: Rev<Iter<i32>> = vec9.iter().rev();
+    println!(" > reverse iterator direction rev(): vec9: Rev<Vec<i32>>: {vec9:?}");
 }
 
 #[cfg(test)]

@@ -2,11 +2,12 @@
 
 pub fn memory_stack() {
     let n1 = r#"
+    ---
 	pod: Stack Contents
 	- Function arguments
 	- Local variables
 	- Known size at compile time
-	---
+
 	pod: Stack Properties
 	- Size: dynamic, fixed upper limit
 	- Lifecycle: lifetime of a function
@@ -17,12 +18,13 @@ pub fn memory_stack() {
 
 pub fn memory_heap() {
     let n1 = r#"
+    ---
 	pod: Heap Contents
 	- Values that live beyond a function's lifetime
 	- Values accessed by multiple threads
 	- Large values
 	- Unknown size at compile time
-	---
+
 	pod: Heap Properties
 	- Size: dynamic
 	- Lifecycle: determined by programmer
@@ -33,11 +35,12 @@ pub fn memory_heap() {
 
 pub fn memory_static() {
     let n1 = r#"
+    ---
 	pod: Static Memory Contents
     - Program's binary
   	- Static variables
 	- String literals
-	---
+	
 	pod: Static Memory Properties
 	- Size: fixed
 	- Lifecycle: lifetime of programm
