@@ -1,44 +1,59 @@
 //! # Slices
 
-fn trim_tweet(tweet: &String) -> &str {
-    println!("Slices: trimming tweet: {tweet}");
-    &tweet[..16]
+fn trim_tweet(p1: &String) -> &str {
+    println!(" > func: trimming &String");
+    &p1[..16]
 }
 
-fn trim_tweet_deref(tweet: &str) -> &str {
-    println!("Slices: trimming deref tweet: {tweet}");
-    &tweet[..16]
+fn trim_tweet_deref(p1: &str) -> &str {
+    println!(" > func: trimming &str (deref)");
+    &p1[..16]
 }
 
 pub fn slices_range_syntax() {
     let n1 = r#"
+    ---
 	pod: Slices
 	- References to a contiguous sequence of elements in a collection
 	- Used to reference part of a collection
 	---"#;
     println!("{n1}");
 
+    println!("Slices");
+
     let tweet: String = String::from("This is my tweet and it's very long.");
+    println!(" > tweet: {tweet}");
+
     let s1: &str = &tweet[..20]; // beginning
+    println!(" > beginning s1: {s1}");
+
     let s2: &str = &tweet[20..]; // ending
+    println!(" > ending s2: {s2}");
+
     let s3: &str = &tweet[..]; // entire
-    println!("Slices: s2: '{s2}', s1: '{s1}'");
+    println!(" > entire s3: {s3}");
 }
 
 pub fn slices_string_types() {
     let n1 = r#"
+    ---
 	pod: String
 	- Growable, UTF-8 encoded, heap-allocated value
 	---"#;
     println!("{n1}");
 
+    println!("Slices");
+
     let tweet: String = String::from("This is my tweet and it's very long.");
-    let s1: &str = &tweet[..20];
-    println!("Slices: s1: {s1}");
+    println!(" > String: tweet: {tweet}");
+
+    let s1: &str = &tweet[..];
+    println!(" > Slice [..] s1: {s1}");
 }
 
 pub fn slices_string_literal() {
     let n1 = r#"
+    ---
 	pod: String Slice
 	- Immutable sequence of UTF-8 bytes somewhere in memory (stack, heap, or static)
 	- Handled behind a reference `&str` because length of sequence is unknown at compile time
@@ -46,18 +61,25 @@ pub fn slices_string_literal() {
 	---"#;
     println!("{n1}");
 
+    println!("Slices");
+
     let s4: &str = "Ferris the crab";
-    println!("Slices, string literal: {s4}");
+    println!(" > String literal &str s4: {s4}");
 }
 
 pub fn slices_string_slice_and_functions() {
+    println!("Slices");
+
     let tweet: String = String::from("This is my tweet and it's very long.");
+    println!(" > main: tweet: {tweet}");
+
     let s5: &str = trim_tweet(&tweet);
-    println!("String slice from string reference: s5: {s5}");
+    println!(" > main: trimmed &str s5: {s5}");
 }
 
 pub fn slices_deref_coercion() {
     let n1 = r#"
+    ---
 	pod: Deref Coercion
 	- An automatic conversion the compiler performs when a type implements the `Deref` trait
 	- Allows a type to be implicitly treated as a reference to its target type
@@ -66,25 +88,39 @@ pub fn slices_deref_coercion() {
 	---"#;
     println!("{n1}");
 
-    let tweet: String = String::from("This is my tweet and it's very long.");
-    let s1: &str = "This is another tweet.";
-    let s6: &str = trim_tweet_deref(&tweet);
-    let s7: &str = trim_tweet_deref(s1);
-    println!("Deref slices: s6: {s6}, s7: {s7}");
+    println!("Slices");
+
+    let s1: String = String::from("This is my tweet and it's very long.");
+    println!(" > main: String s1: {s1}");
+
+    let t1: &str = trim_tweet_deref(&s1);
+    println!(" > main: String t1: {t1}");
+
+    let s2: &str = "This is another tweet.";
+    println!(" > main: slice &str s2: {s2}");
+
+    let t2: &str = trim_tweet_deref(s2);
+    println!(" > main: slice &str t2: {t2}");
 }
 
 pub fn slices_vector_slices() {
     let n1 = r#"
-	pod: Debug Formatting
+    ---
+	trait: `Debug`
 	- The standardized, developer-focused way to print a value for inspection
-	- A type supports it by implementing the std::fmt::Debug trait
-	- `{:?}` syntax
+	- A type supports it by implementing the `std::fmt::Debug` trait
+	- When used with the alternate format specifier `#?`, the output is pretty-printed
+	- Sintax: `{:?}`, `{:#?}`, `{name:?}`
 	---"#;
     println!("{n1}");
 
+    println!("Slices");
+
     let v1: [i32; 6] = [1, 2, 3, 4, 5, 6];
+    println!(" > format-string v1: {v1:?}");
+
     let v2: &[i32] = &v1[..3];
-    println!("Debug format: v2: {:?}", v2);
+    println!(" > pretty-print v2: {v2:#?}");
 }
 
 #[cfg(test)]
