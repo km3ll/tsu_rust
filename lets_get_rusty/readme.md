@@ -59,9 +59,9 @@ docker build .
     - u02 Ownership part 1
     - u03 Ownership part 2
     - u04 Borrowing
-[ºº]
     - u05 Slices
     - u06 Strings
+[ºº]
   - c03 Build your own data types
     - u01 Structs
     - u02 Implementation blocks
