@@ -83,7 +83,6 @@ docker build .
       - p04_mod_folder
     - u03 External dependencies
     - u04 Publishing your package
-- m02 intermediate
   - c05 Structuring larger projects
     - u01 Cargo features
       - p05_features_lib
@@ -98,6 +97,7 @@ docker build .
     - u04 Benchmark testing
       - p09_benchmark
 [ºº]
+- m02 intermediate
   - c01 Polymorphism with generics and traits
     - u01 Generics
     - u02 Traits
