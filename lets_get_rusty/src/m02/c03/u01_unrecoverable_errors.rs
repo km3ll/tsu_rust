@@ -2,7 +2,7 @@
 
 fn unrecoverable_errors_panic_macro() {
     let n1 = r#"
-    pod: macro: panic!()
+    macro: `panic!()`
     - Error state that is unrecoverable
     - The program shows an error message and exits abruptly
     - For more verbose error trace we can set: `RUST_BACKTRACE=1` or `RUST_BACKTRACE=full`

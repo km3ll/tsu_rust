@@ -61,7 +61,6 @@ docker build .
     - u04 Borrowing
     - u05 Slices
     - u06 Strings
-[ºº]
   - c03 Build your own data types
     - u01 Structs
     - u02 Implementation blocks
@@ -72,6 +71,7 @@ docker build .
     - u07 Result
     - u08 Vector
   - c04 How to structure your projects
+[ºº]
     - u01 Project structure overview
       - p01_basic
     - u02 Modules 

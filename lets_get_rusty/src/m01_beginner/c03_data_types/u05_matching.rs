@@ -1,5 +1,7 @@
 //! # Matching
 
+use rand::Rng;
+
 enum Command {
     Undo,
     Redo,
@@ -10,6 +12,7 @@ enum Command {
 
 impl Command {
     fn serialize(&self) -> String {
+        println!(" > impl: serialize()");
         match self {
             Command::Undo => String::from("{ \"cmd\": \"undo\" }"),
             Command::Redo => String::from("{ \"cmd\": \"redo\" }"),
@@ -45,6 +48,7 @@ impl Command {
 
 pub fn matching_expression() {
     let n1 = r#"
+    ---
 	pod: Match Expression
 	- Flow-control operator
 	- Allows to compare a value against the series of patterns (match arms)
@@ -54,30 +58,37 @@ pub fn matching_expression() {
 	---"#;
     println!("{n1}");
 
-    let age: u32 = 32;
+    println!("Matching");
+    let age: u32 = rand::rng().random_range(1..100);
+    println!(" > age: {age}");
+
+    println!(" > match:");
     match age {
         // Literal value
-        1 => println!("Happy 1st Birthday!"),
+        1 => println!(" > Happy 1st Birthday!"),
         // Range
-        13..19 => println!("You're a teenager!"),
+        13..19 => println!(" > You're a teenager!"),
         // With a binding value
-        x => println!("You are {x} years old!"), // Catch-all pattern (no binding value)
-                                                 // _ => println!("Other age")
+        x => println!(" > You are {x} years old!"), // Catch-all pattern (no binding value)
+                                                    // _ => println!("Other age")
     }
 }
 
 pub fn matching_serialize() {
-    let cmd1 = Command::Undo;
-    let cmd2 = Command::Redo;
-    let cmd3 = Command::AddText(String::from("Ferris"));
-    let cmd4 = Command::Replace {
+    println!("Matching");
+    let c1 = Command::Undo;
+    let c2 = Command::Redo;
+    let c3 = Command::AddText(String::from("Ferris"));
+    let c4 = Command::Replace {
         from: String::from("Hello"),
         to: String::from("Hola"),
     };
-    println!("cmd1: {}", cmd1.serialize());
-    println!("cmd2: {}", cmd2.serialize());
-    println!("cmd3: {}", cmd3.serialize());
-    println!("cmd4: {}", cmd4.serialize());
+
+    println!(" > main:");
+    println!(" > c1: {}", c1.serialize());
+    println!(" > c2: {}", c2.serialize());
+    println!(" > c3: {}", c3.serialize());
+    println!(" > c4: {}", c4.serialize());
 }
 
 #[cfg(test)]

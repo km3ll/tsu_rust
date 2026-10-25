@@ -82,7 +82,7 @@ mod tests {
         account.deposit(100);
 
         let n1 = r#"
-		pod: macro: assert!
+		macro: `assert!()`
 		- assert
 		- assert_eq!
 		- assert_ne!

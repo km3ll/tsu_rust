@@ -71,7 +71,7 @@ pub fn strings_string() {
 pub fn strings_concatenation() {
     let n1 = r#"
     ---
-	pod: macro: `format!()`
+	macro: `format!()`
 	- Creates a String using interpolation and formatting
 	- It just returns the formatted text as an owned String
 	- Less efficient because it copies the contents of strings
