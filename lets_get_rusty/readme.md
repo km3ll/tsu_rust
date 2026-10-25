@@ -39,7 +39,7 @@ cargo build -b blog_shared
 cargo doc
 cargo doc --open
 
-# benchmarks
+# run benchmark tests
 cargo bench
 
 docker build .
