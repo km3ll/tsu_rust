@@ -1,4 +1,4 @@
-# lgr_workspace
+# lgr_workspace_blog
 
 Let's Get Rusty: Workspace
 
