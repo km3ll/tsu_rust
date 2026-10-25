@@ -3,6 +3,7 @@
 Let's Get Rusty: Project Features
 
 ```
+.
 ├── Cargo.lock
 ├── Cargo.toml
 ├── readme.md

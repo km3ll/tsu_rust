@@ -17,6 +17,10 @@ cargo run
 cargo run --bin base_package
 cargo run --bin another_main
 
+# module within workspace
+cargo run -p blog_api
+cargo run -p blog_web
+
 # target/release
 cargo run --release
 
