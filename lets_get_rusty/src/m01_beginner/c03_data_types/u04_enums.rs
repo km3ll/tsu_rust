@@ -25,12 +25,14 @@ enum Command {
 
 impl Command {
     fn serialize(&self) -> String {
+        println!(" > impl: serialize(&self)");
         serde_json::to_string(self).unwrap()
     }
 }
 
 pub fn enums_instance() {
     let n1 = r#"
+    ---
 	pod: Enums
 	- Allow to define a type enumerating its variance
 	- Variants can have data associated with them
@@ -38,31 +40,37 @@ pub fn enums_instance() {
 	---"#;
     println!("{n1}");
 
-    let book = Product {
+    println!("Enums");
+    let p1 = Product {
         name: String::from("1984"),
         category: Category::Books,
     };
-    println!("book: {:?}", book);
+    println!(" > p1: {p1:?}");
 }
 
 pub fn enums_variants() {
-    let cmd1 = Command::Undo;
-    let cmd2 = Command::AddText(String::from("Hello Ferris"));
-    let cmd3 = Command::MoveCursor(10, 30);
-    let cmd4 = Command::Replace {
+    println!("Enum Variants");
+    let c1 = Command::Undo;
+    let c2 = Command::AddText(String::from("Hello Ferris"));
+    let c3 = Command::MoveCursor(10, 30);
+    let c4 = Command::Replace {
         from: String::from("Hello"),
         to: String::from("Hi"),
     };
-    println!("cmd1: {:?}", cmd1);
-    println!("cmd2: {:?}", cmd2);
-    println!("cmd3: {:?}", cmd3);
-    println!("cmd4: {:?}", cmd4);
+    println!(" > commands:");
+    println!(" > c1: {c1:?}");
+    println!(" > c2: {c2:?}");
+    println!(" > c3: {c3:?}");
+    println!(" > c4: {c4:?}");
 }
 
 pub fn enums_implementation_blocks() {
-    let cmd1 = Command::AddText(String::from("Hello Ferris"));
-    let json1 = cmd1.serialize();
-    println!("json1: {:?}", json1)
+    println!("Enums");
+    let cmd = Command::AddText(String::from("Hello Ferris"));
+    println!(" > main: cmd: {cmd:?}");
+
+    let json = cmd.serialize();
+    println!(" > main: json: {json:?}")
 }
 
 #[cfg(test)]

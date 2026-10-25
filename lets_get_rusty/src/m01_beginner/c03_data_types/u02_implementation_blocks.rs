@@ -11,24 +11,29 @@ struct Product {
 
 impl Product {
     fn calculate_tax(&self) -> f32 {
+        println!(" > impl: calculate_tax()");
         self.price * 0.1
     }
 
     fn set_price(&mut self, price: f32) {
+        println!(" > impl: set_price({price})");
         self.price = price
     }
 
     fn buy(self) -> u32 {
+        println!(" > impl: buy (owned form)");
         let name = self.name;
-        println!("{name} was bought!");
+        println!(" > impl: {name} was bought!");
         rand::rng().random()
     }
 
     fn get_default_sales_tax() -> f32 {
+        println!(" impl: get_default_sales_tax()");
         0.1
     }
 
     fn new(name: String, price: f32) -> Product {
+        println!(" > asoc: new()");
         Product {
             name: name,
             price: price,
@@ -39,14 +44,15 @@ impl Product {
 
 pub fn impl_blocks() {
     let n1 = r#"
+    ---
 	pod: Implementation Blocks
 	- Add functionality for a given type
-	- `self` refers to the instance of product (mutable/immutable)
-	---
+	- `self` refers to the instance of the struct (mutable/immutable)
+
 	pod: Owned Form Of Self
 	- Usually done when you want to transform to another type while preventing the caller from using the original
 	- At the end of the method, self is dropped
-	---
+
 	pod: Associated Functions
 	- Called static functions in other languages
 	- Don't take 'self' as a parameter
@@ -56,45 +62,58 @@ pub fn impl_blocks() {
 }
 
 pub fn impl_blocks_immutable_borrow() {
+    println!("Implementation Blocks");
     let book = Product {
         name: String::from("Book"),
         price: 10.85,
         in_stock: true,
     };
+
+    println!(" > main: p1: {book:#?}");
     let tax: f32 = book.calculate_tax();
-    println!("book: {:?}", book);
-    println!("tax : {}", tax);
+    println!(" > main: tax : {tax}");
 }
 
 pub fn impl_blocks_mutable_borrow() {
+    println!("Implementation Blocks");
     let mut chair = Product {
         name: String::from("Chair"),
         price: 28.50,
         in_stock: true,
     };
-    println!("chair: {:?}", chair);
+
+    println!(" > main: mut p2: {chair:?}");
     chair.set_price(21.75);
-    println!("chair: {:?}", chair);
+    println!(" > main: mut p2: {chair:?}");
 }
 
 pub fn impl_blocks_owned_form() {
-    let mut lamp = Product {
+    println!("Implementation Blocks");
+    let mut p3 = Product {
         name: String::from("Lamp"),
         price: 9.99,
         in_stock: true,
     };
-    let receipt: u32 = lamp.buy();
-    println!("receipt: {}", receipt)
+
+    println!(" > main: p3: {p3:?}");
+    let p3: u32 = p3.buy();
+    println!(" > main: p3: {p3}")
 }
 
 pub fn impl_blocks_associated_functions() {
+    println!("Implementation Blocks");
+
+    println!("> main:");
     let default_tax: f32 = Product::get_default_sales_tax();
-    println!("default tax: {}", default_tax);
+    println!(" > main: default_tax: {default_tax}");
 }
 
 pub fn impl_blocks_constructor_new() {
+    println!("Implementation Blocks");
+
+    println!(" > main:");
     let lamp = Product::new(String::from("Lamp"), 13.95);
-    println!("new: {:?}", lamp);
+    println!(" > main: p4: {lamp:?}");
 }
 
 #[cfg(test)]

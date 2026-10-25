@@ -17,6 +17,10 @@ cargo run
 cargo run --bin base_package
 cargo run --bin another_main
 
+# module within workspace
+cargo run -p blog_api
+cargo run -p blog_web
+
 # target/release
 cargo run --release
 
@@ -61,7 +65,6 @@ docker build .
     - u04 Borrowing
     - u05 Slices
     - u06 Strings
-[ºº]
   - c03 Build your own data types
     - u01 Structs
     - u02 Implementation blocks
@@ -80,6 +83,7 @@ docker build .
       - p04_mod_folder
     - u03 External dependencies
     - u04 Publishing your package
+- m02 intermediate
   - c05 Structuring larger projects
     - u01 Cargo features
       - p05_features_lib
@@ -93,7 +97,7 @@ docker build .
     - u03 Documentation
     - u04 Benchmark testing
       - p09_benchmark
-- m02 intermediate
+[ºº]
   - c01 Polymorphism with generics and traits
     - u01 Generics
     - u02 Traits

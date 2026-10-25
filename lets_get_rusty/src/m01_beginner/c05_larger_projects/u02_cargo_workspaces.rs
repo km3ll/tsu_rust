@@ -2,6 +2,7 @@
 
 pub fn workspaces() {
     let n1 = r#"
+    ---
 	pod: Workspace
 	- A collection of related cargo packages
 	- Packages in a workspace share a `Cargo.lock` file

@@ -1,0 +1,9 @@
+[package]
+name = "lgr_multi_mod"
+version = "0.1.0"
+edition = "2024"
+description = "Example of multi-module project"
+license = "MIT"
+
+[dependencies]
+rand = { version = "0.8.4"}
