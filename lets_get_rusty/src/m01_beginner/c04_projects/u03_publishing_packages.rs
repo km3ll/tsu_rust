@@ -2,6 +2,7 @@
 
 pub fn publishing_crates_io() {
     let n1 = r#"
+    ---
 	pod: crates.io
 	- Changes must be committed to GitHub
 	- Required fields: description and license
