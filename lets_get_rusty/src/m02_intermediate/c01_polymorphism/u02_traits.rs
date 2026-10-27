@@ -19,7 +19,7 @@ trait Park {
 
 trait Paint {
     fn paint(&self, color: &str) {
-        println!(" impl<Trait>: paint color: {color}");
+        println!(" meth<Trait>: paint color: {color}");
     }
 }
 
@@ -27,19 +27,19 @@ impl Paint for Car {}
 impl Paint for Truck {}
 impl Paint for House {
     fn paint(&self, color: &str) {
-        println!(" impl<House>: paint({color})")
+        println!(" meth<House>: paint({color})")
     }
 }
 
 impl Park for Car {
     fn park(&self) {
-        println!(" > impl<Car> park()")
+        println!(" > meth<Car> park()")
     }
 }
 
 impl Park for Truck {
     fn park(&self) {
-        println!(" > impl<Truck> park()")
+        println!(" > meth<Truck> park()")
     }
 }
 

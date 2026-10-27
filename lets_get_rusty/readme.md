@@ -96,7 +96,6 @@ docker build .
     - u03 Documentation
     - u04 Benchmark testing
       - p09_benchmark
-[ºº]
 - m02 intermediate
   - c01 Polymorphism with generics and traits
     - u01 Generics
@@ -104,6 +103,7 @@ docker build .
     - u03 Trait bounds
     - u04 Super traits
     - u05 Trait objects
+[ºº]
     - u06 Deriving traits
     - u07 The orphan rule
   - c02 Advanced memory management
