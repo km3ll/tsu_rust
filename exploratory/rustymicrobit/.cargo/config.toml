@@ -1,0 +1,7 @@
+# https://docs.rs/cortex-m-rt/0.7.7/cortex_m_rt/#an-example
+
+[build]
+target = "thumbv7em-none-eabihf"
+
+[target.thumbv7em-none-eabihf]
+rustflags = ["-C", "link-arg=-Tlink.x"]
