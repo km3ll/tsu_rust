@@ -6,6 +6,11 @@
 - [Packt Introduction to Rust](packt_m01_introduction)
 - [The Book](the_book)
 
+### books
+
+- [Embedded MB2 Discovery](books/discovery_mb2)
+- [Embedded Rust](books/embedded_rust)
+
 ### exploratory
 
 - [backyard](exploratory/backyard)
