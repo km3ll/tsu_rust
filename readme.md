@@ -19,4 +19,5 @@
 - [lgr_tests_integration](exploratory/lgr_tests_integration)
 - [lgr_workspace_blog](exploratory/lgr_workspace_blog)
 - [restaurant](exploratory/restaurant)
+- [rustymicrobit](exploratory/rustymicrobit)
 - [zip](exploratory/zip)
